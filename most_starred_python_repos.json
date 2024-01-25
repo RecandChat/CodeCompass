@@ -1,0 +1,152 @@
+[
+    {
+        "name": "simp_le",
+        "stars": 889,
+        "description": "Simple Let's Encrypt Client"
+    },
+    {
+        "name": "jungle",
+        "stars": 844,
+        "description": "AWS operations by cli should be simpler"
+    },
+    {
+        "name": "django-api-rest-and-angular",
+        "stars": 808,
+        "description": "An example repository of combining Django Rest Framework with AngularJS"
+    },
+    {
+        "name": "SublimeHighlight",
+        "stars": 787,
+        "description": "A humble SublimeText package for exporting highlighted code as RTF or HTML"
+    },
+    {
+        "name": "ChinaDNS-Python",
+        "stars": 766,
+        "description": "Protect yourself against DNS poisoning in China."
+    },
+    {
+        "name": "zhihu-spider",
+        "stars": 726,
+        "description": "A web spider for zhihu.com"
+    },
+    {
+        "name": "PEPS",
+        "stars": 703,
+        "description": "Innovative Open source Email + File sharing"
+    },
+    {
+        "name": "dropship",
+        "stars": 686,
+        "description": "Instantly transfer files between Dropbox accounts using only their hashes."
+    },
+    {
+        "name": "centrifuge",
+        "stars": 681,
+        "description": "Migrated to Go language, see https://github.com/centrifugal/centrifugo"
+    },
+    {
+        "name": "alchemy-framework",
+        "stars": 674,
+        "description": "Alchemy is a framework for creating highly available systems that are built from micro-services"
+    },
+    {
+        "name": "python-nvd3",
+        "stars": 658,
+        "description": "Python Wrapper for NVD3 - It's time for beautiful charts"
+    },
+    {
+        "name": "dockercloud-haproxy",
+        "stars": 652,
+        "description": "HAproxy image that autoreconfigures itself when used in Docker Cloud"
+    },
+    {
+        "name": "glacier-cli",
+        "stars": 618,
+        "description": "Command-line interface to Amazon Glacier"
+    },
+    {
+        "name": "git-fat",
+        "stars": 617,
+        "description": "Simple way to handle fat files without committing them to git, supports synchronization using rsync"
+    },
+    {
+        "name": "Retaliation",
+        "stars": 599,
+        "description": "A Jenkins \"Extreme Feedback\" Contraption - fire foam rockets at build breaking perpetrators."
+    },
+    {
+        "name": "octogit",
+        "stars": 576,
+        "description": "giving git more tentacles  "
+    },
+    {
+        "name": "hangoutsbot",
+        "stars": 575,
+        "description": "Google Hangouts bot"
+    },
+    {
+        "name": "heartbleed-masstest",
+        "stars": 571,
+        "description": "Multi-threaded tool for scanning many hosts for CVE-2014-0160."
+    },
+    {
+        "name": "sublemacspro",
+        "stars": 566,
+        "description": "Emacs Pro Essentials brings the most common emacs features and key bindings that you love to Sublime Text. The kill and mark rings, i-search, registers, numeric arguments, and cursor motion commands for chars/words/lines/s-expressions are all there and multi-cursor enhanced! Also, improved switch to buffer and zap/jump to char/string, and more!"
+    },
+    {
+        "name": "restmq",
+        "stars": 556,
+        "description": "REST/JSON/HTTP based message queue"
+    },
+    {
+        "name": "dialogflow-python-client",
+        "stars": 555,
+        "description": "Python library for Dialogflow"
+    },
+    {
+        "name": "teeceepee",
+        "stars": 552,
+        "description": "mini-TCP stack in Python, for fun"
+    },
+    {
+        "name": "omnisharp-sublime",
+        "stars": 552,
+        "description": "C# IDE Plugin for Sublime Text 3"
+    },
+    {
+        "name": "f.lux-indicator-applet",
+        "stars": 549,
+        "description": "This repository is unmaintained. Visit:"
+    },
+    {
+        "name": "pypress",
+        "stars": 549,
+        "description": "flask team blog"
+    },
+    {
+        "name": "CVE-2015-7547",
+        "stars": 545,
+        "description": "Proof of concept for CVE-2015-7547"
+    },
+    {
+        "name": "aws-google-auth",
+        "stars": 531,
+        "description": "Provides AWS STS credentials based on Google Apps SAML SSO auth (what a jumble!)"
+    },
+    {
+        "name": "dedrm-ebook-tools",
+        "stars": 528,
+        "description": "DRM Removal Tools for eBooks"
+    },
+    {
+        "name": "xiaohuangji",
+        "stars": 528,
+        "description": "人人网小黄鸡 (deprecated)"
+    },
+    {
+        "name": "RoboGif",
+        "stars": 521,
+        "description": "A small utility to record Android device screen to a GIF"
+    }
+]
