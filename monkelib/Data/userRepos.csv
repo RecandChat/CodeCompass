@@ -1,11 +1,9 @@
 id,name,owner_login,owner_type,description,stars,url,updated_at,language
-584564666,AutoNewProject,felixggj,User,Python Script to Automate New Project Creation,1,https://api.github.com/repos/felixggj/AutoNewProject,2023-02-07T10:31:02Z,Python
-690470709,bank-system,felixggj,User,DevOps Course Assignment 1,0,https://api.github.com/repos/felixggj/bank-system,2023-10-13T11:03:24Z,Vue
-678135113,chat-pdf,felixggj,User,App to Chat with multiple PDFs using OpenAI,1,https://api.github.com/repos/felixggj/chat-pdf,2023-09-27T02:17:58Z,Python
-658115585,dashboard-react,felixggj,User,Dashboard React application using Material UI,0,https://api.github.com/repos/felixggj/dashboard-react,2023-06-27T09:19:33Z,JavaScript
-661396972,face-recognition-app,felixggj,User,Attendance tracking application using OpenCV and Firebase,0,https://api.github.com/repos/felixggj/face-recognition-app,2023-07-07T21:27:55Z,Python
-579793974,image-classification,felixggj,User,Deep Learning Image Classification model which detects whether a person is happy or sad,0,https://api.github.com/repos/felixggj/image-classification,2023-06-27T09:21:03Z,Jupyter Notebook
-725167058,msdocs-python-flask-webapp-quickstart,felixggj,User,No description,0,https://api.github.com/repos/felixggj/msdocs-python-flask-webapp-quickstart,2023-12-05T06:44:24Z,Bicep
-580969693,multi-person-pose-detection,felixggj,User,Deep Learning model using the Lighting Model to detect 17 different keypoints in a human body,0,https://api.github.com/repos/felixggj/multi-person-pose-detection,2023-06-27T09:22:37Z,Jupyter Notebook
-652189188,stock-news-summarizer,felixggj,User,"Python-based pipeline that enables the extraction, condensation, and sentiment analysis of news related to stocks.",1,https://api.github.com/repos/felixggj/stock-news-summarizer,2023-06-27T09:38:11Z,Jupyter Notebook
-706102755,tic-tac-toe,felixggj,User,tic tac toe implemention in C ,0,https://api.github.com/repos/felixggj/tic-tac-toe,2023-10-17T11:40:35Z,C
+694554656,Back-End-Bank-Project,Lukasaurus11,User,Back-End Bank Project,0,https://api.github.com/repos/Lukasaurus11/Back-End-Bank-Project,2023-10-07T19:42:01Z,Python
+694593649,Front-End-Bank-Project,Lukasaurus11,User,Front-End-Bank-Project,0,https://api.github.com/repos/Lukasaurus11/Front-End-Bank-Project,2023-10-07T19:36:49Z,Vue
+747841692,IE-Tower-WebPage,Lukasaurus11,User,Assignment 1 JavaScript 2,0,https://api.github.com/repos/Lukasaurus11/IE-Tower-WebPage,2024-01-24T18:45:15Z,JavaScript
+729129532,infra-exercise-3,Lukasaurus11,User,Exercise Three DevOps,0,https://api.github.com/repos/Lukasaurus11/infra-exercise-3,2023-12-08T14:05:11Z,Bicep
+694594538,Infrastructure-Bank-Project,Lukasaurus11,User,Infrastructure-Bank-Project,0,https://api.github.com/repos/Lukasaurus11/Infrastructure-Bank-Project,2023-10-07T16:51:06Z,Bicep
+708157382,Lukasaurus11,Lukasaurus11,User,No description,0,https://api.github.com/repos/Lukasaurus11/Lukasaurus11,2023-10-21T17:36:41Z,
+725157840,msdocs-python-flask-webapp-quickstart,Lukasaurus11,User,Contains the sample application for the App Service Quickstart in Python using Flask.,0,https://api.github.com/repos/Lukasaurus11/msdocs-python-flask-webapp-quickstart,2023-12-08T14:05:18Z,Bicep
+705636185,Tic-Tac-Toe,Lukasaurus11,User,Computer Programming II - Assignment,0,https://api.github.com/repos/Lukasaurus11/Tic-Tac-Toe,2023-10-17T09:35:13Z,C
