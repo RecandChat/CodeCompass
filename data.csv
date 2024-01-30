@@ -1,0 +1,11 @@
+id,name,owner_login,owner_type,description,stars,url,updated_at,language
+54346799,public-apis,public-apis,Organization,A collective list of free APIs,277591,https://api.github.com/repos/public-apis/public-apis,2024-01-30 11:26:31+00:00,Python
+83222441,system-design-primer,donnemartin,User,Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards.,244615,https://api.github.com/repos/donnemartin/system-design-primer,2024-01-30 11:25:50+00:00,Python
+21289110,awesome-python,vinta,User,"A curated list of awesome Python frameworks, libraries, software and resources",196191,https://api.github.com/repos/vinta/awesome-python,2024-01-30 11:01:02+00:00,Python
+63476337,Python,TheAlgorithms,Organization,All Algorithms implemented in Python,175263,https://api.github.com/repos/TheAlgorithms/Python,2024-01-30 11:14:40+00:00,Python
+123458551,Python-100-Days,jackfrued,User,Python - 100天从新手到大师,146050,https://api.github.com/repos/jackfrued/Python-100-Days,2024-01-30 11:29:26+00:00,Python
+1039520,youtube-dl,ytdl-org,Organization,Command-line program to download videos from YouTube.com and other video sites,126531,https://api.github.com/repos/ytdl-org/youtube-dl,2024-01-30 09:15:46+00:00,Python
+527591471,stable-diffusion-webui,AUTOMATIC1111,User,Stable Diffusion web UI,119503,https://api.github.com/repos/AUTOMATIC1111/stable-diffusion-webui,2024-01-30 11:27:24+00:00,Python
+155220641,transformers,huggingface,Organization,"🤗 Transformers: State-of-the-art Machine Learning for Pytorch, TensorFlow, and JAX.",119454,https://api.github.com/repos/huggingface/transformers,2024-01-30 10:54:17+00:00,Python
+58028038,HelloGitHub,521xueweihan,User,":octocat: 分享 GitHub 上有趣、入门级的开源项目。Share interesting, entry-level open source projects on GitHub.",81622,https://api.github.com/repos/521xueweihan/HelloGitHub,2024-01-30 10:30:22+00:00,Python
+33614304,thefuck,nvbn,User,Magnificent app which corrects your previous console command.,81096,https://api.github.com/repos/nvbn/thefuck,2024-01-30 09:56:30+00:00,Python
