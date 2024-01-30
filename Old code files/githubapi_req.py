@@ -1,5 +1,4 @@
 import requests
-import json
 import time
 import json
 
@@ -47,7 +46,7 @@ try:
         repos_data.append(repo_info)
 
     # Writing data to a JSON file
-    with open('most_starred_python_repos.json', 'w', encoding='utf-8') as f:
+    with open('../most_starred_python_repos.json', 'w', encoding='utf-8') as f:
         json.dump(repos_data, f, ensure_ascii=False, indent=4)
 
     print("Data successfully written to most_starred_python_repos.json")
