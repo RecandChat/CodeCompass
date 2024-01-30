@@ -1,152 +1,112 @@
 [
     {
-        "name": "simp_le",
-        "stars": 889,
-        "description": "Simple Let's Encrypt Client"
+        "id": 54346799,
+        "name": "public-apis",
+        "owner_login": "public-apis",
+        "owner_type": "Organization",
+        "description": "A collective list of free APIs",
+        "stars": 277591,
+        "url": "https://api.github.com/repos/public-apis/public-apis",
+        "updated_at": "2024-01-30T11:26:31Z",
+        "language": "Python"
     },
     {
-        "name": "jungle",
-        "stars": 844,
-        "description": "AWS operations by cli should be simpler"
+        "id": 83222441,
+        "name": "system-design-primer",
+        "owner_login": "donnemartin",
+        "owner_type": "User",
+        "description": "Learn how to design large-scale systems. Prep for the system design interview.  Includes Anki flashcards.",
+        "stars": 244615,
+        "url": "https://api.github.com/repos/donnemartin/system-design-primer",
+        "updated_at": "2024-01-30T11:25:50Z",
+        "language": "Python"
     },
     {
-        "name": "django-api-rest-and-angular",
-        "stars": 808,
-        "description": "An example repository of combining Django Rest Framework with AngularJS"
+        "id": 21289110,
+        "name": "awesome-python",
+        "owner_login": "vinta",
+        "owner_type": "User",
+        "description": "A curated list of awesome Python frameworks, libraries, software and resources",
+        "stars": 196191,
+        "url": "https://api.github.com/repos/vinta/awesome-python",
+        "updated_at": "2024-01-30T11:01:02Z",
+        "language": "Python"
     },
     {
-        "name": "SublimeHighlight",
-        "stars": 787,
-        "description": "A humble SublimeText package for exporting highlighted code as RTF or HTML"
+        "id": 63476337,
+        "name": "Python",
+        "owner_login": "TheAlgorithms",
+        "owner_type": "Organization",
+        "description": "All Algorithms implemented in Python",
+        "stars": 175263,
+        "url": "https://api.github.com/repos/TheAlgorithms/Python",
+        "updated_at": "2024-01-30T11:14:40Z",
+        "language": "Python"
     },
     {
-        "name": "ChinaDNS-Python",
-        "stars": 766,
-        "description": "Protect yourself against DNS poisoning in China."
+        "id": 123458551,
+        "name": "Python-100-Days",
+        "owner_login": "jackfrued",
+        "owner_type": "User",
+        "description": "Python - 100天从新手到大师",
+        "stars": 146050,
+        "url": "https://api.github.com/repos/jackfrued/Python-100-Days",
+        "updated_at": "2024-01-30T11:29:26Z",
+        "language": "Python"
     },
     {
-        "name": "zhihu-spider",
-        "stars": 726,
-        "description": "A web spider for zhihu.com"
+        "id": 1039520,
+        "name": "youtube-dl",
+        "owner_login": "ytdl-org",
+        "owner_type": "Organization",
+        "description": "Command-line program to download videos from YouTube.com and other video sites",
+        "stars": 126531,
+        "url": "https://api.github.com/repos/ytdl-org/youtube-dl",
+        "updated_at": "2024-01-30T09:15:46Z",
+        "language": "Python"
     },
     {
-        "name": "PEPS",
-        "stars": 703,
-        "description": "Innovative Open source Email + File sharing"
+        "id": 527591471,
+        "name": "stable-diffusion-webui",
+        "owner_login": "AUTOMATIC1111",
+        "owner_type": "User",
+        "description": "Stable Diffusion web UI",
+        "stars": 119503,
+        "url": "https://api.github.com/repos/AUTOMATIC1111/stable-diffusion-webui",
+        "updated_at": "2024-01-30T11:27:24Z",
+        "language": "Python"
     },
     {
-        "name": "dropship",
-        "stars": 686,
-        "description": "Instantly transfer files between Dropbox accounts using only their hashes."
+        "id": 155220641,
+        "name": "transformers",
+        "owner_login": "huggingface",
+        "owner_type": "Organization",
+        "description": "🤗 Transformers: State-of-the-art Machine Learning for Pytorch, TensorFlow, and JAX.",
+        "stars": 119454,
+        "url": "https://api.github.com/repos/huggingface/transformers",
+        "updated_at": "2024-01-30T10:54:17Z",
+        "language": "Python"
     },
     {
-        "name": "centrifuge",
-        "stars": 681,
-        "description": "Migrated to Go language, see https://github.com/centrifugal/centrifugo"
+        "id": 58028038,
+        "name": "HelloGitHub",
+        "owner_login": "521xueweihan",
+        "owner_type": "User",
+        "description": ":octocat: 分享 GitHub 上有趣、入门级的开源项目。Share interesting, entry-level open source projects on GitHub.",
+        "stars": 81622,
+        "url": "https://api.github.com/repos/521xueweihan/HelloGitHub",
+        "updated_at": "2024-01-30T10:30:22Z",
+        "language": "Python"
     },
     {
-        "name": "alchemy-framework",
-        "stars": 674,
-        "description": "Alchemy is a framework for creating highly available systems that are built from micro-services"
-    },
-    {
-        "name": "python-nvd3",
-        "stars": 658,
-        "description": "Python Wrapper for NVD3 - It's time for beautiful charts"
-    },
-    {
-        "name": "dockercloud-haproxy",
-        "stars": 652,
-        "description": "HAproxy image that autoreconfigures itself when used in Docker Cloud"
-    },
-    {
-        "name": "glacier-cli",
-        "stars": 618,
-        "description": "Command-line interface to Amazon Glacier"
-    },
-    {
-        "name": "git-fat",
-        "stars": 617,
-        "description": "Simple way to handle fat files without committing them to git, supports synchronization using rsync"
-    },
-    {
-        "name": "Retaliation",
-        "stars": 599,
-        "description": "A Jenkins \"Extreme Feedback\" Contraption - fire foam rockets at build breaking perpetrators."
-    },
-    {
-        "name": "octogit",
-        "stars": 576,
-        "description": "giving git more tentacles  "
-    },
-    {
-        "name": "hangoutsbot",
-        "stars": 575,
-        "description": "Google Hangouts bot"
-    },
-    {
-        "name": "heartbleed-masstest",
-        "stars": 571,
-        "description": "Multi-threaded tool for scanning many hosts for CVE-2014-0160."
-    },
-    {
-        "name": "sublemacspro",
-        "stars": 566,
-        "description": "Emacs Pro Essentials brings the most common emacs features and key bindings that you love to Sublime Text. The kill and mark rings, i-search, registers, numeric arguments, and cursor motion commands for chars/words/lines/s-expressions are all there and multi-cursor enhanced! Also, improved switch to buffer and zap/jump to char/string, and more!"
-    },
-    {
-        "name": "restmq",
-        "stars": 556,
-        "description": "REST/JSON/HTTP based message queue"
-    },
-    {
-        "name": "dialogflow-python-client",
-        "stars": 555,
-        "description": "Python library for Dialogflow"
-    },
-    {
-        "name": "teeceepee",
-        "stars": 552,
-        "description": "mini-TCP stack in Python, for fun"
-    },
-    {
-        "name": "omnisharp-sublime",
-        "stars": 552,
-        "description": "C# IDE Plugin for Sublime Text 3"
-    },
-    {
-        "name": "f.lux-indicator-applet",
-        "stars": 549,
-        "description": "This repository is unmaintained. Visit:"
-    },
-    {
-        "name": "pypress",
-        "stars": 549,
-        "description": "flask team blog"
-    },
-    {
-        "name": "CVE-2015-7547",
-        "stars": 545,
-        "description": "Proof of concept for CVE-2015-7547"
-    },
-    {
-        "name": "aws-google-auth",
-        "stars": 531,
-        "description": "Provides AWS STS credentials based on Google Apps SAML SSO auth (what a jumble!)"
-    },
-    {
-        "name": "dedrm-ebook-tools",
-        "stars": 528,
-        "description": "DRM Removal Tools for eBooks"
-    },
-    {
-        "name": "xiaohuangji",
-        "stars": 528,
-        "description": "人人网小黄鸡 (deprecated)"
-    },
-    {
-        "name": "RoboGif",
-        "stars": 521,
-        "description": "A small utility to record Android device screen to a GIF"
+        "id": 33614304,
+        "name": "thefuck",
+        "owner_login": "nvbn",
+        "owner_type": "User",
+        "description": "Magnificent app which corrects your previous console command.",
+        "stars": 81096,
+        "url": "https://api.github.com/repos/nvbn/thefuck",
+        "updated_at": "2024-01-30T09:56:30Z",
+        "language": "Python"
     }
 ]
