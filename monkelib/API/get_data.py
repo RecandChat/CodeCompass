@@ -2,7 +2,6 @@
 Functional description:
     - This file contains the functions that are used to get data from the GitHub API.
     - Helper functions are prefixed with an underscore, and they should not be used outside of this file.
-    - API model taken from model.py file.
 """
 # --- Imports ---
 import requests
@@ -33,6 +32,27 @@ def _save_to_csv(data, filename) -> None:
     df.to_csv(f"Data/{filename}", index=False)
 
 
+def _get_repo_fields(repo: dict) -> dict:
+    """
+    This function gets the fields of a repository.
+    The fields have been chosen beforehand, mentioned in the wiki of this project.
+    :param repo: The repository.
+    :return: A dictionary containing the fields of the repository.
+    """
+    repo_fields: dict = {
+        'id': repo['id'],
+        'name': repo['name'],
+        'owner_login': repo['owner']['login'],
+        'owner_type': repo['owner']['type'],
+        'description': repo['description'] or "No description",
+        'stars': repo['stargazers_count'],
+        'url': repo['url'],
+        'updated_at': repo['updated_at'],
+        'language': repo['language']
+    }
+    return repo_fields
+
+
 def _load_secret() -> str:
     """
     This function loads the GitHub Personal Access Token from the pat.json file.
@@ -59,17 +79,7 @@ def get_user_repo(username: str) -> bool:
         repos_data: list = []
 
         for repo in response.json():
-            repo_info: dict = {
-                'id': repo['id'],
-                'name': repo['name'],
-                'owner_login': repo['owner']['login'],
-                'owner_type': repo['owner']['type'],
-                'description': repo['description'] or "No description",
-                'stars': repo['stargazers_count'],
-                'url': repo['url'],
-                'updated_at': repo['updated_at'],
-                'language': repo['language']
-            }
+            repo_info: dict = _get_repo_fields(repo)
             repos_data.append(repo_info)
 
         # Writing data to a JSON file
@@ -115,17 +125,7 @@ def get_most_starred_python_repos() -> bool:
         repos_data: list = []
 
         for repo in response.json()['items']:
-            repo_info = {
-                'id': repo['id'],
-                'name': repo['name'],
-                'owner_login': repo['owner']['login'],
-                'owner_type': repo['owner']['type'],
-                'description': repo['description'] or "No description",
-                'stars': repo['stargazers_count'],
-                'url': repo['url'],
-                'updated_at': repo['updated_at'],
-                'language': repo['language']
-            }
+            repo_info = _get_repo_fields(repo)
             repos_data.append(repo_info)
 
         # Writing data to a JSON file
