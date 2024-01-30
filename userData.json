@@ -1,0 +1,90 @@
+[
+    {
+        "id": 694554656,
+        "name": "Back-End-Bank-Project",
+        "owner_login": "Lukasaurus11",
+        "owner_type": "User",
+        "description": "Back-End Bank Project",
+        "stars": 0,
+        "url": "https://api.github.com/repos/Lukasaurus11/Back-End-Bank-Project",
+        "updated_at": "2023-10-07T19:42:01Z",
+        "language": "Python"
+    },
+    {
+        "id": 694593649,
+        "name": "Front-End-Bank-Project",
+        "owner_login": "Lukasaurus11",
+        "owner_type": "User",
+        "description": "Front-End-Bank-Project",
+        "stars": 0,
+        "url": "https://api.github.com/repos/Lukasaurus11/Front-End-Bank-Project",
+        "updated_at": "2023-10-07T19:36:49Z",
+        "language": "Vue"
+    },
+    {
+        "id": 747841692,
+        "name": "IE-Tower-WebPage",
+        "owner_login": "Lukasaurus11",
+        "owner_type": "User",
+        "description": "Assignment 1 JavaScript 2",
+        "stars": 0,
+        "url": "https://api.github.com/repos/Lukasaurus11/IE-Tower-WebPage",
+        "updated_at": "2024-01-24T18:45:15Z",
+        "language": "JavaScript"
+    },
+    {
+        "id": 729129532,
+        "name": "infra-exercise-3",
+        "owner_login": "Lukasaurus11",
+        "owner_type": "User",
+        "description": "Exercise Three DevOps",
+        "stars": 0,
+        "url": "https://api.github.com/repos/Lukasaurus11/infra-exercise-3",
+        "updated_at": "2023-12-08T14:05:11Z",
+        "language": "Bicep"
+    },
+    {
+        "id": 694594538,
+        "name": "Infrastructure-Bank-Project",
+        "owner_login": "Lukasaurus11",
+        "owner_type": "User",
+        "description": "Infrastructure-Bank-Project",
+        "stars": 0,
+        "url": "https://api.github.com/repos/Lukasaurus11/Infrastructure-Bank-Project",
+        "updated_at": "2023-10-07T16:51:06Z",
+        "language": "Bicep"
+    },
+    {
+        "id": 708157382,
+        "name": "Lukasaurus11",
+        "owner_login": "Lukasaurus11",
+        "owner_type": "User",
+        "description": "No description",
+        "stars": 0,
+        "url": "https://api.github.com/repos/Lukasaurus11/Lukasaurus11",
+        "updated_at": "2023-10-21T17:36:41Z",
+        "language": null
+    },
+    {
+        "id": 725157840,
+        "name": "msdocs-python-flask-webapp-quickstart",
+        "owner_login": "Lukasaurus11",
+        "owner_type": "User",
+        "description": "Contains the sample application for the App Service Quickstart in Python using Flask.",
+        "stars": 0,
+        "url": "https://api.github.com/repos/Lukasaurus11/msdocs-python-flask-webapp-quickstart",
+        "updated_at": "2023-12-08T14:05:18Z",
+        "language": "Bicep"
+    },
+    {
+        "id": 705636185,
+        "name": "Tic-Tac-Toe",
+        "owner_login": "Lukasaurus11",
+        "owner_type": "User",
+        "description": "Computer Programming II - Assignment",
+        "stars": 0,
+        "url": "https://api.github.com/repos/Lukasaurus11/Tic-Tac-Toe",
+        "updated_at": "2023-10-17T09:35:13Z",
+        "language": "C"
+    }
+]
