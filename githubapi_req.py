@@ -16,9 +16,7 @@ url = 'https://api.github.com/search/repositories'
 # Setting query parameters for the most starred Python repositories
 query_params = {
     'q': 'language:python',
-    'sort': 'stars',
-    'order': 'desc',
-    'per_page': 30  # Number of results per page (max 100)
+    'per_page': 10  # Number of results per page (max 100)
 }
 
 # Headers with authorization token
@@ -36,9 +34,15 @@ try:
     # Process each repository in the response
     for repo in response.json()['items']:
         repo_info = {
+            'id': repo['id'],
             'name': repo['name'],
+            'owner_login': repo['owner']['login'],
+            'owner_type': repo['owner']['type'],
+            'description': repo['description'] or "No description",
             'stars': repo['stargazers_count'],
-            'description': repo['description'] or "No description"
+            'url': repo['url'],
+            'updated_at': repo['updated_at'],
+            'language': repo['language']
         }
         repos_data.append(repo_info)
 
