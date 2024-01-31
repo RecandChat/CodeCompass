@@ -8,7 +8,12 @@
         "stars": 0,
         "url": "https://api.github.com/repos/Lukasaurus11/Back-End-Bank-Project",
         "updated_at": "2023-10-07T19:42:01Z",
-        "language": "Python"
+        "language": "Python",
+        "open_issues_count": 0,
+        "open_issues": 0,
+        "has_downloads": true,
+        "topics": [],
+        "forks": 0
     },
     {
         "id": 694593649,
@@ -19,7 +24,12 @@
         "stars": 0,
         "url": "https://api.github.com/repos/Lukasaurus11/Front-End-Bank-Project",
         "updated_at": "2023-10-07T19:36:49Z",
-        "language": "Vue"
+        "language": "Vue",
+        "open_issues_count": 0,
+        "open_issues": 0,
+        "has_downloads": true,
+        "topics": [],
+        "forks": 0
     },
     {
         "id": 747841692,
@@ -30,7 +40,12 @@
         "stars": 0,
         "url": "https://api.github.com/repos/Lukasaurus11/IE-Tower-WebPage",
         "updated_at": "2024-01-24T18:45:15Z",
-        "language": "JavaScript"
+        "language": "JavaScript",
+        "open_issues_count": 0,
+        "open_issues": 0,
+        "has_downloads": true,
+        "topics": [],
+        "forks": 0
     },
     {
         "id": 729129532,
@@ -41,7 +56,12 @@
         "stars": 0,
         "url": "https://api.github.com/repos/Lukasaurus11/infra-exercise-3",
         "updated_at": "2023-12-08T14:05:11Z",
-        "language": "Bicep"
+        "language": "Bicep",
+        "open_issues_count": 0,
+        "open_issues": 0,
+        "has_downloads": true,
+        "topics": [],
+        "forks": 0
     },
     {
         "id": 694594538,
@@ -52,7 +72,12 @@
         "stars": 0,
         "url": "https://api.github.com/repos/Lukasaurus11/Infrastructure-Bank-Project",
         "updated_at": "2023-10-07T16:51:06Z",
-        "language": "Bicep"
+        "language": "Bicep",
+        "open_issues_count": 0,
+        "open_issues": 0,
+        "has_downloads": true,
+        "topics": [],
+        "forks": 0
     },
     {
         "id": 708157382,
@@ -63,7 +88,12 @@
         "stars": 0,
         "url": "https://api.github.com/repos/Lukasaurus11/Lukasaurus11",
         "updated_at": "2023-10-21T17:36:41Z",
-        "language": null
+        "language": null,
+        "open_issues_count": 0,
+        "open_issues": 0,
+        "has_downloads": true,
+        "topics": [],
+        "forks": 0
     },
     {
         "id": 725157840,
@@ -74,7 +104,12 @@
         "stars": 0,
         "url": "https://api.github.com/repos/Lukasaurus11/msdocs-python-flask-webapp-quickstart",
         "updated_at": "2023-12-08T14:05:18Z",
-        "language": "Bicep"
+        "language": "Bicep",
+        "open_issues_count": 0,
+        "open_issues": 0,
+        "has_downloads": true,
+        "topics": [],
+        "forks": 0
     },
     {
         "id": 705636185,
@@ -85,6 +120,11 @@
         "stars": 0,
         "url": "https://api.github.com/repos/Lukasaurus11/Tic-Tac-Toe",
         "updated_at": "2023-10-17T09:35:13Z",
-        "language": "C"
+        "language": "C",
+        "open_issues_count": 0,
+        "open_issues": 0,
+        "has_downloads": true,
+        "topics": [],
+        "forks": 0
     }
 ]
