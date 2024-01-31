@@ -22,7 +22,7 @@ def _save_to_json(data, filename) -> None:
     :param filename: The name of the file to save the data to.
     :return: True if the data was successfully saved, False if not.
     """
-    with open(f"Data/{filename}", 'w', encoding='utf-8') as f:
+    with open(f"./monkelib/Data/{filename}", 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 
 
@@ -34,7 +34,7 @@ def _save_to_csv(data, filename) -> None:
     :return: True if the data was successfully saved, False if not.
     """
     df = pd.DataFrame(data)
-    df.to_csv(f"Data/{filename}", index=False)
+    df.to_csv(f"./monkelib/Data/{filename}", index=False)
 
 
 def _get_repo_fields(repo: dict) -> dict:
@@ -53,7 +53,12 @@ def _get_repo_fields(repo: dict) -> dict:
         'stars': repo['stargazers_count'],
         'url': repo['url'],
         'updated_at': repo['updated_at'],
-        'language': repo['language']
+        'language': repo['language'],
+        'open_issues_count': repo['open_issues_count'],
+        'open_issues': repo['open_issues'],
+        'has_downloads': repo['has_downloads'],
+        'topics': repo['topics'],
+        'forks': repo['forks']   
     }
     return repo_fields
 
@@ -63,7 +68,7 @@ def _load_secret() -> str:
     This function loads the GitHub Personal Access Token from the pat.json file.
     :return: The GitHub Personal Access Token.
     """
-    with open('../secrets/pat.json') as f:
+    with open('secrets/pat.json') as f:
         token_data = json.load(f)
         token: str = token_data['token']
     return token
