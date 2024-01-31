@@ -9,6 +9,11 @@ import json
 import pandas as pd
 
 
+# --- Constants ---
+LANGUAGE_LIST = ['Python', 'Java', 'Go', 'JavaScript', 'C++', 'TypeScript', 'PHP', 'C', 'Ruby', "C#", 'Nix',
+                 'Shell', 'Rust', 'Scala', 'Kotlin', 'Swift']
+
+
 # --- Helper functions ---
 def _save_to_json(data, filename) -> None:
     """
@@ -58,7 +63,7 @@ def _load_secret() -> str:
     This function loads the GitHub Personal Access Token from the pat.json file.
     :return: The GitHub Personal Access Token.
     """
-    with open('secrets/pat.json') as f:
+    with open('../secrets/pat.json') as f:
         token_data = json.load(f)
         token: str = token_data['token']
     return token
@@ -73,8 +78,8 @@ def get_user_repo(username: str) -> bool:
     """
     url: str = f"https://api.github.com/users/{username}/repos"
     try:
-        response: requests.Response = requests.get(url)
-        response.raise_for_status()  # This will raise an exception for HTTP error codes
+        response: requests.Response = requests.get(url, allow_redirects=False)
+        response.raise_for_status()
 
         repos_data: list = []
 
@@ -82,11 +87,9 @@ def get_user_repo(username: str) -> bool:
             repo_info: dict = _get_repo_fields(repo)
             repos_data.append(repo_info)
 
-        # Writing data to a JSON file
         _save_to_json(repos_data, 'userRepos.json')
         print("Data successfully written to userRepos.json")
 
-        # Writing data to a CSV file
         _save_to_csv(repos_data, 'userRepos.csv')
         print("Data successfully written to userRepos.csv")
         return True
@@ -99,18 +102,21 @@ def get_user_repo(username: str) -> bool:
         return False
 
 
-def get_most_starred_python_repos() -> bool:
+def get_most_starred_repos() -> bool:
     """
-    This function gets the most starred Python repositories from the GitHub API.
+    This function gets the most starred repositories for multiple languages from the GitHub API.
     :return: True if the request was successful, False if not.
     """
 
     url: str = 'https://api.github.com/search/repositories'
-    query_params: dict = {
-        'q': 'language:python',
-        'per_page': 10  # Number of results per page (max 100)
-    }
-    # Load the token from the pat.json file
+
+    queryList = []
+    for language in LANGUAGE_LIST:
+        queryList.append({
+            'q': f'language:{language}',
+            'per_page': 75,
+        })
+
     token: str = _load_secret()
 
     headers: dict = {
@@ -118,28 +124,30 @@ def get_most_starred_python_repos() -> bool:
         'Accept': 'application/vnd.github.v3+json'
     }
 
-    try:
-        response: requests.Response = requests.get(url, headers=headers, params=query_params)
-        response.raise_for_status()  # This will raise an exception for HTTP error codes
+    dataList = []
+    for query in queryList:
+        try:
+            response: requests.Response = requests.get(url, headers=headers, params=query, allow_redirects=False)
+            response.raise_for_status()
 
-        repos_data: list = []
+            repos_data: list = []
 
-        for repo in response.json()['items']:
-            repo_info = _get_repo_fields(repo)
-            repos_data.append(repo_info)
+            for repo in response.json()['items']:
+                repo_info = _get_repo_fields(repo)
+                repos_data.append(repo_info)
 
-        # Writing data to a JSON file
-        _save_to_json(repos_data, 'most_starred_python_repos.json')
-        print("Data successfully written to most_starred_python_repos.json")
+            dataList.append(repos_data)
+        except requests.exceptions.HTTPError as err:
+            print(f"HTTP error occurred: {err}")
+            return False
+        except Exception as err:
+            print(f"An error occurred: {err}")
+            return False
 
-        # Writing data to a CSV file
-        _save_to_csv(repos_data, 'most_starred_python_repos.csv')
-        print("Data successfully written to most_starred_python_repos.csv")
-        return True
+    dataList = [item for sublist in dataList for item in sublist]   # Flatten the list
+    _save_to_json(dataList, 'mostStarredRepos.json')
+    print("Data successfully written to mostStarredRepos.json")
 
-    except requests.exceptions.HTTPError as err:
-        print(f"HTTP error occurred: {err}")
-        return False
-    except Exception as err:
-        print(f"An error occurred: {err}")
-        return False
+    _save_to_csv(dataList, 'mostStarredRepos.csv')
+    print("Data successfully written to mostStarredRepos.csv")
+    return True

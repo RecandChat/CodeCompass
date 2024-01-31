@@ -2,3 +2,4 @@
 .venv/
 secrets/
 .idea/
+monkelib/API/__pycache__/
