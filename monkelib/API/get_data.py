@@ -5,13 +5,16 @@ Functional description:
 """
 # --- Imports ---
 import requests
-import json
-import pandas as pd
-
+from json import dump, load
+from pandas import DataFrame
+from os.path import dirname
+from pathlib import Path
 
 # --- Constants ---
-LANGUAGE_LIST = ['Python', 'Java', 'Go', 'JavaScript', 'C++', 'TypeScript', 'PHP', 'C', 'Ruby', "C#", 'Nix',
-                 'Shell', 'Rust', 'Scala', 'Kotlin', 'Swift']
+LANGUAGE_LIST: list = ['Python', 'Java', 'Go', 'JavaScript', 'C++', 'TypeScript', 'PHP', 'C', 'Ruby', "C#", 'Nix',
+                       'Shell', 'Rust', 'Scala', 'Kotlin', 'Swift']
+PARENT_PATH: str = dirname(dirname(__file__))  # Get the parent directory of the current directory (monkelib)
+OUTER_PATH: str = dirname(dirname(dirname(__file__)))  # Get the most outer directory of the project
 
 
 # --- Helper functions ---
@@ -22,8 +25,8 @@ def _save_to_json(data, filename) -> None:
     :param filename: The name of the file to save the data to.
     :return: True if the data was successfully saved, False if not.
     """
-    with open(f"./monkelib/Data/{filename}", 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=4)
+    with open(Path(PARENT_PATH + '/Data/' + filename), 'w', encoding='utf-8') as f:
+        dump(data, f, ensure_ascii=False, indent=4)
 
 
 def _save_to_csv(data, filename) -> None:
@@ -33,8 +36,9 @@ def _save_to_csv(data, filename) -> None:
     :param filename: The name of the file to save the data to.
     :return: True if the data was successfully saved, False if not.
     """
-    df = pd.DataFrame(data)
-    df.to_csv(f"./monkelib/Data/{filename}", index=False)
+
+    df = DataFrame(data)
+    df.to_csv(Path(PARENT_PATH + '/Data/' + filename), index=False)
 
 
 def _get_repo_fields(repo: dict) -> dict:
@@ -44,18 +48,18 @@ def _get_repo_fields(repo: dict) -> dict:
     :param repo: The repository.
     :return: A dictionary containing the fields of the repository.
     """
-    repo_fields: dict = { # This should contain as many numberical and categorical fields as possible
+    repo_fields: dict = {
         'id': repo['id'],
         'name': repo['name'],
         'owner_user': repo['owner']['login'],
         'owner_type': repo['owner']['type'],
         'description': repo['description'] or "No description",
         'url': repo['url'],
-        'is_fork': repo['fork'], # Forked from another repo
-        'date_created': repo['created_at'], # datetime 
-        'date_updated': repo['updated_at'], # different from date pushed because of pull requests
-        'date_pushed': repo['pushed_at'], # last time the repo was pushed to. 
-        'size': repo['size'], # size in KB
+        'is_fork': repo['fork'],    # Forked from another repo
+        'date_created': repo['created_at'],
+        'date_updated': repo['updated_at'],     # different from date pushed because of pull requests
+        'date_pushed': repo['pushed_at'],
+        'size': repo['size'],   # size in KB
         'stars': repo['stargazers_count'],
         'watchers': repo['watchers_count'],
         'updated_at': repo['updated_at'],
@@ -70,11 +74,11 @@ def _get_repo_fields(repo: dict) -> dict:
         'is_archived': repo['archived'],
         'is_disabled': repo['disabled'],
         'is_template': repo['is_template'],
-        'license': repo['license']['name'] if repo['license'] else "No license", # license name 
+        'license': repo['license']['name'] if repo['license'] else "No license",
         'allows_forking': repo['allow_forking'],
         'open_issues_count': repo['open_issues_count'],
         'open_issues': repo['open_issues'],
-        'topics': repo['topics'],  
+        'topics': repo['topics'],
     }
     return repo_fields
 
@@ -84,8 +88,8 @@ def _load_secret() -> str:
     This function loads the GitHub Personal Access Token from the pat.json file.
     :return: The GitHub Personal Access Token.
     """
-    with open('secrets/pat.json') as f: # This needs to be dynamically ajusted (mac, windows, linux)
-        token_data = json.load(f)
+    with open(OUTER_PATH + '/secrets/pat.json') as f:
+        token_data = load(f)
         token: str = token_data['token']
     return token
 
@@ -131,7 +135,7 @@ def get_most_starred_repos() -> bool:
 
     url: str = 'https://api.github.com/search/repositories'
 
-    queryList = []
+    queryList: list = []
     for language in LANGUAGE_LIST:
         queryList.append({
             'q': f'language:{language}',
@@ -145,7 +149,7 @@ def get_most_starred_repos() -> bool:
         'Accept': 'application/vnd.github.v3+json'
     }
 
-    dataList = []
+    dataList: list = []
     for query in queryList:
         try:
             response: requests.Response = requests.get(url, headers=headers, params=query, allow_redirects=False)
@@ -165,7 +169,7 @@ def get_most_starred_repos() -> bool:
             print(f"An error occurred: {err}")
             return False
 
-    dataList = [item for sublist in dataList for item in sublist]   # Flatten the list
+    dataList: list = [item for sublist in dataList for item in sublist]  # Flatten the list
     _save_to_json(dataList, 'mostStarredRepos.json')
     print("Data successfully written to mostStarredRepos.json")
 
