@@ -51,18 +51,34 @@ def _get_repo_fields(repo: dict) -> dict:
     repo_fields: dict = {
         'id': repo['id'],
         'name': repo['name'],
-        'owner_login': repo['owner']['login'],
+        'owner_user': repo['owner']['login'],
         'owner_type': repo['owner']['type'],
         'description': repo['description'] or "No description",
-        'stars': repo['stargazers_count'],
         'url': repo['url'],
+        'is_fork': repo['fork'],    # Forked from another repo
+        'date_created': repo['created_at'],
+        'date_updated': repo['updated_at'],     # different from date pushed because of pull requests
+        'date_pushed': repo['pushed_at'],
+        'size': repo['size'],   # size in KB
+        'stars': repo['stargazers_count'],
+        'watchers': repo['watchers_count'],
         'updated_at': repo['updated_at'],
         'language': repo['language'],
+        'has_issues': repo['has_issues'],
+        'has_projects': repo['has_projects'],
+        'has_downloads': repo['has_downloads'],
+        'has_wiki': repo['has_wiki'],
+        'has_pages': repo['has_pages'],
+        'has _discussions': repo['has_discussions'],
+        'num_forks': repo['forks'],
+        'is_archived': repo['archived'],
+        'is_disabled': repo['disabled'],
+        'is_template': repo['is_template'],
+        'license': repo['license']['name'] if repo['license'] else "No license",
+        'allows_forking': repo['allow_forking'],
         'open_issues_count': repo['open_issues_count'],
         'open_issues': repo['open_issues'],
-        'has_downloads': repo['has_downloads'],
         'topics': repo['topics'],
-        'forks': repo['forks']
     }
     return repo_fields
 
