@@ -3,7 +3,7 @@ Functional description:
     - This file contains the functions that are used to get data from the GitHub API.
     - Helper functions are prefixed with an underscore, and they should not be used outside of this file.
 """
-# test workflow
+# test workflo
 # --- Imports ---
 import requests
 from json import dump, load
