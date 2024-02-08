@@ -1,0 +1,29 @@
+name: API Directory Changes Tests
+
+on:
+  push:
+    paths:
+      - 'monkelib/API/**'
+  pull_request:
+    paths:
+      - 'monkelib/API/**'
+
+jobs:
+  test-init-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      
+      - name: Set up Python 3.x
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+      
+      - name: Test __init__.py Script
+        run: |
+          python monkelib/__init__.py
