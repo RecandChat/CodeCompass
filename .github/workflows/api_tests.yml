@@ -7,6 +7,7 @@ on:
   pull_request:
     paths:
       - 'monkelib/API/**'
+  workflow_dispatch: # Allows for manual workflow runs
 
 jobs:
   test-init-script:
