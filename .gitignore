@@ -3,5 +3,5 @@
 secrets/
 .idea/
 monkelib/API/__pycache__/
-monkelib/Data/*.csv
-monkelib/Data/*.json
+#monkelib/Data/*.csv
+#monkelib/Data/*.json
