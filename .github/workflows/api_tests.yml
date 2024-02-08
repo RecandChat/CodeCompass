@@ -23,6 +23,10 @@ jobs:
       - name: Install Dependencies
         run: |
           pip install -r requirements.txt
+    
+      - name: Set up Local Environment File
+        run: echo '{"token":"${{ secrets.GH_PAT }}"}' > ./secrets/pat.json
+        shell: bash
       
       - name: Test __init__.py Script
         run: |
