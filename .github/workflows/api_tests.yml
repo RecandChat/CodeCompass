@@ -7,7 +7,7 @@ on:
   pull_request:
     paths:
       - 'monkelib/API/**'
-  workflow_dispatch: # Allows for manual workflow runs
+  workflow_dispatch:
 
 jobs:
   test-init-script:
@@ -22,13 +22,14 @@ jobs:
           python-version: '3.x'
       
       - name: Install Dependencies
-        run: |
-          pip install -r requirements.txt
+        run: pip install -r requirements.txt
     
+      - name: Create Secrets Directory
+        run: mkdir -p ./secrets
+      
       - name: Set up Local Environment File
         run: echo '{"token":"${{ secrets.GH_PAT }}"}' > ./secrets/pat.json
         shell: bash
       
       - name: Test __init__.py Script
-        run: |
-          python monkelib/__init__.py
+        run: python monkelib/__init__.py
