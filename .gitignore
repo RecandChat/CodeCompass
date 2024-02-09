@@ -10,4 +10,3 @@ monkelib/Tests/functional/__pycache__/
 monkelib/Tests/functional/.pytest_cache/
 monkelib/Data/*.csv
 monkelib/Data/*.json
-monkelib/main.py # gabes file
