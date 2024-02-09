@@ -2,6 +2,11 @@
 .venv/
 secrets/
 .idea/
+monkelib/__pycache__/
 monkelib/API/__pycache__/
+monkelib/Tests/__pycache__/
+monkelib/Tests/.pytest_cache/
+monkelib/Tests/functional/__pycache__/
+monkelib/Tests/functional/.pytest_cache/
 monkelib/Data/*.csv
 monkelib/Data/*.json
