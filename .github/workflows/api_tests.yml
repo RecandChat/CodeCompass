@@ -31,5 +31,7 @@ jobs:
         run: echo '{"token":"${{ secrets.GH_PAT }}"}' > ./secrets/pat.json
         shell: bash
       
-      - name: Test __init__.py Script
-        run: python monkelib/__init__.py
+      - name: Test with Pytest
+        run: |
+          # Run the function tests
+          python -m pytest monkelib/Tests/functional -v
