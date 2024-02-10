@@ -1,0 +1,1147 @@
+id,name,description,url,stars,language,num_forks,open_issues
+54346799,publicapis,collective list free APIs,https://api.github.com/repos/public-apis/public-apis,278839,Python,31309,237
+83222441,systemdesignprimer,Learn design largescale systems Prep system design interview Includes Anki flashcards,https://api.github.com/repos/donnemartin/system-design-primer,245714,Python,42633,415
+63476337,Python,Algorithms implemented Python,https://api.github.com/repos/TheAlgorithms/Python,175617,Python,43858,224
+123458551,Python100Days,Python 100,https://api.github.com/repos/jackfrued/Python-100-Days,146346,Python,51102,706
+1039520,youtubedl,Commandline program download videos YouTubecom video sites,https://api.github.com/repos/ytdl-org/youtube-dl,126899,Python,9785,4263
+527591471,stablediffusionwebui,Stable Diffusion web UI,https://api.github.com/repos/AUTOMATIC1111/stable-diffusion-webui,120528,Python,23999,1869
+155220641,transformers,Transformers Stateoftheart Machine Learning Pytorch TensorFlow JAX,https://api.github.com/repos/huggingface/transformers,119975,Python,24029,966
+58028038,HelloGitHub,octocat GitHub Share interesting entrylevel open source projects GitHub,https://api.github.com/repos/521xueweihan/HelloGitHub,81929,Python,9672,94
+33614304,thefuck,Magnificent app corrects previous console command,https://api.github.com/repos/nvbn/thefuck,81320,Python,3545,323
+51117837,models,Models examples built TensorFlow,https://api.github.com/repos/tensorflow/models,76389,Python,46187,1205
+552661142,langchain,Build contextaware reasoning applications,https://api.github.com/repos/langchain-ai/langchain,76217,Python,11646,2142
+65600975,pytorch,Tensors Dynamic neural networks Python strong GPU acceleration,https://api.github.com/repos/pytorch/pytorch,75276,Python,20815,13396
+160919119,fastapi,FastAPI framework high performance easy learn fast code ready production,https://api.github.com/repos/tiangolo/fastapi,67929,Python,5759,472
+12888993,core,housewithgarden Open source home automation puts local control privacy,https://api.github.com/repos/home-assistant/core,67226,Python,27277,2931
+307260205,ytdlp,youtubedl fork additional features fixes,https://api.github.com/repos/yt-dlp/yt-dlp,65756,Python,5427,1421
+596892,flask,Python micro framework building web applications,https://api.github.com/repos/pallets/flask,65698,Python,16160,5
+21872392,awesomemachinelearning,curated list awesome Machine Learning frameworks libraries software,https://api.github.com/repos/josephmisiti/awesome-machine-learning,62614,Python,14535,2
+212639071,devopsexercises,Linux Jenkins AWS SRE Prometheus Docker Python Ansible Git Kubernetes Terraform OpenStack SQL NoSQL Azure GCP DNS Elastic Network Virtualization DevOps Interview Questions,https://api.github.com/repos/bregman-arie/devops-exercises,61696,Python,13375,26
+145553672,funNLP,ITbertcocoNLPXLORENLUcs224n ASR MicrosoftapiSpaCy Common VoicebertKeyphrasepke4cnocrOCRPython3nlpspeechaligner AmpliGraph PythonScattertext pythonBERT ERNIENLPSynonymsHarvestTextword2wordPython623564ASRKashgarigpt2TextTeaser 14WandSiamese bilstmTransformerHacker NewsBERTLitBankNLP100Facebook LAMATransformerXLBERTELMoGPTCommonsenseQAQA PDF PPTSQLNLPEDANLP mongodbULMFiT qingyun seqGANmasr PythonBERTConvLabrasaTensorFlowBERTNLPTOPOpenCLaPUERg2pCZincbase jiebafast jiebaBERTPythonStanfordNLP 020PythonNeuralNLPNeuralClassifierNeuroNER vs BertNER2019GPT2MLNLP Machine LearningNLPnlp4hanNERNHMMXLMFacebookBERTCoupletAI CNNBiLSTMAttention MiningZhiDaoQACorpus 580brat rapid annotation tool 14nlpallennlpPDF GraphbrainAI OCR Python similarityjavaALBERT Transformers 20 Audioset Poplar 186Amazon Python wwsearchCHAMELEON 8BERTDocSearch LIDA aili fastest inmemory index East mecabPython featurizer baselinePySS3AISS3 NLPCOPE doccano PreNLPGPT2GPT2chitchatLeaderboardsDatasetsPapersColab NLP GitHub Typo CorpusGitHubTextCluster Short text clusterBLINKBertPuncBERTTokenizerspaCy NLP pythonchatbotlist MOSNet BSSEval STOI PESQ SRMR 138GBRoBERTa BERTNERPytorchBERTNER 2019NLP Chinese medical dialogue data awesomenlpsentimentanalysis LineFlowNLPNLP MedQuADTransfer Learning Natural Language Processing NLP TokenizersCLUENER Fine Grained Named Entity Recognition BERTNLPnlp Word EmbeddingNERText ClassificatinText GenerationText Similaritynlpkerastensorflow PythonNLP BlackstonespaCy pipelineNLP ELECTREA pretrain Chinese Model albertchinesener ALBERTNER GPT2 attnvisGPT2BERTtransformerCoVoSTFacebook11Jiagu BiLSTM unetNLP CLUEDatasetSearch NLPNLPNLP medicalNER Fortepipeline PythonPyLaiaTextFoolerHaystackQA,https://api.github.com/repos/fighting41love/funNLP,61543,Python,13953,23
+33015583,keras,Deep Learning humans,https://api.github.com/repos/keras-team/keras,60285,Python,19534,191
+3638964,ansible,Ansible radically simple automation platform makes applications systems easier deploy maintain Automate code deployment network configuration cloud management language approaches plain English SSH agents install remote systems httpsdocsansiblecom,https://api.github.com/repos/ansible/ansible,60278,Python,24026,866
+81598961,cpython,Python programming language,https://api.github.com/repos/python/cpython,58269,Python,28885,8471
+843222,scikitlearn,scikitlearn machine learning Python,https://api.github.com/repos/scikit-learn/scikit-learn,57338,Python,25116,2291
+32689863,manim,Animation engine explanatory math videos,https://api.github.com/repos/3b1b/manim,56288,Python,5644,403
+620936652,gpt4free,official gpt4free repository collection powerful language models,https://api.github.com/repos/xtekky/gpt4free,52476,Python,12854,105
+616372661,gptacademic,GPTGLMLLMPythonCPDFLaTexLLMchatglm3 deepseekcoder llama2 rwkv claude2 moss,https://api.github.com/repos/binary-husky/gpt_academic,51492,Python,6704,180
+71948498,localstack,fully functional local AWS cloud stack Develop test cloud Serverless apps offline,https://api.github.com/repos/localstack/localstack,51212,Python,3880,359
+83844720,facerecognition,worlds simplest facial recognition api Python command line,https://api.github.com/repos/ageitgey/face_recognition,51039,Python,13342,759
+1362490,requests,simple elegant HTTP library,https://api.github.com/repos/psf/requests,51006,Python,9335,272
+529502,scrapy,Scrapy fast highlevel web crawling scraping framework Python,https://api.github.com/repos/scrapy/scrapy,50087,Python,10413,691
+188660663,RealTimeVoiceCloning,Clone voice 5 seconds generate arbitrary speech realtime,https://api.github.com/repos/CorentinJ/Real-Time-Voice-Cloning,49890,Python,8509,185
+601538369,llama,Inference code LLaMA models,https://api.github.com/repos/facebookresearch/llama,49563,Python,8566,311
+634224458,gptengineer,Specify want build AI asks clarification builds,https://api.github.com/repos/gpt-engineer-org/gpt-engineer,48966,Python,7952,28
+114747226,faceswap,Deepfakes Software,https://api.github.com/repos/deepfakes/faceswap,48438,Python,12921,19
+635240594,privateGPT,Interact documents power GPT 100 privately data leaks,https://api.github.com/repos/imartinez/privateGPT,47379,Python,6332,100
+162998479,sherlock,Hunt social media accounts username social networks,https://api.github.com/repos/sherlock-project/sherlock,46565,Python,5968,183
+74627617,openpilot,openpilot open source driver assistance system openpilot performs functions Automated Lane Centering Adaptive Cruise Control 250 supported car makes models,https://api.github.com/repos/commaai/openpilot,46426,Python,8445,289
+220809393,rich,Rich Python library rich text beautiful formatting terminal,https://api.github.com/repos/Textualize/rich,46319,Python,1719,246
+40416236,biglistofnaughtystrings,Big List Naughty Strings list strings high probability causing issues userinput data,https://api.github.com/repos/minimaxir/big-list-of-naughty-strings,45689,Python,2235,100
+264818686,yolov5,YOLOv5 PyTorch ONNX CoreML TFLite,https://api.github.com/repos/ultralytics/yolov5,45023,Python,15357,152
+136026789,DeepFaceLab,DeepFaceLab leading software creating deepfakes,https://api.github.com/repos/iperov/DeepFaceLab,44459,Python,10079,548
+254832799,hackingtool,Hacking Tool Hackers,https://api.github.com/repos/Z4nzu/hackingtool,41883,Python,4721,37
+858127,pandas,Flexible powerful data analysis manipulation library Python providing labeled data structures similar R dataframe objects statistical functions,https://api.github.com/repos/pandas-dev/pandas,41171,Python,17207,3639
+41058054,CppCoreGuidelines,C Core Guidelines set triedandtrue guidelines rules best practices coding C,https://api.github.com/repos/isocpp/CppCoreGuidelines,41021,Python,5478,252
+666299222,openinterpreter,natural language interface computers,https://api.github.com/repos/KillianLucas/open-interpreter,40115,Python,3524,216
+4578002,pythonpatterns,collection design patternsidioms Python,https://api.github.com/repos/faif/python-patterns,39007,Python,7014,13
+613349035,ChatGLM6B,ChatGLM6B Open Bilingual Dialogue Language Model,https://api.github.com/repos/THUDM/ChatGLM-6B,37700,Python,5042,565
+83119431,ailearning,AiLearningPyTorchNLTKTF2,https://api.github.com/repos/apachecn/ailearning,37411,Python,11409,2
+70905478,DeepLearningPapersReadingRoadmap,Deep Learning papers reading roadmap eager learn amazing tech,https://api.github.com/repos/floodsung/Deep-Learning-Papers-Reading-Roadmap,37053,Python,7369,88
+90563585,cheatsh,cheat sheet need,https://api.github.com/repos/chubin/cheat.sh,37000,Python,1810,130
+154747577,bert,TensorFlow code pretrained models BERT,https://api.github.com/repos/google-research/bert,36399,Python,9532,881
+262296122,PaddleOCR,Awesome multilingual OCR toolkits based PaddlePaddle practical ultra lightweight OCR system support 80 languages recognition provide data annotation synthesis tools support training deployment server mobile embedded IoT devices,https://api.github.com/repos/PaddlePaddle/PaddleOCR,36364,Python,7099,1058
+422274596,ColossalAI,Making large AI models cheaper faster accessible,https://api.github.com/repos/hpcaitech/ColossalAI,36350,Python,4171,379
+577603990,OpenAssistant,OpenAssistant chatbased assistant understands tasks interact thirdparty systems retrieve information dynamically,https://api.github.com/repos/LAION-AI/Open-Assistant,36286,Python,3302,284
+873328,sentry,Developerfirst error tracking performance monitoring,https://api.github.com/repos/getsentry/sentry,36245,Python,4093,2042
+125266328,black,uncompromising Python code formatter,https://api.github.com/repos/psf/black,36143,Python,2383,371
+191113739,interviewinternalreference,2023,https://api.github.com/repos/0voice/interview_internal_reference,35822,Python,9458,30
+118861276,pythoncheatsheet,Comprehensive Python Cheatsheet,https://api.github.com/repos/gto76/python-cheatsheet,34956,Python,6359,24
+101684374,wtfpython,fck Python,https://api.github.com/repos/satwikkansal/wtfpython,34818,Python,2723,78
+608555244,TaskMatrix,description,https://api.github.com/repos/moymix/TaskMatrix,34451,Python,3407,250
+642323624,DragGAN,Official Code DragGAN SIGGRAPH 2023,https://api.github.com/repos/XingangPan/DragGAN,34415,Python,3985,142
+569927055,stablediffusion,HighResolution Image Synthesis Latent Diffusion Models,https://api.github.com/repos/Stability-AI/stablediffusion,34267,Python,4555,249
+660551251,MetaGPT,MultiAgent Framework Given line Requirement return PRD Design Tasks Repo,https://api.github.com/repos/geekan/MetaGPT,34178,Python,4059,208
+237791077,diagrams,art Diagram Code prototyping cloud system architectures,https://api.github.com/repos/mingrammer/diagrams,33935,Python,2217,357
+349321229,GFPGAN,GFPGAN aims developing Practical Algorithms Realworld Face Restoration,https://api.github.com/repos/TencentARC/GFPGAN,33935,Python,5707,321
+519832,mitmproxy,interactive TLScapable intercepting HTTP proxy penetration testers software developers,https://api.github.com/repos/mitmproxy/mitmproxy,33552,Python,3957,322
+57222302,gym,toolkit developing comparing reinforcement learning algorithms,https://api.github.com/repos/openai/gym,33507,Python,8711,80
+33884891,airflow,Apache Airflow platform programmatically author schedule monitor workflows,https://api.github.com/repos/apache/airflow,33438,Python,13476,871
+206462776,GitHubChineseTopCharts,cn GitHub,https://api.github.com/repos/GrowingGit/GitHub-Chinese-Top-Charts,81267,Java,11498,153
+160640094,LeetCodeAnimation,Demonstrate questions LeetCode form animationLeetCode,https://api.github.com/repos/MisterBooo/LeetCodeAnimation,74650,Java,14058,18
+127988011,mall,mallSpringBootMyBatisDocker,https://api.github.com/repos/macrozheng/mall,73686,Java,28145,36
+151834062,advancedjava,Core Interview Questions Answers Experienced JavaBackend Developers Java,https://api.github.com/repos/doocs/advanced-java,73332,Java,18846,3
+507775,elasticsearch,Free Open Distributed RESTful Search Engine,https://api.github.com/repos/elastic/elasticsearch,66695,Java,24185,4756
+561730219,helloalgo,Hello Python C Java C Swift JS TS Dart Rust C Zig English edition ongoing,https://api.github.com/repos/krahets/hello-algo,61968,Java,7636,15
+81975372,interviews,need know job,https://api.github.com/repos/kdn251/interviews,61227,Java,12772,111
+63477660,Java,Algorithms implemented Java,https://api.github.com/repos/TheAlgorithms/Java,55719,Java,19057,54
+1148753,springframework,Spring Framework,https://api.github.com/repos/spring-projects/spring-framework,54409,Java,37485,349
+20300177,guava,Google core libraries Java,https://api.github.com/repos/google/guava,49046,Java,10992,727
+173228436,ghidra,Ghidra software reverse engineering SRE framework,https://api.github.com/repos/NationalSecurityAgency/ghidra,46084,Java,5525,1496
+892275,retrofit,typesafe HTTP client Android JVM,https://api.github.com/repos/square/retrofit,42396,Java,7404,157
+4710920,dubbo,java implementation Apache Dubbo RPC microservice framework,https://api.github.com/repos/apache/dubbo,39790,Java,26433,961
+19148949,MPAndroidChart,powerful Android chart view graph view library supporting line bar pie radar bubble candlestick charts scaling panning animations,https://api.github.com/repos/PhilJay/MPAndroidChart,37114,Java,9095,2158
+159152904,jeecgboot,SpringBoot 2x3xSpringCloudAnt DesignVueMybatisShiroJWT OnlineCodingMERGEJava70,https://api.github.com/repos/jeecgboot/jeecg-boot,37029,Java,14235,54
+44662669,dbeaver,Free universal database tool SQL client,https://api.github.com/repos/dbeaver/dbeaver,35966,Java,3224,1971
+70198875,lottieandroid,Render Effects animations natively Android iOS Web React Native,https://api.github.com/repos/airbnb/lottie-android,34521,Java,5444,20
+146633589,arthas,Alibaba Java Diagnostic Tool ArthasAlibaba JavaArthas,https://api.github.com/repos/alibaba/arthas,34272,Java,7367,350
+267775629,helloalgorithm,star ChatGPT,https://api.github.com/repos/geekxh/hello-algorithm,34226,Java,6498,9
+11267509,glide,image loading caching library Android focused smooth scrolling,https://api.github.com/repos/bumptech/glide,34207,Java,6157,499
+64558143,AndroidUtilCode,fire Android developers collect following utilsupdating,https://api.github.com/repos/Blankj/AndroidUtilCode,32798,Java,10706,289
+1064563,netty,Netty project eventdriven asynchronous network application framework,https://api.github.com/repos/netty/netty,32421,Java,15764,614
+2562751,zxing,ZXing Zebra Crossing barcode scanning library Java Android,https://api.github.com/repos/zxing/zxing,31980,Java,9476,4
+110211147,springbootdemo,Spring Boot,https://api.github.com/repos/xkcoding/spring-boot-demo,31531,Java,10736,127
+7613257,selenium,browser automation framework ecosystem,https://api.github.com/repos/SeleniumHQ/selenium,28783,Java,8018,177
+44804216,termuxapp,Termux terminal emulator application Android OS extendible variety packages,https://api.github.com/repos/termux/termux-app,28734,Java,3213,348
+137451403,nacos,easytouse dynamic service discovery configuration service management platform building cloud native applications,https://api.github.com/repos/alibaba/nacos,28514,Java,12498,248
+2700159,druid,DataWorkshttpshelpaliyuncomdocumentdetail137663html,https://api.github.com/repos/alibaba/druid,27535,Java,8591,2173
+41889031,NewPipe,libre lightweight streaming frontend Android,https://api.github.com/repos/TeamNewPipe/NewPipe,27452,Java,2921,1242
+131789494,SpringAll,Spring BootSpring Boot ShiroSpring BatchSpring CloudSpring Cloud AlibabaSpring Security Spring Security OAuth2Springhttpsmrbirdcc,https://api.github.com/repos/wuyouzhuguli/SpringAll,27416,Java,8029,32
+7587038,canal,MySQL binlog,https://api.github.com/repos/alibaba/canal,27372,Java,7541,1026
+116237823,vhr,SpringBootVue,https://api.github.com/repos/lenve/vhr,26721,Java,10355,209
+47023603,xxljob,distributed task scheduling frameworkXXLJOB,https://api.github.com/repos/xuxueli/xxl-job,26057,Java,10602,1314
+148736243,miaosha,,https://api.github.com/repos/qiurunze123/miaosha,25988,Java,6669,1
+8575137,butterknife,Bind Android views callbacks fields methods,https://api.github.com/repos/JakeWharton/butterknife,25585,Java,4677,116
+2700474,fastjson,FASTJSON 20x released faster secure recommend upgrade,https://api.github.com/repos/alibaba/fastjson,25570,Java,6615,2076
+154648112,toBeTopJavaer,Javaer Java,https://api.github.com/repos/hollischuang/toBeTopJavaer,25073,Java,5513,59
+2990192,SignalAndroid,private messenger Android,https://api.github.com/repos/signalapp/Signal-Android,24611,Java,6043,319
+45721011,skywalking,APM Application Performance Monitoring System,https://api.github.com/repos/apache/skywalking,22988,Java,6451,48
+32538871,gson,Java serializationdeserialization library convert Java Objects JSON,https://api.github.com/repos/google/gson,22793,Java,4383,342
+5373551,libgdx,DesktopAndroidHTML5iOS Java game development framework,https://api.github.com/repos/libgdx/libgdx,22462,Java,6552,299
+20773773,bazel,fast scalable multilanguage extensible build system,https://api.github.com/repos/bazelbuild/bazel,22007,Java,4011,1967
+332357698,ruoyivuepro,RuoYiVue Pro Spring Boot MyBatis Plus Vue Element RBAC SaaS Flowable Star,https://api.github.com/repos/YunaiV/ruoyi-vue-pro,21867,Java,4618,9
+128018428,Sentinel,powerful flow control component enabling reliability resilience monitoring microservices,https://api.github.com/repos/alibaba/Sentinel,21763,Java,7927,795
+20818126,ExoPlayer,extensible media player Android,https://api.github.com/repos/google/ExoPlayer,21345,Java,6099,712
+161757837,eladmin,eladmin jpa Spring Boot 264 Jpa Spring SecurityRedisVue RBAC,https://api.github.com/repos/elunez/eladmin,20575,Java,7264,13
+89822531,Mindustry,automation tower defense RTS,https://api.github.com/repos/Anuken/Mindustry,20481,Java,2781,179
+75164823,rocketmq,Apache RocketMQ cloud native messaging streaming platform making simple build eventdriven applications,https://api.github.com/repos/apache/rocketmq,20287,Java,11455,461
+6834703,FizzBuzzEnterpriseEdition,FizzBuzz Enterprise Edition nononsense implementation FizzBuzz businessmen business purposes,https://api.github.com/repos/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition,20146,Java,754,467
+144705602,DoKit,,https://api.github.com/repos/didi/DoKit,19849,Java,3095,244
+73614722,GSYVideoPlayer,IJKplayerExoPlayerMediaPlayerHTTPSgifrotation90270 rtspconcatmpeg,https://api.github.com/repos/CarGuo/GSYVideoPlayer,19458,Java,4153,17
+49876476,shardingsphere,Distributed SQL transaction query engine data sharding scaling encryption database,https://api.github.com/repos/apache/shardingsphere,19234,Java,6635,1227
+8205602,mybatis3,MyBatis SQL mapper framework Java,https://api.github.com/repos/mybatis/mybatis-3,19229,Java,12724,207
+11125589,keycloak,Open Source Identity Access Management Modern Applications Services,https://api.github.com/repos/keycloak/keycloak,18997,Java,6099,2124
+126365965,litemall,litemall Spring Boot Vue Vue,https://api.github.com/repos/linlinjava/litemall,18664,Java,7168,30
+7010724,cat,CAT Java CC Nodejs Python MVCRPC,https://api.github.com/repos/dianping/cat,18319,Java,5409,181
+3766706,Apktool,tool reverse engineering Android apk files,https://api.github.com/repos/iBotPeaches/Apktool,18270,Java,3553,52
+148496687,SpringBootLabs,Spring Boot 2XSpring CloudSpring Cloud AlibabaDubbo Star 1024,https://api.github.com/repos/yudaocode/SpringBoot-Labs,18108,Java,5808,44
+594155488,StirlingPDF,locally hosted web application allows perform operations PDF files,https://api.github.com/repos/Stirling-Tools/Stirling-PDF,17685,Java,1202,122
+87624870,SpringCloudLearning,Spring Cloud,https://api.github.com/repos/forezp/SpringCloudLearning,17652,Java,8139,48
+31533997,fresco,Android library managing images memory use,https://api.github.com/repos/facebook/fresco,17026,Java,3791,234
+67481986,tinker,Tinker hotfix solution library Android supports dex library resources update reinstall apk,https://api.github.com/repos/Tencent/tinker,16996,Java,3350,516
+5901900,disruptor,High Performance InterThread Messaging Library,https://api.github.com/repos/LMAX-Exchange/disruptor,16836,Java,3929,16
+2862290,AndroidUniversalImageLoader,Powerful flexible library loading caching displaying images Android,https://api.github.com/repos/nostra13/Android-Universal-Image-Loader,16810,Java,6180,452
+69953445,zheng,SpringSpringMVCMybatisJ2EE,https://api.github.com/repos/shuzheng/zheng,16617,Java,7451,78
+4576305,zipkin,Zipkin distributed tracing system,https://api.github.com/repos/openzipkin/zipkin,16594,Java,3104,196
+74359442,APIJSON,ORM JSON JSON Transmission Protocol ORM Library provides APIs Docs writing code,https://api.github.com/repos/Tencent/APIJSON,16339,Java,2074,259
+85371262,Algorithms,collection algorithms data structures,https://api.github.com/repos/williamfiset/Algorithms,16212,Java,4226,106
+81057842,springbootlearningexample,spring boot spring boot,https://api.github.com/repos/JeffLi1993/springboot-learning-example,15917,Java,7142,53
+23096959,,programming language,https://api.github.com/repos/golang/go,117687,Go,17693,9112
+21540759,awesomego,curated list awesome frameworks libraries software,https://api.github.com/repos/avelino/awesome-go,116349,Go,11664,194
+20580498,kubernetes,ProductionGrade Container Scheduling Management,https://api.github.com/repos/kubernetes/kubernetes,105020,Go,39110,2768
+48378947,frp,fast reverse proxy help expose local server NAT firewall internet,https://api.github.com/repos/fatedier/frp,77036,Go,12571,96
+20904437,gin,Gin HTTP web framework written Golang features Martinilike API better performance 40 times faster need smashing performance Gin,https://api.github.com/repos/gin-gonic/gin,74116,Go,7878,759
+11180687,hugo,worlds fastest framework building websites,https://api.github.com/repos/gohugoio/hugo,71226,Go,7556,498
+7691631,moby,Moby Project collaborative project container ecosystem assemble containerbased systems,https://api.github.com/repos/moby/moby,67331,Go,19041,3333
+14712850,syncthing,Open Source Continuous File Synchronization,https://api.github.com/repos/syncthing/syncthing,57997,Go,4075,352
+13807606,fzf,cherryblossom commandline fuzzy finder,https://api.github.com/repos/junegunn/fzf,57375,Go,2312,351
+29207621,caddy,Fast extensible multiplatform HTTP123 web server automatic HTTPS,https://api.github.com/repos/caddyserver/caddy,52078,Go,3957,143
+6838921,prometheus,Prometheus monitoring system time series database,https://api.github.com/repos/prometheus/prometheus,51685,Go,8765,945
+163883279,act,Run GitHub Actions locally,https://api.github.com/repos/nektos/act,47448,Go,1220,212
+42408804,traefik,Cloud Native Application Proxy,https://api.github.com/repos/traefik/traefik,46642,Go,4861,671
+11225014,etcd,Distributed reliable keyvalue store critical data distributed system,https://api.github.com/repos/etcd-io/etcd,45697,Go,9689,274
+15452919,goethereum,Official implementation Ethereum protocol,https://api.github.com/repos/ethereum/go-ethereum,44754,Go,19995,331
+138547797,mkcert,simple zeroconfig tool locally trusted development certificates names youd like,https://api.github.com/repos/FiloSottile/mkcert,44602,Go,2403,134
+41912791,v2raycore,platform building proxies bypass network restrictions,https://api.github.com/repos/v2ray/v2ray-core,44378,Go,9085,24
+16752620,gogs,Gogs painless selfhosted Git service,https://api.github.com/repos/gogs/gogs,43766,Go,4926,908
+29261473,minio,Object Store AI Data Infrastructure,https://api.github.com/repos/minio/minio,42998,Go,5141,50
+134017286,lazygit,simple terminal UI git commands,https://api.github.com/repos/jesseduffield/lazygit,42703,Go,1644,600
+5271882,buildwebapplicationwithgolang,golang ebook intro build web golang,https://api.github.com/repos/astaxie/build-web-application-with-golang,42679,Go,10839,128
+17803236,rclone,rsync cloud storage Google Drive S3 Dropbox Backblaze B2 Drive Swift Hubic Wasabi Google Cloud Storage Yandex Files,https://api.github.com/repos/rclone/rclone,42645,Go,3969,989
+133251103,dive,tool exploring layer docker image,https://api.github.com/repos/wagoodman/dive,42477,Go,1644,158
+72495579,gitea,Git cup tea Painless selfhosted allinone software development service including Git hosting code review team collaboration package registry CICD,https://api.github.com/repos/go-gitea/gitea,40558,Go,5145,2615
+17728164,terraform,Terraform enables safely predictably create change improve infrastructure sourceavailable tool codifies APIs declarative configuration files shared team members treated code edited reviewed versioned,https://api.github.com/repos/hashicorp/terraform,40308,Go,9386,1937
+61137153,esbuild,extremely fast bundler web,https://api.github.com/repos/evanw/esbuild,36783,Go,1102,392
+658928958,ollama,running Llama 2 Mistral large language models locally,https://api.github.com/repos/ollama/ollama,36272,Go,2382,603
+41986369,tidb,TiDB opensource cloudnative distributed MySQLCompatible database elastic scale realtime analytics Try AIpowered Chat2Query free httpstidbcloudcomfreetrial,https://api.github.com/repos/pingcap/tidb,35691,Go,5750,4569
+12574344,cobra,Commander modern CLI interactions,https://api.github.com/repos/spf13/cobra,35111,Go,2853,259
+323965659,alist,file listWebDAV program supports multiple storages powered Gin Solidjs WebDAV Gin Solidjs,https://api.github.com/repos/alist-org/alist,34985,Go,4758,119
+13855476,gorm,fantastic ORM library Golang aims developer friendly,https://api.github.com/repos/go-gorm/gorm,34768,Go,3860,285
+212613049,cli,GitHubs official command line tool,https://api.github.com/repos/cli/cli,34520,Go,5955,532
+74175805,istio,Connect secure control observe services,https://api.github.com/repos/istio/istio,34359,Go,7552,558
+24268127,nvmwindows,nodejs version management utility Windows Ironically written,https://api.github.com/repos/coreybutler/nvm-windows,33232,Go,3206,79
+187335810,lazydocker,lazier way manage docker,https://api.github.com/repos/jesseduffield/lazydocker,32310,Go,1126,115
+15045751,compose,Define run multicontainer applications Docker,https://api.github.com/repos/docker/compose,31788,Go,5204,221
+510607652,pocketbase,Open Source realtime backend 1 file,https://api.github.com/repos/pocketbase/pocketbase,31462,Go,1420,38
+119160553,photoprism,AIPowered Photos App Decentralized Web,https://api.github.com/repos/photoprism/photoprism,31421,Go,1743,427
+97533102,LeetCodeGo,Solutions LeetCode 100 test coverage runtime beats 100 LeetCode,https://api.github.com/repos/halfrost/LeetCode-Go,31394,Go,5654,18
+16607898,gitness,Gitness Open Source developer platform Source Control management Continuous Integration Continuous Delivery,https://api.github.com/repos/harness/gitness,31143,Go,2816,129
+3577919,beego,beego opensource highperformance web framework programming language,https://api.github.com/repos/beego/beego,30641,Go,5717,14
+234231371,fiber,Express inspired web framework written,https://api.github.com/repos/gofiber/fiber,30255,Go,1566,65
+31288958,vault,tool secrets management encryption service privileged access management,https://api.github.com/repos/hashicorp/vault,29266,Go,4117,1316
+16563587,cockroach,CockroachDB open source cloudnative distributed SQL database,https://api.github.com/repos/cockroachdb/cockroach,28615,Go,3667,5490
+156084530,nps,tcpudpsocks5httpsshdnssocks5weba lightweight highperformance powerful intranet penetration proxy server powerful web management terminal,https://api.github.com/repos/ehang-io/nps,28554,Go,5243,477
+56353740,minikube,Run Kubernetes locally,https://api.github.com/repos/kubernetes/minikube,27987,Go,4866,996
+31504491,echo,High performance minimalist web framework,https://api.github.com/repos/labstack/echo,27839,Go,2274,77
+14125254,consul,Consul distributed highly available data center aware solution connect configure applications dynamic distributed infrastructure,https://api.github.com/repos/hashicorp/consul,27553,Go,4440,1286
+285864199,gozero,cloudnative microservices framework cli tool productivity,https://api.github.com/repos/zeromicro/go-zero,27007,Go,3815,459
+181461073,v2raycore,platform building proxies bypass network restrictions,https://api.github.com/repos/v2fly/v2ray-core,26823,Go,4454,70
+30215630,kit,standard library microservices,https://api.github.com/repos/go-kit/kit,25929,Go,2506,46
+135516270,k3s,Lightweight Kubernetes,https://api.github.com/repos/k3s-io/k3s,25798,Go,2241,199
+107286889,croc,Easily securely send things computer crocodile package,https://api.github.com/repos/schollz/croc,25720,Go,1053,124
+43723161,helm,Kubernetes Package Manager,https://api.github.com/repos/helm/helm,25666,Go,6983,632
+208728772,milvus,cloudnative vector database storage generation AI applications,https://api.github.com/repos/milvus-io/milvus,25433,Go,2712,630
+18369373,viper,configuration fangs,https://api.github.com/repos/spf13/viper,25190,Go,2079,488
+50709152,iris,fastest HTTP2 Web Framework New modern easy learn Fast development Code control Unbeatable costperformance ratio rocket,https://api.github.com/repos/kataras/iris,24701,Go,2508,105
+4307108,nsq,realtime distributed messaging platform,https://api.github.com/repos/nsqio/nsq,24373,Go,2938,62
+436297812,memos,open source lightweight notetaking service Easily capture share great thoughts,https://api.github.com/repos/usememos/memos,24330,Go,1784,85
+77144337,faas,OpenFaaS Serverless Functions Simple,https://api.github.com/repos/openfaas/faas,24251,Go,1935,35
+167596393,k9s,Kubernetes CLI Manage Clusters Style,https://api.github.com/repos/derailed/k9s,23901,Go,1546,442
+23689830,dockerpractice,Learn understand DockerContainer technologies real DevOps practice,https://api.github.com/repos/yeasy/docker_practice,23870,Go,5709,6
+13628513,logrus,Structured pluggable logging,https://api.github.com/repos/sirupsen/logrus,23788,Go,2338,71
+15315789,Wox,crossplatform launcher simply works,https://api.github.com/repos/Wox-launcher/Wox,23737,Go,2396,158
+8900723,ngrok,Introspected tunnels localhost,https://api.github.com/repos/inconshreveable/ngrok,23600,Go,4387,235
+48003886,gopatterns,Curated list design patterns recipes idioms,https://api.github.com/repos/tmrts/go-patterns,23573,Go,2201,62
+53632140,micro,modern intuitive terminalbased text editor,https://api.github.com/repos/zyedidia/micro,23478,Go,1197,894
+122734569,lux,Fast simple video download library CLI tool written,https://api.github.com/repos/iawia002/lux,23147,Go,2681,482
+192632000,dapr,Dapr portable eventdriven runtime building distributed applications cloud edge,https://api.github.com/repos/dapr/dapr,22945,Go,1835,434
+19205896,restic,Fast secure efficient backup program,https://api.github.com/repos/restic/restic,22783,Go,1441,463
+54400687,k6,modern load testing tool JavaScript httpsk6io,https://api.github.com/repos/grafana/k6,22730,Go,1192,410
+401025,hub,commandline tool makes git easier use GitHub,https://api.github.com/repos/mislav/hub,22649,Go,2449,295
+42332863,filebrowser,Web File Browser,https://api.github.com/repos/filebrowser/filebrowser,22632,Go,2678,85
+120227732,fyne,Cross platform GUI toolkit inspired Material Design,https://api.github.com/repos/fyne-io/fyne,22552,Go,1344,637
+10270250,react,library web native user interfaces,https://api.github.com/repos/facebook/react,218413,JavaScript,46078,1592
+70107786,nextjs,React Framework,https://api.github.com/repos/vercel/next.js,117964,JavaScript,25707,2936
+27193779,node,Nodejs JavaScript runtime,https://api.github.com/repos/nodejs/node,101735,JavaScript,28551,2022
+63537249,createreactapp,Set modern web app running command,https://api.github.com/repos/facebook/create-react-app,101541,JavaScript,26962,2156
+576201,threejs,JavaScript 3D Library,https://api.github.com/repos/mrdoob/three.js,97384,JavaScript,35371,485
+74791366,cleancodejavascript,bathtub Clean Code concepts adapted JavaScript,https://api.github.com/repos/ryanmcdermott/clean-code-javascript,88283,JavaScript,12078,101
+311525798,WebDevForBeginners,24 Lessons 12 Weeks Started Web Developer,https://api.github.com/repos/microsoft/Web-Dev-For-Beginners,80176,JavaScript,12253,101
+157616880,iptv,Collection publicly available IPTV channels world,https://api.github.com/repos/iptv-org/iptv,75533,JavaScript,1508,8
+74293321,svelte,Cybernetically enhanced web apps,https://api.github.com/repos/sveltejs/svelte,75342,JavaScript,4283,1017
+14747598,jsonserver,fake REST API zero coding 30 seconds seriously,https://api.github.com/repos/typicode/json-server,70422,JavaScript,6965,664
+1861458,revealjs,HTML Presentation Framework,https://api.github.com/repos/hakimel/reveal.js,66426,JavaScript,16945,779
+278335273,githubreadmestats,zap Dynamically generated stats github readmes,https://api.github.com/repos/anuraghazra/github-readme-stats,63055,JavaScript,20142,254
+8843683,Chartjs,Simple HTML5 Charts canvas tag,https://api.github.com/repos/chartjs/Chart.js,62912,JavaScript,12033,347
+1334369,resumegithubcom,Resumes generated GitHub informations,https://api.github.com/repos/resume/resume.github.com,61133,JavaScript,1436,66
+36040894,gatsby,best Reactbased framework performance scalability security built,https://api.github.com/repos/gatsbyjs/gatsby,54944,JavaScript,10597,325
+9309093,SemanticUI,Semantic UI component framework based useful principles natural language,https://api.github.com/repos/Semantic-Org/Semantic-UI,50932,JavaScript,5100,1077
+53809090,anime,JavaScript animation engine,https://api.github.com/repos/juliangarnier/anime,48241,JavaScript,3788,218
+1424470,moment,Parse validate manipulate display dates javascript,https://api.github.com/repos/moment/moment,47716,JavaScript,7241,229
+67186968,chinesepoetry,comprehensive database Chinese poetry 5526 156421050,https://api.github.com/repos/chinese-poetry/chinese-poetry,45982,JavaScript,9341,105
+382496361,uptimekuma,fancy selfhosted monitoring tool,https://api.github.com/repos/louislam/uptime-kuma,45681,JavaScript,4170,688
+92443980,drawiodesktop,Official electron build drawio,https://api.github.com/repos/jgraph/drawio-desktop,45357,JavaScript,4697,160
+1663468,pdfjs,PDF Reader JavaScript,https://api.github.com/repos/mozilla/pdf.js,45352,JavaScript,9803,367
+9852918,Ghost,Independent technology modern publishing memberships subscriptions newsletters,https://api.github.com/repos/TryGhost/Ghost,45110,JavaScript,10057,134
+135786093,react,Cheatsheets experienced React developers getting started TypeScript,https://api.github.com/repos/typescript-cheatsheets/react,43501,JavaScript,4057,3
+110446844,marktext,simple elegant markdown editor available Linux macOS Windows,https://api.github.com/repos/marktext/marktext,43477,JavaScript,3337,1108
+3100121,nwjs,Nodejs modules directly DOMWebWorker enable new way writing applications Web technologies,https://api.github.com/repos/nwjs/nw.js,40028,JavaScript,3981,918
+364474335,zx,tool writing better scripts,https://api.github.com/repos/google/zx,39764,JavaScript,1046,80
+931135,Leaflet,JavaScript library mobilefriendly interactive maps,https://api.github.com/repos/Leaflet/Leaflet,39413,JavaScript,5861,530
+23974149,materialize,Materialize CSS Framework based Material Design,https://api.github.com/repos/Dogfalo/materialize,38860,JavaScript,4836,797
+3721224,swiper,modern mobile touch slider hardware accelerated transitions,https://api.github.com/repos/nolimits4web/swiper,37947,JavaScript,9825,66
+67508428,drawio,drawio JavaScript clientside editor general diagramming,https://api.github.com/repos/jgraph/drawio,37730,JavaScript,7266,422
+3065454,impressjs,presentation framework based power CSS3 transforms transitions modern browsers inspired idea prezicom,https://api.github.com/repos/impress/impress.js,37453,JavaScript,6864,66
+110058856,awesomecheatsheets,Awesome cheatsheets popular programming languages frameworks development tools include know single file,https://api.github.com/repos/LeCoupa/awesome-cheatsheets,36199,JavaScript,5897,103
+12972263,fullPagejs,fullPage plugin Alvaro Trigo Create screen pages fast simple,https://api.github.com/repos/alvarotrigo/fullPage.js,34896,JavaScript,7427,185
+14370955,hackathonstarter,boilerplate Nodejs web applications,https://api.github.com/repos/sahat/hackathon-starter,34605,JavaScript,8245,7
+42751014,clipboardjs,scissors Modern copy clipboard Flash 3kb gzipped clipboard,https://api.github.com/repos/zenorocha/clipboard.js,33705,JavaScript,4132,15
+97249406,wtfjs,list funny tricky JavaScript examples,https://api.github.com/repos/denysdovhan/wtfjs,33421,JavaScript,2576,36
+37958358,tesseractjs,Pure Javascript OCR 100 Languages,https://api.github.com/repos/naptha/tesseract.js,32653,JavaScript,2215,22
+56899284,insomnia,opensource crossplatform API client GraphQL REST WebSockets SSE gRPC Cloud Local Git storage,https://api.github.com/repos/Kong/insomnia,32356,JavaScript,1862,653
+99761907,reactbeautifuldnd,Beautiful accessible drag drop lists React,https://api.github.com/repos/atlassian/react-beautiful-dnd,31875,JavaScript,2535,617
+48626335,vuecli,webpackbased tooling Vuejs Development,https://api.github.com/repos/vuejs/vue-cli,29755,JavaScript,6487,1071
+31085130,lottieweb,Render Effects animations natively Web Android iOS React Native httpairbnbiolottie,https://api.github.com/repos/airbnb/lottie-web,29444,JavaScript,2895,748
+14098121,500lines,500 Lines,https://api.github.com/repos/aosabook/500lines,28814,JavaScript,5976,59
+39176269,vuex,Centralized State Management Vuejs,https://api.github.com/repos/vuejs/vuex,28335,JavaScript,9731,140
+15308499,Sortable,Reorderable draganddrop lists modern browsers touch devices jQuery framework required,https://api.github.com/repos/SortableJS/Sortable,28301,JavaScript,3696,451
+23736449,particlesjs,lightweight JavaScript library creating particles,https://api.github.com/repos/VincentGarreau/particles.js,28133,JavaScript,4888,358
+698041,async,Async utilities node browser,https://api.github.com/repos/caolan/async,28028,JavaScript,2554,5
+46273445,uppy,open source file uploader web browsers dog,https://api.github.com/repos/transloadit/uppy,27853,JavaScript,1988,162
+12226786,sharp,High performance Nodejs image processing fastest module resize JPEG PNG WebP AVIF TIFF images Uses libvips library,https://api.github.com/repos/lovell/sharp,27412,JavaScript,1318,100
+44150497,remotejobs,list semi fully remotefriendly companies jobs tech,https://api.github.com/repos/remoteintech/remote-jobs,27212,JavaScript,2977,37
+166535974,DailyInterviewQuestion,,https://api.github.com/repos/Advanced-Frontend/Daily-Interview-Question,27181,JavaScript,3332,260
+85541218,weekly,,https://api.github.com/repos/ascoders/weekly,26715,JavaScript,3171,2
+74260508,docsify,magical documentation site generator,https://api.github.com/repos/docsifyjs/docsify,26134,JavaScript,5720,267
+958314,nodemon,Monitor changes nodejs application automatically restart server perfect development,https://api.github.com/repos/remy/nodemon,25859,JavaScript,1759,13
+1283503,request,Simplified HTTP request client,https://api.github.com/repos/request/request,25665,JavaScript,3293,125
+317757,Modernizr,Modernizr JavaScript library detects HTML5 CSS3 features users browser,https://api.github.com/repos/Modernizr/Modernizr,25587,JavaScript,3065,189
+1198539,netron,Visualizer neural network deep learning machine learning models,https://api.github.com/repos/lutzroeder/netron,25410,JavaScript,2651,27
+74962515,CyberChef,Cyber Swiss Army Knife web app encryption encoding compression data analysis,https://api.github.com/repos/gchq/CyberChef,24216,JavaScript,2915,433
+65233633,pkg,Package Nodejs project executable,https://api.github.com/repos/vercel/pkg,24145,JavaScript,1056,0
+11061773,eslint,Find fix problems JavaScript code,https://api.github.com/repos/eslint/eslint,23934,JavaScript,4594,108
+1580851,PhotoSwipe,JavaScript image gallery mobile desktop modular framework independent,https://api.github.com/repos/dimsemenov/PhotoSwipe,23574,JavaScript,3416,606
+9603240,pure,set small responsive CSS modules use web project,https://api.github.com/repos/pure-css/pure,23313,JavaScript,2613,16
+35133520,mostlyadequateguide,adequate guide FP javascript,https://api.github.com/repos/MostlyAdequate/mostly-adequate-guide,23038,JavaScript,1922,88
+1213225,highlightjs,JavaScript syntax highlighter language autodetection zero dependencies,https://api.github.com/repos/highlightjs/highlight.js,22762,JavaScript,3626,128
+58623321,flvjs,HTML5 FLV Player,https://api.github.com/repos/bilibili/flv.js,22622,JavaScript,3445,445
+47071941,reduxsaga,alternative effect model Redux apps,https://api.github.com/repos/redux-saga/redux-saga,22506,JavaScript,2067,32
+128237146,vuepress,Minimalistic Vuepowered static site generator,https://api.github.com/repos/vuejs/vuepress,22209,JavaScript,4862,606
+201570219,responsivelyapp,modified web browser helps responsive web development web developers devtool,https://api.github.com/repos/responsively-org/responsively-app,21479,JavaScript,1116,190
+734934,pug,Pug robust elegant feature rich template engine Nodejs,https://api.github.com/repos/pugjs/pug,21461,JavaScript,2008,304
+8768406,autoprefixer,Parse CSS add vendor prefixes rules Use,https://api.github.com/repos/postcss/autoprefixer,21353,JavaScript,1347,38
+72343657,losslesscut,swiss army knife lossless videoaudio editing,https://api.github.com/repos/mifi/lossless-cut,21098,JavaScript,1125,191
+82040650,chineseprogrammerwrongpronunciation,,https://api.github.com/repos/shimohq/chinese-programmer-wrong-pronunciation,21095,JavaScript,1548,125
+169529567,ChromeAppHeroes,Chrome Chrome Chrome ChromePluginHeroes Write Chinese manual excellent Chrome plugin let Chrome plugin heroes benefit human 01,https://api.github.com/repos/zhaoolee/ChromeAppHeroes,21055,JavaScript,2268,28
+18964487,es6tutorial,ECMAScript 6 JavaScript ECMAScript 6,https://api.github.com/repos/ruanyf/es6tutorial,21027,JavaScript,9000,0
+45717250,tensorflow,Open Source Machine Learning Framework,https://api.github.com/repos/tensorflow/tensorflow,180573,C++,89423,2043
+29028775,reactnative,framework building native applications React,https://api.github.com/repos/facebook/react-native,114250,C++,24230,1151
+9384267,electron,electron Build crossplatform desktop apps JavaScript HTML CSS,https://api.github.com/repos/electron/electron,110553,C++,15503,920
+100060912,terminal,new Windows Terminal original Windows console host place,https://api.github.com/repos/microsoft/terminal,92659,C++,8320,1520
+15634981,godot,Godot Engine Multiplatform 2D 3D game engine,https://api.github.com/repos/godotengine/godot,80493,C++,17258,11922
+5108051,opencv,Open Source Computer Vision Library,https://api.github.com/repos/opencv/opencv,74010,C++,55885,2521
+1181927,bitcoin,Bitcoin Core integrationstaging tree,https://api.github.com/repos/bitcoin/bitcoin,73793,C++,36738,679
+44838949,swift,Swift Programming Language,https://api.github.com/repos/apple/swift,65213,C++,10463,7074
+23357588,protobuf,Protocol Buffers Googles data interchange format,https://api.github.com/repos/protocolbuffers/protobuf,62851,C++,15454,708
+619959033,gpt4all,gpt4all opensource LLM chatbots run,https://api.github.com/repos/nomic-ai/gpt4all,60966,C++,6854,357
+22887094,tesseract,Tesseract Open Source OCR Engine main repository,https://api.github.com/repos/tesseract-ocr/tesseract,56420,C++,9053,416
+22067521,imgui,Dear ImGui Bloatfree Graphical User interface C minimal dependencies,https://api.github.com/repos/ocornut/imgui,53947,C++,9579,961
+612354784,llamacpp,Port Facebooks LLaMA model CC,https://api.github.com/repos/ggerganov/llama.cpp,50483,C++,7241,1099
+33791743,x64dbg,opensource user mode debugger Windows Optimized reverse engineering malware analysis,https://api.github.com/repos/x64dbg/x64dbg,42655,C++,2335,577
+67702184,Magisk,Magic Mask Android,https://api.github.com/repos/topjohnwu/Magisk,42271,C++,10925,32
+27729880,grpc,C based gRPC C Python Ruby ObjectiveC PHP C,https://api.github.com/repos/grpc/grpc,40184,C++,10722,869
+11171548,json,JSON Modern C,https://api.github.com/repos/nlohmann/json,39073,C++,6670,115
+196813750,CPlusPlusThings,C,https://api.github.com/repos/Light-City/CPlusPlusThings,35621,C++,8222,13
+23405758,leveldb,LevelDB fast keyvalue storage library written Google provides ordered mapping string keys string values,https://api.github.com/repos/google/leveldb,34518,C++,7715,306
+12791642,caffe,Caffe fast open framework deep learning,https://api.github.com/repos/BVLC/caffe,33766,C++,18972,1180
+116167731,yuzu,Nintendo Switch emulator,https://api.github.com/repos/yuzu-emu/yuzu,33360,C++,2866,1775
+60246359,ClickHouse,ClickHouse free analytics DBMS big data,https://api.github.com/repos/ClickHouse/ClickHouse,33002,C++,6469,3670
+1116542,aria2,aria2 lightweight multiprotocol multisource cross platform download utility operated commandline supports HTTPHTTPS FTP SFTP BitTorrent Metalink,https://api.github.com/repos/aria2/aria2,32817,C++,3444,1047
+39840932,googletest,GoogleTest Google Testing Mocking Framework,https://api.github.com/repos/google/googletest,32079,C++,10128,318
+120887835,interview,CC repository summary basic knowledge recruiting job seekers beginners direction CC technology including language program library data structure algorithm system network link loading library interview experience recruitment recommendation etc,https://api.github.com/repos/huihut/interview,31938,C++,7786,23
+259463685,carbonlang,Carbon Languages main repository documents design implementation related tools NOTE Carbon Language experimental README,https://api.github.com/repos/carbon-language/carbon-lang,31923,C++,1516,111
+311683390,ImHex,Hex Editor Reverse Engineers Programmers people value retinas working 3,https://api.github.com/repos/WerWolv/ImHex,31716,C++,1596,192
+98771110,TrafficMonitor,CPU,https://api.github.com/repos/zhongyang219/TrafficMonitor,31130,C++,3078,970
+1200050,phantomjs,Scriptable Headless Browser,https://api.github.com/repos/ariya/phantomjs,29376,C++,5869,14
+89247811,openpose,OpenPose Realtime multiperson keypoint detection library body face hands foot estimation,https://api.github.com/repos/CMU-Perceptual-Computing-Lab/openpose,29283,C++,7790,298
+63477612,CPlusPlus,Collection algorithms mathematics machine learning computer science physics implemented C educational purposes,https://api.github.com/repos/TheAlgorithms/C-Plus-Plus,28522,C++,6990,27
+168008797,calculator,Windows Calculator simple powerful calculator ships Windows,https://api.github.com/repos/microsoft/calculator,28501,C++,5251,319
+160083795,serenity,Serenity Operating System,https://api.github.com/repos/SerenityOS/serenity,27338,C++,2974,761
+6934395,rocksdb,library provides embeddable persistent keyvalue store fast storage,https://api.github.com/repos/facebook/rocksdb,26910,C++,6142,925
+4524181,folly,opensource C library developed Facebook,https://api.github.com/repos/facebook/folly,26731,C++,5656,462
+81227005,faiss,library efficient similarity search clustering dense vectors,https://api.github.com/repos/facebookresearch/faiss,26727,C++,3328,427
+6452529,rethinkdb,opensource database realtime web,https://api.github.com/repos/rethinkdb/rethinkdb,26446,C++,1904,1349
+23129458,aseprite,Animated sprite editor pixel art tool Windows macOS Linux,https://api.github.com/repos/aseprite/aseprite,25537,C++,3736,1490
+11276147,cmder,Lovely console emulator package Windows,https://api.github.com/repos/cmderdev/cmder,25420,C++,2086,44
+16587283,xgboost,Scalable Portable Distributed Gradient Boosting GBDT GBRT GBM Library Python R Java Scala C Runs single machine Hadoop Spark Dask Flink DataFlow,https://api.github.com/repos/dmlc/xgboost,25305,C++,8714,418
+1357796,emscripten,Emscripten LLVMtoWebAssembly Compiler,https://api.github.com/repos/emscripten-core/emscripten,24859,C++,3256,1909
+191820100,mediapipe,Crossplatform customizable ML solutions live streaming media,https://api.github.com/repos/google/mediapipe,24621,C++,4915,334
+74660642,taichi,Productive portable highperformance programming Python,https://api.github.com/repos/taichi-dev/taichi,24368,C++,2307,763
+96246170,apollo,open autonomous driving platform,https://api.github.com/repos/ApolloAuto/apollo,24024,C++,9559,779
+3351871,qBittorrent,qBittorrent BitTorrent client,https://api.github.com/repos/qbittorrent/qBittorrent,24017,C++,3759,2838
+19374812,tdesktop,Telegram Desktop messaging app,https://api.github.com/repos/telegramdesktop/tdesktop,23865,C++,4923,806
+60273704,DeepSpeech,DeepSpeech open source embedded offline ondevice speechtotext engine run real time devices ranging Raspberry Pi 4 high power GPU servers,https://api.github.com/repos/mozilla/DeepSpeech,23826,C++,3932,137
+34777562,srs,SRS simple highefficiency realtime video server supporting RTMP WebRTC HLS HTTPFLV SRT MPEGDASH GB28181,https://api.github.com/repos/ossrs/srs,23680,C++,5245,198
+65214191,envoy,Cloudnative highperformance edgemiddleservice proxy,https://api.github.com/repos/envoyproxy/envoy,23460,C++,4646,1652
+66088979,moderncpptutorial,Modern C Tutorial C11141720 Fly httpschangkundemoderncpp,https://api.github.com/repos/changkun/modern-cpp-tutorial,22712,C++,3006,10
+90902132,flameshot,Powerful simple use screenshot software desktopcomputer cameraflash,https://api.github.com/repos/flameshot-org/flameshot,22677,C++,1491,566
+11892946,RedisDesktopManager,description,https://api.github.com/repos/RedisInsight/RedisDesktopManager,22581,C++,3322,56
+437245741,dragonfly,modern replacement Redis Memcached,https://api.github.com/repos/dragonflydb/dragonfly,22246,C++,838,138
+125098880,Proton,Compatibility tool Steam Play based Wine additional components,https://api.github.com/repos/ValveSoftware/Proton,22063,C++,1011,4101
+19953044,flatbuffers,FlatBuffers Memory Efficient Serialization Library,https://api.github.com/repos/google/flatbuffers,21722,C++,3222,154
+40892817,solidity,Solidity Smart Contract Programming Language,https://api.github.com/repos/ethereum/solidity,21698,C++,5715,437
+197275130,wingetcli,WinGet Windows Package Manager project includes CLI Command Line Interface PowerShell modules COM Component Object Model API Application Programming Interface,https://api.github.com/repos/microsoft/winget-cli,21668,C++,1412,946
+26038648,spdlog,Fast C logging library,https://api.github.com/repos/gabime/spdlog,21459,C++,4244,53
+65711522,Paddle,PArallel Distributed Deep LEarning Machine Learning Framework Industrial Practice,https://api.github.com/repos/PaddlePaddle/Paddle,21340,C++,5430,1913
+33014811,notepadplusplus,Notepad official repository,https://api.github.com/repos/notepad-plus-plus/notepad-plus-plus,21002,C++,4367,2252
+22394357,osquery,SQL powered operating system instrumentation monitoring analytics,https://api.github.com/repos/osquery/osquery,20911,C++,2511,629
+34864402,mxnet,Lightweight Portable Flexible DistributedMobile Deep Learning Dynamic Mutationaware Dataflow Dep Scheduler Python R Julia Scala Javascript,https://api.github.com/repos/apache/mxnet,20690,C++,6896,2010
+19416551,sqlitebrowser,Official home DB Browser SQLite DB4S project Previously known SQLite Database Browser Database Browser SQLite Website,https://api.github.com/repos/sqlitebrowser/sqlitebrowser,19595,C++,2078,654
+7056202,fmt,modern formatting library,https://api.github.com/repos/fmtlib/fmt,18924,C++,2380,15
+29397594,tinyrenderer,brief computer graphics rendering course,https://api.github.com/repos/ssloy/tinyrenderer,18860,C++,1864,44
+95879426,ncnn,ncnn highperformance neural network inference framework optimized mobile platform,https://api.github.com/repos/Tencent/ncnn,18764,C++,4066,1010
+107794782,trojan,unidentifiable mechanism helps bypass GFW,https://api.github.com/repos/trojan-gfw/trojan,18399,C++,3064,78
+53658802,weex,framework building Mobile crossplatform UI,https://api.github.com/repos/alibaba/weex,18196,C++,2172,58
+52729242,keepassxc,KeePassXC crossplatform communitydriven port Windows application Keepass Password Safe,https://api.github.com/repos/keepassxreboot/keepassxc,18164,C++,1329,660
+5133949,swoolesrc,Coroutinebased concurrency library PHP,https://api.github.com/repos/swoole/swoole-src,18141,C++,3237,99
+126412363,simdjson,Parsing gigabytes JSON second FacebookMeta Velox Nodejs runtime WatermelonDB Apache Doris Milvus StarRocks,https://api.github.com/repos/simdjson/simdjson,17987,C++,968,123
+455600,hhvm,virtual machine executing programs written Hack,https://api.github.com/repos/facebook/hhvm,17930,C++,3178,555
+251383553,CnCRemasteredCollection,description,https://api.github.com/repos/electronicarts/CnC_Remastered_Collection,17862,C++,4698,87
+28457823,freeCodeCamp,freeCodeCamporgs opensource codebase curriculum Learn code free,https://api.github.com/repos/freeCodeCamp/freeCodeCamp,383086,TypeScript,35785,352
+85077558,developerroadmap,Interactive roadmaps guides educational content help developers grow careers,https://api.github.com/repos/kamranahmedse/developer-roadmap,265860,TypeScript,36541,914
+11730342,vue,repo Vue 2 Vue 3 httpsgithubcomvuejscore,https://api.github.com/repos/vuejs/vue,206348,TypeScript,34681,606
+41881900,vscode,Visual Studio Code,https://api.github.com/repos/microsoft/vscode,155770,TypeScript,28217,7605
+62607227,techinterviewhandbook,Curated coding interview preparation materials busy software engineers,https://api.github.com/repos/yangshun/tech-interview-handbook,106596,TypeScript,13697,32
+20929025,TypeScript,TypeScript superset JavaScript compiles clean JavaScript output,https://api.github.com/repos/microsoft/TypeScript,96609,TypeScript,12512,6126
+24195339,angular,Deliver web apps confidence,https://api.github.com/repos/angular/angular,93488,TypeScript,25171,1609
+23083156,materialui,MUI Core Readytouse foundational React components free forever includes Material UI implements Googles Material Design,https://api.github.com/repos/mui/material-ui,90667,TypeScript,31332,1832
+34526884,antdesign,enterpriseclass UI design language React UI library,https://api.github.com/repos/ant-design/ant-design,89297,TypeScript,44477,1128
+90796663,puppeteer,Nodejs API Chrome,https://api.github.com/repos/puppeteer/puppeteer,86088,TypeScript,9232,301
+54173593,storybook,Storybook frontend workshop building UI components pages isolation UI development testing documentation,https://api.github.com/repos/storybookjs/storybook,81786,TypeScript,9064,1805
+52631841,realworld,mother demo apps Exemplary fullstack Mediumcom clone powered React Angular Node Django,https://api.github.com/repos/gothinkster/realworld,77617,TypeScript,7222,76
+231283452,excalidraw,Virtual whiteboard sketching handdrawn like diagrams,https://api.github.com/repos/excalidraw/excalidraw,67679,TypeScript,6012,1490
+172953845,codeserver,VS Code browser,https://api.github.com/repos/coder/code-server,64113,TypeScript,5407,315
+257485422,vite,generation frontend tooling fast,https://api.github.com/repos/vitejs/vite,63151,TypeScript,5698,528
+80945428,nest,progressive Nodejs framework building efficient scalable enterprisegrade serverside applications TypeScriptJavaScript,https://api.github.com/repos/nestjs/nest,62784,TypeScript,7343,99
+214587193,supabase,open source Firebase alternative,https://api.github.com/repos/supabase/supabase,62766,TypeScript,5849,346
+36535156,redux,Predictable state container JavaScript apps,https://api.github.com/repos/reduxjs/redux,60260,TypeScript,15489,47
+612344730,ChatGPTNextWeb,crossplatform ChatGPTGemini UI Web PWA Linux Win MacOS ChatGPTGemini,https://api.github.com/repos/ChatGPTNextWeb/ChatGPT-Next-Web,60064,TypeScript,51911,179
+557980,socketio,Realtime application framework NodeJS server,https://api.github.com/repos/socketio/socket.io,59778,TypeScript,10262,106
+221981891,playwright,Playwright framework Web Testing Automation allows testing Chromium Firefox WebKit single API,https://api.github.com/repos/microsoft/playwright,59264,TypeScript,3320,701
+15111821,grafana,open composable observability data visualization platform Visualize metrics logs traces multiple sources like Prometheus Loki Elasticsearch InfluxDB Postgres,https://api.github.com/repos/grafana/grafana,59176,TypeScript,11614,4433
+43441403,strapi,Strapi leading opensource headless CMS 100 JavaScriptTypeScript fully customizable developerfirst,https://api.github.com/repos/strapi/strapi,58765,TypeScript,7433,605
+203587744,hoppscotch,Open source API development ecosystem httpshoppscotchio,https://api.github.com/repos/hoppscotch/hoppscotch,58759,TypeScript,4112,297
+9185792,echarts,Apache ECharts powerful interactive charting data visualization library browser,https://api.github.com/repos/apache/echarts,57866,TypeScript,19687,2330
+39464018,superset,Apache Superset Data Visualization Data Exploration Platform,https://api.github.com/repos/apache/superset,56591,TypeScript,12265,1514
+77213120,tabby,terminal modern age,https://api.github.com/repos/Eugeny/tabby,53721,TypeScript,3210,1770
+19872456,reactrouter,Declarative routing React,https://api.github.com/repos/remix-run/react-router,51595,TypeScript,10220,59
+94911145,docusaurus,Easy maintain open source documentation websites,https://api.github.com/repos/facebook/docusaurus,51205,TypeScript,7877,331
+71995937,nuxt,Intuitive Vue Framework,https://api.github.com/repos/nuxt/nuxt,50382,TypeScript,4763,957
+12256376,ionicframework,powerful crossplatform UI toolkit building nativequality iOS Android Progressive Web Apps HTML CSS JavaScript,https://api.github.com/repos/ionic-team/ionic-framework,50150,TypeScript,13752,387
+585146387,ui,Beautifully designed components copy paste apps Accessible Customizable Open Source,https://api.github.com/repos/shadcn-ui/ui,48028,TypeScript,2463,1186
+6093316,DefinitelyTyped,repository high quality TypeScript type definitions,https://api.github.com/repos/DefinitelyTyped/DefinitelyTyped,46516,TypeScript,29847,877
+15062869,jest,Delightful JavaScript Testing,https://api.github.com/repos/jestjs/jest,43298,TypeScript,6604,398
+137078487,core,Vuejs progressive incrementallyadoptable JavaScript framework building UI web,https://api.github.com/repos/vuejs/core,43180,TypeScript,7800,1058
+24560307,babel,Babel compiler writing generation JavaScript,https://api.github.com/repos/babel/babel,42782,TypeScript,5884,767
+62367558,hyper,terminal built web technologies,https://api.github.com/repos/vercel/hyper,42287,TypeScript,3591,908
+7741856,pixijs,HTML5 Creation Engine Create beautiful digital content fastest flexible 2D WebGL renderer,https://api.github.com/repos/pixijs/pixijs,41895,TypeScript,4893,239
+79162682,joplin,Joplin secure note taking todo app synchronisation capabilities Windows macOS Linux Android iOS,https://api.github.com/repos/laurent22/joplin,40675,TypeScript,4382,363
+108761645,nocodb,Open Source Airtable Alternative,https://api.github.com/repos/nocodb/nocodb,40616,TypeScript,2715,500
+180328715,zustand,Bear necessities state management React,https://api.github.com/repos/pmndrs/zustand,39963,TypeScript,1253,3
+65794292,styledcomponents,Visual primitives component age Use best bits ES6 CSS style apps stress,https://api.github.com/repos/styled-components/styled-components,39900,TypeScript,2558,230
+348060227,astro,web framework contentdriven websites Star support work,https://api.github.com/repos/withastro/astro,39733,TypeScript,2105,142
+154950925,reactuse,React Hooks,https://api.github.com/repos/streamich/react-use,39542,TypeScript,3121,576
+180190854,appwrite,Build like team hundreds,https://api.github.com/repos/appwrite/appwrite,39265,TypeScript,3622,842
+281975310,typechallenges,Collection TypeScript type challenges online judge,https://api.github.com/repos/type-challenges/type-challenges,38911,TypeScript,4216,28217
+67962648,vuetify,Vue Component Framework,https://api.github.com/repos/vuetifyjs/vuetify,38712,TypeScript,6996,864
+174038031,reacthookform,React Hooks form state management validation Web React Native,https://api.github.com/repos/react-hook-form/react-hook-form,38706,TypeScript,1958,21
+207645083,query,Powerful asynchronous state management serverstate utilities data fetching web TSJS React Query Solid Query Svelte Query Vue Query,https://api.github.com/repos/TanStack/query,38398,TypeScript,2564,71
+193215554,n8n,Free sourceavailable faircode licensed workflow automation tool Easily automate tasks different services,https://api.github.com/repos/n8n-io/n8n,38313,TypeScript,4579,302
+5239185,quill,Quill modern WYSIWYG editor built compatibility extensibility,https://api.github.com/repos/quilljs/quill,38272,TypeScript,3202,1083
+35866694,RocketChat,communications platform puts data protection,https://api.github.com/repos/RocketChat/Rocket.Chat,38251,TypeScript,9842,3095
+192925833,prisma,Nextgeneration ORM Nodejs TypeScript PostgreSQL MySQL MariaDB SQL Server SQLite MongoDB CockroachDB,https://api.github.com/repos/prisma/prisma,36138,TypeScript,1516,3059
+101394335,antdesignpro,Use Ant Design like Pro,https://api.github.com/repos/ant-design/ant-design-pro,35493,TypeScript,8198,24
+718741813,screenshottocode,Drop screenshot convert clean code HTMLTailwindReactVue,https://api.github.com/repos/abi/screenshot-to-code,35342,TypeScript,4143,83
+47394776,lerna,dragon Lerna fast modern build system managing publishing multiple JavaScriptTypeScript packages repository,https://api.github.com/repos/lerna/lerna,35214,TypeScript,2353,336
+202367615,lxmusicdesktop,electron,https://api.github.com/repos/lyswhut/lx-music-desktop,34944,TypeScript,5511,543
+38558578,nativefier,web page desktop application,https://api.github.com/repos/nativefier/nativefier,34540,TypeScript,2211,259
+128624453,taro,ReactVueNerv QQ H5React Native httpstarozone,https://api.github.com/repos/NervJS/taro,34280,TypeScript,4850,1179
+94367677,formik,Build forms React tears,https://api.github.com/repos/jaredpalmer/formik,33321,TypeScript,2794,811
+24841635,datefns,Modern JavaScript date utility library,https://api.github.com/repos/date-fns/date-fns,33262,TypeScript,1827,669
+52773157,typeorm,ORM TypeScript JavaScript Supports MySQL PostgreSQL MariaDB SQLite MS SQL Server Oracle SAP Hana WebSQL databases Works NodeJS Browser Ionic Cordova Electron platforms,https://api.github.com/repos/typeorm/typeorm,32887,TypeScript,6198,2252
+21413198,immutablejs,Immutable persistent data collections Javascript increase efficiency simplicity,https://api.github.com/repos/immutable-js/immutable-js,32807,TypeScript,1883,118
+400215964,novu,opensource notification infrastructure fully functional embedded notification center,https://api.github.com/repos/novuhq/novu,31785,TypeScript,3379,345
+280557054,trpc,Fast Break Endtoend typesafe APIs easy,https://api.github.com/repos/trpc/trpc,31537,TypeScript,1152,107
+365739812,tldraw,Infinite canvas,https://api.github.com/repos/tldraw/tldraw,31130,TypeScript,1831,350
+137724480,graphqlengine,Blazing fast instant realtime GraphQL APIs DB fine grained access control trigger webhooks database events,https://api.github.com/repos/hasura/graphql-engine,30669,TypeScript,2790,2152
+275993885,appsmith,Platform build admin panels internal tools dashboards Integrates 25 databases API,https://api.github.com/repos/appsmithorg/appsmith,30623,TypeScript,3314,3822
+130884470,solid,declarative efficient flexible JavaScript library building user interfaces,https://api.github.com/repos/solidjs/solid,30424,TypeScript,879,79
+361044034,slidev,Presentation Slides Developers,https://api.github.com/repos/slidevjs/slidev,30054,TypeScript,1192,80
+32247847,rxjs,reactive programming library JavaScript,https://api.github.com/repos/ReactiveX/rxjs,29941,TypeScript,3074,258
+2056312,html2canvas,Screenshots JavaScript,https://api.github.com/repos/niklasvh/html2canvas,29460,TypeScript,4860,959
+218115303,swr,React Hooks Data Fetching,https://api.github.com/repos/vercel/swr,28922,TypeScript,1185,102
+624681066,AgentGPT,Assemble configure deploy autonomous AI Agents browser,https://api.github.com/repos/reworkd/AgentGPT,28712,TypeScript,9181,155
+245704608,zod,TypeScriptfirst schema validation static type inference,https://api.github.com/repos/colinhacks/zod,28706,TypeScript,1000,393
+3482588,SecLists,SecLists security testers companion collection multiple types lists security assessments collected place List types include usernames passwords URLs sensitive data patterns fuzzing payloads web shells,https://api.github.com/repos/danielmiessler/SecLists,51992,PHP,23562,41
+1129010,jQueryFileUpload,File Upload widget multiple file selection dragdrop support progress bar validation preview images audio video jQuery Supports crossdomain chunked resumable file uploads Works serverside platform Google App Engine PHP Python Ruby Rails Java etc supports standard HTML form file uploads,https://api.github.com/repos/blueimp/jQuery-File-Upload,31006,PHP,8151,52
+7548986,framework,Laravel Framework,https://api.github.com/repos/laravel/framework,30954,PHP,10580,29
+458058,symfony,Symfony PHP framework,https://api.github.com/repos/symfony/symfony,29066,PHP,9483,793
+1864363,composer,Dependency Manager PHP,https://api.github.com/repos/composer/composer,28085,PHP,6859,143
+2579314,Faker,Faker PHP library generates fake data,https://api.github.com/repos/fzaninotto/Faker,26781,PHP,3632,231
+60243197,server,Nextcloud server safe home data,https://api.github.com/repos/nextcloud/server,25001,PHP,3868,2766
+1420053,guzzle,Guzzle extensible PHP HTTP client,https://api.github.com/repos/guzzle/guzzle,22893,PHP,2467,29
+2246815,DesignPatternsPHP,Sample code design patterns PHP 8x,https://api.github.com/repos/DesignPatternsPHP/DesignPatternsPHP,21608,PHP,4622,4
+170355508,livewire,fullstack framework Laravel takes pain building dynamic UIs,https://api.github.com/repos/livewire/livewire,21407,PHP,1420,7
+1376664,monolog,Sends logs files sockets inboxes databases web services,https://api.github.com/repos/Seldaek/monolog,20699,PHP,1900,39
+82238168,monica,Personal CRM Remember friends family business relationships,https://api.github.com/repos/monicahq/monica,20346,PHP,2066,680
+2253830,PHPMailer,classic email sending library PHP,https://api.github.com/repos/PHPMailer/PHPMailer,20300,PHP,9849,50
+448045,phpunit,PHP Unit Testing framework,https://api.github.com/repos/sebastianbergmann/phpunit,19503,PHP,2244,110
+1548202,matomo,Liberating Web Analytics Star Github 1 Matomo leading open alternative Google Analytics gives control data Matomo lets easily collect data websites apps visualise data extract insights Privacy builtin love Pull Requests,https://api.github.com/repos/matomo-org/matomo,18739,PHP,2616,2305
+2234102,CodeIgniter,Open Source PHP Framework originally EllisLab,https://api.github.com/repos/bcit-ci/CodeIgniter,18262,PHP,7764,79
+1631570,PHPParser,PHP parser written PHP,https://api.github.com/repos/nikic/PHP-Parser,16470,PHP,979,39
+5724990,Carbon,simple PHP API extension DateTime,https://api.github.com/repos/briannesbitt/Carbon,16398,PHP,1341,14
+12615154,laraveldebugbar,Debugbar Laravel Integrates PHP Debug Bar,https://api.github.com/repos/barryvdh/laravel-debugbar,15918,PHP,1581,72
+47495360,koel,personal music streaming server works,https://api.github.com/repos/koel/koel,15303,PHP,1933,38
+11323319,parsedown,Better Markdown Parser PHP,https://api.github.com/repos/erusev/parsedown,14567,PHP,1152,153
+22553797,grav,Modern Crazy Fast Ridiculously Easy Amazingly Powerful FlatFile CMS powered PHP Markdown Twig Symfony,https://api.github.com/repos/getgrav/grav,14192,PHP,1406,417
+3431193,yii2,Yii 2 Fast Secure Professional PHP Framework,https://api.github.com/repos/yiisoft/yii2,14178,PHP,7025,571
+8678290,laravelidehelper,IDE Helper Laravel,https://api.github.com/repos/barryvdh/laravel-ide-helper,13715,PHP,1162,167
+7704544,image,PHP Image Processing,https://api.github.com/repos/Intervention/image,13591,PHP,1546,46
+26730195,cachet,opensource status page system,https://api.github.com/repos/cachethq/cachet,13579,PHP,1577,3
+41589337,BookStack,platform create documentationwiki content built PHP Laravel,https://api.github.com/repos/BookStackApp/BookStack,13336,PHP,1720,455
+13899674,flysystem,Abstraction local remote filesystems,https://api.github.com/repos/thephpleague/flysystem,13123,PHP,824,65
+8708394,whoops,PHP errors cool kids,https://api.github.com/repos/filp/whoops,13098,PHP,665,5
+21298446,fireflyiii,Firefly III personal finances manager,https://api.github.com/repos/firefly-iii/firefly-iii,12856,PHP,1202,116
+7769432,phpdotenv,Loads environment variables env getenv ENV SERVER automagically,https://api.github.com/repos/vlucas/phpdotenv,12850,PHP,672,4
+61490598,PhpSpreadsheet,pure PHP library reading writing spreadsheet files,https://api.github.com/repos/PHPOffice/PhpSpreadsheet,12785,PHP,3355,170
+248372441,filament,collection beautiful fullstack components Laravel perfect starting point app Livewire Alpinejs Tailwind CSS,https://api.github.com/repos/filamentphp/filament,12521,PHP,2034,75
+1305114,sage,WordPress starter theme Laravel Blade components templates Tailwind CSS modern development workflow,https://api.github.com/repos/roots/sage,12436,PHP,3023,1
+49014795,phpstan,PHP Static Analysis Tool discover bugs code running,https://api.github.com/repos/phpstan/phpstan,12417,PHP,935,994
+4344257,PHPCSFixer,tool automatically fix PHP Coding Standards issues,https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer,12380,PHP,1607,187
+4916869,uuid,snowflake PHP library generating universally unique identifiers UUIDs,https://api.github.com/repos/ramsey/uuid,12264,PHP,557,23
+79111500,cleancodephp,bathtub Clean Code concepts adapted PHP,https://api.github.com/repos/piotrplenik/clean-code-php,11963,PHP,2288,27
+14259390,LaravelExcel,Supercharged Excel exports imports Laravel,https://api.github.com/repos/SpartnerNL/Laravel-Excel,11912,PHP,1899,9
+926544,Slim,Slim PHP micro framework helps quickly write simple powerful web applications APIs,https://api.github.com/repos/slimphp/Slim,11772,PHP,1960,17
+42480275,laravelpermission,Associate users roles permissions,https://api.github.com/repos/spatie/laravel-permission,11684,PHP,1751,22
+72069409,voyager,Voyager Missing Laravel Admin,https://api.github.com/repos/thedevdojo/voyager,11636,PHP,2691,435
+4702560,PHPExcel,ARCHIVED,https://api.github.com/repos/PHPOffice/PHPExcel,11458,PHP,4294,664
+56728437,labs,collection tutorials learning use Docker tools Contributions welcome,https://api.github.com/repos/docker/labs,11414,PHP,5413,142
+10157178,EmailValidator,PHP Email address validator,https://api.github.com/repos/egulias/EmailValidator,11278,PHP,235,25
+7549096,inflector,Doctrine Inflector small library perform string manipulations regard uppercaselowercase singularplural forms words,https://api.github.com/repos/doctrine/inflector,11162,PHP,128,19
+2884111,magento2,Prior making Submissions sign Adobe Contributor License Agreement available httpsopensourceadobecomclahtml Submissions Adobe Inc affiliates assigns subsidiaries collectively Adobe subject terms Adobe Contributor License Agreement,https://api.github.com/repos/magento/magento2,11160,PHP,9352,2544
+23680678,jwtauth,JSON Web Token Authentication Laravel Lumen,https://api.github.com/repos/tymondesigns/jwt-auth,11121,PHP,1558,593
+48796179,laraveladmin,Build fullfeatured administrative interface minutes,https://api.github.com/repos/z-song/laravel-admin,11035,PHP,2827,240
+7579180,lexer,Base library lexer TopDown Recursive Descent Parsers,https://api.github.com/repos/doctrine/lexer,10984,PHP,55,2
+14732311,october,Selfhosted CMS platform based Laravel PHP Framework,https://api.github.com/repos/octobercms/october,10954,PHP,2298,5
+22726901,instantiator,description,https://api.github.com/repos/doctrine/instantiator,10891,PHP,65,1
+15020102,workerman,asynchronous event driven PHP socket framework Supports HTTP Websocket SSL custom protocols,https://api.github.com/repos/walkor/workerman,10831,PHP,2287,72
+53131903,speedtest,Selfhosted Speed Test HTML5 Easy setup examples configurable mobile friendly Supports PHP Node Multiple servers,https://api.github.com/repos/librespeed/speedtest,10803,PHP,2069,93
+11467667,typecho,PHP Blogging Platform Simple Powerful,https://api.github.com/repos/typecho/typecho,10771,PHP,2034,285
+2854337,cphalcon,High performance fullstack PHP framework delivered C extension,https://api.github.com/repos/phalcon/cphalcon,10737,PHP,2038,76
+717413801,deploy,Pandora Cloud Pandora Server Shared Chat BackendAPI Proxy Chat2API Signup Free PandoraNext New GPTsGizmo UI,https://api.github.com/repos/pandora-next/deploy,10699,PHP,2111,26
+2699935,PHPCodeSniffer,PHPCodeSniffer tokenizes PHP files detects violations defined set coding standards,https://api.github.com/repos/squizlabs/PHP_CodeSniffer,10560,PHP,1560,300
+137515,mockery,Mockery simple flexible PHP mock object framework use unit testing PHPUnit PHPSpec testing framework core goal offer test double framework succinct API capable clearly defining possible object operations interactions human readable Domain Specific Language DSL,https://api.github.com/repos/mockery/mockery,10530,PHP,463,105
+332880689,coolify,opensource selfhostable Heroku Netlify Vercel alternative,https://api.github.com/repos/coollabsio/coolify,10493,PHP,565,58
+5627682,MobileDetect,MobileDetect lightweight PHP class detecting mobile devices including tablets uses UserAgent string combined specific HTTP headers detect mobile environment,https://api.github.com/repos/serbanghita/Mobile-Detect,10432,PHP,2705,16
+11340559,deployer,PHP deployment tool support popular frameworks box,https://api.github.com/repos/deployphp/deployer,10222,PHP,1480,144
+29843361,easywechat,PHP SDK,https://api.github.com/repos/w7corp/easywechat,10180,PHP,2477,6
+6660366,dompdf,HTML PDF converter PHP,https://api.github.com/repos/dompdf/dompdf,10117,PHP,1815,553
+5508585,YOURLS,de facto standard self hosted URL shortener PHP,https://api.github.com/repos/YOURLS/YOURLS,9978,PHP,1951,64
+65755556,container,description,https://api.github.com/repos/php-fig/container,9848,PHP,49,6
+597887,orm,Doctrine Object Relational Mapper ORM,https://api.github.com/repos/doctrine/orm,9780,PHP,2506,1459
+4549925,psysh,REPL PHP,https://api.github.com/repos/bobthecow/psysh,9614,PHP,351,41
+111583593,scrcpy,Display control Android device,https://api.github.com/repos/Genymobile/scrcpy,97951,C,9816,1696
+10744183,netdata,opensource observability platform needs,https://api.github.com/repos/netdata/netdata,67043,C,5795,272
+156018,redis,Redis inmemory database persists disk data model keyvalue different kind values supported Strings Lists Sets Sorted Sets Hashes Streams HyperLogLogs Bitmaps,https://api.github.com/repos/redis/redis,63316,C,23248,2517
+246335987,Ventoy,new bootable USB solution,https://api.github.com/repos/ventoy/Ventoy,56307,C,3951,665
+13233158,obsstudio,OBS Studio Free open source software live streaming screen recording,https://api.github.com/repos/obsproject/obs-studio,54034,C,7571,648
+1903522,phpsrc,PHP Interpreter,https://api.github.com/repos/php/php-src,36814,C,7802,865
+3774328,wrk,Modern HTTP benchmarking tool,https://api.github.com/repos/wg/wrk,36304,C,2927,192
+569041,curl,command line tool library transferring data URL syntax supporting DICT FILE FTP FTPS GOPHER GOPHERS HTTP HTTPS IMAP IMAPS LDAP LDAPS MQTT POP3 POP3S RTMP RTMPS RTSP SCP SFTP SMB SMBS SMTP SMTPS TELNET TFTP WS WSS libcurl offers myriad powerful features,https://api.github.com/repos/curl/curl,33214,C,6220,69
+10446890,ijkplayer,AndroidiOS video player based FFmpeg n34 MediaCodec VideoToolbox support,https://api.github.com/repos/bilibili/ijkplayer,31988,C,8140,2845
+36836475,tmux,tmux source code,https://api.github.com/repos/tmux/tmux,31944,C,2051,58
+102578345,lede,Leans LEDE source,https://api.github.com/repos/coolsnowwolf/lede,28221,C,19786,643
+5101141,jq,Commandline JSON processor,https://api.github.com/repos/jqlang/jq,28174,C,1557,419
+541269386,whispercpp,Port OpenAIs Whisper model CC,https://api.github.com/repos/ggerganov/whisper.cpp,27831,C,2709,487
+2810292,rufus,Reliable USB Formatting Utility,https://api.github.com/repos/pbatard/rufus,26113,C,2503,9
+24586308,ostutorial,create OS scratch,https://api.github.com/repos/cfenollosa/os-tutorial,26107,C,3246,122
+2810455,thesilversearcher,codesearching tool similar ack faster,https://api.github.com/repos/ggreer/the_silver_searcher,25529,C,1440,551
+6201092,mpv,Command line video player,https://api.github.com/repos/mpv-player/mpv,25115,C,2817,988
+18666758,darknet,Convolutional Neural Networks,https://api.github.com/repos/pjreddie/darknet,25056,C,21440,1966
+20159867,stb,stb singlefile public domain libraries CC,https://api.github.com/repos/nothings/stb,24466,C,7832,248
+7634677,openssl,TLSSSL crypto library,https://api.github.com/repos/openssl/openssl,23704,C,10337,2315
+14812739,libuv,Crossplatform asynchronous IO,https://api.github.com/repos/libuv/libuv,22844,C,3553,170
+196353673,TDengine,TDengine open source highperformance cloud native timeseries database optimized Internet Things IoT Connected Cars Industrial IoT DevOps,https://api.github.com/repos/taosdata/TDengine,22547,C,4800,1239
+11715753,masscan,TCP port scanner spews SYN packets asynchronously scanning entire Internet 5 minutes,https://api.github.com/repos/robertdavidgraham/masscan,22303,C,3062,369
+29759715,zstd,Zstandard Fast realtime compression algorithm,https://api.github.com/repos/facebook/zstd,21701,C,2087,200
+15183485,TheArtOfProgrammingByJuly2nd,,https://api.github.com/repos/julycoding/The-Art-Of-Programming-By-July-2nd,21171,C,7166,68
+80286288,Tasmota,Alternative firmware ESP8266 ESP32 based devices easy configuration webUI OTA updates automation timers rules expandability entirely local control MQTT HTTP Serial KNX documentation,https://api.github.com/repos/arendst/Tasmota,21018,C,4652,11
+14807173,HowtoMakeaComputerOperatingSystem,Computer Operating System C,https://api.github.com/repos/SamyPesse/How-to-Make-a-Computer-Operating-System,20799,C,3477,84
+184909163,yabai,tiling window manager macOS based binary space partitioning,https://api.github.com/repos/koekeishiya/yabai,20224,C,612,262
+394318710,ExplorerPatcher,project aims enhance working environment Windows,https://api.github.com/repos/valinet/ExplorerPatcher,19859,C,915,127
+47409672,hashcat,Worlds fastest advanced password recovery utility,https://api.github.com/repos/hashcat/hashcat,19293,C,2778,283
+214011414,WindTerm,professional crossplatform SSHSftpShellTelnetSerial terminal,https://api.github.com/repos/kingToolbox/WindTerm,19242,C,1514,1480
+4869294,radare2,UNIXlike reverse engineering framework commandline toolset,https://api.github.com/repos/radareorg/radare2,19224,C,2968,873
+34921116,bcc,BCC Tools BPFbased Linux IO analysis networking monitoring,https://api.github.com/repos/iovisor/bcc,18902,C,3752,916
+18496166,mimikatz,little tool play Windows security,https://api.github.com/repos/gentilkiwi/mimikatz,18363,C,3574,164
+15337142,micropython,MicroPython lean efficient Python implementation microcontrollers constrained systems,https://api.github.com/repos/micropython/micropython,17935,C,7160,1750
+66150122,nnn,n unorthodox terminal file manager,https://api.github.com/repos/jarun/nnn,17795,C,746,6
+13836499,raylib,simple easytouse library enjoy videogames programming,https://api.github.com/repos/raysan5/raylib,17674,C,1870,22
+63477515,C,Collection algorithms mathematics machine learning computer science physics etc implemented C educational purposes,https://api.github.com/repos/TheAlgorithms/C,17650,C,4246,20
+45821540,openwrt,repository mirror httpsgitopenwrtorgopenwrtopenwrtgit reference active checkins continue accept Pull Requests merged staging trees openwrtgit,https://api.github.com/repos/openwrt/openwrt,17574,C,9605,2537
+11397939,goaccess,GoAccess realtime web log analyzer interactive viewer runs terminal nix systems browser,https://api.github.com/repos/allinurl/goaccess,17194,C,1146,390
+27737393,qmkfirmware,Opensource keyboard firmware Atmel AVR Arm USB families,https://api.github.com/repos/qmk/qmk_firmware,16627,C,35747,611
+84240850,timescaledb,opensource timeseries SQL database optimized fast ingest complex queries Packaged PostgreSQL extension,https://api.github.com/repos/timescale/timescaledb,16119,C,843,563
+727213319,mytv,,https://api.github.com/repos/lizongying/my-tv,15982,C,1524,128
+90320494,ish,Linux shell iOS,https://api.github.com/repos/ish-app/ish,15518,C,845,570
+41215835,HandBrake,HandBrakes main development repository,https://api.github.com/repos/HandBrake/HandBrake,14923,C,1222,277
+70777180,Mailspring,loveletter beautiful fast fully open source mail client Mac Windows Linux,https://api.github.com/repos/Foundry376/Mailspring,14880,C,911,8
+193885464,blurhash,compact representation placeholder image,https://api.github.com/repos/woltapp/blurhash,14765,C,330,46
+60667730,lvgl,Embedded graphics library create beautiful UIs MCU MPU display type boosted professional affordable drag drop UI editor called SquareLine Studio,https://api.github.com/repos/lvgl/lvgl,14346,C,2880,105
+28515839,kcp,zap KCP Fast Reliable ARQ Protocol,https://api.github.com/repos/skywind3000/kcp,14321,C,2464,169
+669686044,llama2c,Inference Llama 2 file pure C,https://api.github.com/repos/karpathy/llama2.c,14162,C,1524,146
+470579591,unleashedfirmware,Flipper Zero Unleashed Firmware,https://api.github.com/repos/DarkFlippers/unleashed-firmware,14034,C,1256,73
+272457606,cosmopolitan,buildonce runanywhere c library,https://api.github.com/repos/jart/cosmopolitan,13960,C,518,149
+488002779,opengpukernelmodules,NVIDIA Linux open GPU kernel module source,https://api.github.com/repos/NVIDIA/open-gpu-kernel-modules,13693,C,1071,140
+32866454,nuklear,singleheader ANSI C gui library,https://api.github.com/repos/vurtun/nuklear,13626,C,1161,237
+40217904,sway,i3compatible Wayland compositor,https://api.github.com/repos/swaywm/sway,13431,C,1057,928
+184981,memcached,memcached development tree,https://api.github.com/repos/memcached/memcached,13010,C,3266,77
+3714900,nginxrtmpmodule,NGINXbased Media Streaming Server,https://api.github.com/repos/arut/nginx-rtmp-module,12987,C,3515,1125
+211381291,BlackHole,BlackHole modern macOS audio loopback driver allows applications pass audio applications zero additional latency,https://api.github.com/repos/ExistentialAudio/BlackHole,12880,C,529,7
+95133665,raspberrypios,Learning operating system development Linux kernel Raspberry Pi,https://api.github.com/repos/s-matyukevich/raspberry-pi-os,12747,C,1289,55
+78281075,esp8266deauther,Affordable WiFi hacking platform testing learning,https://api.github.com/repos/SpacehuhnTech/esp8266_deauther,12643,C,2526,116
+5254557,skynet,lightweight online game framework,https://api.github.com/repos/cloudwu/skynet,12575,C,4104,21
+3784017,tengine,distribution Nginx advanced features,https://api.github.com/repos/alibaba/tengine,12474,C,2529,434
+215530281,ffmpegwasm,FFmpeg browser powered WebAssembly,https://api.github.com/repos/ffmpegwasm/ffmpeg.wasm,12373,C,701,289
+6041301,sumatrapdf,SumatraPDF reader,https://api.github.com/repos/sumatrapdfreader/sumatrapdf,12181,C,1641,532
+32873313,systemd,systemd System Service Manager,https://api.github.com/repos/systemd/systemd,12160,C,3586,2266
+7715820,rofi,Rofi window switcher application launcher dmenu replacement,https://api.github.com/repos/davatorium/rofi,12107,C,610,64
+8514,rails,Ruby Rails,https://api.github.com/repos/rails/rails,54385,Ruby,21639,1108
+65252,jekyll,globewithmeridians Jekyll blogaware static site generator Ruby,https://api.github.com/repos/jekyll/jekyll,47901,Ruby,10325,205
+52281283,mastodon,selfhosted globally interconnected microblogging community,https://api.github.com/repos/mastodon/mastodon,45274,Ruby,6812,3974
+8681349,huginn,Create agents monitor act behalf agents standing,https://api.github.com/repos/huginn/huginn,40482,Ruby,3620,698
+53238813,brew,missing package manager macOS Linux,https://api.github.com/repos/Homebrew/brew,38528,Ruby,9588,44
+27442967,fastlane,easiest way automate building releasing iOS Android apps,https://api.github.com/repos/fastlane/fastlane,38400,Ruby,5790,592
+13840241,devdocs,API Documentation Browser,https://api.github.com/repos/freeCodeCamp/devdocs,33432,Ruby,2303,170
+2293158,metasploitframework,Metasploit Framework,https://api.github.com/repos/rapid7/metasploit-framework,32258,Ruby,13816,433
+21600440,awesomeawesomeness,curated list awesome awesomeness,https://api.github.com/repos/bayandin/awesome-awesomeness,31038,Ruby,3597,34
+37382858,engineeringblogs,curated list engineering blogs,https://api.github.com/repos/kilimchoi/engineering-blogs,28400,Ruby,1340,121
+481872,vagrant,Vagrant tool building distributing development environments,https://api.github.com/repos/hashicorp/vagrant,25653,Ruby,4516,716
+21696302,awesomeswift,collaborative list awesome Swift libraries resources Feel free contribute,https://api.github.com/repos/matteocrippa/awesome-swift,24046,Ruby,3089,9
+308770,devise,Flexible authentication solution Rails Warden,https://api.github.com/repos/heartcombo/devise,23616,Ruby,5599,217
+737898780,maybe,OS personal finances,https://api.github.com/repos/maybe-finance/maybe,21457,Ruby,1590,11
+73648678,forem,empowering community,https://api.github.com/repos/forem/forem,21377,Ruby,3946,604
+3623050,homebrewcask,CLI workflow administration macOS applications distributed binaries,https://api.github.com/repos/Homebrew/homebrew-cask,20385,Ruby,10611,24
+202291859,chatwoot,Opensource livechat email support omnichannel desk alternative Intercom Zendesk Salesforce Service Cloud etc,https://api.github.com/repos/chatwoot/chatwoot,17836,Ruby,2784,688
+18486300,setup,Setup instructions Le Wagons students day Web Development Bootcamp,https://api.github.com/repos/lewagon/setup,17594,Ruby,1615,5
+2203645,CocoaPods,Cocoa Dependency Manager,https://api.github.com/repos/CocoaPods/CocoaPods,14375,Ruby,2716,591
+88740103,postal,fully featured open source mail delivery platform incoming outgoing email,https://api.github.com/repos/postalserver/postal,13563,Ruby,993,73
+11423758,quinerelay,uroboros program 100 programming languages,https://api.github.com/repos/mame/quine-relay,13543,Ruby,570,15
+585285,gollum,simple Gitpowered wiki sweet API local frontend,https://api.github.com/repos/gollum/gollum,13471,Ruby,1659,48
+911765,diaspora,privacyaware distributed open source social network,https://api.github.com/repos/diaspora/diaspora,13326,Ruby,2957,433
+52855516,homebrewcore,Default formulae missing package manager macOS Linux,https://api.github.com/repos/Homebrew/homebrew-core,13031,Ruby,12119,125
+3195124,sidekiq,Simple efficient background processing Ruby,https://api.github.com/repos/sidekiq/sidekiq,12845,Ruby,2384,27
+138312,capistrano,deployment automation tool built Ruby Rake SSH,https://api.github.com/repos/capistrano/capistrano,12625,Ruby,1838,59
+3314,spree,Open Source multilanguagemulticurrencymultistore eCommerce platform,https://api.github.com/repos/spree/spree,12532,Ruby,4936,322
+4095287,rubocop,Ruby static code analyzer formatter based community Ruby style guide,https://api.github.com/repos/rubocop/rubocop,12454,Ruby,3094,378
+1918677,fluentd,Fluentd Unified Logging Layer project CNCF,https://api.github.com/repos/fluent/fluentd,12416,Ruby,1335,156
+1157388,tmuxinator,Manage complex tmux sessions easily,https://api.github.com/repos/tmuxinator/tmuxinator,12287,Ruby,640,114
+106995,sinatra,Classy webdevelopment dressed DSL official canonical repo,https://api.github.com/repos/sinatra/sinatra,12067,Ruby,2128,12
+1725199,linguist,Language Savant repositorys language reported incorrectly send pull request,https://api.github.com/repos/github-linguist/linguist,11584,Ruby,4442,168
+96395,faker,library generating fake data names addresses phone numbers,https://api.github.com/repos/faker-ruby/faker,10996,Ruby,3181,16
+1217404,fpm,Effing package management Build packages multiple platforms deb rpm etc great ease sanity,https://api.github.com/repos/jordansissel/fpm,10993,Ruby,1077,759
+6688319,LearningSICP,MIT,https://api.github.com/repos/DeathKing/Learning-SICP,10768,Ruby,1539,1
+15435,liquid,Liquid markup language Safe customer facing template language flexible web apps,https://api.github.com/repos/Shopify/liquid,10660,Ruby,1402,339
+361310,capybara,Acceptance test framework web applications,https://api.github.com/repos/teamcapybara/capybara,9921,Ruby,1459,28
+812393,grape,opinionated framework creating RESTlike APIs Ruby,https://api.github.com/repos/ruby-grape/grape,9814,Ruby,1242,251
+13761875,remoteworking,,https://api.github.com/repos/greatghoul/remote-working,9592,Ruby,826,1
+611921,activeadmin,administration framework Ruby Rails applications,https://api.github.com/repos/activeadmin/activeadmin,9419,Ruby,3357,29
+5200099,guides,guide programming style,https://api.github.com/repos/thoughtbot/guides,9385,Ruby,1384,1
+275604,resque,Resque Redisbacked Ruby library creating background jobs placing multiple queues processing later,https://api.github.com/repos/resque/resque,9376,Ruby,1680,82
+341626,octopress,Octopress obsessively designed framework Jekyll blogging easy configure easy deploy Sweet huh,https://api.github.com/repos/imathis/octopress,9332,Ruby,2678,247
+1653882,bourbon,Lightweight Sass Tool Set,https://api.github.com/repos/thoughtbot/bourbon,9102,Ruby,902,5
+8393,paperclip,Easy file attachment management ActiveRecord,https://api.github.com/repos/thoughtbot/paperclip,9042,Ruby,2460,54
+47087,carrierwave,Classier solution file uploads Rails Sinatra Ruby web frameworks,https://api.github.com/repos/carrierwaveuploader/carrierwave,8780,Ruby,1663,43
+129791,,Cron jobs Ruby,https://api.github.com/repos/javan/whenever,8770,Ruby,742,93
+586265895,kamal,Deploy web apps,https://api.github.com/repos/basecamp/kamal,8534,Ruby,318,104
+1333863,kaminari,Scope Engine based clean powerful customizable sophisticated paginator Ruby webapps,https://api.github.com/repos/kaminari/kaminari,8475,Ruby,1088,60
+69193081,howtocontributetoopensource,guide contributing open source,https://api.github.com/repos/freeCodeCamp/how-to-contribute-to-open-source,8409,Ruby,1792,89
+451035,simpleform,Forms easy Rails tied simple DSL opinion markup,https://api.github.com/repos/heartcombo/simple_form,8179,Ruby,1325,49
+4994614,wpscan,WPScan WordPress security scanner Written security professionals blog maintainers test security WordPress websites Contact contactwpscancom,https://api.github.com/repos/wpscanteam/wpscan,8107,Ruby,1256,53
+6529205,pundit,Minimal authorization OO design pure Ruby classes,https://api.github.com/repos/varvet/pundit,8107,Ruby,630,24
+21829,factorybot,library setting Ruby objects test data,https://api.github.com/repos/thoughtbot/factory_bot,7869,Ruby,2637,56
+810796,railsadmin,RailsAdmin Rails engine provides easytouse interface managing data,https://api.github.com/repos/railsadminteam/rails_admin,7833,Ruby,2258,198
+587311,omniauth,OmniAuth flexible authentication system utilizing Rack middleware,https://api.github.com/repos/omniauth/omniauth,7807,Ruby,1008,97
+2441517,puma,RubyRack web server built parallelism,https://api.github.com/repos/puma/puma,7546,Ruby,1435,63
+22059578,pghero,performance dashboard Postgres,https://api.github.com/repos/ankane/pghero,7459,Ruby,439,8
+108278,chef,Chef Infra powerful automation platform transforms infrastructure code automating infrastructure configured deployed managed environment scale,https://api.github.com/repos/chef/chef,7407,Ruby,2603,367
+20552964,jazzy,Soulful docs Swift ObjectiveC,https://api.github.com/repos/realm/jazzy,7303,Ruby,466,80
+16549503,scientist,microscope Ruby library carefully refactoring critical paths,https://api.github.com/repos/github/scientist,7290,Ruby,533,17
+26018608,githubchangeloggenerator,Automatically generate change log tags issues labels pull requests GitHub,https://api.github.com/repos/github-changelog-generator/github-changelog-generator,7262,Ruby,883,145
+910744,puppet,Server automation framework application,https://api.github.com/repos/puppetlabs/puppet,7205,Ruby,2295,53
+261943,middleman,Handcrafted frontend development,https://api.github.com/repos/middleman/middleman,6995,Ruby,774,18
+277089,bullet,help kill N1 queries unused eager loading,https://api.github.com/repos/flyerhzm/bullet,6958,Ruby,422,99
+2798959,dotfiles,YADR best vimgitzsh plugins cleanest vimrc youve seen,https://api.github.com/repos/skwp/dotfiles,6932,Ruby,1430,3
+7066560,bettererrors,Better error page Rack apps,https://api.github.com/repos/BetterErrors/better_errors,6862,Ruby,456,60
+865250,brakeman,static analysis security vulnerability scanner Ruby Rails applications,https://api.github.com/repos/presidentbeef/brakeman,6849,Ruby,748,93
+72754314,nodejslearningguide,Nodejs,https://api.github.com/repos/chyingp/nodejs-learning-guide,6820,Ruby,1273,11
+1145832,pry,runtime developer console IRB alternative powerful introspection capabilities,https://api.github.com/repos/pry/pry,6683,Ruby,613,159
+211588,papertrail,Track changes rails models,https://api.github.com/repos/paper-trail-gem/paper_trail,6664,Ruby,887,15
+184456251,PowerToys,Windows system utilities maximize productivity,https://api.github.com/repos/microsoft/PowerToys,102150,C#,6280,5446
+7600409,shadowsockswindows,C port shadowsocks,https://api.github.com/repos/shadowsocks/shadowsocks-windows,57736,C#,16847,167
+199570071,v2rayN,GUI client Windows support Xray core v2fly core,https://api.github.com/repos/2dust/v2rayN,57629,C#,10323,14
+49609581,PowerShell,PowerShell system,https://api.github.com/repos/PowerShell/PowerShell,42755,C#,7832,917
+17620347,aspnetcore,ASPNET Core crossplatform NET framework building modern cloudbased web applications Windows Mac Linux,https://api.github.com/repos/dotnet/aspnetcore,33641,C#,9663,2967
+164140756,Files,Building best file manager Windows,https://api.github.com/repos/files-community/Files,30891,C#,2095,386
+161012019,jellyfin,Free Software Media System,https://api.github.com/repos/jellyfin/jellyfin,28035,C#,2595,535
+13428264,ShareX,ShareX free open source program lets capture record area screen share single press key allows uploading images text types files supported destinations choose,https://api.github.com/repos/ShareX/ShareX,26780,C#,3072,516
+120231691,Ryujinx,Experimental Nintendo Switch Emulator written C,https://api.github.com/repos/Ryujinx/Ryujinx,26374,C#,2503,772
+198071756,RevokeMsgPatcher,trollface hex editor WeChatQQTIM PCQQTIM,https://api.github.com/repos/huiyadanli/RevokeMsgPatcher,25085,C#,3096,52
+70104825,eShopOnContainers,Crossplatform NET sample microservices container based application runs Linux Windows macOS Powered NET 7 Docker Containers Azure Kubernetes Services Supports Visual Studio VS Mac CLI based environments Docker CLI dotnet CLI VS Code code editor Moved httpsgithubcomdotneteShop,https://api.github.com/repos/dotnet-architecture/eShopOnContainers,24607,C#,10546,71
+14964475,Avalonia,Develop Desktop Embedded Mobile WebAssembly apps C XAML popular NET Foundation community project,https://api.github.com/repos/AvaloniaUI/Avalonia,22938,C#,2050,1326
+11620669,CodeHub,CodeHub iOS application written Xamarin,https://api.github.com/repos/CodeHubApp/CodeHub,22917,C#,677,237
+69662720,WaveFunctionCollapse,Bitmap tilemap generation single example help ideas quantum mechanics,https://api.github.com/repos/mxgmn/WaveFunctionCollapse,22450,C#,1274,3
+64713769,ScreenToGif,ScreenToGif allows record selected area screen edit save gif video,https://api.github.com/repos/NickeManarin/ScreenToGif,22122,C#,2132,255
+262395224,maui,NET MAUI NET Multiplatform App UI framework building native device applications spanning mobile tablet desktop,https://api.github.com/repos/dotnet/maui,21263,C#,1577,3351
+411493648,DevToys,Swiss Army knife developers,https://api.github.com/repos/veler/DevToys,20792,C#,1149,176
+1327739,ILSpy,NET Decompiler support PDB generation ReadyToRun Metadata crossplatform,https://api.github.com/repos/icsharpcode/ILSpy,19641,C#,3266,205
+54086969,awesomedotnetcore,honeybee collection awesome NET core libraries tools frameworks software,https://api.github.com/repos/thangchung/awesome-dotnet-core,18878,C#,2844,154
+29078997,roslyn,Roslyn NET compiler provides C Visual Basic languages rich code analysis APIs,https://api.github.com/repos/dotnet/roslyn,18264,C#,4037,8941
+324473895,downkyi,downkyi8KHDR,https://api.github.com/repos/leiurayer/downkyi,17658,C#,2033,563
+321682465,SteamTools,Watt Toolkit Steam,https://api.github.com/repos/BeyondDimension/SteamTools,17286,C#,1082,742
+1613345,Dapper,Dapper simple object mapper Net,https://api.github.com/repos/DapperLib/Dapper,16882,C#,3676,464
+607289185,semantickernel,Integrate cuttingedge LLM technology quickly easily apps,https://api.github.com/repos/microsoft/semantic-kernel,16652,C#,2457,549
+102904613,mlagents,Unity Machine Learning Agents Toolkit MLAgents opensource project enables games simulations serve environments training intelligent agents deep reinforcement learning imitation learning,https://api.github.com/repos/Unity-Technologies/ml-agents,15992,C#,4053,49
+88064357,QuickLook,Bring macOS Quick Look feature Windows,https://api.github.com/repos/QL-Win/QuickLook,15781,C#,1058,423
+193681686,netch,simple proxy client,https://api.github.com/repos/netchx/netch,15699,C#,2655,10
+213460285,CleanArchitecture,Clean Architecture Solution Template ASPNET Core,https://api.github.com/repos/jasontaylordev/CleanArchitecture,14993,C#,3259,37
+30474266,MaterialDesignInXamlToolkit,Googles Material Design XAML WPF C VBNet,https://api.github.com/repos/MaterialDesignInXAML/MaterialDesignInXamlToolkit,14373,C#,3397,174
+69673033,CleanArchitecture,Clean Architecture Solution Template starting point Clean Architecture ASPNET Core,https://api.github.com/repos/ardalis/CleanArchitecture,14330,C#,2531,50
+165548191,PEASSng,PEASS Privilege Escalation Awesome Scripts SUITE colors,https://api.github.com/repos/carlospolop/PEASS-ng,14284,C#,2932,20
+46755185,server,core infrastructure backend API database Docker etc,https://api.github.com/repos/bitwarden/server,13930,C#,1203,175
+959908,OpenRA,Open Source realtime strategy game engine early Westwood games Command Conquer Red Alert written C SDL OpenGL Runs Windows Linux BSD Mac OS X,https://api.github.com/repos/OpenRA/OpenRA,13862,C#,2650,1544
+22456440,osu,rhythm click away,https://api.github.com/repos/ppy/osu,13765,C#,2079,1303
+210716005,runtime,NET crossplatform runtime cloud mobile desktop IoT apps,https://api.github.com/repos/dotnet/runtime,13600,C#,4440,8876
+135050219,CMWTATDigitalEdition,CloudMoe Windows 1011 Activation Toolkit digital license best open source Win 1011 activator GitHub GitHub Win10Win11,https://api.github.com/repos/TGSAN/CMWTAT_Digital_Edition,13348,C#,1807,24
+201188122,lively,Free opensource software allows users set animated desktop wallpapers screensavers powered WinUI 3,https://api.github.com/repos/rocksdanister/lively,13309,C#,1015,284
+16157746,efcore,EF Core modern objectdatabase mapper NET supports LINQ queries change tracking updates schema migrations,https://api.github.com/repos/dotnet/efcore,13126,C#,3079,1983
+182095352,Nm3u8DLCLI,NET m3u8 downloader m3u8HLSdashAES128CBC English Supported,https://api.github.com/repos/nilaoda/N_m3u8DL-CLI,13098,C#,2073,248
+9864166,Polly,Polly NET resilience transientfaulthandling library allows developers express policies Retry Circuit Breaker Timeout Bulkhead Isolation Fallback fluent threadsafe manner version 601 Polly targets NET Standard 11 20,https://api.github.com/repos/App-vNext/Polly,12754,C#,1131,11
+28239455,AspNetCoreDocs,Documentation ASPNET Core,https://api.github.com/repos/dotnet/AspNetCore.Docs,12200,C#,25546,486
+64753043,AssetStudio,AssetStudio tool exploring extracting exporting assets assetbundles,https://api.github.com/repos/Perfare/AssetStudio,12163,C#,2384,185
+75505125,abp,Open Source Web Application Framework ASPNET Core Offers opinionated architecture build enterprise software solutions best practices NET ASPNET Core platforms Provides fundamental infrastructure productionready startup templates application modules UI themes tooling guides documentation,https://api.github.com/repos/abpframework/abp,11981,C#,3292,515
+12201538,aspnetboilerplate,ASPNET Boilerplate Web Application Framework,https://api.github.com/repos/aspnetboilerplate/aspnetboilerplate,11450,C#,3773,164
+103370157,optimizer,finest Windows Optimizer,https://api.github.com/repos/hellzerg/optimizer,10974,C#,770,7
+500093,winsw,wrapper executable run executable Windows service permissive license,https://api.github.com/repos/winsw/winsw,10879,C#,1488,210
+791611,mono,Mono open source ECMA CLI C NET implementation,https://api.github.com/repos/mono/mono,10754,C#,3876,2263
+334515155,basiccomputergames,updated version classic Basic Computer Games book wellwritten examples variety common MEMORY SAFE SCRIPTING programming languages httpscodinghorrorgithubiobasiccomputergames,https://api.github.com/repos/coding-horror/basic-computer-games,10720,C#,1329,18
+75990888,csharplang,official repo design C programming language,https://api.github.com/repos/dotnet/csharplang,10687,C#,1069,473
+1579990,MonoGame,framework creating powerful crossplatform games,https://api.github.com/repos/MonoGame/MonoGame,10581,C#,2821,778
+45195614,Jackett,API Support favorite torrent trackers,https://api.github.com/repos/Jackett/Jackett,10476,C#,1224,202
+3476845,NewtonsoftJson,JsonNET popular highperformance JSON framework NET,https://api.github.com/repos/JamesNK/Newtonsoft.Json,10420,C#,3265,751
+17369361,MediatR,Simple unambitious mediator implementation NET,https://api.github.com/repos/jbogard/MediatR,10377,C#,1113,13
+44897462,ArchiSteamFarm,C application primary purpose farming Steam cards multiple accounts simultaneously,https://api.github.com/repos/JustArchiNET/ArchiSteamFarm,10315,C#,1082,4
+203892454,modularmonolithwithddd,Modular Monolith application DomainDriven Design approach,https://api.github.com/repos/kgrzybek/modular-monolith-with-ddd,9880,C#,1532,54
+326826023,QuestPDF,QuestPDF modern opensource NET library PDF document generation Offering comprehensive layout engine powered concise discoverable C Fluent API Easily generate PDF reports invoices exports etc,https://api.github.com/repos/QuestPDF/QuestPDF,9878,C#,503,203
+22636263,duplicati,Store securely encrypted backups cloud,https://api.github.com/repos/duplicati/duplicati,9858,C#,856,902
+12191244,BenchmarkDotNet,Powerful NET library benchmarking,https://api.github.com/repos/dotnet/BenchmarkDotNet,9819,C#,945,222
+28232663,orleans,Cloud Native application framework NET,https://api.github.com/repos/dotnet/orleans,9692,C#,2025,480
+28647218,choco,Chocolatey package manager Windows,https://api.github.com/repos/chocolatey/choco,9677,C#,910,789
+83380995,eShopOnWeb,Sample ASPNET Core 80 reference application powered Microsoft demonstrating layered application architecture monolithic deployment model Download eBook PDF docs folder,https://api.github.com/repos/dotnet-architecture/eShopOnWeb,9671,C#,5030,18
+505380,AutoMapper,conventionbased objectobject mapper NET,https://api.github.com/repos/AutoMapper/AutoMapper,9666,C#,1742,0
+304230333,ContextMenuManager,Windows,https://api.github.com/repos/BluePointLilac/ContextMenuManager,9643,C#,526,85
+2465723,Sonarr,Smart PVR newsgroup bittorrent users,https://api.github.com/repos/Sonarr/Sonarr,9639,C#,1205,113
+1135454,CefSharp,NET WPF Windows Forms bindings Chromium Embedded Framework,https://api.github.com/repos/cefsharp/CefSharp,9570,C#,2930,52
+374228,RestSharp,Simple REST HTTP API Client NET,https://api.github.com/repos/restsharp/RestSharp,9364,C#,2336,42
+41589439,Captura,Capture Screen Audio Cursor Mouse Clicks Keystrokes,https://api.github.com/repos/MathewSachin/Captura,9194,C#,1764,120
+46652227,IdentityServer4,OpenID Connect OAuth 20 Framework ASPNET Core,https://api.github.com/repos/IdentityServer/IdentityServer4,9150,C#,3994,0
+118322286,FluentTerminal,Terminal Emulator based UWP web technologies,https://api.github.com/repos/felixse/FluentTerminal,9078,C#,456,248
+2584777,MahAppsMetro,framework allows developers cobble better UI WPF applications minimal effort,https://api.github.com/repos/MahApps/MahApps.Metro,9046,C#,2458,93
+2087064,SignalR,Incredibly simple realtime web NET,https://api.github.com/repos/SignalR/SignalR,9040,C#,2298,40
+113807330,TerminalGui,Cross Platform Terminal UI toolkit NET,https://api.github.com/repos/gui-cs/Terminal.Gui,8930,C#,667,170
+4542716,nixpkgs,Nix Packages collection NixOS,https://api.github.com/repos/NixOS/nixpkgs,14419,Nix,11680,13116
+78938149,homemanager,Manage user environment Nix maintainerrycee,https://api.github.com/repos/nix-community/home-manager,5400,Nix,1503,628
+555988330,devenv,Fast Declarative Reproducible Composable Developer Environments,https://api.github.com/repos/cachix/devenv,2855,Nix,215,287
+71055474,nixdarwin,nix modules darwin,https://api.github.com/repos/LnL7/nix-darwin,2058,Nix,358,226
+261367423,nixosconfig,NixOS configurations,https://api.github.com/repos/mitchellh/nixos-config,1661,Nix,168,8
+439118950,nixstarterconfigs,Simple documented config templates help started NixOS homemanager flakes boilerplate need,https://api.github.com/repos/Misterio77/nix-starter-configs,1525,Nix,82,15
+8497338,dotfiles,hey whats going,https://api.github.com/repos/hlissner/dotfiles,1415,Nix,102,8
+51292491,nixoshardware,collection NixOS modules covering hardware quirks,https://api.github.com/repos/NixOS/nixos-hardware,1390,Nix,473,74
+211264092,nixdirenv,fast persistent usenixuseflake implementation direnv maintainerMic92 bbenne10,https://api.github.com/repos/nix-community/nix-direnv,1281,Nix,95,8
+131399100,nixosgenerators,Collection image builders maintainerLassulus,https://api.github.com/repos/nix-community/nixos-generators,1268,Nix,121,69
+226584170,NixOSWSL,NixOS WSL2 maintainernzbr,https://api.github.com/repos/nix-community/NixOS-WSL,1218,Nix,91,31
+657465612,nixosandflakesbook,hammerandwrench heart Want know NixOS Flakes detail Looking beginnerfriendly tutorial youve come right place NixOS Flakes,https://api.github.com/repos/ryan4yin/nixos-and-flakes-book,1155,Nix,53,2
+77855199,haskellnix,Nix Haskell production,https://api.github.com/repos/Gabriella439/haskell-nix,1119,Nix,119,28
+291897139,agenix,ageencrypted secrets NixOS Home manager,https://api.github.com/repos/ryantm/agenix,1092,Nix,90,57
+168824926,disko,Declarative disk partitioning formatting nix maintainerLassulus,https://api.github.com/repos/nix-community/disko,1022,Nix,120,74
+285092401,devshell,project developer environments,https://api.github.com/repos/numtide/devshell,1007,Nix,80,70
+221324180,digga,flake utility library craft shell home hosts environments,https://api.github.com/repos/divnix/digga,973,Nix,115,36
+335469407,pianotrans,Simple GUI ByteDances Piano Transcription Pedals,https://api.github.com/repos/azuwis/pianotrans,925,Nix,116,0
+503528235,athenanix,Athena OS NixOSbased distro focused Cybersecurity Learn practice enjoy hacking tool,https://api.github.com/repos/Athena-OS/athena-nix,923,Nix,71,18
+254872371,flakeutils,Pure Nix flake utility functions maintainerzimbatm,https://api.github.com/repos/numtide/flake-utils,915,Nix,72,20
+174202140,nixondroid,Nixenabled environment Android device maintainerst184256Gerschtli,https://api.github.com/repos/nix-community/nix-on-droid,912,Nix,56,80
+379762392,microvmnix,NixOS MicroVMs,https://api.github.com/repos/astro/microvm.nix,862,Nix,62,28
+325421844,nixvim,Configure Neovim Nix maintainerpta2002 traxys GaetanLepage,https://api.github.com/repos/nix-community/nixvim,808,Nix,130,41
+402816765,dream2nix,Simplified nix packaging programming language ecosystems maintainerDavHau,https://api.github.com/repos/nix-community/dream2nix,785,Nix,115,170
+269449884,impermanence,Modules help handle persistent state systems ephemeral root storage maintainertalyz,https://api.github.com/repos/nix-community/impermanence,768,Nix,56,43
+200123415,nix1p,page introduction Nix language,https://api.github.com/repos/tazjin/nix-1p,739,Nix,22,7
+214714219,simpletwitter,barebones Twitter clone implemented single file,https://api.github.com/repos/Gabriella439/simple-twitter,718,Nix,33,0
+21312973,hnix,Haskell reimplementation Nix expression language,https://api.github.com/repos/haskell-nix/hnix,717,Nix,116,142
+30125141,reflexplatform,curated package set set tools let build Haskell packages run variety platforms reflexplatform built nix package manager,https://api.github.com/repos/reflex-frp/reflex-platform,707,Nix,164,47
+420004805,nixosconfig,Nix configuration MacOS NixOS starter templates stepbystep guides,https://api.github.com/repos/dustinlyons/nixos-config,704,Nix,44,8
+60321165,notos,operating system generator based NixOS given config outputs small 47 MB readonly squashfs runitbased operating system support iPXE signed boot,https://api.github.com/repos/cleverca22/not-os,699,Nix,36,11
+242821299,nixconfig,spaceinvader NixOS configuration,https://api.github.com/repos/gvolpe/nix-config,687,Nix,68,2
+448456146,crane,Nix library building cargo projects build twice thanks incremental artifact caching,https://api.github.com/repos/ipetkov/crane,675,Nix,60,22
+325973252,rustoverlay,Pure reproducible nix overlay binary distributed rust toolchains,https://api.github.com/repos/oxalica/rust-overlay,672,Nix,40,10
+192372472,poetry2nix,Convert poetry projects nix automagically maintaineradisbladis,https://api.github.com/repos/nix-community/poetry2nix,663,Nix,351,142
+336990093,nixportable,Nix Static Permissionless Installationfree Preconfigured,https://api.github.com/repos/DavHau/nix-portable,650,Nix,23,30
+438066095,nixosapplesilicon,Resources install NixOS bare metal Apple Silicon Macs,https://api.github.com/repos/tpwrules/nixos-apple-silicon,619,Nix,59,20
+191750015,naersk,Build Rust projects Nix configuration code generation IFD sandbox friendly maintainerAxelSilverdew,https://api.github.com/repos/nix-community/naersk,611,Nix,80,47
+452466924,alejandra,Uncompromising Nix Code Formatter,https://api.github.com/repos/kamadorueda/alejandra,575,Nix,34,51
+162268840,jupyenv,Declarative reproducible Jupyter environments powered Nix,https://api.github.com/repos/tweag/jupyenv,569,Nix,121,76
+42525362,dappsys,Composable building blocks Ethereum contracts,https://api.github.com/repos/dapphub/dappsys,568,Nix,113,15
+61151418,nixbundle,Bundle Nix derivations run,https://api.github.com/repos/matthewbauer/nix-bundle,566,Nix,45,53
+103743611,nixGL,wrapper tool nix OpenGL application maintainerguibou,https://api.github.com/repos/nix-community/nixGL,555,Nix,64,62
+512942885,devtemplates,Dev environments numerous languages based Nix flakes maintainerlucperkins,https://api.github.com/repos/the-nix-way/dev-templates,551,Nix,54,8
+192943429,robotnix,Build Android AOSP Nix maintainerdanielfullmerAtemu,https://api.github.com/repos/nix-community/robotnix,535,Nix,56,52
+381217913,nixconfig,Personal nixos homemanager configurations,https://api.github.com/repos/Misterio77/nix-config,532,Nix,38,11
+162159170,arion,Run dockercompose help NixNixOS,https://api.github.com/repos/hercules-ci/arion,530,Nix,44,80
+127972398,nixosshell,Spawns lightweight nixos vms shell,https://api.github.com/repos/Mic92/nixos-shell,521,Nix,33,11
+421747669,flakeparts,Simplify Nix Flakes module system,https://api.github.com/repos/hercules-ci/flake-parts,519,Nix,32,47
+130384443,haskellnix,Alternative Haskell Infrastructure Nixpkgs,https://api.github.com/repos/input-output-hk/haskell.nix,513,Nix,230,189
+323381043,stylix,Systemwide colorscheming typography NixOS,https://api.github.com/repos/danth/stylix,512,Nix,58,68
+323142553,dotfiles,NixOS system config HomeManager user config,https://api.github.com/repos/fufexan/dotfiles,509,Nix,31,0
+394063679,NixOSGuide,NixOS Guide Learn immutable Nix Operating System declarative Nix Expression Language,https://api.github.com/repos/mikeroyal/NixOS-Guide,507,Nix,12,1
+326285915,fenix,Rust toolchains rustanalyzer nightly Nix maintainerfigsoda,https://api.github.com/repos/nix-community/fenix,506,Nix,35,20
+600535287,flake,Nix flake AI projects,https://api.github.com/repos/nixified-ai/flake,498,Nix,50,33
+519420513,crystal,nix dotfiles chilly people,https://api.github.com/repos/chadcat7/crystal,481,Nix,14,4
+455680411,nixosconfig,Personal Nix NixOS NixDarwin System Configuration Flake,https://api.github.com/repos/MatthiasBenaets/nixos-config,480,Nix,55,0
+61329173,nixpkgsmozilla,Mozilla overlay Nixpkgs,https://api.github.com/repos/mozilla/nixpkgs-mozilla,480,Nix,134,59
+24204033,node2nix,Generate Nix expressions build NPM packages,https://api.github.com/repos/svanderburg/node2nix,474,Nix,96,119
+277568940,gettingstarteddevenvtemplate,Based nixdev tutorials repository template started Nix,https://api.github.com/repos/nix-dot-dev/getting-started-devenv-template,467,Nix,28,5
+511742452,meltedflakes,presonal NixOS configNew config httpsgithubcomRuixirebirthflakes,https://api.github.com/repos/Ruixi-rebirth/melted-flakes,452,Nix,37,8
+354689732,TowBoot,opinionated distribution UBoot httpsmatrixtoTowBootmatrixorgviamatrixorg,https://api.github.com/repos/Tow-Boot/Tow-Boot,449,Nix,123,131
+163399343,emacsoverlay,Bleeding edge emacs overlay maintaineradisbladis,https://api.github.com/repos/nix-community/emacs-overlay,442,Nix,160,22
+154420124,nixpkgswayland,Automated prebuilt packages Wayland swaywlroots tools NixOS maintainerscolemickens Artturin,https://api.github.com/repos/nix-community/nixpkgs-wayland,441,Nix,45,42
+622702308,BotGeneratorBot,ultimate bot generator bot prompt Use prompt create powerful ChatGPT bots imagine,https://api.github.com/repos/ruvnet/Bot-Generator-Bot,440,Nix,88,2
+160699139,nixbitcoin,collection Nix packages NixOS modules easily installing fullfeatured Bitcoin nodes emphasis security,https://api.github.com/repos/fort-nix/nix-bitcoin,427,Nix,97,35
+347380169,flakeutilsplus,Use Nix flakes fluff,https://api.github.com/repos/gytis-ivaskevicius/flake-utils-plus,418,Nix,42,10
+203426070,nixshorts,collection short notes Nix immediately needed users,https://api.github.com/repos/justinwoo/nix-shorts,411,Nix,22,2
+285483895,dotfiles,NixOS dotfiles,https://api.github.com/repos/Mic92/dotfiles,411,Nix,33,1
+566505214,yuki,Yuki Snowflake snowflake,https://api.github.com/repos/rxyhn/yuki,409,Nix,26,0
+202728276,precommithooksnix,Seamless integration httpsprecommitcom git hooks Nix,https://api.github.com/repos/cachix/pre-commit-hooks.nix,406,Nix,120,52
+698405642,NixThePlanet,Run macOS Windows single Nix command simple nixosModules,https://api.github.com/repos/MatthewCroughan/NixThePlanet,404,Nix,3,7
+28358928,musnix,Realtime audio NixOS,https://api.github.com/repos/musnix/musnix,394,Nix,54,10
+276564920,system,Declarative system configurations nixOS nixdarwin homemanager,https://api.github.com/repos/kclejeune/system,385,Nix,46,0
+631333073,nixconfig,ryan4yins nix configNixOSmacOS homemanager i3hyprland neovimemacs agenix,https://api.github.com/repos/ryan4yin/nix-config,384,Nix,24,0
+291137,ohmyzsh,delightful communitydriven 2200 contributors framework managing zsh configuration Includes 300 optional plugins rails git macOS hub docker homebrew node php python etc 140 themes spice morning autoupdate tool makes easy latest updates community,https://api.github.com/repos/ohmyzsh/ohmyzsh,166635,Shell,25837,475
+943149,d3,Bring data life SVG Canvas HTML barchartchartwithupwardstrendtada,https://api.github.com/repos/d3/d3,107208,Shell,23392,15
+15204860,paperswelove,Papers computer science community read discuss,https://api.github.com/repos/papers-we-love/papers-we-love,81597,Shell,5940,18
+612230,nvm,Node Version Manager POSIXcompliant bash script manage multiple active nodejs versions,https://api.github.com/repos/nvm-sh/nvm,73685,Shell,7773,406
+596115135,node,required run Base node,https://api.github.com/repos/base-org/node,66356,Shell,2476,14
+243950408,HowToCook,Programmers guide cook home Simplified Chinese,https://api.github.com/repos/Anduin2017/HowToCook,58735,Shell,8168,368
+20619036,pihole,black hole Internet advertisements,https://api.github.com/repos/pi-hole/pi-hole,46014,Shell,2635,55
+228016443,leetcodemaster,LeetCode 20060w50CJavaPythonGoJavaScript,https://api.github.com/repos/youngyangyang04/leetcode-master,45123,Shell,10627,152
+172378503,powerlevel10k,Zsh theme,https://api.github.com/repos/romkatv/powerlevel10k,41389,Shell,2052,39
+137147386,purebashbible,collection pure bash alternatives external processes,https://api.github.com/repos/dylanaraps/pure-bash-bible,35569,Shell,3266,62
+48610662,acmesh,pure Unix shell script implementing ACME client protocol,https://api.github.com/repos/acmesh-official/acme.sh,35370,Shell,4713,1130
+63266213,ogaws,Amazon Web Services practical guide,https://api.github.com/repos/open-guides/og-aws,35073,Shell,3859,156
+269336148,DockerOSX,Run macOS VM Docker Run near native OSXKVM Docker X11 Forwarding CICD OS X Security Research Docker mac Containers,https://api.github.com/repos/sickcodes/Docker-OSX,34289,Shell,1719,324
+2329766,dotfiles,wrench files including macos sensible hacker defaults macOS,https://api.github.com/repos/mathiasbynens/dotfiles,29612,Shell,8823,185
+13886476,zshautosuggestions,Fishlike autosuggestions zsh,https://api.github.com/repos/zsh-users/zsh-autosuggestions,28861,Shell,1852,152
+61929586,programmerjobblacklist,seenoevil,https://api.github.com/repos/shengxinjing/programmer-job-blacklist,28403,Shell,1896,159
+481366,gitflow,Git extensions provide highlevel repository operations Vincent Driessens branching model,https://api.github.com/repos/nvie/gitflow,26442,Shell,2730,318
+10567197,dokku,dockerpowered PaaS helps build manage lifecycle applications,https://api.github.com/repos/dokku/dokku,25669,Shell,1858,25
+118858739,hackerlaws,Laws Theories Principles Patterns developers find useful hackerlaws,https://api.github.com/repos/dwmkerr/hacker-laws,25404,Shell,1541,139
+7240954,fonts,Patched fonts Powerline users,https://api.github.com/repos/powerline/fonts,25185,Shell,3301,180
+441903012,90DaysOfDevOps,repository document journey learning DevOps began process January 1 2022 plan continue March 31 dedicating hour day including weekends gaining foundational understanding aspects DevOps 90day intensive study period 2022 2023 inc,https://api.github.com/repos/MichaelCade/90DaysOfDevOps,24777,Shell,6001,15
+49217007,setupipsecvpn,Scripts build IPsec VPN server IPsecL2TP Cisco IPsec IKEv2,https://api.github.com/repos/hwdsl2/setup-ipsec-vpn,23552,Shell,6197,0
+18044526,streisand,Streisand sets new server running choice WireGuard OpenConnect OpenSSH OpenVPN Shadowsocks sslh Stunnel Tor bridge generates custom instructions services end run given HTML file instructions shared friends family members fellow activists,https://api.github.com/repos/StreisandEffect/streisand,23089,Shell,2050,238
+144590939,vscodium,binary releases VS Code MS brandingtelemetrylicensing,https://api.github.com/repos/VSCodium/vscodium,23000,Shell,985,120
+111205328,v2ray,V2Ray,https://api.github.com/repos/233boy/v2ray,22028,Shell,15664,136
+53133861,config,AppsCLIsconfigs use macOSiOS Fish Karabiner Cursor,https://api.github.com/repos/nikitavoloboev/config,20192,Shell,868,0
+48795298,neofetch,commandline system information tool written bash 32,https://api.github.com/repos/dylanaraps/neofetch,19826,Shell,1455,471
+683892956,ChatDev,Create Customized Software Natural Language Idea LLMpowered MultiAgent Collaboration,https://api.github.com/repos/OpenBMB/ChatDev,19759,Shell,2465,28
+27291507,asdf,Extendable version manager support Ruby Nodejs Elixir Erlang,https://api.github.com/repos/asdf-vm/asdf,19701,Shell,781,167
+18442377,dotfiles,Default configuration Le Wagons students,https://api.github.com/repos/lewagon/dotfiles,19629,Shell,24078,3
+50726688,spaceshipprompt,rocketstar Minimalistic powerful extremely customizable Zsh prompt,https://api.github.com/repos/spaceship-prompt/spaceship-prompt,18926,Shell,981,129
+1197428,zshsyntaxhighlighting,Fish shell like syntax highlighting Zsh,https://api.github.com/repos/zsh-users/zsh-syntax-highlighting,18580,Shell,1324,183
+1223029,n,Node version management,https://api.github.com/repos/tj/n,18307,Shell,757,4
+10054176,openvpninstall,OpenVPN road warrior installer Ubuntu Debian AlmaLinux Rocky Linux CentOS Fedora,https://api.github.com/repos/Nyr/openvpn-install,18094,Shell,4787,8
+817345,gitextras,GIT utilities repo summary repl changelog population author commit percentages,https://api.github.com/repos/tj/git-extras,16604,Shell,1246,106
+26827696,dockerelk,Elastic stack ELK powered Docker Compose,https://api.github.com/repos/deviantony/docker-elk,16278,Shell,6568,8
+33428461,interviewpython,Python,https://api.github.com/repos/taizilongxu/interview_python,16097,Shell,5564,36
+37829238,Hack,typeface designed source code,https://api.github.com/repos/source-foundry/Hack,16086,Shell,633,125
+236571,z,z jump,https://api.github.com/repos/rupa/z,15904,Shell,1224,101
+2139017,rbenv,Manage apps Ruby environment,https://api.github.com/repos/rbenv/rbenv,15610,Shell,1444,16
+44315167,awesomekubernetes,curated list awesome kubernetes sources shiptada,https://api.github.com/repos/ramitsurana/awesome-kubernetes,14548,Shell,2275,10
+38342221,graphqlspec,GraphQL query language execution engine tied backend service,https://api.github.com/repos/graphql/graphql-spec,14184,Shell,1212,212
+24878875,awesomezshplugins,collection ZSH frameworks plugins themes tutorials,https://api.github.com/repos/unixorn/awesome-zsh-plugins,14059,Shell,533,5
+957012,bashit,community Bash framework,https://api.github.com/repos/Bash-it/bash-it,13922,Shell,2349,86
+1173522,prezto,configuration framework Zsh,https://api.github.com/repos/sorin-ionescu/prezto,13722,Shell,4504,185
+34275045,kaldi,kaldiasrkaldi official location Kaldi project,https://api.github.com/repos/kaldi-asr/kaldi,13494,Shell,5283,235
+30003816,powerlevel9k,Powerlevel9k tool building beautiful highly functional CLI customized P9k substantial impact CLI UX legacy continued P10k,https://api.github.com/repos/Powerlevel9k/powerlevel9k,13442,Shell,969,169
+182644013,macOSSimpleKVM,Tools set quick macOS VM QEMU accelerated KVM,https://api.github.com/repos/foxlet/macOS-Simple-KVM,13422,Shell,1191,363
+156108442,macosvirtualbox,Pushbutton installer macOS Catalina Mojave High Sierra guests Virtualbox x86 CPUs Windows Linux macOS,https://api.github.com/repos/myspaghetti/macos-virtualbox,13413,Shell,1134,9
+167966270,nginxadminshandbook,improve NGINX performance security important things,https://api.github.com/repos/trimstray/nginx-admins-handbook,13323,Shell,1073,2
+38832942,awesomecliapps,curated list command line apps,https://api.github.com/repos/agarrharr/awesome-cli-apps,13220,Shell,840,61
+22938893,distributions,NodeSource Nodejs Binary Distributions,https://api.github.com/repos/nodesource/distributions,13029,Shell,3163,17
+33037215,dockermailserver,Productionready fullstack simple mail server SMTP IMAP LDAP Antispam Antivirus etc running inside container,https://api.github.com/repos/docker-mailserver/docker-mailserver,12797,Shell,1708,66
+5890857,pure,Pretty minimal fast ZSH prompt,https://api.github.com/repos/sindresorhus/pure,12635,Shell,974,30
+68380413,awesomeraspberrypi,curated list awesome Raspberry Pi tools projects images resources,https://api.github.com/repos/thibmaek/awesome-raspberry-pi,12369,Shell,993,2
+165164444,nsfwdatascraper,Collection scripts aggregate image data purposes training NSFW Image Classifier,https://api.github.com/repos/alex000kim/nsfw_data_scraper,12106,Shell,2890,6
+65280705,haoelgithubio,description,https://api.github.com/repos/haoel/haoel.github.io,12097,Shell,1916,158
+219897009,v2rayagent,XrayTuichysteria2singbox,https://api.github.com/repos/mack-a/v2ray-agent,11973,Shell,4367,10
+37346186,termuxpackages,package build system Termux,https://api.github.com/repos/termux/termux-packages,11835,Shell,2944,583
+39160150,gitsecrets,Prevents committing secrets credentials git repositories,https://api.github.com/repos/awslabs/git-secrets,11829,Shell,1181,111
+80627278,terminalsaresexy,curated list Terminal frameworks plugins resources CLI lovers,https://api.github.com/repos/k4m4/terminals-are-sexy,11801,Shell,630,111
+146190027,fancyss,fancyss project providing tools GFW asuswrtmerlin based router,https://api.github.com/repos/hq450/fancyss,11694,Shell,3174,133
+15078635,lynis,Lynis Security auditing tool Linux macOS UNIXbased systems Assists compliance testing HIPAAISO27001PCI DSS system hardening Agentless installation optional,https://api.github.com/repos/CISOfy/lynis,11636,Shell,1381,161
+74272018,openvpninstall,Set OpenVPN server Debian Ubuntu Fedora CentOS Arch Linux,https://api.github.com/repos/angristan/openvpn-install,11452,Shell,2755,131
+8855769,ansibleexamples,starter examples ansible playbooks features work httpgalaxyansiblecom example roles Ansible community deploying popular applications,https://api.github.com/repos/ansible/ansible-examples,11282,Shell,7275,89
+39103837,bocker,Docker implemented 100 lines bash,https://api.github.com/repos/p8952/bocker,10971,Shell,718,12
+88254582,kuberneteshandbook,Kubernetes httpsjimmysongiokuberneteshandbook,https://api.github.com/repos/rootsongjc/kubernetes-handbook,10876,Shell,2948,3
+19935788,tpm,Tmux Plugin Manager,https://api.github.com/repos/tmux-plugins/tpm,10708,Shell,387,120
+120983092,awesomecheatsheets,zap,https://api.github.com/repos/skywind3000/awesome-cheatsheets,10683,Shell,2019,23
+250761246,bashtop,LinuxOSXFreeBSD resource monitor,https://api.github.com/repos/aristocratos/bashtop,10564,Shell,551,58
+255558345,CodeGuide,books Java Java,https://api.github.com/repos/fuzhengwei/CodeGuide,10524,Shell,3380,35
+50806714,YubiKeyGuide,Guide YubiKey GPG SSH,https://api.github.com/repos/drduh/YubiKey-Guide,10476,Shell,1119,17
+23328131,tmuxresurrect,Persists tmux environment system restarts,https://api.github.com/repos/tmux-plugins/tmux-resurrect,10463,Shell,396,231
+133442384,deno,modern runtime JavaScript TypeScript,https://api.github.com/repos/denoland/deno,92156,Rust,5209,1848
+724712,rust,Empowering build reliable efficient software,https://api.github.com/repos/rust-lang/rust,89825,Rust,12012,9661
+196701619,tauri,Build smaller faster secure desktop applications web frontend,https://api.github.com/repos/tauri-apps/tauri,74185,Rust,2257,716
+299354207,rustdesk,opensource remote desktop alternative TeamViewer,https://api.github.com/repos/rustdesk/rustdesk,59112,Rust,6429,51
+51980455,alacritty,crossplatform OpenGL terminal emulator,https://api.github.com/repos/alacritty/alacritty,51159,Rust,2927,308
+331107018,sway,Empowering build reliable efficient smart contracts,https://api.github.com/repos/FuelLabs/sway,48183,Rust,2902,653
+42489829,rustlings,crab Small exercises reading writing Rust code,https://api.github.com/repos/rust-lang/rustlings,46750,Rust,8806,168
+575340621,ChatGPT,ChatGPT Desktop Application Mac Windows Linux,https://api.github.com/repos/lencx/ChatGPT,45464,Rust,5465,586
+130464961,bat,cat1 clone wings,https://api.github.com/repos/sharkdp/bat,45085,Rust,1218,243
+53631945,ripgrep,ripgrep recursively searches directories regex pattern respecting gitignore,https://api.github.com/repos/BurntSushi/ripgrep,43207,Rust,1921,85
+130688011,meilisearch,lightningfast search API fits effortlessly apps websites workflow,https://api.github.com/repos/meilisearch/meilisearch,41676,Rust,1606,159
+21938243,awesomerust,curated list Rust code resources,https://api.github.com/repos/rust-unofficial/awesome-rust,40937,Rust,2522,12
+178991158,starship,minimal blazingfast infinitely customizable prompt shell,https://api.github.com/repos/starship/starship,39200,Rust,1720,652
+290882787,fuelcore,Rust node implementation Fuel v2 protocol,https://api.github.com/repos/FuelLabs/fuel-core,37101,Rust,1453,157
+121898717,vaultwarden,Unofficial Bitwarden compatible server written Rust known bitwardenrs,https://api.github.com/repos/dani-garcia/vaultwarden,31178,Rust,1597,23
+90793418,fd,simple fast userfriendly alternative find,https://api.github.com/repos/sharkdp/fd,30650,Rust,813,99
+120425779,lapce,Lightningfast Powerful Code Editor written Rust,https://api.github.com/repos/lapce/lapce,30558,Rust,909,715
+234798675,bevy,refreshingly simple datadriven game engine built Rust,https://api.github.com/repos/bevyengine/bevy,30325,Rust,2968,1965
+115110181,swc,Rustbased platform Web,https://api.github.com/repos/swc-project/swc,29503,Rust,1150,339
+186024298,nushell,new type shell,https://api.github.com/repos/nushell/nushell,28497,Rust,1482,1219
+423275200,fuelsrs,Fuel Network Rust SDK,https://api.github.com/repos/FuelLabs/fuels-rs,28435,Rust,804,66
+268424739,helix,postmodern modal text editor,https://api.github.com/repos/helix-editor/helix,28061,Rust,2025,1167
+13124802,influxdb,Scalable datastore metrics events realtime analytics,https://api.github.com/repos/influxdata/influxdb,27245,Rust,3531,1897
+210702427,typst,new markupbased typesetting system powerful easy learn,https://api.github.com/repos/typst/typst,25939,Rust,671,609
+436658287,surrealdb,scalable distributed collaborative documentgraph database realtime web,https://api.github.com/repos/surrealdb/surrealdb,24410,Rust,770,481
+580836813,comprehensiverust,Rust course Android team Google provides material quickly teach Rust,https://api.github.com/repos/google/comprehensive-rust,24207,Rust,1473,128
+263727855,polars,Dataframes powered multithreaded vectorized query engine written Rust,https://api.github.com/repos/pola-rs/polars,24160,Rust,1416,1362
+413918947,turbo,Incremental bundler build system optimized JavaScriptand TypeScript written Rust including Turbopack Turborepo,https://api.github.com/repos/vercel/turbo,24152,Rust,1664,291
+241805592,tools,Unified developer tools JavaScript TypeScript web,https://api.github.com/repos/rome/tools,23989,Rust,753,94
+4279682,fishshell,userfriendly command line shell,https://api.github.com/repos/fish-shell/fish-shell,23970,Rust,1861,447
+67836789,tokio,runtime writing reliable asynchronous applications Rust Provides IO networking scheduling timers,https://api.github.com/repos/tokio-rs/tokio,23783,Rust,2204,268
+107505869,firecracker,Secure fast microVMs serverless computing,https://api.github.com/repos/firecracker-microvm/firecracker,23506,Rust,1708,124
+20060596,exa,modern replacement ls,https://api.github.com/repos/ogham/exa,23040,Rust,683,264
+523043277,ruff,extremely fast Python linter code formatter written Rust,https://api.github.com/repos/astral-sh/ruff,22947,Rust,758,694
+54168759,Rocket,web framework Rust,https://api.github.com/repos/rwf2/Rocket,22823,Rust,1529,66
+197081291,iced,crossplatform GUI library Rust inspired Elm,https://api.github.com/repos/iced-rs/iced,21809,Rust,1002,236
+143822069,rustcourse,GC OOJS Rust RustJS WASM Deno Rust Book,https://api.github.com/repos/sunface/rust-course,21367,Rust,1868,59
+551376520,Pake,Turn webpage desktop app Rust Rust,https://api.github.com/repos/tw93/Pake,20857,Rust,3029,7
+340547520,zed,Code speed thought Zed highperformance multiplayer code editor creators Atom Treesitter,https://api.github.com/repos/zed-industries/zed,20403,Rust,686,1368
+193526915,delta,syntaxhighlighting pager git diff grep output,https://api.github.com/repos/dandavison/delta,19832,Rust,338,263
+57167764,xieditor,modern editor backend written Rust,https://api.github.com/repos/xi-editor/xi-editor,19786,Rust,720,154
+105379569,actixweb,Actix Web powerful pragmatic extremely fast web framework Rust,https://api.github.com/repos/actix/actix-web,19642,Rust,1605,193
+148641954,Rust,Algorithms implemented Rust,https://api.github.com/repos/TheAlgorithms/Rust,19213,Rust,1970,11
+172714919,sonic,Fast lightweight schemaless search backend alternative Elasticsearch runs MBs RAM,https://api.github.com/repos/valeriansaliou/sonic,19158,Rust,551,65
+117356231,hyperfine,commandline benchmarking tool,https://api.github.com/repos/sharkdp/hyperfine,18877,Rust,322,47
+14158237,v86,x86 PC emulator x86towasm JIT running browser,https://api.github.com/repos/copy/v86,18829,Rust,1370,103
+165522651,egui,egui easytouse immediate mode GUI Rust runs web native,https://api.github.com/repos/emilk/egui,18341,Rust,1357,640
+40508605,relay,Relay JavaScript framework building datadriven React applications,https://api.github.com/repos/facebook/relay,18098,Rust,1882,625
+152572186,wasmer,leading Wasm Runtime supporting WASIX WASI Emscripten,https://api.github.com/repos/wasmerio/wasmer,17039,Rust,732,322
+162276894,difftastic,structural diff understands syntax,https://api.github.com/repos/Wilfred/difftastic,16975,Rust,269,169
+149026292,cube,Cube Semantic Layer Building Data Applications,https://api.github.com/repos/cube-js/cube,16854,Rust,1674,843
+135201145,RustPython,Python Interpreter written Rust,https://api.github.com/repos/RustPython/RustPython,16684,Rust,1189,392
+179164257,diem,Diems mission build trusted innovative financial network empowers people businesses world,https://api.github.com/repos/diem/diem,16683,Rust,2639,367
+7270538,anki,Ankis shared backend web components Qt frontend,https://api.github.com/repos/ankitects/anki,16514,Rust,1932,176
+11847500,coreutils,Crossplatform Rust rewrite GNU coreutils,https://api.github.com/repos/uutils/coreutils,16419,Rust,1191,327
+247725846,gitui,Blazing fast terminalui git written rust,https://api.github.com/repos/extrawurst/gitui,16348,Rust,502,152
+202787876,spotifytui,Spotify terminal written Rust,https://api.github.com/repos/Rigellute/spotify-tui,16257,Rust,496,291
+268163609,qdrant,Qdrant Highperformance massivescale Vector Database generation AI available cloud httpscloudqdrantio,https://api.github.com/repos/qdrant/qdrant,16075,Rust,979,224
+38655056,mdBook,Create book markdown files Like Gitbook implemented Rust,https://api.github.com/repos/rust-lang/mdBook,16056,Rust,1548,525
+292014229,zellij,terminal workspace batteries included,https://api.github.com/repos/zellij-org/zellij,15953,Rust,517,762
+61349723,,command runner,https://api.github.com/repos/casey/just,15880,Rust,375,215
+329782568,dioxus,Fullstack GUI library desktop web mobile,https://api.github.com/repos/DioxusLabs/dioxus,15786,Rust,535,193
+301244405,atuin,Magical shell history,https://api.github.com/repos/atuinsh/atuin,15635,Rust,440,174
+614764248,tabby,Selfhosted AI coding assistant,https://api.github.com/repos/TabbyML/tabby,15616,Rust,607,123
+146327667,vector,highperformance observability data pipeline,https://api.github.com/repos/vectordotdev/vector,15467,Rust,1329,1727
+14164618,treesitter,incremental parsing system programming tools,https://api.github.com/repos/tree-sitter/tree-sitter,15067,Rust,1199,431
+372172254,axum,Ergonomic modular web framework built Tokio Tower Hyper,https://api.github.com/repos/tokio-rs/axum,14908,Rust,908,56
+166045424,fnm,Fast simple Nodejs version manager built Rust,https://api.github.com/repos/Schniz/fnm,14613,Rust,397,184
+48833910,tikv,Distributed transactional keyvalue database originally created complement TiDB,https://api.github.com/repos/tikv/tikv,14165,Rust,2056,1524
+183483988,ruffle,Flash Player emulator written Rust,https://api.github.com/repos/ruffle-rs/ruffle,14099,Rust,734,4050
+209799228,navi,interactive cheatsheet tool commandline,https://api.github.com/repos/denisidoro/navi,14038,Rust,491,59
+591273534,carbonyl,Chromium running inside terminal,https://api.github.com/repos/fathyb/carbonyl,14007,Rust,298,65
+101767772,wasmtime,fast secure runtime WebAssembly,https://api.github.com/repos/bytecodealliance/wasmtime,13935,Rust,1153,684
+292065578,czkawka,Multi functional app find duplicates folders similar images etc,https://api.github.com/repos/qarmin/czkawka,13911,Rust,387,368
+519882617,leptos,Build fast web applications Rust,https://api.github.com/repos/leptos-rs/leptos,13822,Rust,532,70
+619859161,thealgorithm,Source code Twitters Recommendation Algorithm,https://api.github.com/repos/twitter/the-algorithm,60767,Scala,12259,424
+69164196,prisma1,Database Tools incl ORM Migrations Admin UI Postgres MySQL MongoDB deprecated,https://api.github.com/repos/prisma/prisma1,16608,Scala,898,2
+3507455,lila,lichessorg forever free adless open source chess server,https://api.github.com/repos/lichess-org/lila,14308,Scala,2121,911
+130013,akka,Build highly concurrent distributed resilient messagedriven applications JVM,https://api.github.com/repos/akka/akka,12879,Scala,3623,868
+2340549,playframework,Community Maintained High Velocity Web Framework Java Scala,https://api.github.com/repos/playframework/playframework,12481,Scala,4125,486
+29981861,CMAK,CMAK tool managing Apache Kafka clusters,https://api.github.com/repos/yahoo/CMAK,11628,Scala,2514,520
+7266492,bfgrepocleaner,Removes large troublesome blobs like gitfilterbranch faster written Scala,https://api.github.com/repos/rtyley/bfg-repo-cleaner,10472,Scala,558,267
+9350746,gitbucket,Git platform powered Scala easy installation high extensibility GitHub API compatibility,https://api.github.com/repos/gitbucket/gitbucket,9033,Scala,1261,341
+1007362,finagle,fault tolerant protocolagnostic RPC system,https://api.github.com/repos/twitter/finagle,8735,Scala,1479,58
+697976,snowflake,Snowflake network service generating unique ID numbers high scale simple guarantees,https://api.github.com/repos/twitter-archive/snowflake,7534,Scala,1151,4
+3591964,snowplow,enterprisegrade behavioral data engine web mobile serverside webhooks running cloudnatively AWS GCP,https://api.github.com/repos/snowplow/snowplow,6693,Scala,1222,57
+13451291,ArnoldC,Arnold Schwarzenegger based programming language,https://api.github.com/repos/lhartikk/ArnoldC,6675,Scala,302,76
+52039373,openwhisk,Apache OpenWhisk open source serverless cloud platform,https://api.github.com/repos/apache/openwhisk,6300,Scala,1177,386
+1826128,gatling,Modern Load Testing Code,https://api.github.com/repos/gatling/gatling,6186,Scala,1178,48
+4370755,frontend,Guardian DotCom,https://api.github.com/repos/guardian/frontend,5742,Scala,567,108
+3526586,fpinscala,Code exercises answers hints book Functional Programming Scala,https://api.github.com/repos/fpinscala/fpinscala,5627,Scala,3050,133
+7035651,dotty,Scala 3 compiler known Dotty,https://api.github.com/repos/lampepfl/dotty,5522,Scala,1005,1397
+49605596,linkerd,Old repo Linkerd 1x linkerd2 repo Linkerd 2x,https://api.github.com/repos/linkerd/linkerd,5355,Scala,519,147
+29986727,cats,Lightweight modular extensible library functional programming,https://api.github.com/repos/typelevel/cats,5118,Scala,1259,231
+93381875,SynapseML,Simple Distributed Machine Learning,https://api.github.com/repos/microsoft/SynapseML,4933,Scala,829,338
+35507603,aerosolve,machine learning package built humans,https://api.github.com/repos/airbnb/aerosolve,4796,Scala,587,10
+279553,sbt,sbt interactive build tool,https://api.github.com/repos/sbt/sbt,4741,Scala,938,773
+474633,scalaz,Principled Functional Programming Scala,https://api.github.com/repos/scalaz/scalaz,4650,Scala,726,164
+8272315,scalajs,Scalajs Scala JavaScript compiler,https://api.github.com/repos/scala-js/scala-js,4516,Scala,434,37
+27235687,scalanative,favorite language gets closer bare metal,https://api.github.com/repos/scala-native/scala-native,4415,Scala,362,242
+8189762,chronos,Fault tolerant job scheduler Mesos handles dependencies ISO8601 based schedules,https://api.github.com/repos/mesos/chronos,4369,Scala,540,232
+271929004,XiangShan,Opensource highperformance RISCV processor,https://api.github.com/repos/OpenXiangShan/XiangShan,4194,Scala,579,51
+10941409,marathon,Deploy manage containers including Docker Apache Mesos scale,https://api.github.com/repos/mesosphere/marathon,4068,Scala,868,30
+134079884,zio,ZIO typesafe composable library async concurrent programming Scala,https://api.github.com/repos/zio/zio,3951,Scala,1245,362
+40621327,diffy,Find potential bugs services Diffy,https://api.github.com/repos/twitter-archive/diffy,3826,Scala,380,5
+34695562,chisel,Chisel Modern Hardware Design Language,https://api.github.com/repos/chipsalliance/chisel,3617,Scala,557,391
+104670986,sparknlp,State Art Natural Language Processing,https://api.github.com/repos/JohnSnowLabs/spark-nlp,3605,Scala,695,41
+3146558,scalding,Scala API Cascading,https://api.github.com/repos/twitter/scalding,3464,Scala,717,319
+47316383,CoolplaySpark,Spark Spark Spark,https://api.github.com/repos/lw-lin/CoolplaySpark,3438,Scala,1425,35
+246644,breeze,Breeze numerical processing library Scala,https://api.github.com/repos/scalanlp/breeze,3427,Scala,703,90
+22631422,atlas,Inmemory dimensional time series database,https://api.github.com/repos/Netflix/atlas,3370,Scala,284,24
+3006066,shapeless,Generic programming Scala,https://api.github.com/repos/milessabin/shapeless,3352,Scala,538,34
+72767327,TheHive,TheHive Scalable Open Source Free Security Incident Response Platform,https://api.github.com/repos/TheHive-Project/TheHive,3141,Scala,599,818
+226219525,shadowsocksrv2raytrojanandroid,simple client Android,https://api.github.com/repos/xxf098/shadowsocksr-v2ray-trojan-android,3132,Scala,386,89
+143925946,deequ,Deequ library built Apache Spark defining unit tests data measure data quality large datasets,https://api.github.com/repos/awslabs/deequ,3061,Scala,521,140
+23950406,rocketchip,Rocket Chip Generator,https://api.github.com/repos/chipsalliance/rocket-chip,2928,Scala,1056,269
+23205911,sparkjobserver,REST job server Apache Spark,https://api.github.com/repos/spark-jobserver/spark-jobserver,2842,Scala,1011,111
+11493,kestrel,simple distributed message queue system inactive,https://api.github.com/repos/twitter-archive/kestrel,2786,Scala,325,24
+91362946,SparkTheDefinitiveGuide,Spark Definitive Guides Code Repository,https://api.github.com/repos/databricks/Spark-The-Definitive-Guide,2710,Scala,2707,30
+1527969,util,Wonderful reusable code Twitter,https://api.github.com/repos/twitter/util,2678,Scala,601,12
+52320967,lagom,Reactive Microservices JVM,https://api.github.com/repos/lagom/lagom,2635,Scala,638,453
+133684,slick,Slick Scala Language Integrated Connection Kit modern database query access library Scala,https://api.github.com/repos/slick/slick,2631,Scala,617,432
+214710,scalatra,Tiny Scala highperformance async web framework inspired Sinatra,https://api.github.com/repos/scalatra/scalatra,2630,Scala,343,69
+23613922,scalaexercises,easy way learn Scala,https://api.github.com/repos/scala-exercises/scala-exercises,2619,Scala,555,69
+29178282,Ammonite,Scala Scripting,https://api.github.com/repos/com-lihaoyi/Ammonite,2575,Scala,368,127
+62104170,node2vec,description,https://api.github.com/repos/aditya-grover/node2vec,2565,Scala,913,96
+1525163,spray,suite scala libraries building consuming RESTful web services Akka lightweight asynchronous nonblocking actorbased testable,https://api.github.com/repos/spray/spray,2521,Scala,576,80
+32946662,scio,Scala API Apache Beam Google Cloud Dataflow,https://api.github.com/repos/spotify/scio,2506,Scala,515,128
+3692188,http4s,minimal idiomatic Scala interface HTTP,https://api.github.com/repos/http4s/http4s,2491,Scala,793,318
+40011080,circe,JSON library Scala,https://api.github.com/repos/circe/circe,2462,Scala,536,171
+1951336,elasticmq,Inmemory message queue Amazon SQScompatible interface Runs standalone embedded,https://api.github.com/repos/softwaremill/elasticmq,2362,Scala,193,28
+8609125,fs2,Compositional streaming IO library Scala,https://api.github.com/repos/typelevel/fs2,2294,Scala,595,97
+5275507,algebird,Abstract Algebra Scala,https://api.github.com/repos/twitter/algebird,2275,Scala,355,99
+3465312,finatra,Fast testable Scala services built TwitterServer Finagle,https://api.github.com/repos/twitter/finatra,2270,Scala,420,14
+10912100,s3website,Manage S3 website sync deliver CloudFront benefit advanced S3 website features,https://api.github.com/repos/laurilehmijoki/s3_website,2249,Scala,193,76
+109289451,TransmogrifAI,TransmogrifAI pronounced trnsmgrf AutoML library building modular reusable strongly typed machine learning workflows Apache Spark minimal handtuning,https://api.github.com/repos/salesforce/TransmogrifAI,2226,Scala,402,46
+5957708,summingbird,Streaming MapReduce Scalding Storm,https://api.github.com/repos/twitter/summingbird,2137,Scala,271,163
+39411044,zioquill,Compiletime Language Integrated Queries Scala,https://api.github.com/repos/zio/zio-quill,2135,Scala,345,314
+14679065,doobie,Functional JDBC layer Scala,https://api.github.com/repos/tpolecat/doobie,2110,Scala,353,150
+6120146,scaloid,Scaloid makes Android code easy understand maintain,https://api.github.com/repos/pocorall/scaloid,2094,Scala,168,17
+255299994,SZTbigdata,,https://api.github.com/repos/geekyouth/SZT-bigdata,2074,Scala,603,13
+37299718,flix,Flix Programming Language,https://api.github.com/repos/flix/flix,2002,Scala,139,472
+109404123,metals,Scala language server rich IDE features,https://api.github.com/repos/scalameta/metals,1993,Scala,314,256
+37548601,coursier,Pure Scala Artifact Fetching,https://api.github.com/repos/coursier/coursier,1992,Scala,306,375
+5152285,okhttp,Squares meticulous HTTP client JVM Android GraalVM,https://api.github.com/repos/square/okhttp,45002,Kotlin,9313,121
+51148780,architecturesamples,collection samples discuss showcase different architectural tools patterns Android apps,https://api.github.com/repos/android/architecture-samples,43595,Kotlin,11665,203
+7190986,shadowsocksandroid,shadowsocks client Android,https://api.github.com/repos/shadowsocks/shadowsocks-android,34503,Kotlin,11695,51
+29219243,fanqiang,,https://api.github.com/repos/bannedbook/fanqiang,34206,Kotlin,6897,304
+95189138,p3c,Alibaba Java Coding Guidelines pmd implements IDE plugin,https://api.github.com/repos/alibaba/p3c,29963,Kotlin,8133,176
+34824499,leakcanary,memory leak detection library Android,https://api.github.com/repos/square/leakcanary,29005,Kotlin,4012,90
+186733095,v2rayNG,V2Ray client Android support Xray core v2fly core,https://api.github.com/repos/2dust/v2rayNG,28401,Kotlin,4483,145
+55886798,BaseRecyclerViewAdapterHelper,BRVAHPowerful flexible RecyclerAdapter,https://api.github.com/repos/CymChad/BaseRecyclerViewAdapterHelper,23937,Kotlin,5140,386
+90792131,architecturecomponentssamples,Samples Android Architecture Components,https://api.github.com/repos/android/architecture-components-samples,23169,Kotlin,8341,193
+18347476,iosched,Google IO Android App,https://api.github.com/repos/google/iosched,21801,Kotlin,6348,76
+187961907,legado,Legado 30 Book Reader powerful controls functions30,https://api.github.com/repos/gedoor/legado,21601,Kotlin,3185,65
+10057936,picasso,powerful image downloading caching library Android,https://api.github.com/repos/square/picasso,18629,Kotlin,4019,221
+211288349,composesamples,Official Jetpack Compose samples,https://api.github.com/repos/android/compose-samples,18213,Kotlin,4392,7
+58034548,flexboxlayout,Flexbox Android,https://api.github.com/repos/google/flexbox-layout,18118,Kotlin,1847,127
+134505361,sunflower,gardening app illustrating Android development best practices migrating Viewbased app Jetpack Compose,https://api.github.com/repos/android/sunflower,17343,Kotlin,4675,90
+80233816,lottiereactnative,Lottie wrapper React Native,https://api.github.com/repos/lottie-react-native/lottie-react-native,16393,Kotlin,1827,24
+45261969,plaid,Android app provides design news inspiration example implementing material design,https://api.github.com/repos/nickbutcher/plaid,16245,Kotlin,3211,104
+24186761,anko,Pleasant Android application development,https://api.github.com/repos/Kotlin/anko,15916,Kotlin,1319,243
+483402734,nowinandroid,fully functional Android app built entirely Kotlin Jetpack Compose,https://api.github.com/repos/android/nowinandroid,14502,Kotlin,2492,155
+293498508,composemultiplatform,Compose Multiplatform modern UI framework Kotlin makes building performant beautiful user interfaces easy enjoyable,https://api.github.com/repos/JetBrains/compose-multiplatform,14284,Kotlin,1054,1232
+201025777,mirai,QQ,https://api.github.com/repos/mamoe/mirai,13784,Kotlin,2591,265
+661957079,gkd,Android APP Android APP custom screen tapping based Accessibility Advanced Selectors Subscription Rules,https://api.github.com/repos/gkd-kit/gkd,13665,Kotlin,749,7
+337594329,SmsForwarder,AndroidAPPbarkwebhookTelegramServerPushPlusV30 PSAPKBUGISSUEPR,https://api.github.com/repos/pppscn/SmsForwarder,13162,Kotlin,1859,3
+31929346,uamp,sample audio app Android,https://api.github.com/repos/android/uamp,12985,Kotlin,3779,93
+61722736,kotlinxcoroutines,Library support Kotlin coroutines,https://api.github.com/repos/Kotlin/kotlinx.coroutines,12585,Kotlin,1826,295
+40136600,ktor,Framework quickly creating connected applications Kotlin minimal effort,https://api.github.com/repos/ktorio/ktor,11994,Kotlin,993,151
+30120110,MaterialDrawer,flexible easy use drawer library Android project brand new material 2 design,https://api.github.com/repos/mikepenz/MaterialDrawer,11654,Kotlin,2081,1
+28340997,recyclerviewanimators,Android Animation library easily add itemanimator RecyclerView items,https://api.github.com/repos/wasabeef/recyclerview-animators,11394,Kotlin,1998,109
+40936978,awesomekotlin,curated list awesome Kotlin related stuff Inspired awesomejava,https://api.github.com/repos/KotlinBy/awesome-kotlin,10795,Kotlin,1216,20
+60159997,TranslationPlugin,Translation plugin IntelliJ based IDEsAndroid Studio,https://api.github.com/repos/YiiGuxing/TranslationPlugin,10652,Kotlin,765,53
+36814724,AppIntro,cool intro Android app,https://api.github.com/repos/AppIntro/AppIntro,10428,Kotlin,1779,29
+11495787,timber,logger small extensible API provides utility Androids normal Log class,https://api.github.com/repos/JakeWharton/timber,10249,Kotlin,962,60
+201684760,coil,Image loading Android Compose Multiplatform,https://api.github.com/repos/coil-kt/coil,10055,Kotlin,628,40
+279966127,SpotiFlyer,Kotlin Multiplatform Music Downloader Supports Spotify Gaana Youtube Music Jio Saavn SoundCloud,https://api.github.com/repos/Shabinder/SpotiFlyer,9710,Kotlin,752,377
+32775739,RxBinding,RxJava binding APIs Androids UI widgets,https://api.github.com/repos/JakeWharton/RxBinding,9694,Kotlin,969,43
+22789601,moshi,modern JSON library Kotlin Java,https://api.github.com/repos/square/moshi,9397,Kotlin,799,99
+1326671,thunderbirdandroid,K9 Mail Open Source Email App Android,https://api.github.com/repos/thunderbird/thunderbird-android,9052,Kotlin,2444,749
+17812502,okio,modern IO library Android Java Kotlin Multiplatform,https://api.github.com/repos/square/okio,8607,Kotlin,1211,75
+93515203,koin,Koin pragmatic lightweight dependency injection framework Kotlin Kotlin Multiplatform,https://api.github.com/repos/InsertKoinIO/koin,8502,Kotlin,675,97
+228162278,BiliRoaming,BXposedAn Xposed module unblocks bangumi area limit BILIBILI miscellaneous features,https://api.github.com/repos/yujincheng08/BiliRoaming,8342,Kotlin,502,21
+247263904,VancedManager,Vanced Installer,https://api.github.com/repos/TeamVanced/VancedManager,8275,Kotlin,1203,61
+11765017,Exposed,Kotlin SQL Framework,https://api.github.com/repos/JetBrains/Exposed,7743,Kotlin,662,214
+105686726,RIBs,Ubers crossplatform mobile architecture framework,https://api.github.com/repos/uber/RIBs,7619,Kotlin,906,119
+162613268,chains,provides metadata chains,https://api.github.com/repos/ethereum-lists/chains,7559,Kotlin,5912,98
+7716883,AnkiAndroid,AnkiDroid Anki flashcards Android secret trick achieve superhuman information retention,https://api.github.com/repos/ankidroid/Anki-Android,7513,Kotlin,2077,337
+111605778,Unciv,Opensource AndroidDesktop remake Civ V,https://api.github.com/repos/yairm210/Unciv,7290,Kotlin,1442,213
+268501098,Pokedex,Pokedex demonstrates modern Android development Hilt Material Motion Coroutines Flow Jetpack Room ViewModel based MVVM architecture,https://api.github.com/repos/skydoves/Pokedex,7245,Kotlin,957,15
+436609718,LibreTube,alternative frontend YouTube Android,https://api.github.com/repos/libre-tube/LibreTube,7213,Kotlin,401,47
+261392630,accompanist,collection extension libraries Jetpack Compose,https://api.github.com/repos/google/accompanist,7088,Kotlin,573,22
+499220578,ViMusic,Android application streaming music YouTube Music,https://api.github.com/repos/vfsfitvnm/ViMusic,7063,Kotlin,521,219
+26357991,uhabits,Loop Habit Tracker mobile app creating maintaining longterm positive habits,https://api.github.com/repos/iSoron/uhabits,7051,Kotlin,892,39
+58957623,kotlinnative,KotlinNative infrastructure,https://api.github.com/repos/JetBrains/kotlin-native,7045,Kotlin,607,0
+23095938,RxKotlin,RxJava bindings Kotlin,https://api.github.com/repos/ReactiveX/RxKotlin,6995,Kotlin,474,32
+87012358,javalin,simple modern Java Kotlin web framework,https://api.github.com/repos/javalin/javalin,6966,Kotlin,614,15
+61435800,Compressor,android image compression library,https://api.github.com/repos/zetbaitsu/Compressor,6957,Kotlin,972,138
+576303915,KernelSU,Kernel based root solution Android,https://api.github.com/repos/tiann/KernelSU,6811,Kotlin,1530,17
+609535399,NekoBoxForAndroid,NekoBox Android singbox universal proxy toolchain Android,https://api.github.com/repos/MatsuriDayo/NekoBoxForAndroid,6784,Kotlin,626,116
+433655415,androiddeveloperroadmap,Android Developer Roadmap offers comprehensive learning paths help understand Android ecosystems,https://api.github.com/repos/skydoves/android-developer-roadmap,6723,Kotlin,626,19
+96525128,sourcererapp,Sourcerer app makes visual profile GitHub git repositories,https://api.github.com/repos/sourcerer-io/sourcerer-app,6716,Kotlin,288,203
+92297825,Shizuku,system APIs directly adbroot privileges normal apps Java process started appprocess,https://api.github.com/repos/RikkaApps/Shizuku,6658,Kotlin,440,40
+126314606,fenix,Fenix Firefox Android moved new repository developed maintained httpsgithubcommozillamobilefirefoxandroid,https://api.github.com/repos/mozilla-mobile/fenix,6528,Kotlin,1321,0
+395543217,reader,3iOS Kotlin Spring Boot Vertx Coroutine Vuejs Elementstar Demo,https://api.github.com/repos/hectorqin/reader,6429,Kotlin,5001,60
+481797111,Seal,VideoAudio Downloader Android based ytdlp designed Material,https://api.github.com/repos/JunkFood02/Seal,6313,Kotlin,311,177
+100624553,tivi,Tivi TV tracking Android app connects trakttv,https://api.github.com/repos/chrisbanes/tivi,6306,Kotlin,856,20
+158460787,androidshowcase,Android application following best practices Kotlin Coroutines JetPack Clean Architecture Feature Modules Tests MVVM DI Static Analysis,https://api.github.com/repos/igorwojda/android-showcase,6280,Kotlin,891,11
+5890835,acra,Application Crash Reports Android,https://api.github.com/repos/ACRA/acra,6185,Kotlin,1150,5
+659341,facebookandroidsdk,integrate Android apps Facebook Platform,https://api.github.com/repos/facebook/facebook-android-sdk,6020,Kotlin,3829,95
+71729669,detekt,Static code analysis Kotlin,https://api.github.com/repos/detekt/detekt,5925,Kotlin,770,159
+64293719,ktlint,antibikeshedding Kotlin linter builtin formatter,https://api.github.com/repos/pinterest/ktlint,5908,Kotlin,505,20
+86057409,arrow,rrow Functional companion Kotlins Standard Library,https://api.github.com/repos/arrow-kt/arrow,5893,Kotlin,432,34
+21700699,awesomeios,curated list awesome iOS ecosystem including ObjectiveC Swift Projects,https://api.github.com/repos/vsouza/awesome-ios,45124,Swift,6924,0
+22458259,Alamofire,Elegant HTTP Networking Swift,https://api.github.com/repos/Alamofire/Alamofire,40330,Swift,7632,38
+76838017,iina,modern video player macOS,https://api.github.com/repos/iina/iina,35638,Swift,2541,1705
+60844036,ShadowsocksXNG,Generation ShadowsocksX,https://api.github.com/repos/shadowsocks/ShadowsocksX-NG,32066,Swift,8058,306
+50447720,swiftalgorithmclub,Algorithms data structures Swift explanations,https://api.github.com/repos/kodecocodes/swift-algorithm-club,28325,Swift,5063,62
+32578467,Charts,Beautiful charts iOStvOSOSX Apple crossplatform MPAndroidChart,https://api.github.com/repos/danielgindi/Charts,27229,Swift,6034,951
+103784142,MonitorControl,Control displays brightness volume Mac native Apple Display Use Apple Keyboard keys custom shortcuts Shows native macOS OSDs,https://api.github.com/repos/MonitorControl/MonitorControl,25208,Swift,770,28
+70198664,lottieios,iOS library natively render Effects vector animations,https://api.github.com/repos/airbnb/lottie-ios,24786,Swift,3692,17
+33569135,RxSwift,Reactive Programming Swift,https://api.github.com/repos/ReactiveX/RxSwift,24059,Swift,4290,51
+193162629,Rectangle,resize windows macOS keyboard shortcuts snap areas,https://api.github.com/repos/rxhanson/Rectangle,23691,Swift,718,107
+49910095,vapor,serverside Swift HTTP web framework,https://api.github.com/repos/vapor/vapor,23588,Swift,1456,97
+181042062,UTM,Virtual machines iOS macOS,https://api.github.com/repos/utmapp/UTM,23223,Swift,1217,714
+20965586,SwiftyJSON,better way deal JSON data Swift,https://api.github.com/repos/SwiftyJSON/SwiftyJSON,22325,Swift,3468,138
+33486016,Kingfisher,lightweight pureSwift library downloading caching images web,https://api.github.com/repos/onevcat/Kingfisher,22009,Swift,2506,128
+74697963,Hero,Elegant transition library iOS tvOS,https://api.github.com/repos/HeroTransitions/Hero,21724,Swift,1746,38
+44998092,Aerial,Apple TV Aerial Screensaver Mac,https://api.github.com/repos/JohnCoates/Aerial,20707,Swift,1074,61
+189285554,stats,macOS system monitor menu bar,https://api.github.com/repos/exelban/stats,20462,Swift,693,21
+3606624,ReactiveCocoa,Cocoa framework ObjC dynamism bindings ReactiveSwift,https://api.github.com/repos/ReactiveCocoa/ReactiveCocoa,19957,Swift,3599,9
+20541795,SnapKit,Swift Autolayout DSL iOS OS X,https://api.github.com/repos/SnapKit/SnapKit,19710,Swift,1997,103
+468515960,CodeEdit,CodeEdit App macOS Elevate code editing experience Open source free forever,https://api.github.com/repos/CodeEditApp/CodeEdit,19688,Swift,1093,166
+35732214,SwiftLint,tool enforce Swift style conventions,https://api.github.com/repos/realm/SwiftLint,18134,Swift,2207,411
+12358097,IQKeyboardManager,Codeless dropin universal library allows prevent issues keyboard sliding cover UITextFieldUITextView need write code setup required,https://api.github.com/repos/hackiftekhar/IQKeyboardManager,16275,Swift,2404,6
+20822291,SwiftGuide,Swift Featured Projects brain Mapping,https://api.github.com/repos/ipader/SwiftGuide,15947,Swift,3616,0
+1185279,OpenEmu,Retro video game emulation macOS,https://api.github.com/repos/OpenEmu/OpenEmu,15590,Swift,1308,294
+23013268,Moya,Network abstraction layer written Swift,https://api.github.com/repos/Moya/Moya,14889,Swift,1969,163
+25050844,Carthage,simple decentralized dependency manager Cocoa,https://api.github.com/repos/Carthage/Carthage,14886,Swift,1636,199
+21796955,DesignPatternsInSwift,Design Patterns implemented Swift 50,https://api.github.com/repos/ochococo/Design-Patterns-In-Swift,14874,Swift,1753,4
+18440563,PromiseKit,Promises Swift ObjC,https://api.github.com/repos/mxcl/PromiseKit,14160,Swift,1487,18
+28513398,Spring,library simplify iOS animations Swift,https://api.github.com/repos/MengTo/Spring,14068,Swift,1869,166
+43568832,Perfect,Serverside Swift Perfect core toolset framework Swift Developers mobile backend development website API development,https://api.github.com/repos/PerfectlySoft/Perfect,13839,Swift,969,65
+10115880,Amethyst,Automatic tiling window manager macOS la xmonad,https://api.github.com/repos/ianyh/Amethyst,13797,Swift,486,331
+64705781,SwifterSwift,handy collection 500 native Swift extensions boost productivity,https://api.github.com/repos/SwifterSwift/SwifterSwift,13502,Swift,1629,16
+80204710,Mos,macOS lightweight tool smooth scrolling set scroll direction independently mouse macOS,https://api.github.com/repos/Caldis/Mos,13233,Swift,487,240
+109878485,SkeletonView,elegant way users happening prepare contents awaiting,https://api.github.com/repos/Juanpe/SkeletonView,12353,Swift,1084,66
+41215439,Material,UIUX framework creating beautiful applications,https://api.github.com/repos/CosmicMind/Material,11967,Swift,1286,36
+26133979,firefoxios,Firefox iOS,https://api.github.com/repos/mozilla-mobile/firefox-ios,11825,Swift,2891,1152
+43330374,Eureka,Elegant iOS form builder Swift,https://api.github.com/repos/xmartlabs/Eureka,11726,Swift,1345,173
+51648174,30DaysofSwift,selftaught project learn Swift,https://api.github.com/repos/allenwong/30DaysofSwift,11475,Swift,2078,9
+26481815,animatedtabbar,octocat RAMAnimatedTabBarController Swift UI module library adding animation iOS tabbar items icons iOS library Ramotion,https://api.github.com/repos/Ramotion/animated-tab-bar,11109,Swift,1348,16
+261039251,swiftcomposablearchitecture,library building applications consistent understandable way composition testing ergonomics mind,https://api.github.com/repos/pointfreeco/swift-composable-architecture,10765,Swift,1217,7
+39452201,NVActivityIndicatorView,collection awesome loading animations,https://api.github.com/repos/ninjaprox/NVActivityIndicatorView,10521,Swift,1151,16
+186036865,AltStore,AltStore alternative app store nonjailbroken iOS devices,https://api.github.com/repos/altstoreio/AltStore,10352,Swift,807,408
+40092232,mas,package Mac App Store command line interface,https://api.github.com/repos/mas-cli/mas,10349,Swift,271,94
+19429698,SignaliOS,private messenger iOS,https://api.github.com/repos/signalapp/Signal-iOS,10344,Swift,2929,103
+16096528,AudioKit,Audio synthesis processing analysis platform iOS macOS tvOS,https://api.github.com/repos/AudioKit/AudioKit,10270,Swift,1552,27
+48376164,foldingcell,octocat FoldingCell expanding content cell animation Ramotion,https://api.github.com/repos/Ramotion/folding-cell,10208,Swift,1170,12
+103053825,pock,Widgets manager MacBook Touch Bar,https://api.github.com/repos/pock/pock,10063,Swift,380,60
+119637215,Maccy,Lightweight clipboard manager macOS,https://api.github.com/repos/p0deje/Maccy,9763,Swift,431,22
+20506004,Quick,Swift ObjectiveC testing framework,https://api.github.com/repos/Quick/Quick,9745,Swift,975,28
+170244456,hidden,ultralight MacOS utility helps hide menu bar icons,https://api.github.com/repos/dwarvesf/hidden,9696,Swift,275,101
+20430314,FlappySwift,swift implementation flappy bird fullstackeducom,https://api.github.com/repos/newlinedotco/FlappySwift,9637,Swift,2702,16
+44840041,swiftpackagemanager,Package Manager Swift Programming Language,https://api.github.com/repos/apple/swift-package-manager,9512,Swift,1342,726
+24797553,SQLiteswift,typesafe Swiftlanguage layer SQLite3,https://api.github.com/repos/stephencelis/SQLite.swift,9363,Swift,1539,114
+27892731,Rswift,Strong typed autocompleted resources like images fonts segues Swift projects,https://api.github.com/repos/mac-cain13/R.swift,9350,Swift,755,85
+40010613,iOSInterviewQuestions,iOS interview questionsiOSqq Telegram httpsgithubcomChenYilongiOSBlogissues21,https://api.github.com/repos/ChenYilong/iOSInterviewQuestions,9241,Swift,2785,71
+202353432,alttabmacos,Windows alttab macOS,https://api.github.com/repos/lwouis/alt-tab-macos,9222,Swift,281,84
+25310522,ObjectMapper,Simple JSON Object mapping written Swift,https://api.github.com/repos/tristanhimmelman/ObjectMapper,9092,Swift,1027,55
+39166950,SwiftGen,Swift code generator assets storyboards Localizablestrings rid Stringbased APIs,https://api.github.com/repos/SwiftGen/SwiftGen,9003,Swift,721,121
+275095333,eul,macOS status monitoring app written SwiftUI,https://api.github.com/repos/gao-sun/eul,8938,Swift,339,65
+618007777,Whisky,modern Wine wrapper macOS built SwiftUI,https://api.github.com/repos/Whisky-App/Whisky,8756,Swift,229,151
+46383222,IBAnimatable,Design prototype customized UI interaction navigation transition animation App Store ready Apps Interface Builder IBAnimatable,https://api.github.com/repos/IBAnimatable/IBAnimatable,8672,Swift,794,49
+34222505,WWDC,unofficial WWDC app macOS,https://api.github.com/repos/insidegui/WWDC,8522,Swift,790,35
+453642201,DevToysMac,DevToys mac,https://api.github.com/repos/ObuchiYuki/DevToysMac,8463,Swift,311,71
+75432091,iososs,Kickstarter iOS Bring new ideas life,https://api.github.com/repos/kickstarter/ios-oss,8323,Swift,1231,4
+21924882,Starscream,Websockets swift iOS OSX,https://api.github.com/repos/daltoniam/Starscream,8052,Swift,1157,120
+21190654,LTMorphingLabel,EXPERIMENTAL Graceful morphing effects UILabel written Swift,https://api.github.com/repos/lexrus/LTMorphingLabel,7967,Swift,793,25
+8200767,gitignoreio,Create useful gitignore files project,https://api.github.com/repos/toptal/gitignore.io,7964,Swift,633,15
+51711443,Swift30Projects,30 mini Swift Apps selfstudy,https://api.github.com/repos/soapyigu/Swift-30-Projects,7897,Swift,1817,6
+24293205,Reachabilityswift,Replacement Apples Reachability rewritten Swift closures,https://api.github.com/repos/ashleymills/Reachability.swift,7860,Swift,937,90
+95652496,AwesomeARKit,curated list awesome ARKit projects resources Feel free contribute,https://api.github.com/repos/olucurious/Awesome-ARKit,7758,Swift,929,4
+32012751,Nuke,Image loading system,https://api.github.com/repos/kean/Nuke,7716,Swift,507,19
+28463126,KeychainAccess,Simple Swift wrapper Keychain works iOS watchOS tvOS macOS,https://api.github.com/repos/kishikawakatsumi/KeychainAccess,7705,Swift,790,53
+150961965,Dozer,Hide menu bar icons macOS,https://api.github.com/repos/Mortennn/Dozer,7690,Swift,251,86
+120498971,swiftnio,Eventdriven network application framework high performance protocol servers clients nonblocking,https://api.github.com/repos/apple/swift-nio,7668,Swift,636,212
