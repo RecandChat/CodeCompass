@@ -191,16 +191,19 @@ def get_data() -> bool:
     return True
 
 
-def get_users_from_following_link(link: list) -> list:
-    """
-    This function gets the users from the following link.
-    :param link: The following link.
-    :return: A list of users.
-    """
+def get_users_from_following_link() -> bool:
+    # Read the JSON file
+    with open(PARENT_PATH + '/Data/usersData.json') as f:
+        users_data = load(f)
+
+    following_links = []
+    for user in users_data:
+        following_links.append(user['following_url'].replace('{/other_user}', ""))
+
     users: list = []
-    for url in link:
+    for link in following_links:
         try:
-            response: requests.Response = requests.get(url, allow_redirects=False)
+            response: requests.Response = requests.get(link, allow_redirects=False)
             response.raise_for_status()
 
             for user in response.json():
@@ -208,10 +211,14 @@ def get_users_from_following_link(link: list) -> list:
 
         except requests.exceptions.HTTPError as err:
             print(f"HTTP error occurred: {err}")
+            return False
         except Exception as err:
             print(f"An error occurred: {err}")
+            return False
 
-    return users
+    _save_to_json(users, 'usersFromFollowingLink.json')
+    print("Data successfully written to usersFromFollowingLink.json")
+    return True
 
 
 def get_followers_from_user(username: str) -> list:
@@ -247,7 +254,7 @@ def data_from_users() -> bool:
     url: str = 'https://api.github.com/users'
     query: dict = {
         'q': 'followers:>1000 repos:>1000',
-        'per_page': 40,
+        'per_page': 100,
     }
 
     token: str = _load_secret()
@@ -270,21 +277,9 @@ def data_from_users() -> bool:
                 'following_url': user['following_url'],
             })
 
-        followers_list: list = [get_followers_from_user(user['login']) for user in users_data]
-        following_list: list = [get_users_from_following_link([user['following_url']]) for user in users_data]
-
-        users: list = [user['login'] for user in users_data]
-        users = list(set(users + [item for sublist in followers_list for item in sublist] +
-                         [item for sublist in following_list for item in sublist]))
-
-        data = []
-        for user in users:
-            if get_user_repo(user):
-                data.append(user)
-
-        _save_to_json(data, 'usersWithData.json')
-        print("Data successfully written to usersWithData.json")
-
+        # Save the users data to a JSON file
+        _save_to_json(users_data, 'usersData.json')
+        print("Data successfully written to usersData.json")
         return True
 
     except requests.exceptions.HTTPError as err:
@@ -295,4 +290,4 @@ def data_from_users() -> bool:
         return False
 
 
-data_from_users()
+get_users_from_following_link()
