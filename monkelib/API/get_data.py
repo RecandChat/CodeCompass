@@ -116,11 +116,11 @@ def get_user_repo(username: str) -> bool:
             repo_info: dict = _get_repo_fields(repo)
             repos_data.append(repo_info)
 
-        # _save_to_json(repos_data, 'userRepos.json')
-        # print("Data successfully written to userRepos.json")
-        #
-        # _save_to_csv(repos_data, 'userRepos.csv')
-        # print("Data successfully written to userRepos.csv")
+        _save_to_json(repos_data, 'userRepos.json')
+        print("Data successfully written to userRepos.json")
+
+        _save_to_csv(repos_data, 'userRepos.csv')
+        print("Data successfully written to userRepos.csv")
         return True
 
     except requests.exceptions.HTTPError as err:
@@ -201,9 +201,16 @@ def get_users_from_following_link() -> bool:
         following_links.append(user['following_url'].replace('{/other_user}', ""))
 
     users: list = []
+    token: str = _load_secret()
+
+    headers: dict = {
+        'Authorization': f'token {token}',
+        'Accept': 'application/vnd.github.v3+json'
+    }
+
     for link in following_links:
         try:
-            response: requests.Response = requests.get(link, allow_redirects=False)
+            response: requests.Response = requests.get(link, headers=headers, allow_redirects=False)
             response.raise_for_status()
 
             for user in response.json():
@@ -221,29 +228,41 @@ def get_users_from_following_link() -> bool:
     return True
 
 
-def get_followers_from_user(username: str) -> list:
-    """
-    This function gets the followers of a user.
-    :param username: The username of the user.
-    :return: A list of followers.
-    """
-    url: str = f"https://api.github.com/users/{username}/followers"
+def get_followers_from_user() -> bool:
+    # Read the JSON file
+    with open(PARENT_PATH + '/Data/usersData.json') as f:
+        users_data = load(f)
+
+    followers_links = []
+    for user in users_data:
+        followers_links.append(user['followers_url'])
+
     followers: list = []
-    try:
-        response: requests.Response = requests.get(url, allow_redirects=False)
-        response.raise_for_status()
+    token: str = _load_secret()
 
-        for user in response.json():
-            followers.append(user['login'])
+    headers: dict = {
+        'Authorization': f'token {token}',
+        'Accept': 'application/vnd.github.v3+json'
+    }
 
-        return followers
+    for link in followers_links:
+        try:
+            response: requests.Response = requests.get(link, headers=headers, allow_redirects=False)
+            response.raise_for_status()
 
-    except requests.exceptions.HTTPError as err:
-        print(f"HTTP error occurred: {err}")
-        return followers
-    except Exception as err:
-        print(f"An error occurred: {err}")
-        return followers
+            for user in response.json():
+                followers.append(user['login'])
+
+        except requests.exceptions.HTTPError as err:
+            print(f"HTTP error occurred: {err}")
+            return False
+        except Exception as err:
+            print(f"An error occurred: {err}")
+            return False
+
+    _save_to_json(followers, 'followersFromUser.json')
+    print("Data successfully written to followersFromUser.json")
+    return True
 
 
 def data_from_users() -> bool:
@@ -290,4 +309,72 @@ def data_from_users() -> bool:
         return False
 
 
-get_users_from_following_link()
+def most_famous_users_repos() -> bool:
+    """
+
+    :return:
+    """
+
+    users: any = set()
+    with open(PARENT_PATH + '/Data/followersFromUser.json') as f:
+        followers = load(f)
+        for follower in followers:
+            users.add(follower)
+
+    with open(PARENT_PATH + '/Data/usersFromFollowingLink.json') as f:
+        following = load(f)
+        for user in following:
+            users.add(user)
+
+    with open(PARENT_PATH + '/Data/usersData.json') as f:
+        users_data = load(f)
+        for user in users_data:
+            users.add(user['login'])
+
+    users = list(users)
+
+    print("Number of users: ", len(users))
+
+    token: str = _load_secret()
+    headers: dict = {
+        'Authorization': f'token {token}',
+        'Accept': 'application/vnd.github.v3+json'
+    }
+
+    # Limit the users to 10
+    users = users[:1000]
+
+    users_data: list = []
+
+    for user in users:
+        url: str = f"https://api.github.com/users/{user}/repos"
+        try:
+            response: requests.Response = requests.get(url, headers=headers, allow_redirects=False)
+            response.raise_for_status()
+
+            repos_data: list = []
+
+            for repo in response.json():
+                repo_info: dict = _get_repo_fields(repo)
+                repos_data.append(repo_info)
+
+            users_data.append(repos_data)
+
+        except requests.exceptions.HTTPError as err:
+            print(f"HTTP error occurred: {err}")
+            return False
+        except Exception as err:
+            print(f"An error occurred: {err}")
+            return False
+
+    users_data: list = [item for sublist in users_data for item in sublist]  # Flatten the list
+
+    _save_to_json(users_data, 'mostFamousUsersRepos.json')
+    print("Data successfully written to mostFamousUsersRepos.json")
+
+    _save_to_csv(users_data, 'mostFamousUsersRepos.csv')
+    print("Data successfully written to mostFamousUsersRepos.csv")
+    return True
+
+
+most_famous_users_repos()
