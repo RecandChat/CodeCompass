@@ -62,7 +62,6 @@ def _get_repo_fields(repo: dict) -> dict:
         'size': repo['size'],   # size in KB
         'stars': repo['stargazers_count'],
         'watchers': repo['watchers_count'],
-        'updated_at': repo['updated_at'],
         'language': repo['language'],
         'has_issues': repo['has_issues'],
         'has_projects': repo['has_projects'],
