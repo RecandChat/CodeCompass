@@ -3,9 +3,8 @@
 # It does the following:
 # 1. Load the data from the original CSV file.
 # 2. Drop unnecessary columns.
-# 3. Clean text data.
-# 4. Filter based on 'has_issues'.
-# 5. Drop missing values. -> might not work for certain datasets
+# 3. Clean text data. (removes stopwords, special characters, etc.)
+# 5. Drops missing values 
 # 6. Save the cleaned data to a new CSV file.
 
 
@@ -33,19 +32,31 @@ def clean_data(df, columns_to_drop, text_columns):
         df[col] = df[col].apply(nf.remove_special_characters)
         df[col] = df[col].apply(nf.remove_stopwords)
 
-    # Filter out rows where 'description' equals the string 'description'
+    # Filter out rows where 'description' equals the string 'description' -> we don't want rows without a description
     df = df[df['description'].str.lower() != 'description']
 
     return df
 
 def delete_missing_values(df):
-    # Drop rows with any missing values
-    df = df.dropna()
+    # List of columns to check for missing values
+    columns_to_check = [
+        'id', 'name', 'owner_user', 'description', 'url',
+        'date_created', 'date_updated', 'date_pushed', 'size', 'stars', 'watchers',
+        'updated_at', 'language', 'num_forks', 'license', 'open_issues', 'topics', 
+        'is_archived', 'is_disabled', 'is_template', 'has_projects', 
+        'has _discussions', 'owner_type', 'has_pages', 'has_wiki', 
+        'has_issues', 'has_downloads', 'is_fork'
+    ]
+
+    # Drop rows with any missing values in the specified columns
+    df = df.dropna(subset=columns_to_check)
+
     return df
 
+
 def delete_duplicates(df):
-    # Drop duplicate rows
-    df = df.drop_duplicates(subset=['name'], keep='first')
+    # Drop duplicate rows based on id
+    df = df.drop_duplicates(subset=['id'], keep='first')
     return df
 
 def save_data(df, file_path):
@@ -55,13 +66,13 @@ def save_data(df, file_path):
     except Exception as e:
         print(f"Error saving file: {e}")
 
-# File paths - CHANGE THIS TO YOUR CSV
+# File paths - CHANGE THIS TO YOUR CSVs
 input_file_path = 'monkelib/Data/original/mostStarredRepos.csv'
-output_file_path = 'monkelib/Data/clean/mostStarredReposCleaned.csv'
+output_file_path = 'monkelib/Data/clean/t4.csv'
 
-# Columns to drop and text columns to clean
+# Columns to drop and text columns to clean -> this should be always dropped as it's the same as open_issues, also allow_forking is not useful in any situation
 columns_to_drop = [
-    'is_archived', 'id'
+   'open_issues_count', 'allow_forking'
 ]
 text_columns = ['description', 'name']
 
