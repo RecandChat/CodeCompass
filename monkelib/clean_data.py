@@ -56,8 +56,8 @@ def save_data(df, file_path):
         print(f"Error saving file: {e}")
 
 # File paths - CHANGE THIS TO YOUR CSV
-input_file_path = 'monkelib/Data/original/mostFamousUsersRepos.csv'
-output_file_path = 'monkelib/Data/clean/mostFamousUsersReposCleaned.csv'
+input_file_path = 'monkelib/Data/original/mostStarredRepos.csv'
+output_file_path = 'monkelib/Data/clean/mostStarredReposCleaned.csv'
 
 # Columns to drop and text columns to clean
 columns_to_drop = [
