@@ -33,14 +33,19 @@ def clean_data(df, columns_to_drop, text_columns):
         df[col] = df[col].apply(nf.remove_special_characters)
         df[col] = df[col].apply(nf.remove_stopwords)
 
-    # Filter based on 'has_issues'
-    df = df[df['has_issues'] == True].drop(['has_issues'], axis=1)
+    # Filter out rows where 'description' equals the string 'description'
+    df = df[df['description'].str.lower() != 'description']
 
     return df
 
 def delete_missing_values(df):
     # Drop rows with any missing values
     df = df.dropna()
+    return df
+
+def delete_duplicates(df):
+    # Drop duplicate rows
+    df = df.drop_duplicates(subset=['name'], keep='first')
     return df
 
 def save_data(df, file_path):
@@ -51,15 +56,12 @@ def save_data(df, file_path):
         print(f"Error saving file: {e}")
 
 # File paths - CHANGE THIS TO YOUR CSV
-input_file_path = 'monkelib/Data/original/mostStarredRepos.csv'
-output_file_path = 'monkelib/Data/clean/mostStarredReposCleaned.csv'
+input_file_path = 'monkelib/Data/original/mostFamousUsersRepos.csv'
+output_file_path = 'monkelib/Data/clean/mostFamousUsersReposCleaned.csv'
 
 # Columns to drop and text columns to clean
 columns_to_drop = [
-    'is_archived', 'is_disabled', 'owner_user', 'license', 'has_pages', 
-    'owner_type', 'date_created', 'has_projects', 'has_downloads', 'topics', 
-    'is_template', 'has _discussions', 'allows_forking', 'date_updated', 'size', 
-    'is_fork', 'date_pushed', 'watchers', 'updated_at', 'has_wiki', 'open_issues_count'
+    'is_archived', 'id'
 ]
 text_columns = ['description', 'name']
 
@@ -68,6 +70,7 @@ df = load_data(input_file_path)
 if df is not None:
     cleaned_df = clean_data(df, columns_to_drop, text_columns)
     cleaned_df = delete_missing_values(cleaned_df)
+    cleaned_df = delete_duplicates(cleaned_df)
     save_data(cleaned_df, output_file_path)
 else:
     print("Data loading failed, script will exit.")
