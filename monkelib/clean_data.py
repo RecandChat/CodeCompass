@@ -70,7 +70,7 @@ def save_data(df, file_path):
 input_file_path = 'monkelib/Data/original/mostStarredRepos.csv'
 output_file_path = 'monkelib/Data/clean/t4.csv'
 
-# Columns to drop and text columns to clean -> this should be always dropped as it's the same as open_issues, also allow_forking is not useful in any situation
+# Columns to drop and text columns to clean -> these columns should always be dropped as one is the same as open_issues, and allow_forking is not useful in any situation
 columns_to_drop = [
    'open_issues_count', 'allow_forking'
 ]
