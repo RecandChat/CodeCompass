@@ -1,6 +1,6 @@
 import requests
 from pandas import DataFrame
-from monkelib.API.helper_functions import load_secret, get_repo_fields, save_to_csv
+from codecompasslib.API.helper_functions import load_secret, get_repo_fields, save_to_csv
 
 TOKEN: str = load_secret()
 HEADER: dict = {

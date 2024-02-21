@@ -33,4 +33,4 @@ jobs:
       
       - name: Test with Pytest
         run: |
-          python -m pytest monkelib/Tests -v
+          python -m pytest Tests -v
