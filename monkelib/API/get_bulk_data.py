@@ -243,6 +243,3 @@ def get_bulk_data(user_amount: int = 100) -> bool:
     df.drop_duplicates(subset='id', keep='first', inplace=True)
     save_to_csv(df, 'original/bulkDataNew.csv')
     return True
-
-
-get_bulk_data()
