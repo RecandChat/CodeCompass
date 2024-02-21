@@ -67,8 +67,8 @@ def save_data(df, file_path):
         print(f"Error saving file: {e}")
 
 # File paths - CHANGE THIS TO YOUR CSVs
-input_file_path = 'monkelib/Data/original/mostStarredRepos.csv'
-output_file_path = 'monkelib/Data/clean/t4.csv'
+input_file_path = 'codecompasslib/Data/original/mostStarredRepos.csv'
+output_file_path = 'codecompasslib/Data/clean/t4.csv'
 
 # Columns to drop and text columns to clean -> these columns should always be dropped as one is the same as open_issues, and allow_forking is not useful in any situation
 columns_to_drop = [

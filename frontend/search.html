@@ -56,7 +56,8 @@
 		<ul>
 			{% for recommendation in recommendations %}
 				<li>
-					<p>Owner User: {{ recommendation.owner_user }}</p>
+                    <p>Owner User: {{ recommendation.owner_user }}</p>
+                    <p>Project Name: {{ recommendation.name }}</p>
 					<p>Description: {{ recommendation.description }}</p>
 					<p>Language: {{ recommendation.language }}</p>
 				</li>
