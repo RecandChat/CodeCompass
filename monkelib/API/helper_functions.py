@@ -53,8 +53,6 @@ def get_repo_fields(repo: dict) -> dict:
         'is_disabled': repo['disabled'],
         'is_template': repo['is_template'],
         'license': repo['license']['name'] if repo['license'] else "No license",
-        'allows_forking': repo['allow_forking'],
-        'open_issues_count': repo['open_issues_count'],
         'open_issues': repo['open_issues'],
         'topics': repo['topics'],
     }

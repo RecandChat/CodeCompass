@@ -12,12 +12,12 @@ HEADER: dict = {
 def get_users(user_amount: int = 100) -> (list, bool):
     """
     This functions gets the users from the GitHub API based on the query parameters.
-    This are them having at least 1000 followers and 1000 repos.
+    These are them having at least 1000 followers and 1000 repos.
     :return: A list of users and a boolean indicating if the request was successful.
     """
-    url: str = 'https://api.github.com/users'
+    url: str = 'https://api.github.com/search/users'
     query_parameters: dict = {
-        'q': 'followers:>1000 repos:>1000',
+        'q': 'repos:>1000 followers:>1000',
         'per_page': user_amount,
     }
 
@@ -27,7 +27,7 @@ def get_users(user_amount: int = 100) -> (list, bool):
 
         users_data: list = []
 
-        for user in response.json():
+        for user in response.json()['items']:
             users_data.append(user['login'])
 
         return users_data, True
@@ -241,5 +241,5 @@ def get_bulk_data(user_amount: int = 100) -> bool:
 
     df = DataFrame(users_repos)
     df.drop_duplicates(subset='id', keep='first', inplace=True)
-    save_to_csv(df, 'bulkData.csv')
+    save_to_csv(df, 'original/bulkDataNew.csv')
     return True
