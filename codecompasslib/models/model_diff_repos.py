@@ -6,7 +6,8 @@ from scipy.spatial.distance import cosine
 
 def load_data():
     # Grab a dataframe from Data cleaner folder and only import columns necessary for analyzing a user's repositories
-    df = pd.read_csv('/Users/mirandadrummond/VSCode/Github-Recommendation-System/monkelib/Data/clean/allReposCleaned.csv', usecols=['owner_user', 'name', 'description', 'language'])
+    
+    df = pd.read_csv('./codecompasslib/Data/clean/allReposCleaned.csv', usecols=['owner_user', 'name', 'description', 'language'])
     return df
 
 def preprocess_data(df):
@@ -40,7 +41,7 @@ def preprocess_data(df):
 def load_word2vec_model():
     # Load pre-trained Word2Vec model. Word Embeddings for the Software Engineering Domain, pre-trained on 15GB of Stack Overflow posts
     # Citation: Efstathiou Vasiliki, Chatzilenas Christos, & Spinellis Diomidis. (2018). Word Embeddings for the Software Engineering Domain [Data set]. Zenodo. https://doi.org/10.5281/zenodo.1199620
-    word_vect = KeyedVectors.load_word2vec_format("/Users/mirandadrummond/VSCode/Github-Recommendation-System/monkelib/PretrainedModels/SO_vectors_200.bin", binary=True)
+    word_vect = KeyedVectors.load_word2vec_format("./codecompasslib/PretrainedModels/SO_vectors_200.bin", binary=True)
     return word_vect
 
 def vectorize_text(text, word_vect):
@@ -97,14 +98,19 @@ def find_most_dissimilar_repo(target_user, target_repos, other_repos):
 
     return most_dissimilar_repo_info 
 
-def clean_code(user_input='21,AntiTyping'):
-    target_user_index, target_user = user_input.split(',')
-    target_user_index = int(target_user_index)
+def get_user_index(df, target_user):
+    return df[df['owner_user'] == target_user].index[0]
+
+def clean_code(user_input='AntiTyping'):
+    # Get the target user index and the target user from the user input
+    target_user = user_input
+
     # Load data, preprocess it, and load the word2vec model, then preprocess the user dataframe and the neighbors dataframe.
     df = load_data()
     user_df = preprocess_data(df)
     word_vect = load_word2vec_model()
     embedded_user_df = preprocess_user_df(user_df, word_vect)
+    target_user_index = int(get_user_index(embedded_user_df, target_user))
     vectors = []
     repo_df = embedded_user_df * 1
 
@@ -144,16 +150,18 @@ def clean_code(user_input='21,AntiTyping'):
     if most_dissimilar_repo_info:
         most_dissimilar_repo = df.iloc[most_dissimilar_repo_info[0]]
         
-    owner_user, description, language = most_dissimilar_repo['owner_user'], most_dissimilar_repo['description'], most_dissimilar_repo['language']
+    name, owner_user, description, language = most_dissimilar_repo['name'], most_dissimilar_repo['owner_user'], most_dissimilar_repo['description'], most_dissimilar_repo['language']
     recommendations = []  # Placeholder for recommendations
     
     # Example: Generate a list of recommendation dictionaries
     for i in range(1):  # Assuming you want to return 3 recommendations
         recommendations.append({
+            'name': name,
             'owner_user': owner_user,
             'description': description,
             'language': language
         })
-    
     print(recommendations)
     return recommendations
+
+clean_code()

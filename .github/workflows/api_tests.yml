@@ -3,10 +3,10 @@ name: API Directory Changes Tests
 on:
   push:
     paths:
-      - 'monkelib/API/**'
+      - 'codecompasslib/API/**'
   pull_request:
     paths:
-      - 'monkelib/API/**'
+      - 'codecompasslib/API/**'
   workflow_dispatch:
 
 jobs:
@@ -33,4 +33,4 @@ jobs:
       
       - name: Test with Pytest
         run: |
-          python -m pytest Tests -v
+          python -m pytest tests -v

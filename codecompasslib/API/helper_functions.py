@@ -4,7 +4,7 @@ from os.path import dirname
 from pathlib import Path
 
 
-PARENT_PATH: str = dirname(dirname(__file__))  # Get the parent directory of the current directory (monkelib)
+PARENT_PATH: str = dirname(dirname(__file__))  # Get the parent directory of the current directory (codecompasslib)
 OUTER_PATH: str = dirname(dirname(dirname(__file__)))  # Get the most outer directory of the project
 
 
