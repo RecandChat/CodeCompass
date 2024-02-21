@@ -1,0 +1,116 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>hello</title>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<style type="text/css">
+
+		.high{
+			width: 1900px;
+			height: 700px;
+			margin: 0 350px;
+			/*margin-top: 100px;*/
+		}
+
+		.content {
+			position: relative;
+			width: 600px;
+			height: 250px;
+			float: left;
+			border: 4px solid green;
+			border-radius: 5px;
+			margin: 20px;
+			padding: 5px;
+			font-size: 10px;
+		}
+		h1{
+			padding: 10px;
+			margin: 50px 10px;
+			text-align: center;
+			color: black;
+			font-size: 60px;
+		}
+		.btn{
+			border: 3px solid lightgreen;
+			color: black;
+			margin-top: 30px;
+			margin-right: 15px;
+			float: right;
+			font-size: 20px;
+			transition-duration: 0.4s;
+		}
+		.btn:hover {
+			border: none;
+		  background-color: #4CAF50; /* Green */
+		  color: white;
+		}
+		h3{
+			text-align: center;
+			font-weight: bold;
+			padding-bottom: 5px;
+		}
+		h1{
+			
+		}
+	</style>
+</head>
+<body>
+
+
+	<h1 class="hd" >The project recomended for {{pro_name}}</h1>
+
+
+<div class="high">
+
+	<div class="content">
+	<h3>{{content[0]}}</h3>
+	<h4>User Name  : {{content[1]}}</h4>
+	<h4>Description : {{content[2]}}</h4>
+	<a role="button" href= "{{content[3]}}" class="btn btn-outline-success">Repository</a>
+
+	</div>
+
+	<div class="content">
+	<h3>{{content[4]}}</h3>
+	<h4>User Name  : {{content[5]}}</h4>
+	<h4>Description : {{content[6]}}</h4>
+	<a role="button" href= "{{content[7]}}" class="btn btn-outline-success">Repository</a>
+	</div>
+	
+	<div class="content">
+	<h3>{{content[8]}}</h3>
+	<h4>User Name  : {{content[9]}}</h4>
+	<h4>Description : {{content[10]}}</h4>
+	<a role="button" href="{{content[11]}}" class="btn btn-outline-success">Repository</a>
+
+	</div>
+
+	<div class="content">
+	<h3>{{content[12]}}</h3>
+	<h4>User Name  : {{content[13]}}</h4>
+	<h4>Description : {{content[14]}}</h4>
+	<a role="button" href=""{{content[15]}} class="btn btn-outline-success">Repository</a>
+	</div>
+
+	<div class="content">
+	<h3>{{content[16]}}</h3>
+	<h4>User Name  : {{content[17]}}</h4>
+	<h4>Description : {{content[18]}}</h4>
+	<a role="button" href="{{content[19]}}" class="btn btn-outline-success">Repository</a>
+
+	</div>
+
+	<div class="content">
+	<h3>{{content[20]}}</h3>
+	<h4>User Name  : {{content[21]}}</h4>
+	<h4>Description : {{content[22]}}</h4>
+	<a role="button" href="{{content[23]}}" class="btn btn-outline-success">Repository</a>
+
+	</div>
+</div>
+</body>
+</html>

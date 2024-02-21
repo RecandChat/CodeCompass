@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project Search</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style type="text/css">
+        h1 {
+            padding: 10px;
+            margin: 100px 10px;
+            text-align: center;
+            color: black;
+            font-size: 60px;
+        }
+        .btn {
+            border: 3px solid lightgreen;
+            color: black;
+            font-size: 33px;
+            margin-bottom: 19px;
+            transition-duration: 0.4s;
+        }
+        .btn:hover {
+            border: none;
+            background-color: #4CAF50; /* Green */
+            color: white;
+        }
+        #user_input {
+            font-size: 40px;
+            text-align: center;
+            width: 100%; /* Full width */
+            padding: 12px; /* Some padding */
+            margin: 10px 0; /* Some space between fields */
+        }
+        .form-container {
+            width: 50%;
+            margin: 0 auto; /* Center the form */
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Search the Project</h1>
+
+    <div class="form-container">
+        <form action="/recommend" method="post">
+            <input type="text" id="user_input" name="user_input" placeholder="Enter your search query">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </div>
+
+    {% if recommendations %}
+	<body>
+		<h2>Recommendations</h2>
+		<ul>
+			{% for recommendation in recommendations %}
+				<li>
+					<p>Owner User: {{ recommendation.owner_user }}</p>
+					<p>Description: {{ recommendation.description }}</p>
+					<p>Language: {{ recommendation.language }}</p>
+				</li>
+			{% endfor %}
+		</ul>
+	</body>
+	{% endif %}
+
+
+</body>
+</html>
