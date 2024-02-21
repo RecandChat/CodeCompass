@@ -65,6 +65,7 @@ def load_secret() -> str:
     :return: the token as a string.
     """
     with open(OUTER_PATH + '/secrets/pat.json') as f:
+        print(f"Loading token from {OUTER_PATH + '/secrets/pat.json'}")
         token_data: dict = load(f)
         token: str = token_data['token']
     return token

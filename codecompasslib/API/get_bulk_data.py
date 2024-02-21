@@ -157,8 +157,6 @@ def get_misc_data(query_parameters: list = None) -> bool:
                     'per_page': 100,
                 })
 
-    print(HEADER)
-
     data_list: list = []
     for query in query_list:
         try:
