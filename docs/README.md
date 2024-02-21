@@ -27,7 +27,4 @@ Documentation
 Internal Documentation: Maintained on GitHub wiki, encompassing detailed code comments and internal documentation strategies.
 User Documentation: Simple and intuitive - enter your GitHub account name, choose your preferred recommendations, and enjoy tailored suggestions. Feedback is always welcome!
 ## Sample 
-Enter your GitHub username.
-Select your areas of interest for recommendations.
-Engage with the personalized recommendations.
-Optional: Rate the recommendations to help us improve.
+Currently only working with usernames in our data. Run app.py in your local environment, then enter the name of the user you would like a repository to be recomended to.
