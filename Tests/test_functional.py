@@ -1,5 +1,5 @@
 import pytest
-from monkelib.API.get_bulk_data import *
+from codecompasslib.API.get_bulk_data import *
 
 
 def test_get_users(sample_size) -> None:
