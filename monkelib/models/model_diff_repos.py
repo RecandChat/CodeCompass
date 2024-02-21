@@ -97,7 +97,9 @@ def find_most_dissimilar_repo(target_user, target_repos, other_repos):
 
     return most_dissimilar_repo_info 
 
-def clean_code(target_user_index, target_user):
+def clean_code(user_input='21,AntiTyping'):
+    target_user_index, target_user = user_input.split(',')
+    target_user_index = int(target_user_index)
     # Load data, preprocess it, and load the word2vec model, then preprocess the user dataframe and the neighbors dataframe.
     df = load_data()
     user_df = preprocess_data(df)
@@ -125,8 +127,6 @@ def clean_code(target_user_index, target_user):
     neighbors = nn_model.kneighbors([vectors[target_user_index]], return_distance=False)[0][1:]
     neighborsAndTarget = [target_user_index] + list(neighbors)
     neighborsAndTargetRepos = user_df.iloc[neighborsAndTarget]
-    print('target useer and most similar users',neighborsAndTarget)
-    print('target user and most similar users repos',neighborsAndTargetRepos)
 
     ###   
     dfs = []
@@ -144,11 +144,16 @@ def clean_code(target_user_index, target_user):
     if most_dissimilar_repo_info:
         most_dissimilar_repo = df.iloc[most_dissimilar_repo_info[0]]
         
-        
-
-    print(most_dissimilar_repo)
-    return most_dissimilar_repo
-
-
-
-clean_code(21, "AntiTyping")
+    owner_user, description, language = most_dissimilar_repo['owner_user'], most_dissimilar_repo['description'], most_dissimilar_repo['language']
+    recommendations = []  # Placeholder for recommendations
+    
+    # Example: Generate a list of recommendation dictionaries
+    for i in range(1):  # Assuming you want to return 3 recommendations
+        recommendations.append({
+            'owner_user': owner_user,
+            'description': description,
+            'language': language
+        })
+    
+    print(recommendations)
+    return recommendations
