@@ -1,5 +1,6 @@
 import pytest
-from codecompasslib.API.get_bulk_data import *
+from codecompasslib.API.get_bulk_data import get_users, get_followers, get_following, get_user_repos, get_misc_data, \
+    get_bulk_data
 
 
 def test_get_users(sample_size) -> None:

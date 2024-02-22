@@ -11,3 +11,4 @@ codecompasslib/tests/functional/.pytest_cache/
 codecompasslib/models/__pycache__/
 codecompasslib/PretrainedModels/
 backend/__pycache__/
+*.pyc
