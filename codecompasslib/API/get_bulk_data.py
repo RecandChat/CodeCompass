@@ -1,4 +1,5 @@
 import requests
+import time
 from pandas import DataFrame
 from codecompasslib.API.helper_functions import load_secret, get_repo_fields, save_to_csv
 
@@ -211,6 +212,18 @@ def get_misc_data(query_parameters: list = None) -> bool:
         try:
             response: requests.Response = requests.get(url, headers=HEADER, params=query, allow_redirects=False)
             response.raise_for_status()
+
+            # Check rate limit headers
+            remaining = int(response.headers.get('X-RateLimit-Remaining', 0))
+            reset_time = int(response.headers.get('X-RateLimit-Reset', 0))
+
+            if remaining == 0:
+                # Calculate sleep duration
+                now = int(time.time())
+                sleep_duration = reset_time - now
+
+                if sleep_duration > 0:
+                    time.sleep(sleep_duration)
 
             repos_data: list = []
 
