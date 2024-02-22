@@ -17,14 +17,13 @@ def get_users(user_amount: int = 100) -> (list, bool):
     HEADER: dict = {
         'Authorization': f'token {TOKEN}',
         'Accept': 'application/vnd.github.v3+json',
-        'User-Agent': 'CodeCompass'
+        'User-Agent': 'CodeCompass/v1.0.0'
     }
 
     url: str = 'https://api.github.com/search/users'
     query_parameters: dict = {
         'q': 'repos:>1000 followers:>1000',
         'per_page': user_amount,
-        'User-Agent': 'request'
     }
 
     try:
@@ -60,7 +59,7 @@ def get_followers(username: str) -> (list, bool):
     HEADER: dict = {
         'Authorization': f'token {TOKEN}',
         'Accept': 'application/vnd.github.v3+json',
-        'User-Agent': 'CodeCompass'
+        'User-Agent': 'CodeCompass/v1.0.0'
     }
 
     url: str = f'https://api.github.com/users/{username}/followers'
@@ -97,7 +96,7 @@ def get_following(username: str) -> (list, bool):
     HEADER: dict = {
         'Authorization': f'token {TOKEN}',
         'Accept': 'application/vnd.github.v3+json',
-        'User-Agent': 'CodeCompass'
+        'User-Agent': 'CodeCompass/v1.0.0'
     }
 
     url: str = f'https://api.github.com/users/{username}/following'
@@ -134,7 +133,7 @@ def get_user_repos(username: str) -> (list, bool):
     HEADER: dict = {
         'Authorization': f'token {TOKEN}',
         'Accept': 'application/vnd.github.v3+json',
-        'User-Agent': 'CodeCompass'
+        'User-Agent': 'CodeCompass/v1.0.0'
     }
 
     url: str = f'https://api.github.com/users/{username}/repos'
@@ -181,7 +180,7 @@ def get_misc_data(query_parameters: list = None) -> bool:
     HEADER: dict = {
         'Authorization': f'token {TOKEN}',
         'Accept': 'application/vnd.github.v3+json',
-        'User-Agent': 'CodeCompass'
+        'User-Agent': 'CodeCompass/v1.0.0'
     }
 
     url: str = 'https://api.github.com/search/repositories'
