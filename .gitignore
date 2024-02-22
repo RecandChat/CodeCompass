@@ -4,10 +4,11 @@ secrets/
 .idea/
 codecompasslib/__pycache__/
 codecompasslib/API/__pycache__/
-codecompasslib/Tests/__pycache__/
-codecompasslib/Tests/.pytest_cache/
-codecompasslib/Tests/functional/__pycache__/
-codecompasslib/Tests/functional/.pytest_cache/
+codecompasslib/tests/__pycache__/
+codecompasslib/tests/.pytest_cache/
+codecompasslib/tests/functional/__pycache__/
+codecompasslib/tests/functional/.pytest_cache/
+codecompasslib/models/__pycache__/
 codecompasslib/PretrainedModels/
 backend/__pycache__/
 *.pyc
