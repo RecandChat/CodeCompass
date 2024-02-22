@@ -177,7 +177,7 @@ def get_misc_data(query_parameters: list = None) -> bool:
             return False
 
     data_list: list = [item for sublist in data_list for item in sublist]
-    df: DataFrame = DataFrame(data_list)
+    df = DataFrame(data_list)
     df.drop_duplicates(subset='id', keep='first', inplace=True)
     save_to_csv(df, 'miscData.csv')
     return True
@@ -239,7 +239,7 @@ def get_bulk_data(user_amount: int = 100) -> bool:
 
     users_repos: list = [item for sublist in users_repos for item in sublist]
 
-    df: DataFrame = DataFrame(users_repos)
+    df = DataFrame(users_repos)
     df.drop_duplicates(subset='id', keep='first', inplace=True)
     save_to_csv(df, 'original/bulkDataNew.csv')
     return True
