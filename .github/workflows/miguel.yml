@@ -44,11 +44,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Create Secrets Directory
+        run: mkdir -p ./secrets
+        
+      - name: Set up Local Environment File
+        run: echo '{"token":"${{ secrets.GH_PAT }}"}' > ./secrets/pat.json
+      
       - name: Add root directory to PYTHONPATH
         run: echo "PYTHONPATH=${{ github.workspace }}" >> $GITHUB_ENV
-
-      - name: Check current working directory
-        run: pwd
         
       - name: Run tests
         run: |
