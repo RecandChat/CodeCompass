@@ -1,14 +1,16 @@
-name: PR gate
+name: API Directory Changes Tests
 
 on:
   push:
     branches:
-    - main
+      - main
 
   pull_request:
+    #only run tests on pull requests to main
     branches:
-    - main
+      - main
 
+  #enable manual workflow dispatch
   workflow_dispatch:
     inputs:
       tags:
@@ -26,32 +28,24 @@ jobs:
     timeout-minutes: 40
     strategy:
       fail-fast: false
-      max-parallel: 20
       matrix:
         os: [ubuntu-22.04]
-        python: ['3.8', '3.9', '3.10','3.11']
+        python: ['3.8', '3.9', '3.10', '3.11']
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-    
-    - name: Use Python ${{ matrix.python }}
-      uses: actions/setup-python@v4
-      with:
-        python-version: ${{ matrix.python }}
-    
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-    
-    - name: Python version and dependency list
-      run: |
-        echo "Python version expected: ${{ matrix.python }}"
-        python --version
-        which python
-        pip list
-
-    - name: Run tests
-      run: |
-        pytest tests --disable-warnings --durations 0
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+      - name: Use Python ${{ matrix.python }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python }}
+        
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+        
+      - name: Run tests
+        run: |
+          pytest tests --disable-warnings --durations 0
