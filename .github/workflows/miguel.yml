@@ -1,4 +1,4 @@
-name: API Directory Changes Tests
+name: PR Gate
 
 on:
   push:
@@ -6,11 +6,9 @@ on:
       - main
 
   pull_request:
-    #only run tests on pull requests to main
     branches:
       - main
 
-  #enable manual workflow dispatch
   workflow_dispatch:
     inputs:
       tags:
@@ -45,7 +43,15 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+
+      - name: Add root directory to PYTHONPATH
+        run: echo "PYTHONPATH=${{ github.workspace }}" >> $GITHUB_ENV
+
+      - name: Check current working directory
+        run: pwd
         
       - name: Run tests
         run: |
           pytest tests --disable-warnings --durations 0
+        env:
+          PYTHONPATH: ${{ github.workspace }}
