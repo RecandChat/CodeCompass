@@ -3,7 +3,6 @@ from pandas import DataFrame
 from os.path import dirname
 from pathlib import Path
 
-
 PARENT_PATH: str = dirname(dirname(__file__))  # Get the parent directory of the current directory (codecompasslib)
 OUTER_PATH: str = dirname(dirname(dirname(__file__)))  # Get the most outer directory of the project
 
@@ -59,12 +58,40 @@ def get_repo_fields(repo: dict) -> dict:
     return repo_fields
 
 
+import requests
+
+
 def load_secret() -> str:
     """
-    This function loads the personal access token from the secrets folder.
-    :return: the token as a string.
+    This function loads the secret token.
+    :return: The secret token.
     """
-    with open(OUTER_PATH + '/secrets/pat.json') as f:
-        token_data = load(f)
-        token: str = token_data['token']
-    return token
+    try:
+        with open('secret.txt', 'r') as file:
+            TOKEN = file.read().strip()
+            print("Token loaded successfully.")
+    except FileNotFoundError:
+        print("Secret file not found.")
+        return ''
+
+    # Check if the token is valid
+    HEADER: dict = {
+        'Authorization': f'token {TOKEN}',
+        'Accept': 'application/vnd.github.v3+json',
+        'User-Agent': 'CodeCompass'
+    }
+
+    url: str = 'https://api.github.com/user'
+
+    try:
+        response: requests.Response = requests.get(url, headers=HEADER)
+        response.raise_for_status()
+        print("Token is valid.")
+    except requests.exceptions.HTTPError as err:
+        print(f"HTTP error occurred: {err}. Token might be invalid.")
+        return ''
+    except Exception as err:
+        print(f"An error occurred: {err}. Token might be invalid.")
+        return ''
+
+    return TOKEN

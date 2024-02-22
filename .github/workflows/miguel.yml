@@ -52,6 +52,9 @@ jobs:
       
       - name: Add root directory to PYTHONPATH
         run: echo "PYTHONPATH=${{ github.workspace }}" >> $GITHUB_ENV
+
+      - name: Print PYTHONPATH
+        run: echo $PYTHONPATH
         
       - name: Run tests
         run: |

@@ -10,6 +10,10 @@ def get_users(user_amount: int = 100) -> (list, bool):
     :return: A list of users and a boolean indicating if the request was successful.
     """
     TOKEN: str = load_secret()
+    if TOKEN == "":
+        print("No token found.")
+        return [], False
+
     HEADER: dict = {
         'Authorization': f'token {TOKEN}',
         'Accept': 'application/vnd.github.v3+json',
@@ -49,6 +53,10 @@ def get_followers(username: str) -> (list, bool):
     :return: A list of followers and a boolean indicating if the request was successful.
     """
     TOKEN: str = load_secret()
+    if TOKEN == "":
+        print("No token found.")
+        return [], False
+
     HEADER: dict = {
         'Authorization': f'token {TOKEN}',
         'Accept': 'application/vnd.github.v3+json',
@@ -82,6 +90,10 @@ def get_following(username: str) -> (list, bool):
     :return: A list of following and a boolean indicating if the request was successful.
     """
     TOKEN: str = load_secret()
+    if TOKEN == "":
+        print("No token found.")
+        return [], False
+
     HEADER: dict = {
         'Authorization': f'token {TOKEN}',
         'Accept': 'application/vnd.github.v3+json',
@@ -115,6 +127,10 @@ def get_user_repos(username: str) -> (list, bool):
     :return: A list of repositories and a boolean indicating if the request was successful.
     """
     TOKEN: str = load_secret()
+    if TOKEN == "":
+        print("No token found.")
+        return [], False
+
     HEADER: dict = {
         'Authorization': f'token {TOKEN}',
         'Accept': 'application/vnd.github.v3+json',
@@ -158,6 +174,10 @@ def get_misc_data(query_parameters: list = None) -> bool:
         return False
 
     TOKEN: str = load_secret()
+    if TOKEN == "":
+        print("No token found.")
+        return False
+
     HEADER: dict = {
         'Authorization': f'token {TOKEN}',
         'Accept': 'application/vnd.github.v3+json',
@@ -190,7 +210,6 @@ def get_misc_data(query_parameters: list = None) -> bool:
     for query in query_list:
         try:
             response: requests.Response = requests.get(url, headers=HEADER, params=query, allow_redirects=False)
-            print(response.text)
             response.raise_for_status()
 
             repos_data: list = []
