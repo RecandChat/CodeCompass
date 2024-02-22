@@ -15,7 +15,7 @@ def save_to_csv(data: any, filename: str) -> None:
     :param filename: The name of the file.
     :return: Does not return anything.
     """
-    df: DataFrame = DataFrame(data)
+    df = DataFrame(data)
     df.to_csv(Path(PARENT_PATH + '/Data/' + filename), index=False)
 
 
@@ -65,6 +65,6 @@ def load_secret() -> str:
     :return: the token as a string.
     """
     with open(OUTER_PATH + '/secrets/pat.json') as f:
-        token_data: dict = load(f)
+        token_data = load(f)
         token: str = token_data['token']
     return token
