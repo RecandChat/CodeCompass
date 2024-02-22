@@ -1,5 +1,4 @@
-from requests import Response, get
-from requests.exceptions import HTTPError
+import requests
 from pandas import DataFrame
 from codecompasslib.API.helper_functions import load_secret, get_repo_fields, save_to_csv
 
@@ -23,7 +22,7 @@ def get_users(user_amount: int = 100) -> (list, bool):
     }
 
     try:
-        response: Response = get(url, headers=HEADER, params=query_parameters, allow_redirects=False)
+        response: requests.Response = requests.get(url, headers=HEADER, params=query_parameters, allow_redirects=False)
         response.raise_for_status()
 
         users_data: list = []
@@ -33,7 +32,7 @@ def get_users(user_amount: int = 100) -> (list, bool):
 
         return users_data, True
 
-    except HTTPError as err:
+    except requests.exceptions.HTTPError as err:
         print(f"HTTP error occurred: {err}")
         return [], False
     except Exception as err:
@@ -49,7 +48,7 @@ def get_followers(username: str) -> (list, bool):
     """
     url: str = f'https://api.github.com/users/{username}/followers'
     try:
-        response: Response = get(url, headers=HEADER, allow_redirects=False)
+        response: requests.Response = requests.get(url, headers=HEADER, allow_redirects=False)
         response.raise_for_status()
 
         followers: list = []
@@ -59,7 +58,7 @@ def get_followers(username: str) -> (list, bool):
 
         return followers, True
 
-    except HTTPError as err:
+    except requests.exceptions.HTTPError as err:
         print(f"HTTP error occurred: {err}")
         return [], False
     except Exception as err:
@@ -75,7 +74,7 @@ def get_following(username: str) -> (list, bool):
     """
     url: str = f'https://api.github.com/users/{username}/following'
     try:
-        response: Response = get(url, headers=HEADER, allow_redirects=False)
+        response: requests.Response = requests.get(url, headers=HEADER, allow_redirects=False)
         response.raise_for_status()
 
         following: list = []
@@ -85,7 +84,7 @@ def get_following(username: str) -> (list, bool):
 
         return following, True
 
-    except HTTPError as err:
+    except requests.exceptions.HTTPError as err:
         print(f"HTTP error occurred: {err}")
         return [], False
     except Exception as err:
@@ -101,7 +100,7 @@ def get_user_repos(username: str) -> (list, bool):
     """
     url: str = f'https://api.github.com/users/{username}/repos'
     try:
-        response: Response = get(url, headers=HEADER, allow_redirects=False)
+        response: requests.Response = requests.get(url, headers=HEADER, allow_redirects=False)
         response.raise_for_status()
 
         repo_data: list = []
@@ -111,7 +110,7 @@ def get_user_repos(username: str) -> (list, bool):
 
         return repo_data, True
 
-    except HTTPError as err:
+    except requests.exceptions.HTTPError as err:
         print(f"HTTP error occurred: {err}")
         return [], False
     except Exception as err:
@@ -160,7 +159,7 @@ def get_misc_data(query_parameters: list = None) -> bool:
     data_list: list = []
     for query in query_list:
         try:
-            response: Response = get(url, headers=HEADER, params=query, allow_redirects=False)
+            response: requests.Response = requests.get(url, headers=HEADER, params=query, allow_redirects=False)
             response.raise_for_status()
 
             repos_data: list = []
@@ -170,7 +169,7 @@ def get_misc_data(query_parameters: list = None) -> bool:
                 repos_data.append(repo_info)
 
             data_list.append(repos_data)
-        except HTTPError as err:
+        except requests.exceptions.HTTPError as err:
             print(f"HTTP error occurred: {err}")
             return False
         except Exception as err:
