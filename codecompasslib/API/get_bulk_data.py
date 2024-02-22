@@ -190,6 +190,7 @@ def get_misc_data(query_parameters: list = None) -> bool:
     for query in query_list:
         try:
             response: requests.Response = requests.get(url, headers=HEADER, params=query, allow_redirects=False)
+            print(response.text)
             response.raise_for_status()
 
             repos_data: list = []
