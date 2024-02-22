@@ -1,5 +1,4 @@
-from requests import Response, get
-from requests.exceptions import HTTPError
+from requests import Response, get, exceptions
 from pandas import DataFrame
 from codecompasslib.API.helper_functions import load_secret, get_repo_fields, save_to_csv
 
@@ -33,7 +32,7 @@ def get_users(user_amount: int = 100) -> (list, bool):
 
         return users_data, True
 
-    except HTTPError as err:
+    except exceptions.HTTPError as err:
         print(f"HTTP error occurred: {err}")
         return [], False
     except Exception as err:
@@ -59,7 +58,7 @@ def get_followers(username: str) -> (list, bool):
 
         return followers, True
 
-    except HTTPError as err:
+    except exceptions.HTTPError as err:
         print(f"HTTP error occurred: {err}")
         return [], False
     except Exception as err:
@@ -111,7 +110,7 @@ def get_user_repos(username: str) -> (list, bool):
 
         return repo_data, True
 
-    except HTTPError as err:
+    except exceptions.HTTPError as err:
         print(f"HTTP error occurred: {err}")
         return [], False
     except Exception as err:
@@ -170,7 +169,7 @@ def get_misc_data(query_parameters: list = None) -> bool:
                 repos_data.append(repo_info)
 
             data_list.append(repos_data)
-        except HTTPError as err:
+        except exceptions.HTTPError as err:
             print(f"HTTP error occurred: {err}")
             return False
         except Exception as err:
