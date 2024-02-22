@@ -2,13 +2,6 @@ import requests
 from pandas import DataFrame
 from codecompasslib.API.helper_functions import load_secret, get_repo_fields, save_to_csv
 
-TOKEN: str = load_secret()
-HEADER: dict = {
-    'Authorization': f'token {TOKEN}',
-    'Accept': 'application/vnd.github.v3+json',
-    'User-Agent': 'CodeCompass'
-}
-
 
 def get_users(user_amount: int = 100) -> (list, bool):
     """
@@ -16,6 +9,13 @@ def get_users(user_amount: int = 100) -> (list, bool):
     These are them having at least 1000 followers and 1000 repos.
     :return: A list of users and a boolean indicating if the request was successful.
     """
+    TOKEN: str = load_secret()
+    HEADER: dict = {
+        'Authorization': f'token {TOKEN}',
+        'Accept': 'application/vnd.github.v3+json',
+        'User-Agent': 'CodeCompass'
+    }
+
     url: str = 'https://api.github.com/search/users'
     query_parameters: dict = {
         'q': 'repos:>1000 followers:>1000',
@@ -48,6 +48,13 @@ def get_followers(username: str) -> (list, bool):
     :param username: The username of the user.
     :return: A list of followers and a boolean indicating if the request was successful.
     """
+    TOKEN: str = load_secret()
+    HEADER: dict = {
+        'Authorization': f'token {TOKEN}',
+        'Accept': 'application/vnd.github.v3+json',
+        'User-Agent': 'CodeCompass'
+    }
+
     url: str = f'https://api.github.com/users/{username}/followers'
     try:
         response: requests.Response = requests.get(url, headers=HEADER, allow_redirects=False)
@@ -74,6 +81,13 @@ def get_following(username: str) -> (list, bool):
     :param username: The username of the user.
     :return: A list of following and a boolean indicating if the request was successful.
     """
+    TOKEN: str = load_secret()
+    HEADER: dict = {
+        'Authorization': f'token {TOKEN}',
+        'Accept': 'application/vnd.github.v3+json',
+        'User-Agent': 'CodeCompass'
+    }
+
     url: str = f'https://api.github.com/users/{username}/following'
     try:
         response: requests.Response = requests.get(url, headers=HEADER, allow_redirects=False)
@@ -100,6 +114,13 @@ def get_user_repos(username: str) -> (list, bool):
     :param username: The username of the user.
     :return: A list of repositories and a boolean indicating if the request was successful.
     """
+    TOKEN: str = load_secret()
+    HEADER: dict = {
+        'Authorization': f'token {TOKEN}',
+        'Accept': 'application/vnd.github.v3+json',
+        'User-Agent': 'CodeCompass'
+    }
+
     url: str = f'https://api.github.com/users/{username}/repos'
     try:
         response: requests.Response = requests.get(url, headers=HEADER, allow_redirects=False)
@@ -135,6 +156,13 @@ def get_misc_data(query_parameters: list = None) -> bool:
     if not all(item in ACCEPTED_FIELDS for item in query_parameters):
         print("Invalid query parameters.")
         return False
+
+    TOKEN: str = load_secret()
+    HEADER: dict = {
+        'Authorization': f'token {TOKEN}',
+        'Accept': 'application/vnd.github.v3+json',
+        'User-Agent': 'CodeCompass'
+    }
 
     url: str = 'https://api.github.com/search/repositories'
     LANGUAGE_LIST: list = ['Python', 'Java', 'Go', 'JavaScript', 'C++', 'TypeScript', 'PHP', 'C', 'Ruby', "C#", 'Nix',
