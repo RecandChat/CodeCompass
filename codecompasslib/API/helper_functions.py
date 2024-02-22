@@ -2,6 +2,7 @@ from json import load
 from pandas import DataFrame
 from os.path import dirname
 from pathlib import Path
+import requests
 
 PARENT_PATH: str = dirname(dirname(__file__))  # Get the parent directory of the current directory (codecompasslib)
 OUTER_PATH: str = dirname(dirname(dirname(__file__)))  # Get the most outer directory of the project
@@ -58,17 +59,14 @@ def get_repo_fields(repo: dict) -> dict:
     return repo_fields
 
 
-import requests
-
-
 def load_secret() -> str:
     """
     This function loads the secret token.
     :return: The secret token.
     """
     try:
-        with open('secret.txt', 'r') as file:
-            TOKEN = file.read().strip()
+        with open(OUTER_PATH + '/secrets/pat.json') as f:
+            TOKEN = load(f)['token']
             print("Token loaded successfully.")
     except FileNotFoundError:
         print("Secret file not found.")
