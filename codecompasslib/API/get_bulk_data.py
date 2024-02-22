@@ -5,7 +5,8 @@ from codecompasslib.API.helper_functions import load_secret, get_repo_fields, sa
 TOKEN: str = load_secret()
 HEADER: dict = {
     'Authorization': f'token {TOKEN}',
-    'Accept': 'application/vnd.github.v3+json'
+    'Accept': 'application/vnd.github.v3+json',
+    'User-Agent': 'CodeCompass'
 }
 
 
@@ -19,6 +20,7 @@ def get_users(user_amount: int = 100) -> (list, bool):
     query_parameters: dict = {
         'q': 'repos:>1000 followers:>1000',
         'per_page': user_amount,
+        'User-Agent': 'request'
     }
 
     try:
