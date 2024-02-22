@@ -58,6 +58,6 @@ jobs:
         
       - name: Run tests
         run: |
-          python -m pytest tests -v
+          python -m pytest codecompasslib/tests -v
         env:
           PYTHONPATH: ${{ github.workspace }}
