@@ -1,11 +1,14 @@
-import requests
+from requests import Response, get
+from requests.exceptions import HTTPError
 from pandas import DataFrame
 from codecompasslib.API.helper_functions import load_secret, get_repo_fields, save_to_csv
+
 
 TOKEN: str = load_secret()
 HEADER: dict = {
     'Authorization': f'token {TOKEN}',
-    'Accept': 'application/vnd.github.v3+json'
+    'Accept': 'application/vnd.github.v3+json',
+    'User-Agent': 'CodeCompass/v1.0.0'
 }
 
 
@@ -22,7 +25,7 @@ def get_users(user_amount: int = 100) -> (list, bool):
     }
 
     try:
-        response: requests.Response = requests.get(url, headers=HEADER, params=query_parameters, allow_redirects=False)
+        response: Response = get(url, headers=HEADER, params=query_parameters, allow_redirects=False)
         response.raise_for_status()
 
         users_data: list = []
@@ -32,7 +35,7 @@ def get_users(user_amount: int = 100) -> (list, bool):
 
         return users_data, True
 
-    except requests.exceptions.HTTPError as err:
+    except HTTPError as err:
         print(f"HTTP error occurred: {err}")
         return [], False
     except Exception as err:
@@ -48,7 +51,7 @@ def get_followers(username: str) -> (list, bool):
     """
     url: str = f'https://api.github.com/users/{username}/followers'
     try:
-        response: requests.Response = requests.get(url, headers=HEADER, allow_redirects=False)
+        response: Response = get(url, headers=HEADER, allow_redirects=False)
         response.raise_for_status()
 
         followers: list = []
@@ -58,7 +61,7 @@ def get_followers(username: str) -> (list, bool):
 
         return followers, True
 
-    except requests.exceptions.HTTPError as err:
+    except HTTPError as err:
         print(f"HTTP error occurred: {err}")
         return [], False
     except Exception as err:
@@ -74,7 +77,7 @@ def get_following(username: str) -> (list, bool):
     """
     url: str = f'https://api.github.com/users/{username}/following'
     try:
-        response: requests.Response = requests.get(url, headers=HEADER, allow_redirects=False)
+        response: Response = get(url, headers=HEADER, allow_redirects=False)
         response.raise_for_status()
 
         following: list = []
@@ -84,7 +87,7 @@ def get_following(username: str) -> (list, bool):
 
         return following, True
 
-    except requests.exceptions.HTTPError as err:
+    except HTTPError as err:
         print(f"HTTP error occurred: {err}")
         return [], False
     except Exception as err:
@@ -100,7 +103,7 @@ def get_user_repos(username: str) -> (list, bool):
     """
     url: str = f'https://api.github.com/users/{username}/repos'
     try:
-        response: requests.Response = requests.get(url, headers=HEADER, allow_redirects=False)
+        response: Response = get(url, headers=HEADER, allow_redirects=False)
         response.raise_for_status()
 
         repo_data: list = []
@@ -110,7 +113,7 @@ def get_user_repos(username: str) -> (list, bool):
 
         return repo_data, True
 
-    except requests.exceptions.HTTPError as err:
+    except HTTPError as err:
         print(f"HTTP error occurred: {err}")
         return [], False
     except Exception as err:
@@ -159,7 +162,7 @@ def get_misc_data(query_parameters: list = None) -> bool:
     data_list: list = []
     for query in query_list:
         try:
-            response: requests.Response = requests.get(url, headers=HEADER, params=query, allow_redirects=False)
+            response: Response = get(url, headers=HEADER, params=query, allow_redirects=False)
             response.raise_for_status()
 
             repos_data: list = []
@@ -169,7 +172,7 @@ def get_misc_data(query_parameters: list = None) -> bool:
                 repos_data.append(repo_info)
 
             data_list.append(repos_data)
-        except requests.exceptions.HTTPError as err:
+        except HTTPError as err:
             print(f"HTTP error occurred: {err}")
             return False
         except Exception as err:
@@ -177,7 +180,7 @@ def get_misc_data(query_parameters: list = None) -> bool:
             return False
 
     data_list: list = [item for sublist in data_list for item in sublist]
-    df = DataFrame(data_list)
+    df: DataFrame = DataFrame(data_list)
     df.drop_duplicates(subset='id', keep='first', inplace=True)
     save_to_csv(df, 'miscData.csv')
     return True
@@ -239,7 +242,7 @@ def get_bulk_data(user_amount: int = 100) -> bool:
 
     users_repos: list = [item for sublist in users_repos for item in sublist]
 
-    df = DataFrame(users_repos)
+    df: DataFrame = DataFrame(users_repos)
     df.drop_duplicates(subset='id', keep='first', inplace=True)
     save_to_csv(df, 'original/bulkDataNew.csv')
     return True

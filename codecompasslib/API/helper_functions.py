@@ -3,7 +3,6 @@ from pandas import DataFrame
 from os.path import dirname
 from pathlib import Path
 
-
 PARENT_PATH: str = dirname(dirname(__file__))  # Get the parent directory of the current directory (codecompasslib)
 OUTER_PATH: str = dirname(dirname(dirname(__file__)))  # Get the most outer directory of the project
 
@@ -15,7 +14,7 @@ def save_to_csv(data: any, filename: str) -> None:
     :param filename: The name of the file.
     :return: Does not return anything.
     """
-    df = DataFrame(data)
+    df: DataFrame = DataFrame(data)
     df.to_csv(Path(PARENT_PATH + '/Data/' + filename), index=False)
 
 
@@ -61,10 +60,14 @@ def get_repo_fields(repo: dict) -> dict:
 
 def load_secret() -> str:
     """
-    This function loads the personal access token from the secrets folder.
-    :return: the token as a string.
+    This function loads the secret token.
+    :return: The secret token.
     """
-    with open(OUTER_PATH + '/secrets/pat.json') as f:
-        token_data = load(f)
-        token: str = token_data['token']
-    return token
+    try:
+        with open(OUTER_PATH + '/secrets/pat.json') as f:
+            TOKEN: str = load(f)['token']
+            print("Token loaded successfully.")
+            return TOKEN
+    except FileNotFoundError:
+        print("Secret file not found.")
+        return ""
