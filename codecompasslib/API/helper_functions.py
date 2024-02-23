@@ -2,7 +2,6 @@ from json import load
 from pandas import DataFrame
 from os.path import dirname
 from pathlib import Path
-import requests
 
 PARENT_PATH: str = dirname(dirname(__file__))  # Get the parent directory of the current directory (codecompasslib)
 OUTER_PATH: str = dirname(dirname(dirname(__file__)))  # Get the most outer directory of the project
@@ -15,7 +14,7 @@ def save_to_csv(data: any, filename: str) -> None:
     :param filename: The name of the file.
     :return: Does not return anything.
     """
-    df = DataFrame(data)
+    df: DataFrame = DataFrame(data)
     df.to_csv(Path(PARENT_PATH + '/Data/' + filename), index=False)
 
 
@@ -66,30 +65,9 @@ def load_secret() -> str:
     """
     try:
         with open(OUTER_PATH + '/secrets/pat.json') as f:
-            TOKEN = load(f)['token']
+            TOKEN: str = load(f)['token']
             print("Token loaded successfully.")
+            return TOKEN
     except FileNotFoundError:
         print("Secret file not found.")
-        return ''
-
-    # Check if the token is valid
-    HEADER: dict = {
-        'Authorization': f'token {TOKEN}',
-        'Accept': 'application/vnd.github.v3+json',
-        'User-Agent': 'CodeCompass'
-    }
-
-    url: str = 'https://api.github.com/user'
-
-    try:
-        response: requests.Response = requests.get(url, headers=HEADER)
-        response.raise_for_status()
-        print("Token is valid.")
-    except requests.exceptions.HTTPError as err:
-        print(f"HTTP error occurred: {err}. Token might be invalid.")
-        return ''
-    except Exception as err:
-        print(f"An error occurred: {err}. Token might be invalid.")
-        return ''
-
-    return TOKEN
+        return ""
