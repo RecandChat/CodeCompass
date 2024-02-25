@@ -32,11 +32,11 @@ def preprocess_data(df):
 
     user_df = df.groupby('owner_user').agg(aggregation_dict).reset_index()
 
-    # first we turn list of names and descriptions into a single string
+    # first we turn list of names and descriptions into a single string (so that it can later be utilized by the word2vec model)
     user_df['name'] = user_df['name'].apply(lambda x: ' '.join(str(i) for i in x) if isinstance(x, list) else '')
     user_df['description'] = user_df['description'].apply(lambda x: ' '.join(str(i) for i in x) if isinstance(x, list) else '')
 
-    return user_df
+    return user_df, languages
 
 def load_word2vec_model():
     # Load pre-trained Word2Vec model. Word Embeddings for the Software Engineering Domain, pre-trained on 15GB of Stack Overflow posts
@@ -64,64 +64,87 @@ def preprocess_user_df(user_df, word_vect):
     embedded_user_df['description_vector'] = embedded_user_df['description'].apply(lambda x: vectorize_text(x, word_vect))
     return embedded_user_df
 
-def preprocess_neighbors_repos(neighborsRepos, word_vect):
-    neighborsRepos['name_vector'] = neighborsRepos['name'].apply(lambda x: vectorize_text(x, word_vect))
-    neighborsRepos['description_vector'] = neighborsRepos['description'].apply(lambda x: vectorize_text(x, word_vect))
-    neighborsRepos.drop(['name','description'], axis=1, inplace=True)
-    return neighborsRepos
+def preprocess_repos(neighbors_and_target_repos, word_vect):
+    neighbors_and_target_repos_Copy = neighbors_and_target_repos.copy()
+    neighbors_and_target_repos_Copy['name'] = neighbors_and_target_repos['name'].fillna('')
+    neighbors_and_target_repos_Copy['description'] = neighbors_and_target_repos['description'].fillna('')
+    neighbors_and_target_repos_Copy.loc[:, 'name_vector'] = neighbors_and_target_repos['name'].apply(lambda x: vectorize_text(x, word_vect))
+    neighbors_and_target_repos_Copy.loc[:, 'description_vector'] = neighbors_and_target_repos['description'].apply(lambda x: vectorize_text(x, word_vect))
+    neighbors_and_target_repos_Copy.drop(['name','description'], axis=1, inplace=True)
+    return neighbors_and_target_repos_Copy * 1 # Multiply by 1 to convert booleans to int
 
 def calculate_cosine_dissimilarity(vec1, vec2):
-    if np.all(vec1 == 0) or np.all(vec2 == 0):
-        return 1.0  # Assuming maximum dissimilarity when one vector is all zeros
-    return cosine(vec1, vec2)
+    # Check for NaN values in the vectors
+    if np.any(np.isnan(vec1)) or np.any(np.isnan(vec2)):
+        return 0.5  # Return 0.5 dissimilarity if there are NaN values
+    
+    # Check for zero norms
+    norm_vec1 = np.linalg.norm(vec1)
+    norm_vec2 = np.linalg.norm(vec2)
+    if norm_vec1 < 1e-8 or norm_vec2 < 1e-8:
+        return 0.5  # Return 0.5 dissimilarity if norms are close to zero
+    
+    # Calculate cosine dissimilarity
+    return (-1) * cosine(vec1, vec2)
 
-def find_most_dissimilar_repo(target_user, target_repos, other_repos):
-    max_dissimilarity_score = 0
-    most_dissimilar_repo_info = None
+def find_most_dissimilar_repos(target_user, target_repos, other_repos, languages, number_of_recommendations=1):
+    dissimilar_repos = {} # Keys are the indices of the most dissimilar repos, values are the dissimilarity scores
 
-    for index, other_repo in other_repos.iterrows():
-        other_name_vec = np.array(other_repo['name_vector'])
-        other_desc_vec = np.array(other_repo['description_vector'])
+    for row_o in other_repos.index:
+        # Neighbor's repo vector which combines name and description vectors as well as languages of that repo
+        neighbors_repo_vector = []
+        # columns for languages and vector embeddings
+        for columns in list(languages) + ['name_vector', 'description_vector']:
+            if type(other_repos.at[row_o, columns]) == np.ndarray: # For embeddings
+                for element in other_repos.at[row_o, columns]:
+                    neighbors_repo_vector.append(element)
+            elif type(other_repos.at[row_o, columns]) == int: # For 0 and 1 values in languages
+                neighbors_repo_vector.append(other_repos.at[row_o, columns])
+        
+        dissimilarity_sum = 0 # To keep track of the sum of dissimilarities between the target user's repos (multiple) and the neighbor's repo (one)
+        
+        for row_t in target_repos.index:
+            target_repo_vector = []
+            for columns in list(languages) + ['name_vector', 'description_vector']:
+                if type(target_repos.at[row_t, columns]) == np.ndarray:
+                    for element in target_repos.at[row_t, columns]:
+                        target_repo_vector.append(element)
+                elif type(target_repos.at[row_t, columns]) == int:
+                    target_repo_vector.append(target_repos.at[row_t, columns])
+                    
 
-        for _, target_repo in target_repos.iterrows():
-            target_name_vec = np.array(target_repo['name_vector'])
-            target_desc_vec = np.array(target_repo['description_vector'])
-
-            name_dissimilarity = calculate_cosine_dissimilarity(other_name_vec, target_name_vec)
-            desc_dissimilarity = calculate_cosine_dissimilarity(other_desc_vec, target_desc_vec)
-
-            average_dissimilarity = (name_dissimilarity + desc_dissimilarity) / 2
-
-            if average_dissimilarity > max_dissimilarity_score:
-                max_dissimilarity_score = average_dissimilarity
-                most_dissimilar_repo_info = (index, other_repo['owner_user'], max_dissimilarity_score)
-
-    return most_dissimilar_repo_info 
+            dissimilarity_sum += calculate_cosine_dissimilarity(target_repo_vector, neighbors_repo_vector)
+       
+        average_dissimilarity = dissimilarity_sum / len(target_repos)
+        dissimilar_repos[row_o] = average_dissimilarity
+    # Return the n most dissimilar repos reverse sorted by dissimilarity score
+    return sorted(dissimilar_repos.items(), key=lambda x: x[1], reverse=True)[:number_of_recommendations]
 
 def get_user_index(df, target_user):
     return df[df['owner_user'] == target_user].index[0]
 
-def clean_code(user_input='AntiTyping'):
+def main(user_input='AntiTyping', number_of_recommendations=1, return_neighbors=True):
     # Get the target user index and the target user from the user input
     target_user = user_input
 
     # Load data, preprocess it, and load the word2vec model, then preprocess the user dataframe and the neighbors dataframe.
     df = load_data()
-    user_df = preprocess_data(df)
+    user_df, languages = preprocess_data(df)
     word_vect = load_word2vec_model()
-    embedded_user_df = preprocess_user_df(user_df, word_vect)
+    embedded_user_df = preprocess_user_df(user_df, word_vect) * 1 # Multiply by 1 to convert booleans to int
     target_user_index = int(get_user_index(embedded_user_df, target_user))
     vectors = []
-    repo_df = embedded_user_df * 1
 
-    # Embed and vectorize the user dataframe
-    for row in repo_df.index: 
+    # Turn the embedded user dataframe into a list of vectors for every row/user
+    for row in embedded_user_df.index: 
         vector = []
-        for columns in ['name_vector', 'description_vector']:
-            if type(repo_df.at[row, columns]) == np.ndarray:
-                for element in repo_df.at[row, columns]:
+        # columns in langauges and vector embeddings
+        for columns in list(languages) + ['name_vector', 'description_vector']:
+            if type(embedded_user_df.at[row, columns]) == np.ndarray: # For embeddings
+                for element in embedded_user_df.at[row, columns]:
                     vector.append(element)
-            else: vector.append(repo_df.at[row, columns])
+            elif type(embedded_user_df.at[row, columns]) == int: # For 0 and 1 values in languages
+                vector.append(embedded_user_df.at[row, columns])
         vectors.append(vector)
 
     # Fit the nearest neighbors model to find the most similar users to the target user
@@ -129,39 +152,42 @@ def clean_code(user_input='AntiTyping'):
     nn_model = NearestNeighbors(n_neighbors=k, metric='euclidean')
     nn_model.fit(vectors)
 
-    # print the target user and the most similar users
+    # Output the target user and the most similar users
     neighbors = nn_model.kneighbors([vectors[target_user_index]], return_distance=False)[0][1:]
-    neighborsAndTarget = [target_user_index] + list(neighbors)
-    neighborsAndTargetRepos = user_df.iloc[neighborsAndTarget]
-
-    ###   
-    dfs = []
-    for index in neighborsAndTargetRepos.index:
-        dfs.append(df[df['owner_user'] == user_df.at[index, 'owner_user']])
-
-    neighborsRepos = pd.concat(dfs, ignore_index=False)
-    neighborsRepos = preprocess_neighbors_repos(neighborsRepos, word_vect)
-
-    target_repos = neighborsRepos[neighborsRepos['owner_user'] == target_user]
-    other_repos = neighborsRepos[neighborsRepos['owner_user'] != target_user]
-
-    most_dissimilar_repo_info = find_most_dissimilar_repo(target_user, target_repos, other_repos)
-
-    if most_dissimilar_repo_info:
-        most_dissimilar_repo = df.iloc[most_dissimilar_repo_info[0]]
-        
-    name, owner_user, description, language = most_dissimilar_repo['name'], most_dissimilar_repo['owner_user'], most_dissimilar_repo['description'], most_dissimilar_repo['language']
-    recommendations = []  # Placeholder for recommendations
     
-    # Example: Generate a list of recommendation dictionaries
-    for i in range(1):  # Assuming you want to return 3 recommendations
+    # return owner_names of neighbors if that is requested (this is used for testing purposes or if we want to change functionality of the model)
+    if return_neighbors:
+        print(embedded_user_df.iloc[neighbors]['owner_user'])
+        return embedded_user_df.iloc[neighbors]['owner_user']
+    
+    # Gathering repos of all similar users and the target user
+    neighbors_and_target = [target_user_index] + list(neighbors)
+    neighbors_and_target = user_df.iloc[neighbors_and_target]
+    df_one_hot_encoded = pd.get_dummies(df, columns=['language'], prefix='')
+    neighbors_and_target_repos = df_one_hot_encoded[df_one_hot_encoded['owner_user'].isin(neighbors_and_target['owner_user'])]
+    # vectorize name and description
+    neighbors_and_target_repos = preprocess_repos(neighbors_and_target_repos, word_vect)
+
+    # Split the target user's repos from the neighbors' repos
+    target_repos = neighbors_and_target_repos[neighbors_and_target_repos['owner_user'] == target_user]
+    neighbors_repos = neighbors_and_target_repos[neighbors_and_target_repos['owner_user'] != target_user]
+
+    most_dissimilar_repos_info = find_most_dissimilar_repos(target_user, target_repos, neighbors_repos, languages, number_of_recommendations=number_of_recommendations)
+    
+    # Get the most dissimilar repos' indices and gather the information of the most dissimilar repos
+    most_dissimilar_repo_info = df.iloc[[x[0] for x in most_dissimilar_repos_info]]
+    
+    recommendations = []
+    
+    # Generate a list of recommendation dictionaries
+    for i in range(len(most_dissimilar_repo_info)):  
         recommendations.append({
-            'name': name,
-            'owner_user': owner_user,
-            'description': description,
-            'language': language
+            'name': most_dissimilar_repo_info['name'].iloc[i],
+            'owner_user': most_dissimilar_repo_info['owner_user'].iloc[i],
+            'description': most_dissimilar_repo_info['description'].iloc[i],
+            'language': most_dissimilar_repo_info['language'].iloc[i]
         })
     print(recommendations)
     return recommendations
 
-clean_code()
+main()
