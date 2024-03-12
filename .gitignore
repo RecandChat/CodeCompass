@@ -4,6 +4,6 @@ secrets/
 .idea/
 *.pyc
 **/__pycache__/
-client_secrets.json
-service_account.json
+credentials.json
+token.json
 ```
