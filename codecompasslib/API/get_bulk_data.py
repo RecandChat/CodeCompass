@@ -2,7 +2,6 @@ from requests import Response, get
 from requests.exceptions import HTTPError
 from pandas import DataFrame
 from codecompasslib.API.helper_functions import load_secret, get_repo_fields, save_to_csv
-from codecompasslib.API.drive_operations import upload_df_to_drive_as_csv, get_creds_drive
 
 
 TOKEN: str = load_secret()
@@ -11,10 +10,6 @@ HEADER: dict = {
     'Accept': 'application/vnd.github.v3+json',
     'User-Agent': 'CodeCompass/v1.0.0'
 }
-
-DRIVE_ID = "0AL1DtB4TdEWdUk9PVA"
-DATA_FOLDER = "13JitBJQLNgMvFwx4QJcvrmDwKOYAShVx"
-creds = get_creds_drive()
 
 
 def get_users(user_amount: int = 100) -> (list, bool):
