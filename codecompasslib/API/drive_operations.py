@@ -15,7 +15,8 @@ SCOPES = ['https://www.googleapis.com/auth/drive']
 DRIVE_ID = "0AL1DtB4TdEWdUk9PVA"
 DATA_FOLDER = "13JitBJQLNgMvFwx4QJcvrmDwKOYAShVx"
 
-PARENT_PATH = os.path.abspath(os.path.join((__file__), '..', '..'))  # Get the parent directory of the current directory (codecompasslib)
+PARENT_PATH = os.path.abspath(os.path.join((__file__), '..', '..', '..'))  # Get the parent directory of the current directory (codecompasslib)
+print(PARENT_PATH)
 
 def get_creds_drive():
     
@@ -62,7 +63,7 @@ def list_shared_drive_contents(creds, folder_id, drive_id):
         if not items:
             print("No files found in the folder.")
         else:
-            print("Files in the folder:")
+            print("\nFiles in the folder:")
             for item in items:
                 print(u'{0} ({1})'.format(item['name'], item['id']))
     except Exception as error:
@@ -80,7 +81,7 @@ def download_csv_as_pd_dataframe(creds, file_id):
 
     while not done:
         status, done = downloader.next_chunk()
-        print("Download %d%%." % int(status.progress() * 100))
+        print("\nDownload %d%%." % int(status.progress() * 100))
 
     # The file's contents are now in fh, which we can use to create a Pandas DataFrame
     fh.seek(0)  # Move cursor to the beginning of the file before reading
@@ -123,7 +124,7 @@ def upload_df_to_drive_as_csv(creds, df, filename, folder_id):
                     fields='id',
                     supportsAllDrives=True,
                 ).execute()
-                print(f'File updated. File ID: {file.get("id")}')
+                print(f'\nFile updated. File ID: {file.get("id")}')
         else:
             # File does not exist, so create it
             file = service.files().create(
@@ -132,7 +133,7 @@ def upload_df_to_drive_as_csv(creds, df, filename, folder_id):
                 fields='id',
                 supportsAllDrives=True
             ).execute()
-            print(f'File uploaded. File ID: {file.get("id")}')
+            print(f'\nFile uploaded. File ID: {file.get("id")}')
 
         # Clean up the temporary CSV file
         os.remove(temp_csv_path)
