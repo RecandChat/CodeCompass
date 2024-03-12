@@ -15,7 +15,7 @@ SCOPES = ['https://www.googleapis.com/auth/drive']
 DRIVE_ID = "0AL1DtB4TdEWdUk9PVA"
 DATA_FOLDER = "13JitBJQLNgMvFwx4QJcvrmDwKOYAShVx"
 
-PARENT_PATH = os.path.abspath(os.path.join((__file__), '..', '..'))  # Get the parent directory of the current directory (codecompasslib)
+PARENT_PATH = os.path.abspath(os.path.join((__file__), '..', '..', '..'))  # Get the parent directory of the current directory (codecompasslib)
 
 def get_creds_drive():
     

@@ -1,7 +1,8 @@
 from requests import Response, get
 from requests.exceptions import HTTPError
 from pandas import DataFrame
-from codecompasslib.API.helper_functions import load_secret, get_repo_fields, save_to_csv
+from helper_functions import load_secret, get_repo_fields, save_to_csv
+from drive_operations import upload_df_to_drive_as_csv, get_creds_drive
 
 
 TOKEN: str = load_secret()
@@ -10,6 +11,10 @@ HEADER: dict = {
     'Accept': 'application/vnd.github.v3+json',
     'User-Agent': 'CodeCompass/v1.0.0'
 }
+
+DRIVE_ID = "0AL1DtB4TdEWdUk9PVA"
+DATA_FOLDER = "13JitBJQLNgMvFwx4QJcvrmDwKOYAShVx"
+creds = get_creds_drive()
 
 
 def get_users(user_amount: int = 100) -> (list, bool):
@@ -182,7 +187,8 @@ def get_misc_data(query_parameters: list = None) -> bool:
     data_list: list = [item for sublist in data_list for item in sublist]
     df: DataFrame = DataFrame(data_list)
     df.drop_duplicates(subset='id', keep='first', inplace=True)
-    save_to_csv(df, 'miscData.csv')
+    #save_to_csv(df, 'miscData.csv')
+    upload_df_to_drive_as_csv(creds, df, 'miscData.csv', DATA_FOLDER)
     return True
 
 
@@ -244,5 +250,6 @@ def get_bulk_data(user_amount: int = 100) -> bool:
 
     df: DataFrame = DataFrame(users_repos)
     df.drop_duplicates(subset='id', keep='first', inplace=True)
-    save_to_csv(df, 'original/bulkDataNew.csv')
+    #save_to_csv(df, 'original/bulkDataNew.csv')
+    upload_df_to_drive_as_csv(creds, df, 'bulkDataNew.csv', DATA_FOLDER)
     return True
