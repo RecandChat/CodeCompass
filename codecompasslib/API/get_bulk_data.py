@@ -1,8 +1,8 @@
 from requests import Response, get
 from requests.exceptions import HTTPError
 from pandas import DataFrame
-from API.helper_functions import load_secret, get_repo_fields, save_to_csv
-from API.drive_operations import upload_df_to_drive_as_csv, get_creds_drive
+from codecompasslib.API.helper_functions import load_secret, get_repo_fields, save_to_csv
+from codecompasslib.API.drive_operations import upload_df_to_drive_as_csv, get_creds_drive
 
 
 TOKEN: str = load_secret()
