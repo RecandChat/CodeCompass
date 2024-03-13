@@ -4,3 +4,6 @@ secrets/
 .idea/
 *.pyc
 **/__pycache__/
+credentials.json
+token.json
+```
