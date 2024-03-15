@@ -4,3 +4,5 @@ secrets/
 .idea/
 *.pyc
 **/__pycache__/
+
+.chatbot/
