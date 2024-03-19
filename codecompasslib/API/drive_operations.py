@@ -1,6 +1,7 @@
 import os.path
 import io
 import pandas as pd
+from helper_functions import OUTER_PATH
 
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
@@ -15,31 +16,20 @@ SCOPES = ['https://www.googleapis.com/auth/drive']
 DRIVE_ID = "0AL1DtB4TdEWdUk9PVA"
 DATA_FOLDER = "13JitBJQLNgMvFwx4QJcvrmDwKOYAShVx"
 
-PARENT_PATH = os.path.abspath(os.path.join((__file__), '..', '..', '..'))  # Get the parent directory of the current directory (codecompasslib)
-print(PARENT_PATH)
 
 def get_creds_drive():
-    
-    """Get the credentials for Google Drive.
-    This will generate a token.json file in the credentials_drive folder if there is none.
-    NB! If the scope changes, the token.json file must be deleted and the user must re-authenticate.
-    
-    Returns:
-        creds: The credentials for Google Drive. 
-    """
-    #Need to go bck two directories to access the credentials folder which is in the root
-
+    """Gets the credentials for accessing Google Drive."""
     creds = None
-    print(PARENT_PATH + "/credentials_drive/token.json")
-    if os.path.exists(PARENT_PATH + "/credentials_drive/token.json"):
-        creds = Credentials.from_authorized_user_file(PARENT_PATH + "/credentials_drive/token.json", SCOPES)
+    print(OUTER_PATH + "/credentials_drive/token.json")
+    if os.path.exists(OUTER_PATH + "/credentials_drive/token.json"):
+        creds = Credentials.from_authorized_user_file(OUTER_PATH + "/credentials_drive/token.json", SCOPES)
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
-            flow = InstalledAppFlow.from_client_secrets_file(PARENT_PATH + "/credentials_drive/credentials.json", SCOPES)
+            flow = InstalledAppFlow.from_client_secrets_file(OUTER_PATH + "/credentials_drive/credentials.json", SCOPES)
             creds = flow.run_local_server(port=0)
-        with open(PARENT_PATH + "/credentials_drive/token.json", "w") as token:
+        with open(OUTER_PATH + "/credentials_drive/token.json", "w") as token:
             token.write(creds.to_json())
     return creds
 
@@ -143,10 +133,9 @@ def upload_df_to_drive_as_csv(creds, df, filename, folder_id):
         return None
 
 
-
 if __name__ == "__main__":
     creds = get_creds_drive()
     list_shared_drive_contents(creds=creds, folder_id=DATA_FOLDER, drive_id=DRIVE_ID)
-    df = download_csv_as_pd_dataframe(creds,"1jIYBQQJNo2s1bo3LHlYgKzUNNM0ueuhQ")
+    df = download_csv_as_pd_dataframe(creds, "1jIYBQQJNo2s1bo3LHlYgKzUNNM0ueuhQ")
     upload_df_to_drive_as_csv(creds, df, "test.csv", DATA_FOLDER)
     print(df.head())
