@@ -6,4 +6,4 @@ secrets/
 **/__pycache__/
 credentials.json
 token.json
-```
+codecompasslib/PretrainedModels
