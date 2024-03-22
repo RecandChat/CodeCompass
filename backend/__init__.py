@@ -11,7 +11,7 @@ sys.path.insert(0, codecompasslib_path)
 sys.path.insert(0, frontend_path)
 
 # Now you can import from codecompasslib
-from codecompasslib.models.model_diff_repos import clean_code
+from codecompasslib.models.model_diff_repos import main
 
 app = Flask(__name__, template_folder=os.path.join(project_root, 'frontend'))
 
@@ -29,7 +29,7 @@ def recommend():
     user_input = request.form['user_input']
     
     # Assuming your model's function is named "recommend"
-    recommendations = clean_code(user_input)
+    recommendations = main(user_input, number_of_recommendations=1, return_neighbors=False)
     
     # Return the recommendations to the user
     # You might need to adjust this depending on your output format
