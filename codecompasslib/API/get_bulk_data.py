@@ -307,7 +307,8 @@ def get_bulk_data(user_amount: int = 100) -> list:
                 print(f"An error occurred with user: {user} following")
                 continue
 
-            sleep(60)
+            if user_amount != 1:
+                sleep(60)
             print("Count: ", count)
             count += 1
 

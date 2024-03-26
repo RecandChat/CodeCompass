@@ -41,7 +41,7 @@ jobs:
         run: echo '{"token":"${{ secrets.GH_PAT }}"}' > ./secrets/pat.json
 
       - name: Set up Google Credentials
-        run: echo '{"token":"${{ secrets.GOOGLE_TOKEN }}", "refresh_token":"${{ secrets.GOOGLE_REFRESH_TOKEN }}", "token_uri":"{{ secrets.GOOGLE_TOKEN_URI }}", "client_id":"{{ secrets.GOOGLE_CLIENT_ID }}", "client_secret":"{{ secrets.GOOGLE_CLIENT_SECRET }}", "scopes":["{{ secrets.GOOGLE_SCOPES }}"], "expiry":"{{ secrets.GOOGLE_EXPIRY }}"}' > ./secrets/token.json
+        run: echo '{{ secrets.GOOGLE_CREDS }}' > ./secrets/pat.json
 
       - name: Set up Python 3.9
         uses: actions/setup-python@v4
