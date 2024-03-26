@@ -272,7 +272,7 @@ def get_misc_data(query_parameters: list = None) -> list:
 
 def get_bulk_data(user_amount: int = 100) -> list:
     """
-    This function gets the repositories of the users and saves it to a csv file.
+    This function gets the repositories of the users.
     :param user_amount: How many users to get.
     :return: Returns a list with the fetched data.
     """
