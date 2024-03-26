@@ -2,8 +2,7 @@ from requests import Response, get
 from requests.exceptions import HTTPError
 from re import search
 from time import sleep
-from pandas import DataFrame
-from codecompasslib.API.helper_functions import load_secret, get_repo_fields, save_to_csv
+from codecompasslib.API.helper_functions import load_secret, get_repo_fields
 
 
 TOKEN: str = load_secret()
@@ -209,12 +208,12 @@ def get_user_repos(username: str) -> (list, bool):
     return repos, True
 
 
-def get_misc_data(query_parameters: list = None) -> bool:
+def get_misc_data(query_parameters: list = None) -> list:
     """
-    This function gets the repositories from the GitHub API based on the query parameters and saves it to a csv file.
+    This function gets the repositories from the GitHub API based on the query parameters returns a list of information.
     :param query_parameters: The query parameters. Accepted fields are 'language', 'in:name', 'in:description',
     'in:readme'.
-    :return: A boolean indicating if the request was successful.
+    :return: A list with the fetched data.
     """
     ACCEPTED_FIELDS: list = ['language', 'in:name', 'in:description', 'in:readme']
 
@@ -223,7 +222,7 @@ def get_misc_data(query_parameters: list = None) -> bool:
 
     if not all(item in ACCEPTED_FIELDS for item in query_parameters):
         print("Invalid query parameters.")
-        return False
+        return []
 
     url: str = 'https://api.github.com/search/repositories'
     LANGUAGE_LIST: list = ['Python', 'Java', 'Go', 'JavaScript', 'C++', 'TypeScript', 'PHP', 'C', 'Ruby', "C#", 'Nix',
@@ -262,23 +261,20 @@ def get_misc_data(query_parameters: list = None) -> bool:
             data_list.append(repos_data)
         except HTTPError as err:
             print(f"HTTP error occurred: {err}")
-            return False
+            break
         except Exception as err:
             print(f"An error occurred: {err}")
-            return False
+            break
 
-    data_list: list = [item for sublist in data_list for item in sublist]
-    df: DataFrame = DataFrame(data_list)
-    df.drop_duplicates(subset='id', keep='first', inplace=True)
-    save_to_csv(df, 'miscData.csv')
-    return True
+    data_list = [item for sublist in data_list for item in sublist]
+    return data_list
 
 
 def get_bulk_data(user_amount: int = 100) -> list:
     """
     This function gets the repositories of the users and saves it to a csv file.
     :param user_amount: How many users to get.
-    :return: Returns a boolean indicating if the request was successful.
+    :return: Returns a list with the fetched data.
     """
 
     count: int = 1

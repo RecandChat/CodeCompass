@@ -1,9 +1,14 @@
 requests >= 2.25.1
 pandas >= 1.5.3
-pytest
+pytest~=8.0.0
 google-api-core          
 google-api-python-client 
 google-auth              
 google-auth-httplib2     
 google-auth-oauthlib     
 googleapis-common-protos
+numpy~=1.24.1
+gensim~=4.3.2
+scikit-learn~=1.2.1
+scipy~=1.10.0
+neattext~=0.1.3
