@@ -41,7 +41,7 @@ jobs:
         run: echo '{"token":"${{ secrets.GH_PAT }}"}' > ./secrets/pat.json
 
       - name: Set up Google Credentials
-        run: echo {{ secrets.GOOGLE_CREDS }} > ./secrets/token.json
+        run: echo '${{ secrets.GOOGLE_CREDS }}' > ./secrets/token.json
 
       - name: Set up Python 3.9
         uses: actions/setup-python@v4
