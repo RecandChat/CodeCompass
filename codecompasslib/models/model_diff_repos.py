@@ -3,6 +3,7 @@ import numpy as np
 from gensim.models.keyedvectors import KeyedVectors
 from sklearn.neighbors import NearestNeighbors
 from scipy.spatial.distance import cosine
+from codecompasslib.models.embeddings import load_word2vec_model, vectorize_text
 
 def load_data():
     # Grab a dataframe from Data cleaner folder and only import columns necessary for analyzing a user's repositories
@@ -37,24 +38,6 @@ def preprocess_data(df):
     user_df['description'] = user_df['description'].apply(lambda x: ' '.join(str(i) for i in x) if isinstance(x, list) else '')
 
     return user_df, languages
-
-def load_word2vec_model():
-    # Load pre-trained Word2Vec model. Word Embeddings for the Software Engineering Domain, pre-trained on 15GB of Stack Overflow posts
-    # Citation: Efstathiou Vasiliki, Chatzilenas Christos, & Spinellis Diomidis. (2018). Word Embeddings for the Software Engineering Domain [Data set]. Zenodo. https://doi.org/10.5281/zenodo.1199620
-    word_vect = KeyedVectors.load_word2vec_format("./codecompasslib/PretrainedModels/SO_vectors_200.bin", binary=True)
-    return word_vect
-
-def vectorize_text(text, word_vect):
-    vector_sum = np.zeros(word_vect.vector_size)  # Initialize an array to store the sum of word vectors
-    count = 0  # Initialize a count to keep track of the number of words found in the vocabulary
-    for word in text.split():
-        if word in word_vect.key_to_index:  # Check if the word is in the vocabulary
-            vector_sum += word_vect[word]  # Add the word vector to the sum
-            count += 1  # Increment the count
-    if count > 0:
-        return vector_sum / count  # Return the average of word vectors
-    else:
-        return vector_sum  # Return the zero vector if no words are found in the vocabulary
 
 def preprocess_user_df(user_df, word_vect):
     embedded_user_df = user_df.copy()
@@ -114,7 +97,7 @@ def find_most_dissimilar_repos(target_user, target_repos, other_repos, languages
                     
 
             dissimilarity_sum += calculate_cosine_dissimilarity(target_repo_vector, neighbors_repo_vector)
-       
+
         average_dissimilarity = dissimilarity_sum / len(target_repos)
         dissimilar_repos[row_o] = average_dissimilarity
     # Return the n most dissimilar repos reverse sorted by dissimilarity score
