@@ -1,5 +1,6 @@
 import numpy as np
 from gensim.models.keyedvectors import KeyedVectors
+import openai
 
 def load_word2vec_model():
     # Load pre-trained Word2Vec model. Word Embeddings for the Software Engineering Domain, pre-trained on 15GB of Stack Overflow posts
@@ -19,5 +20,11 @@ def vectorize_text(text, word_vect):
         return vector_sum / count  # Return the average of word vectors
     else:
         return vector_sum  # Return the zero vector if no words are found in the vocabulary
-    
 
+def generate_openAI_embeddings(strings_to_embed, client):
+    response = client.embeddings.create(
+        input=strings_to_embed,
+        model="text-embedding-3-large",  # You can choose the model you prefer
+        dimensions=256  # You can choose the number of dimensions you prefer
+    )
+    return response
