@@ -111,7 +111,7 @@ def get_function_details(run: Run) -> Tuple[str, Any, str]:
 
 # Utility function to submit the function response
 
-def submit_tool_outputs(run: Run, thread: Thread, function_id: str, function_response: Any) -> Run:
+def submit_tool_outputs(client: OpenAI, run: Run, thread: Thread, function_id: str, function_response: Any) -> Run:
     """
     Submits the output of a tool function call as part of the conversation with an assistant.
 
@@ -222,7 +222,7 @@ def run_chatbot(client: OpenAI, assistant: Assistant, thread_id: str = None):
             if run.status == "requires_action":
                 function_name, arguments, function_id = get_function_details(run)
                 function_response = execute_function_call(function_name, arguments)
-                run = submit_tool_outputs(run, thread, function_id, function_response)
+                run = submit_tool_outputs(client, run, thread, function_id, function_response)
                 continue
             
             # Check if the run is completed and display the assistant's response
