@@ -6,5 +6,6 @@ secrets/
 **/__pycache__/
 credentials.json
 token.json
+pat.json
 codecompasslib/API/datasets/**.csv
 codecompasslib/API/**.txt
