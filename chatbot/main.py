@@ -1,7 +1,7 @@
 """
 The entry point of application that brings everything together and runs the chatbot.
 """
-from secrets_manager import load_openai_key, load_github_token
+from secrets_manager import load_openai_key, load_github_token, load_assistant_instructions
 from chatbot_management import initialize_client, create_assistant, load_tools, retrieve_assistant, run_chatbot
 
 # Load secrets
@@ -13,16 +13,17 @@ client = initialize_client(openAI_key)
 
 # Create an assistant
 """
+instructions = load_assistant_instructions(file_path='secrets/instructions')
 new_assistant = create_assistant(
     client=client,
     name="CodeCompass",
-    instructions="You are a helpful assistant that analyzes code from github repositories and files when given a github url. You will answer questions about the structure of a repository, the content of files, or any other code-related queries.",
+    instructions=instructions,
     model="gpt-3.5-turbo-0125",
     tools=load_tools('chatbot/tools.json'))
 """
 
 # Retrieve assistant
-older_assistant = retrieve_assistant(client, 'asst_gDv1PyXxMQ0GPQLYyh5KUm9C')
+assistant = retrieve_assistant(client, 'asst_cibfhJsvFEKbAo7EmaS34oQD')
 
 # Run the chatbot
-run_chatbot(client, assistant=older_assistant)
+run_chatbot(client, assistant=assistant)

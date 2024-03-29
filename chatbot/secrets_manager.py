@@ -43,3 +43,19 @@ def load_askthecode_api_base_url(file_path= 'secrets/askthecode_API') -> str:
     with open(file_path, 'r') as file:
         base_url = file.read().strip()
     return base_url
+
+def load_assistant_instructions(file_path='secrets/instructions') -> str:
+    """
+    Loads the assistant instructions from a specified file.
+
+    :param file_path: The path to the file containing the assistant instructions.
+    :return: The assistant instructions, or an empty string if the file cannot be found.
+    """
+    try:
+        with open(file_path, 'r') as file:
+            instructions = file.read().strip()  # Use strip() to remove newline characters
+            print("Assistant instructions loaded successfully.")
+            return instructions
+    except FileNotFoundError:
+        print(f"Assistant instructions file not found at {file_path}.")
+        return ""
