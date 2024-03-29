@@ -9,3 +9,6 @@ token.json
 pat.json
 codecompasslib/API/datasets/**.csv
 codecompasslib/API/**.txt
+dataset_new.csv
+codecompasslib/models/**.csv
+codecompasslib/PretrainedModels/
