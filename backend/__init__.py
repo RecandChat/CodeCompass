@@ -11,7 +11,7 @@ sys.path.insert(0, codecompasslib_path)
 sys.path.insert(0, frontend_path)
 
 # Now you can import from codecompasslib
-from codecompasslib.models.model_diff_repos import main
+from codecompasslib.models.model_diff_repos_mlops import main
 
 app = Flask(__name__, template_folder=os.path.join(project_root, 'frontend'))
 
