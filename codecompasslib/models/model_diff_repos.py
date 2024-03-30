@@ -7,7 +7,7 @@ from scipy.spatial.distance import cosine
 def load_data():
     # Grab a dataframe from Data cleaner folder and only import columns necessary for analyzing a user's repositories
     
-    df = pd.read_csv('./codecompasslib/Data/clean/allReposCleaned.csv', usecols=['owner_user', 'name', 'description', 'language'])
+    df = pd.read_csv('allReposCleaned.csv', usecols=['owner_user', 'name', 'description', 'language'])
     return df
 
 def preprocess_data(df):
@@ -187,7 +187,8 @@ def main(user_input='AntiTyping', number_of_recommendations=1, return_neighbors=
             'description': most_dissimilar_repo_info['description'].iloc[i],
             'language': most_dissimilar_repo_info['language'].iloc[i]
         })
-    print(recommendations)
+    for recommendation in recommendations:
+        print('rec', recommendation)
     return recommendations
 
 main()
