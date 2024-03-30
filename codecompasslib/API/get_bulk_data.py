@@ -1,7 +1,8 @@
 from requests import Response, get
 from requests.exceptions import HTTPError
-from pandas import DataFrame
-from codecompasslib.API.helper_functions import load_secret, get_repo_fields, save_to_csv
+from re import search
+from time import sleep
+from codecompasslib.API.helper_functions import load_secret, get_repo_fields
 
 
 TOKEN: str = load_secret()
@@ -50,23 +51,37 @@ def get_followers(username: str) -> (list, bool):
     :return: A list of followers and a boolean indicating if the request was successful.
     """
     url: str = f'https://api.github.com/users/{username}/followers'
-    try:
-        response: Response = get(url, headers=HEADER, allow_redirects=False)
-        response.raise_for_status()
+    query_parameters: dict = {
+        'per_page': 100,
+    }
+    followers: list = []
 
-        followers: list = []
+    while url != '':
+        if len(followers) > 1900:
+            break
+        try:
+            response: Response = get(url, headers=HEADER, params=query_parameters, allow_redirects=False)
+            response.raise_for_status()
 
-        for follower in response.json():
-            followers.append(follower['login'])
+            for follower in response.json():
+                followers.append(follower['login'])
 
-        return followers, True
+            # Check if there is a next page
+            link_header = response.headers.get('Link')
+            if link_header:
+                match = search(r'<(https://api.github.com/[^>]*)>; rel="next"', link_header)
+                url = match.group(1) if match else "None"
+            else:
+                url = ''
 
-    except HTTPError as err:
-        print(f"HTTP error occurred: {err}")
-        return [], False
-    except Exception as err:
-        print(f"An error occurred: {err}")
-        return [], False
+        except HTTPError as err:
+            print(f"HTTP error occurred: {err}")
+            return followers, False
+        except Exception as err:
+            print(f"An error occurred: {err}")
+            return followers, False
+
+    return followers, True
 
 
 def get_following(username: str) -> (list, bool):
@@ -76,23 +91,81 @@ def get_following(username: str) -> (list, bool):
     :return: A list of following and a boolean indicating if the request was successful.
     """
     url: str = f'https://api.github.com/users/{username}/following'
-    try:
-        response: Response = get(url, headers=HEADER, allow_redirects=False)
-        response.raise_for_status()
+    query_parameters: dict = {
+        'per_page': 100,
+    }
+    following: list = []
 
-        following: list = []
+    while url != '':
+        if len(following) > 1900:
+            break
+        try:
+            response: Response = get(url, headers=HEADER, params=query_parameters, allow_redirects=False)
+            response.raise_for_status()
 
-        for follow in response.json():
-            following.append(follow['login'])
+            for follow in response.json():
+                following.append(follow['login'])
 
-        return following, True
+            # If following < 100, then there is no next page
+            if len(following) < 100:
+                url = ''
+            else:
+                # Check if there is a next page
+                link_header = response.headers.get('Link')
+                if link_header:
+                    match = search(r'<(https://api.github.com/[^>]*)>; rel="next"', link_header)
+                    url = match.group(1) if match else "None"
+                else:
+                    url = ''
 
-    except HTTPError as err:
-        print(f"HTTP error occurred: {err}")
-        return [], False
-    except Exception as err:
-        print(f"An error occurred: {err}")
-        return [], False
+        except HTTPError as err:
+            print(f"HTTP error occurred: {err}")
+            return following, False
+        except Exception as err:
+            print(f"An error occurred: {err}")
+            return following, False
+
+    return following, True
+
+
+def get_stared_repos(username: str) -> (list, bool):
+    """
+    This function gets the repositories starred by a user.
+    :param username: The username of the user.
+    :return: A list of repositories and a boolean indicating if the request was successful.
+    """
+    url: str = f'https://api.github.com/users/{username}/starred'
+    query_parameters: dict = {
+        'per_page': 100,
+    }
+    starred_repos: list = []
+
+    while url != '':
+        if len(starred_repos) > 1900:
+            break
+        try:
+            response: Response = get(url, headers=HEADER, params=query_parameters, allow_redirects=False)
+            response.raise_for_status()
+
+            for starred_repo in response.json():
+                starred_repos.append(get_repo_fields(starred_repo))
+
+            # Check if there is a next page
+            link_header = response.headers.get('Link')
+            if link_header:
+                match = search(r'<(https://api.github.com/[^>]*)>; rel="next"', link_header)
+                url = match.group(1) if match else "None"
+            else:
+                url = ''
+
+        except HTTPError as err:
+            print(f"HTTP error occurred: {err}")
+            return starred_repos, False
+        except Exception as err:
+            print(f"An error occurred: {err}")
+            return starred_repos, False
+
+    return starred_repos, True
 
 
 def get_user_repos(username: str) -> (list, bool):
@@ -102,31 +175,45 @@ def get_user_repos(username: str) -> (list, bool):
     :return: A list of repositories and a boolean indicating if the request was successful.
     """
     url: str = f'https://api.github.com/users/{username}/repos'
-    try:
-        response: Response = get(url, headers=HEADER, allow_redirects=False)
-        response.raise_for_status()
+    query_parameters: dict = {
+        'per_page': 100,
+    }
+    repos: list = []
 
-        repo_data: list = []
+    while url != '':
+        if len(repos) > 1900:
+            break
+        try:
+            response: Response = get(url, headers=HEADER, params=query_parameters, allow_redirects=False)
+            response.raise_for_status()
 
-        for repo in response.json():
-            repo_data.append(get_repo_fields(repo))
+            for repo in response.json():
+                repos.append(get_repo_fields(repo))
 
-        return repo_data, True
+            # Check if there is a next page
+            link_header = response.headers.get('Link')
+            if link_header:
+                match = search(r'<(https://api.github.com/[^>]*)>; rel="next"', link_header)
+                url = match.group(1) if match else "None"
+            else:
+                url = ''
 
-    except HTTPError as err:
-        print(f"HTTP error occurred: {err}")
-        return [], False
-    except Exception as err:
-        print(f"An error occurred: {err}")
-        return [], False
+        except HTTPError as err:
+            print(f"HTTP error occurred: {err}")
+            return repos, False
+        except Exception as err:
+            print(f"An error occurred: {err}")
+            return repos, False
+
+    return repos, True
 
 
-def get_misc_data(query_parameters: list = None) -> bool:
+def get_misc_data(query_parameters: list = None) -> list:
     """
-    This function gets the repositories from the GitHub API based on the query parameters and saves it to a csv file.
+    This function gets the repositories from the GitHub API based on the query parameters returns a list of information.
     :param query_parameters: The query parameters. Accepted fields are 'language', 'in:name', 'in:description',
     'in:readme'.
-    :return: A boolean indicating if the request was successful.
+    :return: A list with the fetched data.
     """
     ACCEPTED_FIELDS: list = ['language', 'in:name', 'in:description', 'in:readme']
 
@@ -135,7 +222,7 @@ def get_misc_data(query_parameters: list = None) -> bool:
 
     if not all(item in ACCEPTED_FIELDS for item in query_parameters):
         print("Invalid query parameters.")
-        return False
+        return []
 
     url: str = 'https://api.github.com/search/repositories'
     LANGUAGE_LIST: list = ['Python', 'Java', 'Go', 'JavaScript', 'C++', 'TypeScript', 'PHP', 'C', 'Ruby', "C#", 'Nix',
@@ -174,25 +261,23 @@ def get_misc_data(query_parameters: list = None) -> bool:
             data_list.append(repos_data)
         except HTTPError as err:
             print(f"HTTP error occurred: {err}")
-            return False
+            break
         except Exception as err:
             print(f"An error occurred: {err}")
-            return False
+            break
 
-    data_list: list = [item for sublist in data_list for item in sublist]
-    df: DataFrame = DataFrame(data_list)
-    df.drop_duplicates(subset='id', keep='first', inplace=True)
-    save_to_csv(df, 'miscData.csv')
-    return True
+    data_list = [item for sublist in data_list for item in sublist]
+    return data_list
 
 
-def get_bulk_data(user_amount: int = 100) -> bool:
+def get_bulk_data(user_amount: int = 100) -> list:
     """
-    This function gets the repositories of the users and saves it to a csv file.
+    This function gets the repositories of the users.
     :param user_amount: How many users to get.
-    :return: Returns a boolean indicating if the request was successful.
+    :return: Returns a list with the fetched data.
     """
 
+    count: int = 1
     users: set = set()
     users_list: list
     users_flag: bool
@@ -210,7 +295,7 @@ def get_bulk_data(user_amount: int = 100) -> bool:
                 users.update(followers_list)
             else:
                 print(f"An error occurred with user: {user} followers")
-                return False
+                continue
 
             following_list: list
             following_flag: bool
@@ -220,29 +305,16 @@ def get_bulk_data(user_amount: int = 100) -> bool:
                 users.update(following_list)
             else:
                 print(f"An error occurred with user: {user} following")
-                return False
+                continue
+
+            if user_amount != 1:
+                sleep(60)
+            print("Count: ", count)
+            count += 1
+
     else:
         print("An error occurred with getting users.")
-        return False
+        return []
 
     print("Amount of users: ", len(users))
-
-    if len(users) > 3000:
-        print("Too many users, limiting it to 3000")
-        users = set(list(users)[:3000])
-
-    users_repos: list = []
-    for user in users:
-        user_data, flag = get_user_repos(user)
-        if flag:
-            users_repos.append(user_data)
-        else:
-            print(f"An error occurred with user: {user}")
-            return False
-
-    users_repos: list = [item for sublist in users_repos for item in sublist]
-
-    df: DataFrame = DataFrame(users_repos)
-    df.drop_duplicates(subset='id', keep='first', inplace=True)
-    save_to_csv(df, 'original/bulkDataNew.csv')
-    return True
+    return list(users)

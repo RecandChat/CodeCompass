@@ -99,8 +99,8 @@ def test_get_misc_data() -> None:
     This function tests the get_misc_data function, with an accepted field (language).
     :return: None
     """
-    misc_data_flag: bool = get_misc_data(['language'])
-    assert misc_data_flag
+    misc_data_list: list = get_misc_data(['language'])
+    assert len(misc_data_list) > 0
 
 
 def test_get_misc_data_fail() -> None:
@@ -108,8 +108,8 @@ def test_get_misc_data_fail() -> None:
     This function tests the get_misc_data function, with a non-accepted field (ThisFieldDoesNotExist).
     :return: None
     """
-    misc_data_flag: bool = get_misc_data(['ThisFieldDoesNotExist'])
-    assert misc_data_flag is False
+    misc_data_list: list = get_misc_data(['ThisFieldDoesNotExist'])
+    assert len(misc_data_list) == 0
 
 
 def test_get_bulk_data(sample_size) -> None:
@@ -118,5 +118,5 @@ def test_get_bulk_data(sample_size) -> None:
     :param sample_size: How many users to get.
     :return: None
     """
-    bulk_data_flag: bool = get_bulk_data(sample_size)
-    assert bulk_data_flag
+    bulk_data_list: list = get_bulk_data(sample_size)
+    assert len(bulk_data_list) >= 1
