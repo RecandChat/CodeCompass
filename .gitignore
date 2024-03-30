@@ -7,3 +7,5 @@ secrets/
 credentials.json
 token.json
 codecompasslib/PretrainedModels/
+codecompasslib/API/datasets/**.csv
+codecompasslib/API/**.txt

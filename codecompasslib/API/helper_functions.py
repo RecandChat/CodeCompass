@@ -18,6 +18,24 @@ def save_to_csv(data: any, filename: str) -> None:
     df.to_csv(Path(PARENT_PATH + '/Data/' + filename), index=False)
 
 
+def list_to_txt(data: list, file_name: str) -> bool:
+    """
+    This function saves a list to a txt file.
+    :param data: The list to save.
+    :param file_name: The name of the file.
+    :return: A boolean indicating if the request was successful.
+    """
+
+    try:
+        with open(file_name, 'w') as file:
+            for item in data:
+                file.write(f"{item}\n")
+        return True
+    except Exception as err:
+        print(f"An error occurred: {err}")
+        return False
+
+
 def get_repo_fields(repo: dict) -> dict:
     """
     This function gets the fields of a repository.
