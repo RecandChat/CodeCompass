@@ -4,8 +4,8 @@ secrets/
 .idea/
 *.pyc
 **/__pycache__/
-credentials.json
-token.json
-codecompasslib/PretrainedModels/
 codecompasslib/API/datasets/**.csv
 codecompasslib/API/**.txt
+dataset_new.csv
+codecompasslib/models/**.csv
+codecompasslib/PretrainedModels/
