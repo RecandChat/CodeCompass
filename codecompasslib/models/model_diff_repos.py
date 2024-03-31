@@ -3,7 +3,7 @@ import numpy as np
 from gensim.models.keyedvectors import KeyedVectors
 from sklearn.neighbors import NearestNeighbors
 from scipy.spatial.distance import cosine
-from codecompasslib.models.embeddings import load_word2vec_model, vectorize_text
+from codecompasslib.models.embeddings.embeddings_helper_functions import load_word2vec_model, vectorize_text
 
 def load_data():
     # Grab a dataframe from Data cleaner folder and only import columns necessary for analyzing a user's repositories
