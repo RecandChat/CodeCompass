@@ -1,0 +1,217 @@
+[{
+    "type": "function",
+    "function": {
+        "name": "get_repo_structure",
+            "description": "Retrieves the Github repository file structure to analyze it and be able to query only relevant files. If the provided URL contains specific branch and directory information, prioritize using that over querying the entire repository structure.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "url": {
+                        "minLength": 1,
+                        "type": "string",
+                        "description": "Full Github repository URL provided by the user. For example: https://github.com/[owner]/[repo]/blob/[branch]/[file-path]#[additional-parameters]. The URL MUST be identical to the one, that was provided by the user, you MUST NEVER alter or truncate it. This is crucial for valid responses. You should NEVER truncate additional-parameters."
+                    },
+                    "branch": {
+                        "type": "string",
+                        "description": "Repository branch. Provide only if user has explicitly specified it or the previous plugin response contains it.",
+                        "nullable": true
+                    },
+                    "relativePaths": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "description": "Relative paths to retrieve. USE only paths you are certain that exist, NEVER invent them. If the provided URL contains a specific directory path, extract and use it. Otherwise, this should be a directory path or pattern only. Patterns accept * symbol as 'any substring'",
+                        "nullable": true
+                    }
+            },
+            "required": ["url"],
+            "additionalProperties": false}
+        }
+    },
+    {
+    "type": "function",
+    "function": {
+        "name": "get_repo_content",
+        "description": "Retrieves github repository file contents, possibly filtered by file names. Line numbers can be specified in URL as well. NEVER query this endpoint without previously querying get_repo_structure endpoint and when the next step is set to get_repo_structure.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "url": {
+                    "minLength": 1,
+                    "type": "string",
+                    "description": "Full Github repository URL provided by the user. For example: https://github.com/[owner]/[repo]/blob/[branch]/[file-path]#[additional-parameters]. The URL MUST be identical to the one, that was provided by the user, you MUST NEVER alter or truncate it. This is crucial for valid responses. You should NEVER truncate additional-parameters."
+                },
+                "branch": {
+                    "type": "string",
+                    "description": "Repository branch. Provide only if user has explicitly specified it or the previous assistant response contains it. When requesting file from commit, use commit SHA.",
+                    "nullable": true
+                },
+                "relativePath": {
+                    "type": "string",
+                    "description": "Relative paths to the directory. Provide only if user has explicitly specified it or the previous plugin response contains it.",
+                    "nullable": true
+                },
+                "filePaths": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "Files to query the content of. Order them by relevance descendant. This should NEVER contain the repository branch. First determine the branch if possible, and only then the file paths. Pass only if you are sure about the file path, call get_repo_structure otherwise"
+                }
+            },
+            "required": ["url", "filePaths"],
+            "additionalProperties":false
+        }
+    }
+},
+{
+    "type": "function",
+    "function": {
+        "name": "get_repo_branches",
+        "description": "Retrieves a list of branches from a Github repository given its URL.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "url": {
+                    "minLength": 1,
+                    "type": "string",
+                    "description": "Full Github repository URL provided by the user. For example: https://github.com/[owner]/[repo]/blob/[branch]/[file-path]#[additional-parameters]. The URL MUST be identical to the one, that was provided by the user, you MUST NEVER alter or truncate it. This is crucial for valid responses. You should NEVER truncate additional-parameters."
+                }
+            },
+            "required": ["url"],
+            "additionalProperties":false
+        }
+    }
+},
+{
+    "type": "function",
+    "function": {
+        "name": "get_commit_history",
+        "description": "Returns the commits history for the specific file in the repository. If the file path is not provided, the history of the entire repository will be returned. If the branch is not provided, the default branch will be used.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "url": {
+                    "minLength": 1,
+                    "type": "string",
+                    "description": "Full Github repository URL provided by the user. For example: https://github.com/[owner]/[repo]/blob/[branch]/[file-path]#[additional-parameters]. The URL MUST be identical to the one, that was provided by the user, you MUST NEVER alter or truncate it. This is crucial for valid responses. You should NEVER truncate additional-parameters."
+                },
+                "branch": {
+                    "type": "string",
+                    "description": "Repository branch. Provide only if user has explicitly specified it or the previous assistant response contains it.",
+                    "nullable": true
+                },
+                "filePath": {
+                    "type": "string",
+                    "description": "Path to the file to request the commit history for. Use path relative to the root directory of the repository.",
+                    "nullable": true
+                }
+            },
+            "required": ["url"],
+            "additionalProperties":false
+        }
+    }
+},
+{
+        "type": "function",
+        "function": {
+            "name": "search_repo_code",
+            "description": "Search code by user specified keywords. Use when user explicitly asked to search for something. Otherwise prefer to fetch the repository structure. Invoke only with user-specified, specific keywords (e.g., file, class, method names). Avoid generic terms.",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "url": {
+                        "minLength": 1,
+                        "type": "string",
+                        "description": "Full Github repository URL provided by the user. For example: https://github.com/[owner]/[repo]/blob/[branch]/[file-path]#[additional-parameters]. The URL MUST be identical to the one, that was provided by the user, you MUST NEVER alter or truncate it. This is crucial for valid responses. You should NEVER truncate additional-parameters."
+                    },
+                    "searchKeywords": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "description": "Search keywords. Invoke only with user-specified keywords. Never use keywords that are not part of the user prompt. When user asks to search for function definitions in a specific file (not directory) and you cannot parse them from file content, pass function keyword relevant for the file language.."
+                    },
+                    "branch": {
+                        "type": "string",
+                        "description": "Repository branch. Provide only if user has explicitly specified it or the previous plugin response contains it. When requesting file from commit, use commit SHA.",
+                        "nullable": true
+                    },
+                    "relativePath": {
+                        "type": "string",
+                        "description": "Relative path to the file or directory to search in. Provide only if user has explicitly specified it or the previous plugin response contains it.",
+                        "nullable": true
+                    },
+                    "searchHitLinesCount": {
+                        "type": "integer",
+                        "description": "Number of lines to retrieve. Set only when explicitly asked to retrieve the specified amount of lines by the user.",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "skipMatchesCount": {
+                        "type": "integer",
+                        "description": "Number of matches to skip in the file. use only when user is searching over file and you need to search for matches that were omitted from the previous search request",
+                        "format": "int32",
+                        "nullable": true
+                    }
+                },
+                "required": ["url", "searchKeywords"],
+                "additionalProperties":false
+            }
+        }
+    },
+{
+    "type": "function",
+    "function": {
+        "name": "search_repo_commits",
+        "description": "Search commits by user specified keywords. Use only when user explicitly asked to search for commits and provided search query.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "url": {
+                    "minLength": 1,
+                    "type": "string",
+                    "description": "Full Github repository URL provided by the user. For example: https://github.com/[owner]/[repo]/blob/[branch]/[file-path]#[additional-parameters]. The URL MUST be identical to the one, that was provided by the user, you MUST NEVER alter or truncate it. This is crucial for valid responses. You should NEVER truncate additional-parameters."
+                },
+                "searchKeywords": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "Search keywords. Invoke only with user-specified keywords. Never use keywords that are not part of the user prompt."
+                }
+            },
+            "required": ["url", "searchKeywords"],
+            "additionalProperties":false
+        }
+    }
+},
+{
+    "type": "function",
+    "function": {
+        "name": "find_repos",
+        "description": "Search repositories by user specified keywords. Use only when user explicitly asked to search for repositories and provided search query.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "searchKeywords": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "Search keywords. Always use a single, specific keyword that best represents the topic. Avoid using multiple keywords for the same topic. OR logic applied, so providing multiple keywords for the same topic will worsen the results. Keywords should be singular, contain single word and clearly defined for precise searches."
+                },
+                "language": {
+                    "type": "string",
+                    "description": "Programming language. Use only when explicitly specified by the user.",
+                    "nullable": true
+                }
+            },
+            "required": ["searchKeywords"],
+            "additionalProperties":false
+        }
+    }
+}
+
+]
