@@ -191,6 +191,7 @@ def load_thread(client: OpenAI, thread_id: str) -> dict:
     print(f"Thread {thread_id} loaded successfully.")
     return thread
 
+
 def run_chatbot(client: OpenAI, assistant: Assistant, thread_id: str = None):
     """
     Runs the main chatbot loop, allowing user interaction with the assistant.
@@ -200,11 +201,9 @@ def run_chatbot(client: OpenAI, assistant: Assistant, thread_id: str = None):
     :param thread_id: Optional; the ID of an existing thread to continue the conversation from.
     """
     if thread_id:
-        # Load an existing thread if an ID is provided
-        thread = load_thread(client, thread_id)
+        thread = load_thread(client, thread_id)  # Load an existing thread if an ID is provided
     else:
-        # Create a new thread otherwise
-        thread_id = create_new_thread(client)
+        thread_id = create_new_thread(client)  # Create a new thread otherwise
         thread = load_thread(client, thread_id)  # Load the newly created thread for consistency
 
     while True:
@@ -212,29 +211,35 @@ def run_chatbot(client: OpenAI, assistant: Assistant, thread_id: str = None):
         if user_input.lower() == "stop":
             break
 
-        run, _ = create_message_and_run(client, assistant=assistant, query=user_input, thread=thread)
+        try:
+            run, _ = create_message_and_run(client, assistant=assistant, query=user_input, thread=thread)
 
-        while True:
-            run = client.beta.threads.runs.retrieve(thread_id=thread.id, run_id=run.id)
-            print("run status", run.status)
+            while True:
+                run = client.beta.threads.runs.retrieve(thread_id=thread.id, run_id=run.id)
+                print("run status", run.status)
 
-            # Check if the run requires action and execute the function call if so
-            if run.status == "requires_action":
-                function_name, arguments, function_id = get_function_details(run)
-                function_response = execute_function_call(function_name, arguments)
-                run = submit_tool_outputs(client, run, thread, function_id, function_response)
-                continue
-            
-            # Check if the run is completed and display the assistant's response
-            if run.status == "completed":
-                messages = client.beta.threads.messages.list(thread_id=thread.id)
-                latest_message = messages.data[0]
-                text = latest_message.content[0].text.value
-                print(f'User: {user_input}')
-                print(f'Assistant: {text}')
-                break
+                if run.status == "requires_action":
+                    try:
+                        function_name, arguments, function_id = get_function_details(run)
+                        function_response = execute_function_call(function_name, arguments)
+                        run = submit_tool_outputs(client, run, thread, function_id, function_response)
+                    except Exception as e:
+                        print("An error occurred while processing the request. Please try again.")
+                        break  # Break out of the inner loop to prompt for a new user input
 
-            time.sleep(1)
+                if run.status == "completed":
+                    messages = client.beta.threads.messages.list(thread_id=thread.id)
+                    latest_message = messages.data[0]
+                    text = latest_message.content[0].text.value
+                    print(f'Assistant: {text}')
+                    break  # Break out of the inner loop to prompt for a new user input
+
+                time.sleep(1) 
+        
+        except Exception as e:
+            print("An unexpected error occurred. Let's try another question.")
+            # Here, you simply print an error message and continue to the next iteration of the loop
+
 
 """ def get_response_for_streamlit(client: OpenAI, assistant: Assistant, user_input: str, thread_id=None) -> Tuple[str, Optional[str]]:
     # Check if a new thread is needed or continue with the existing one
