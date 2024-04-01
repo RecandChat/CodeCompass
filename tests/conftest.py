@@ -2,6 +2,7 @@ import pytest
 from google.oauth2.credentials import Credentials
 from codecompasslib.API.drive_operations import get_creds_drive
 from pandas import DataFrame
+from unittest.mock import patch 
 
 
 @pytest.fixture
@@ -83,3 +84,33 @@ def filename() -> str:
     :return: A string representing a filename
     """
     return 'test.csv'
+
+"""
+This next section contains fixtures for the Chatbot
+"""
+@pytest.fixture
+def api_response_with_useful_urls():
+    """
+    Provides a sample API response dictionary containing the 'usefulUrls' key.
+    """
+    return {
+        "data": "some data",
+        "usefulUrls": ["http://example.com"]
+    }
+
+@pytest.fixture
+def api_response_without_useful_urls():
+    """
+    Provides a sample API response dictionary without the 'usefulUrls' key.
+    """
+    return {
+        "data": "some data"
+    }
+
+@pytest.fixture
+def mock_github_token():
+    """
+    Mocks the loading of a GitHub token.
+    """
+    with patch('api_utilities.load_github_token', return_value='dummy_token'):
+        yield
