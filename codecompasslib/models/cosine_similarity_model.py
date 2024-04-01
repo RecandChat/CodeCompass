@@ -1,50 +1,103 @@
+"""
+Repository Recommendation System
+
+This script analyzes GitHub repositories to recommend repositories based on cosine similarity scores
+calculated from their textual descriptions, names, and primary programming languages. It utilizes
+TF-IDF vectorization and cosine similarity to determine the relevance of each repository to a given user preference.
+"""
+
+# Standard library imports
+import os
+import sys
+
+# Third-party imports
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-import numpy as np
 
-# load the data
-df = pd.read_csv('allReposCleaned.csv')
+# Path setup
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.dirname(SCRIPT_DIR)
+sys.path.insert(0, PROJECT_DIR)
 
-# delete missing values
-df = df.dropna()
+# Constants
+FILE_PATH = 'allReposCleaned.csv'
 
-# delete columns that are not needed
-df = df.drop(columns=[ 'is_archived', 'is_disabled', 'is_template', 'has_projects', 
-        'has _discussions', 'owner_type', 'has_pages', 'has_wiki', 
-        'has_issues', 'has_downloads', 'is_fork'])
+def load_and_clean_data(filepath):
+    """
+    Load and clean the dataset from a specified filepath.
+    
+    Args:
+        filepath (str): The file path to the dataset.
 
-# Handling missing values in text columns
-df['description'].fillna('', inplace=True)
-df['name'].fillna('', inplace=True)
-df['language'].fillna('', inplace=True)
+    Returns:
+        pandas.DataFrame: The cleaned DataFrame.
+    """
+    # Load the data
+    df = pd.read_csv(filepath)
 
-# Concatenating the text columns for vectorization
-text_data = df['name'] + " " + df['description'] + " " + df['language']
+    # Delete missing values
+    df.dropna(inplace=True)
 
-# Vectorizing the text data
-tfidf_vectorizer = TfidfVectorizer()
-tfidf_matrix = tfidf_vectorizer.fit_transform(text_data)
+    # Delete columns that are not needed
+    columns_to_drop = [
+        'is_archived', 'is_disabled', 'is_template', 'has_projects',  
+        'owner_type', 'has_pages', 'has_wiki', 
+        'has_issues', 'has_downloads', 'is_fork'
+    ]
+    df.drop(columns=columns_to_drop, inplace=True)
 
-# Calculating cosine similarity
-cosine_sim = cosine_similarity(tfidf_matrix)
+    # Handling missing values in text columns
+    df['description'].fillna('', inplace=True)
+    df['name'].fillna('', inplace=True)
+    df['language'].fillna('', inplace=True)
 
-# Since the goal is to give a score to each repo, we can average the cosine similarities for each repo
-# This gives a single score representing how similar each repo's text data is to all other repos
-similarity_scores = np.mean(cosine_sim, axis=1)
+    # Drop duplicates with name
+    df.drop_duplicates(subset='name', keep='first', inplace=True)
 
-# Adding the new column to the dataset
-df['cosine_similarity_score'] = similarity_scores
+    return df
 
-# Displaying the updated dataset with the new column
-# df[['name', 'description', 'language', 'cosine_similarity_score']].head(100)
+def calculate_cosine_similarity_scores(df):
+    """
+    Calculate cosine similarity scores for the dataset.
+
+    Args:
+        df (pandas.DataFrame): The DataFrame containing repository data.
+
+    Returns:
+        tuple: A tuple containing the DataFrame with added similarity scores and the TF-IDF vectorizer.
+    """
+    # Concatenating the text columns for vectorization
+    text_data = df['name'] + " " + df['description'] + " " + df['language']
+
+    # Vectorizing the text data using TF-IDF
+    tfidf_vectorizer = TfidfVectorizer()
+    tfidf_matrix = tfidf_vectorizer.fit_transform(text_data)
+
+    # Calculating cosine similarity
+    cosine_sim = cosine_similarity(tfidf_matrix)
+
+    # Average the cosine similarities for each repo
+    similarity_scores = np.mean(cosine_sim, axis=1)
+
+    # Adding the new column to the dataset
+    df['cosine_similarity_score'] = similarity_scores
+
+    return df, tfidf_vectorizer
 
 def recommend_repos(user_preference, df, tfidf_vectorizer, top_n=10):
     """
     Recommend repositories based on user preferences.
+
+    Args:
+        user_preference (str): The user's preferred keywords or phrases.
+        df (pandas.DataFrame): The DataFrame containing repository data.
+        tfidf_vectorizer (TfidfVectorizer): The TF-IDF vectorizer used for transforming text data.
+        top_n (int, optional): Number of top recommendations to return. Defaults to 10.
+
+    Returns:
+        pandas.DataFrame: DataFrame containing top_n recommended repositories.
     """
     # Vectorize the user preference
     user_pref_vector = tfidf_vectorizer.transform([user_preference])
@@ -55,21 +108,20 @@ def recommend_repos(user_preference, df, tfidf_vectorizer, top_n=10):
     # Get the indices of the repositories with the highest similarity scores
     top_indices = np.argsort(cosine_scores)[-top_n:][::-1]
 
-    # Select the top n recommended repositories and reset the index
+    # Select the top n recommended repositories
     recommended_repos = df.iloc[top_indices].reset_index(drop=True)
 
-    # Optionally, format the output to make it more readable
-    # For example, only displaying certain columns
     return recommended_repos[['name', 'description', 'language', 'cosine_similarity_score']]
 
+def main():
+    """
+    Main function to run the script.
+    """
+    df = load_and_clean_data(FILE_PATH)
+    df, tfidf_vectorizer = calculate_cosine_similarity_scores(df)
+    user_preference = "python"
+    recommended_repos = recommend_repos(user_preference, df, tfidf_vectorizer, top_n=10)
+    print(recommended_repos)
 
-# drop duplìcates with name
-df = df.drop_duplicates(subset='name', keep='first')
-
-# Example usage:
-user_preference = "python"
-recommended_repos = recommend_repos(user_preference, df, tfidf_vectorizer, top_n=10)
-print(recommended_repos)
-
-
-
+if __name__ == "__main__":
+    main()
