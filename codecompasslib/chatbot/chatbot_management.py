@@ -235,3 +235,22 @@ def run_chatbot(client: OpenAI, assistant: Assistant, thread_id: str = None):
                 break
 
             time.sleep(1)
+
+def get_response_for_streamlit(client: OpenAI, assistant: Assistant, user_input: str, thread_id=None) -> Tuple[str, Optional[str]]:
+    # Check if a new thread is needed or continue with the existing one
+    if thread_id is None:
+        thread = client.beta.threads.create()
+        thread_id = thread.id
+    else:
+        thread = client.beta.threads.retrieve(thread_id)
+
+    # Process the user input and get the response
+    run, _ = create_message_and_run(client, assistant=assistant, query=user_input, thread=thread)
+
+    while True:
+        run = client.beta.threads.runs.retrieve(thread_id=thread.id, run_id=run.id)
+        if run.status == "completed":
+            messages = client.beta.threads.messages.list(thread_id=thread.id)
+            latest_message = messages.data[0]
+            return latest_message.content[0].text.value, thread_id
+        time.sleep(1)
