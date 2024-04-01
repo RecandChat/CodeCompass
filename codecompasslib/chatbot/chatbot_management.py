@@ -4,12 +4,13 @@ Functions focusing on handling the initialization and management of the chatbot 
 
 import json
 import time
+from typing import Optional
 from openai import OpenAI
 from typing import Tuple, Any, Union, Dict, Callable
 from openai.types.beta.assistant import Assistant
 from openai.types.beta.thread import Thread
 from openai.types.beta.threads.run import Run
-from repo_info import get_repo_structure, get_repo_content, get_repo_branches, get_commit_history, search_repo_code, search_repo_commits, find_repos
+from codecompasslib.chatbot.repo_info import get_repo_structure, get_repo_content, get_repo_branches, get_commit_history, search_repo_code, search_repo_commits, find_repos
 
 
 def load_tools(file_path: str) -> list:
@@ -236,7 +237,7 @@ def run_chatbot(client: OpenAI, assistant: Assistant, thread_id: str = None):
 
             time.sleep(1)
 
-""" def get_response_for_streamlit(client: OpenAI, assistant: Assistant, user_input: str, thread_id=None) -> Tuple[str, Optional[str]]:
+def get_response_for_streamlit(client: OpenAI, assistant: Assistant, user_input: str, thread_id=None) -> Tuple[str, Optional[str]]:
     # Check if a new thread is needed or continue with the existing one
     if thread_id is None:
         thread = client.beta.threads.create()
@@ -253,4 +254,4 @@ def run_chatbot(client: OpenAI, assistant: Assistant, thread_id: str = None):
             messages = client.beta.threads.messages.list(thread_id=thread.id)
             latest_message = messages.data[0]
             return latest_message.content[0].text.value, thread_id
-        time.sleep(1) """
+        time.sleep(1)

@@ -3,8 +3,8 @@ Functions focusing on fetching various types of information about repositories.
 """
 
 from typing import Any, Dict, List, Optional, Union
-from api_utilities import make_api_request
-from secrets_manager import load_askthecode_api_base_url
+from codecompasslib.chatbot.api_utilities import make_api_request
+from codecompasslib.chatbot.secrets_manager import load_askthecode_api_base_url
 
 
 def get_repo_structure(url: str, branch: Optional[str] = None, relativePaths: Optional[List[str]] = None) -> Union[Dict[str, Any], str]:
