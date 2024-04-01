@@ -1,8 +1,6 @@
 import sys
 import os
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))) # help to locate chatbot folder 
-
 import streamlit as st 
 from codecompasslib.chatbot.chatbot_management import initialize_client, retrieve_assistant, get_response_for_streamlit
 from codecompasslib.chatbot.repo_info import get_repo_structure, get_repo_content, get_repo_branches, get_commit_history, search_repo_code, search_repo_commits, find_repos

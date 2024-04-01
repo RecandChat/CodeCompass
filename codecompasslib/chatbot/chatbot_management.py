@@ -236,7 +236,7 @@ def run_chatbot(client: OpenAI, assistant: Assistant, thread_id: str = None):
 
             time.sleep(1)
 
-def get_response_for_streamlit(client: OpenAI, assistant: Assistant, user_input: str, thread_id=None) -> Tuple[str, Optional[str]]:
+""" def get_response_for_streamlit(client: OpenAI, assistant: Assistant, user_input: str, thread_id=None) -> Tuple[str, Optional[str]]:
     # Check if a new thread is needed or continue with the existing one
     if thread_id is None:
         thread = client.beta.threads.create()
@@ -253,4 +253,4 @@ def get_response_for_streamlit(client: OpenAI, assistant: Assistant, user_input:
             messages = client.beta.threads.messages.list(thread_id=thread.id)
             latest_message = messages.data[0]
             return latest_message.content[0].text.value, thread_id
-        time.sleep(1)
+        time.sleep(1) """

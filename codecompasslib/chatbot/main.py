@@ -5,8 +5,8 @@ from secrets_manager import load_openai_key, load_github_token, load_assistant_i
 from chatbot_management import initialize_client, create_assistant, load_tools, retrieve_assistant, run_chatbot
 
 # Load secrets
-openAI_key = load_openai_key(file_path='secrets/openAI_key')
-github_token = load_github_token(file_path='secrets/github_token')
+openAI_key = load_openai_key(file_path='./secrets/openAI_key')
+github_token = load_github_token(file_path='./secrets/github_token')
 
 # Initialize the OpenAI client
 client = initialize_client(openAI_key)
