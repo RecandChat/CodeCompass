@@ -143,3 +143,7 @@ def mock_tools_json_file(tmpdir, mock_tool_definitions):
         json.dump(mock_tool_definitions, f)
     return str(file)
 
+@pytest.fixture
+def mock_api_base_url():
+    with patch('codecompasslib.chatbot.repo_info.load_askthecode_api_base_url', return_value="https://mockapi.askthecode.ai"):
+        yield

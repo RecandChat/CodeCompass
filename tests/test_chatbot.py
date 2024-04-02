@@ -10,8 +10,8 @@ sys.path.insert(0, project_root)
 import pytest
 from unittest.mock import patch, Mock, MagicMock
 from codecompasslib.chatbot.api_utilities import remove_useful_urls, make_api_request
-from codecompasslib.chatbot.chatbot_management import load_tools, initialize_client, create_assistant, create_message_and_run
-import openai
+from codecompasslib.chatbot.chatbot_management import load_tools, initialize_client, create_assistant
+from codecompasslib.chatbot.repo_info import get_repo_structure, get_repo_content, get_repo_branches
 
 """
 API Utilities Tests
@@ -89,5 +89,45 @@ def test_create_assistant():
 """
 Repo Info tests
 """
+
+@pytest.mark.usefixtures("mock_api_base_url")
+class TestRepoInfo:
+    @pytest.mark.parametrize("branch, relativePaths, expected_url", [
+        (None, None, "https://mockapi.askthecode.ai/api/repository/structure"),
+        ('main', ['src', 'test'], "https://mockapi.askthecode.ai/api/repository/structure"),
+    ])
+    def test_get_repo_structure(self, branch, relativePaths, expected_url):
+        mock_response = {"structure": "mock_data"}
+        with patch('codecompasslib.chatbot.repo_info.make_api_request', return_value=mock_response) as mocked_request:
+            result = get_repo_structure("https://github.com/mockuser/mockrepo", branch, relativePaths)
+            mocked_request.assert_called_once_with(expected_url, {
+                'url': "https://github.com/mockuser/mockrepo",
+                'branch': branch,
+                'relativePaths': relativePaths
+            })
+            assert result == mock_response
+
+    @pytest.mark.parametrize("filePaths, branch, relativePath, expected_url", [
+        (['README.md'], None, None, "https://mockapi.askthecode.ai/api/repository/content"),
+        (['src/main.py'], 'main', 'src', "https://mockapi.askthecode.ai/api/repository/content"),
+    ])
+    def test_get_repo_content(self, filePaths, branch, relativePath, expected_url):
+        mock_response = {"content": "mock_data"}
+        with patch('codecompasslib.chatbot.repo_info.make_api_request', return_value=mock_response) as mocked_request:
+            result = get_repo_content("https://github.com/mockuser/mockrepo", filePaths, branch, relativePath)
+            mocked_request.assert_called_once_with(expected_url, {
+                'url': "https://github.com/mockuser/mockrepo",
+                'filePaths': filePaths,
+                'branch': branch,
+                'relativePath': relativePath
+            })
+            assert result == mock_response
+
+    def test_get_repo_branches(self):
+        mock_response = {"branches": ["main", "dev"]}
+        with patch('codecompasslib.chatbot.repo_info.make_api_request', return_value=mock_response) as mocked_request: 
+            result = get_repo_branches("https://github.com/mockuser/mockrepo")
+            mocked_request.assert_called_once_with("https://mockapi.askthecode.ai/api/repository/branch/list", {'url': "https://github.com/mockuser/mockrepo"})
+            assert result == mock_response
 
 
