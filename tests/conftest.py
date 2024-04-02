@@ -3,6 +3,7 @@ from google.oauth2.credentials import Credentials
 from codecompasslib.API.drive_operations import get_creds_drive
 from pandas import DataFrame
 from unittest.mock import patch, Mock
+import json
 
 
 @pytest.fixture
@@ -125,3 +126,19 @@ def mock_response():
     mock.status_code = 200
     mock.json.return_value = {"data": "some data"}
     return mock
+
+@pytest.fixture
+def mock_tool_definitions():
+    """Provides a mock list of tool definitions."""
+    return [
+        {"name": "tool1", "description": "A test tool"},
+        {"name": "tool2", "description": "Another test tool"}
+    ]
+
+@pytest.fixture
+def mock_tools_json_file(tmpdir, mock_tool_definitions):
+    """Creates a temporary JSON file with mock tool definitions."""
+    file = tmpdir.join("tools.json")
+    with open(file, 'w') as f:
+        json.dump(mock_tool_definitions, f)
+    return str(file)

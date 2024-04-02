@@ -8,8 +8,13 @@ sys.path.insert(0, project_root)
 
 
 import pytest
-from unittest.mock import patch, Mock
+from unittest.mock import patch, Mock, MagicMock
 from codecompasslib.chatbot.api_utilities import remove_useful_urls, make_api_request
+from codecompasslib.chatbot.chatbot_management import load_tools, initialize_client, create_assistant
+
+"""
+API Utilities Tests
+"""
 
 def test_remove_useful_urls_with_key_present(api_response_with_useful_urls) -> None:
     """
@@ -44,4 +49,42 @@ def test_make_api_request_success(mock_github_token) -> None:
         response = make_api_request("https://fakeurl.com/api/test", {})
         assert "usefulUrls" not in response
         assert response == {"data": "some data"}
+
+"""
+Chatbot Management Tests
+"""
+
+def test_load_tools(mock_tools_json_file, mock_tool_definitions):
+    """Tests if tool definitions are correctly loaded from a JSON file."""
+    loaded_tools = load_tools(mock_tools_json_file)
+    assert loaded_tools == mock_tool_definitions, "Failed to load the correct tool definitions from the file"
+
+@pytest.mark.parametrize("api_key", ["test_api_key"])
+def test_initialize_client(api_key):
+    """Tests if the OpenAI client is initialized with the provided API key."""
+    with patch('codecompasslib.chatbot.chatbot_management.OpenAI', return_value=MagicMock()) as MockClient:
+        initialize_client(api_key)
+        MockClient.assert_called_once_with(api_key=api_key)
+
+def test_create_assistant():
+    """Tests if an assistant is created with specified parameters."""
+    mock_client = Mock()
+    mock_client.beta.assistants.create.return_value = Mock()
+    name = "Test Assistant"
+    instructions = "Helpful assistant."
+    model = "gpt-3.5-turbo"
+    tools = []
+
+    assistant = create_assistant(mock_client, name, instructions, model, tools)
+
+    mock_client.beta.assistants.create.assert_called_once_with(
+        name=name,
+        instructions=instructions,
+        model=model,
+        tools=tools
+    )
+    assert assistant == mock_client.beta.assistants.create.return_value, "Failed to return the correct assistant object"
+
+
+
 
