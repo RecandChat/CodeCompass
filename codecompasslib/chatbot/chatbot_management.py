@@ -9,7 +9,7 @@ from typing import Tuple, Any, Union, Dict, Callable
 from openai.types.beta.assistant import Assistant
 from openai.types.beta.thread import Thread
 from openai.types.beta.threads.run import Run
-from repo_info import get_repo_structure, get_repo_content, get_repo_branches, get_commit_history, search_repo_code, search_repo_commits, find_repos
+from codecompasslib.chatbot.repo_info import get_repo_structure, get_repo_content, get_repo_branches, get_commit_history, search_repo_code, search_repo_commits, find_repos
 
 
 def load_tools(file_path: str) -> list:

@@ -2,7 +2,7 @@ import pytest
 from google.oauth2.credentials import Credentials
 from codecompasslib.API.drive_operations import get_creds_drive
 from pandas import DataFrame
-from unittest.mock import patch 
+from unittest.mock import patch, Mock
 
 
 @pytest.fixture
@@ -112,5 +112,16 @@ def mock_github_token():
     """
     Mocks the loading of a GitHub token.
     """
-    with patch('api_utilities.load_github_token', return_value='dummy_token'):
+    # Adjust the path to match the full import path of the function you're mocking
+    with patch('codecompasslib.chatbot.api_utilities.load_github_token', return_value='dummy_token'):
         yield
+
+@pytest.fixture
+def mock_response():
+    """
+    Creates a mock response to simulate `requests.post` being called.
+    """
+    mock = Mock()
+    mock.status_code = 200
+    mock.json.return_value = {"data": "some data"}
+    return mock

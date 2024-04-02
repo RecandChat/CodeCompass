@@ -1,3 +1,12 @@
+import sys
+import os
+
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, project_root)
+
+
 import pytest
 from unittest.mock import patch, Mock
 from codecompasslib.chatbot.api_utilities import remove_useful_urls, make_api_request
@@ -30,7 +39,7 @@ def test_make_api_request_success(mock_github_token) -> None:
     :param mock_github_token: Fixture to mock the loading of the GitHub token.
     :return: None
     """
-    with patch('api_utilities.requests.post') as mocked_post:
+    with patch('codecompasslib.chatbot.api_utilities.requests.post') as mocked_post:
         mocked_post.return_value = Mock(status_code=200, json=lambda: {"data": "some data", "usefulUrls": ["http://example.com"]})
         response = make_api_request("https://fakeurl.com/api/test", {})
         assert "usefulUrls" not in response
