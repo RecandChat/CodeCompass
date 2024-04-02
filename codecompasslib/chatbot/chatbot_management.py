@@ -4,9 +4,9 @@ Functions focusing on handling the initialization and management of the chatbot 
 
 import json
 import time
-from typing import Optional
+import streamlit as st
 from openai import OpenAI
-from typing import Tuple, Any, Union, Dict, Callable
+from typing import Tuple, Any, Union, Dict, Callable, Optional
 from openai.types.beta.assistant import Assistant
 from openai.types.beta.thread import Thread
 from openai.types.beta.threads.run import Run
@@ -237,21 +237,65 @@ def run_chatbot(client: OpenAI, assistant: Assistant, thread_id: str = None):
 
             time.sleep(1)
 
-def get_response_for_streamlit(client: OpenAI, assistant: Assistant, user_input: str, thread_id=None) -> Tuple[str, Optional[str]]:
-    # Check if a new thread is needed or continue with the existing one
-    if thread_id is None:
-        thread = client.beta.threads.create()
-        thread_id = thread.id
-    else:
-        thread = client.beta.threads.retrieve(thread_id)
 
-    # Process the user input and get the response
-    run, _ = create_message_and_run(client, assistant=assistant, query=user_input, thread=thread)
 
-    while True:
-        run = client.beta.threads.runs.retrieve(thread_id=thread.id, run_id=run.id)
+def run_chatbot_streamlit(client: OpenAI, assistant: Assistant):
+    # Initialize or reset session state variables
+    if 'thread_id' not in st.session_state:
+        st.session_state.thread_id = None
+        st.session_state.run_status = None
+        st.session_state.chat_history = []
+
+    user_input = st.text_input("Enter your query:", key="user_input")
+
+    if st.button("Ask"):
+        if st.session_state.thread_id is None:
+            # Create a new thread if not already existing
+            thread_id = create_new_thread(client)
+            st.session_state.thread_id = thread_id
+            thread = load_thread(client, thread_id)
+        else:
+            # Load the existing thread
+            thread = load_thread(client, st.session_state.thread_id)
+
+        run, _ = create_message_and_run(client, assistant=assistant, query=user_input, thread=thread)
+        st.session_state.run_status = 'waiting'
+        st.session_state.chat_history.append(f"User: {user_input}")
+
+    if st.session_state.run_status == 'waiting':
+        # Check the status of the run
+        run = client.beta.threads.runs.retrieve(thread_id=st.session_state.thread_id, run_id=run.id)
         if run.status == "completed":
-            messages = client.beta.threads.messages.list(thread_id=thread.id)
+            messages = client.beta.threads.messages.list(thread_id=st.session_state.thread_id)
             latest_message = messages.data[0]
-            return latest_message.content[0].text.value, thread_id
-        time.sleep(1)
+            response = latest_message.content[0].text.value
+            st.session_state.chat_history.append(f"Assistant: {response}")
+            st.session_state.run_status = 'completed'
+        elif run.status == "requires_action":
+            # Extract action details
+            function_name, arguments, function_id = get_function_details(run)
+            
+            # Execute the required action
+            function_response = execute_function_call(function_name, arguments)
+
+            # Submit the output back to the Assistant
+            run = submit_tool_outputs(client, run, thread, function_id, function_response)
+
+            # Check for the updated status of the run
+            run = client.beta.threads.runs.retrieve(thread_id=st.session_state.thread_id, run_id=run.id)
+            if run.status == "completed":
+                messages = client.beta.threads.messages.list(thread_id=st.session_state.thread_id)
+                latest_message = messages.data[0]
+                response = latest_message.content[0].text.value
+                st.session_state.chat_history.append(f"Assistant: {response}")
+                st.session_state.run_status = 'completed'
+
+    if st.button("Clear Chat"):
+        # Clear the chat history and reset the thread
+        st.session_state.chat_history = []
+        st.session_state.thread_id = None
+        st.session_state.run_status = None
+
+    # Display the chat history
+    for message in st.session_state.chat_history:
+        st.write(message)
