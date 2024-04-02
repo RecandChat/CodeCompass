@@ -1,7 +1,6 @@
 """
 Functions focusing on handling the initialization and management of the chatbot assistant, including thread management and message handling.
 """
-
 import json
 import time
 from openai import OpenAI
@@ -9,7 +8,7 @@ from typing import Tuple, Any, Union, Dict, Callable
 from openai.types.beta.assistant import Assistant
 from openai.types.beta.thread import Thread
 from openai.types.beta.threads.run import Run
-from repo_info import get_repo_structure, get_repo_content, get_repo_branches, get_commit_history, search_repo_code, search_repo_commits, find_repos
+from codecompasslib.chatbot.repo_info import get_repo_structure, get_repo_content, get_repo_branches, get_commit_history, search_repo_code, search_repo_commits, find_repos
 
 
 def load_tools(file_path: str) -> list:
@@ -211,6 +210,31 @@ def run_chatbot(client: OpenAI, assistant: Assistant, thread_id: str = None):
         if user_input.lower() == "stop":
             break
 
+        chatbot_frontend
+        run, _ = create_message_and_run(client, assistant=assistant, query=user_input, thread=thread)
+
+        while True:
+            run = client.beta.threads.runs.retrieve(thread_id=thread.id, run_id=run.id)
+            print("run status", run.status)
+
+            # Check if the run requires action and execute the function call if so
+            if run.status == "requires_action":
+                function_name, arguments, function_id = get_function_details(run)
+                function_response = execute_function_call(function_name, arguments)
+                run = submit_tool_outputs(client, run, thread, function_id, function_response)
+                continue
+            
+            # Check if the run is completed and display the assistant's response
+            if run.status == "completed":
+                messages = client.beta.threads.messages.list(thread_id=thread.id)
+                latest_message = messages.data[0]
+                text = latest_message.content[0].text.value
+                print(f'User: {user_input}')
+                print(f'Assistant: {text}')
+                break
+
+            time.sleep(1)
+            
         try:
             run, _ = create_message_and_run(client, assistant=assistant, query=user_input, thread=thread)
 
@@ -239,23 +263,3 @@ def run_chatbot(client: OpenAI, assistant: Assistant, thread_id: str = None):
         except Exception as e:
             print("An unexpected error occurred. Let's try another question.")
             # Here, you simply print an error message and continue to the next iteration of the loop
-
-
-""" def get_response_for_streamlit(client: OpenAI, assistant: Assistant, user_input: str, thread_id=None) -> Tuple[str, Optional[str]]:
-    # Check if a new thread is needed or continue with the existing one
-    if thread_id is None:
-        thread = client.beta.threads.create()
-        thread_id = thread.id
-    else:
-        thread = client.beta.threads.retrieve(thread_id)
-
-    # Process the user input and get the response
-    run, _ = create_message_and_run(client, assistant=assistant, query=user_input, thread=thread)
-
-    while True:
-        run = client.beta.threads.runs.retrieve(thread_id=thread.id, run_id=run.id)
-        if run.status == "completed":
-            messages = client.beta.threads.messages.list(thread_id=thread.id)
-            latest_message = messages.data[0]
-            return latest_message.content[0].text.value, thread_id
-        time.sleep(1) """
