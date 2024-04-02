@@ -76,3 +76,4 @@ wcwidth==0.2.13
 Werkzeug==2.0.2
 openai >= 1.14.3
 pytest-mock==3.14.0
+streamlit==1.32.2

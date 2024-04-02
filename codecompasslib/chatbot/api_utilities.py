@@ -4,7 +4,6 @@ Includes utility functions for making API requests and preprocessing responses.
 import requests
 from typing import Dict, Any, Union
 from codecompasslib.chatbot.secrets_manager import load_github_token
-#from .secrets_manager import load_github_token
 
 
 """
