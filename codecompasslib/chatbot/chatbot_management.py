@@ -3,7 +3,6 @@ Functions focusing on handling the initialization and management of the chatbot 
 """
 import json
 import time
-import streamlit as st
 from openai import OpenAI
 from typing import Tuple, Any, Union, Dict, Callable
 from openai.types.beta.assistant import Assistant
@@ -235,54 +234,3 @@ def run_chatbot(client: OpenAI, assistant: Assistant, thread_id: str = None):
                 break
 
             time.sleep(1)
-
-
-
-def run_chatbot_streamlit(client: OpenAI, assistant: Assistant):
-    # Initialize or reset session state variables
-    if 'thread_id' not in st.session_state:
-        st.session_state['thread_id'] = None
-        st.session_state['chat_history'] = []
-        st.session_state['response_pending'] = False
-        st.session_state['run'] = None
-
-    user_input = st.text_input("Enter your query:", key="user_input")
-
-    if st.button("Ask"):
-        if not st.session_state['thread_id']:
-            # Create a new thread if not already existing
-            st.session_state['thread_id'] = create_new_thread(client)
-
-        if user_input:
-            # Load the existing thread using the thread ID
-            thread = load_thread(client, st.session_state['thread_id'])
-            # Create a message and initiate a run
-            run, _ = create_message_and_run(client, assistant=assistant, query=user_input, thread=thread)
-            # Update session state
-            st.session_state['chat_history'].append(f"User: {user_input}")
-            st.session_state['response_pending'] = True
-            st.session_state['run'] = run
-
-    if st.session_state['response_pending'] and st.session_state['run']:
-        # Check the status of the run
-        run_status = client.beta.threads.runs.retrieve(thread_id=st.session_state['thread_id'], run_id=st.session_state['run'].id).status
-        if run_status == "completed":
-            messages = client.beta.threads.messages.list(thread_id=st.session_state['thread_id'])
-            latest_message = messages.data[0]
-            response = latest_message.content[0].text.value
-            st.session_state['chat_history'].append(f"Assistant: {response}")
-            st.session_state['response_pending'] = False
-        elif run_status == "requires_action":
-            function_name, arguments, function_id = get_function_details(st.session_state['run'])
-            function_response = execute_function_call(function_name, arguments)
-            st.session_state['run'] = submit_tool_outputs(client, st.session_state['run'], thread, function_id, function_response)
-
-    for message in st.session_state['chat_history']:
-        st.write(message)
-
-    if st.button("Clear Chat"):
-        # Clear the chat history and reset the thread
-        st.session_state['chat_history'] = []
-        st.session_state['thread_id'] = None
-        st.session_state['response_pending'] = False
-        st.session_state['run'] = None
