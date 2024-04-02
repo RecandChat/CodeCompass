@@ -210,7 +210,6 @@ def run_chatbot(client: OpenAI, assistant: Assistant, thread_id: str = None):
         if user_input.lower() == "stop":
             break
 
-        chatbot_frontend
         run, _ = create_message_and_run(client, assistant=assistant, query=user_input, thread=thread)
 
         while True:
