@@ -12,6 +12,7 @@ from unittest.mock import patch, Mock, MagicMock
 from codecompasslib.chatbot.api_utilities import remove_useful_urls, make_api_request
 from codecompasslib.chatbot.chatbot_management import load_tools, initialize_client, create_assistant
 from codecompasslib.chatbot.repo_info import get_repo_structure, get_repo_content, get_repo_branches
+from codecompasslib.chatbot.secrets_manager import load_openai_key, load_github_token, load_askthecode_api_base_url, load_assistant_instructions
 
 """
 API Utilities Tests
@@ -130,4 +131,21 @@ class TestRepoInfo:
             mocked_request.assert_called_once_with("https://mockapi.askthecode.ai/api/repository/branch/list", {'url': "https://github.com/mockuser/mockrepo"})
             assert result == mock_response
 
+"""
+Secrets Manager tests
+"""
+def test_load_openai_key(mock_openai_key_file):
+    key = load_openai_key('secrets/openAI_key')
+    assert key == "test_openai_key", "Failed to load the OpenAI key correctly."
 
+def test_load_github_token(mock_github_token_file):
+    token = load_github_token('secrets/github_token')
+    assert token == "test_github_token", "Failed to load the GitHub token correctly."
+
+def test_load_askthecode_api_base_url(mock_askthecode_api_base_url_file):
+    base_url = load_askthecode_api_base_url('secrets/askthecode_API')
+    assert base_url == "https://mockapi.askthecode.ai", "Failed to load the AskTheCode API base URL correctly."
+
+def test_load_assistant_instructions(mock_assistant_instructions_file):
+    instructions = load_assistant_instructions('secrets/instructions')
+    assert instructions == "test_instructions", "Failed to load the assistant instructions correctly."
