@@ -2,7 +2,7 @@ import pytest
 from google.oauth2.credentials import Credentials
 from codecompasslib.API.drive_operations import get_creds_drive
 from pandas import DataFrame
-from unittest.mock import patch, Mock
+from unittest.mock import patch, Mock, MagicMock
 import json
 
 
@@ -142,3 +142,4 @@ def mock_tools_json_file(tmpdir, mock_tool_definitions):
     with open(file, 'w') as f:
         json.dump(mock_tool_definitions, f)
     return str(file)
+

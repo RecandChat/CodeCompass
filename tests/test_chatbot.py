@@ -10,7 +10,8 @@ sys.path.insert(0, project_root)
 import pytest
 from unittest.mock import patch, Mock, MagicMock
 from codecompasslib.chatbot.api_utilities import remove_useful_urls, make_api_request
-from codecompasslib.chatbot.chatbot_management import load_tools, initialize_client, create_assistant
+from codecompasslib.chatbot.chatbot_management import load_tools, initialize_client, create_assistant, create_message_and_run
+import openai
 
 """
 API Utilities Tests
@@ -85,6 +86,8 @@ def test_create_assistant():
     )
     assert assistant == mock_client.beta.assistants.create.return_value, "Failed to return the correct assistant object"
 
-
+"""
+Repo Info tests
+"""
 
 
