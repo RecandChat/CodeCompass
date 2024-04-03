@@ -136,7 +136,7 @@ def get_stared_repos(username: str) -> (list, bool):
     """
     url: str = f'https://api.github.com/users/{username}/starred'
     query_parameters: dict = {
-        'per_page': 100,
+        'per_page': 500,
     }
     starred_repos: list = []
 
@@ -154,7 +154,7 @@ def get_stared_repos(username: str) -> (list, bool):
             link_header = response.headers.get('Link')
             if link_header:
                 match = search(r'<(https://api.github.com/[^>]*)>; rel="next"', link_header)
-                url = match.group(1) if match else "None"
+                url = match.group(1) if match else ""
             else:
                 url = ''
 

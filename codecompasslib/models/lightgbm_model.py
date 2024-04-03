@@ -108,8 +108,8 @@ def train_lightGBM_model(df_merged, label_col):
     valid_data = pd.concat([X_val, y_val], axis=1)
     test_data = pd.concat([X_test, y_test], axis=1)
     
-    nume_cols = ["embedding_" + str(i) for i in range(256)] + ["stars"]
-    cate_cols = ["language"]	
+    nume_cols = ["embedding_" + str(i) for i in range(256)]
+    cate_cols = []	
     
     ord_encoder = ce.ordinal.OrdinalEncoder(cols=cate_cols)
 
@@ -129,7 +129,7 @@ def train_lightGBM_model(df_merged, label_col):
     
     return lgb_model, ord_encoder
 
-def generate_lightGBM_recommendations(target_user, number_of_recommendations=10):
+def load_data():
     # Load the data
     DRIVE_ID = "0AL1DtB4TdEWdUk9PVA"
     DATA_FOLDER = "13JitBJQLNgMvFwx4QJcvrmDwKOYAShVx"
@@ -137,24 +137,30 @@ def generate_lightGBM_recommendations(target_user, number_of_recommendations=10)
     creds = get_creds_drive()
     
     # Load embedded and non-embedded dataset
-    df_non_embedded = download_csv_as_pd_dataframe(creds=creds, file_id="1WSgwAhzNbSqC6e_RRBDHpgpQCnGZvVcc")
-    df_embedded = download_csv_as_pd_dataframe(creds=creds, file_id="1V7P-bjQCLmFg_7ffG-s-caI6Il6B7Zvp")
+    # df_non_embedded = download_csv_as_pd_dataframe(creds=creds, file_id="1WSgwAhzNbSqC6e_RRBDHpgpQCnGZvVcc")
+    # df_embedded = download_csv_as_pd_dataframe(creds=creds, file_id="1V7P-bjQCLmFg_7ffG-s-caI6Il6B7Zvp")
+    
+    df_non_embedded = pd.read_csv("codecompasslib/models/data_full.csv")
+    df_embedded = pd.read_csv("codecompasslib/models/df_embedded_combined.csv")
     
     print("Data loaded")
     
+    return df_non_embedded, df_embedded
+
+def generate_lightGBM_recommendations(target_user, df_non_embedded, df_embedded, number_of_recommendations=10):
     # grab starred repos by target user
-    starred_by_target = get_stared_repos(target_user)
-    starred_repo_ids = ids = [item['id'] for item in starred_by_target[0]]
+    owned_by_target_repo_ids = [item['id'] for item in get_user_repos(target_user)[0]]
+    starred_repo_ids = ids = [item['id'] for item in get_stared_repos(target_user)[0]]
     
     # Adding stars column to the embedded dataset (add any other column if you want to use it for a model)
-    df_merged = pd.merge(df_embedded, df_non_embedded[['id', 'stars', 'language']], on='id', how='left')
+    df_merged = pd.merge(df_embedded, df_non_embedded[['id']], on='id', how='left')
     # turn stars column into integer column
-    df_merged['stars'] = df_merged['stars'].apply(lambda x: int(x))
+    # df_merged['stars'] = df_merged['stars'].apply(lambda x: int(x))
     
     label_col = 'target'
     
-    # add target column which will be 1 if the user has starred the repo and 0 otherwise
-    df_merged[label_col] = df_merged['id'].apply(lambda x: 1 if x in starred_repo_ids else 0)
+    # add target column which will be 1 if the user has starred or owns the repo and 0 otherwise
+    df_merged[label_col] = df_merged['id'].apply(lambda x: 1 if x in starred_repo_ids+owned_by_target_repo_ids else 0)
     
     lgb_model, ord_encoder = train_lightGBM_model(df_merged, label_col)
     
@@ -169,11 +175,12 @@ def generate_lightGBM_recommendations(target_user, number_of_recommendations=10)
     recommendations = [] # list storing the recommendations
 
     counter = 0
+    not_to_recommend = owned_by_target_repo_ids + starred_repo_ids
     for index in top_indices:
         if counter == number_of_recommendations:
             break
         # disregard if the repo is already starred by the user
-        if df_merged.iloc[index]['id'] in starred_repo_ids:
+        if df_merged.iloc[index]['id'] in not_to_recommend:
             continue
         else:
             counter += 1
@@ -182,13 +189,21 @@ def generate_lightGBM_recommendations(target_user, number_of_recommendations=10)
     return recommendations
         
 def main():
-    target_user = 'Rameshwar0852'
-    recommendations = generate_lightGBM_recommendations(target_user)
-    print("----Recommendations----")
-    for repo in recommendations:
-        print(f"Repo ID: {repo[0]}, Owner: {repo[1]}, Prediction: {repo[2]}")
-    
-    return recommendations
+    # load the data
+    df_non_embedded, df_embedded = load_data()
+    while True:
+        target_user = input("Enter the target user's username: ")
+        # check if user in df_Embedded
+        if target_user not in df_embedded['owner_user'].values:
+            print("User not found in the dataset. Please enter a valid username.")
+            continue
+        else:  
+            recommendations = generate_lightGBM_recommendations(target_user, df_non_embedded, df_embedded, number_of_recommendations=10)
+            print("----Recommendations----")
+            for repo in recommendations:
+                # repo name
+                name = df_non_embedded[df_non_embedded['id'] == repo[0]]['name'].values[0]
+                print(f"Repo ID: {repo[0]}, Owner: {repo[1]}, link: https://github.com/{repo[1]}/{name}")
 
 if __name__ == "__main__":
     main()
