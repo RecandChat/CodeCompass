@@ -34,8 +34,6 @@ def generate_openAI_embedded_csv(df, column_to_embed):
         df = pd.DataFrame({'id': [1, 2, 3], 'text': ['Hello', 'World', 'GitHub']})
         df_with_embeddings = generate_openAI_embedded_csv(df, 'text')
     """
-def generate_openAI_embedded_csv(df, column_to_embed):
-    
     # remove rows with missing values (We still have a very big dataset after removing the missing values anyway)
     df_clean = df.dropna()
     
@@ -92,13 +90,13 @@ def generate_openAI_embedded_csv(df, column_to_embed):
         
         # Save the current batch DataFrame to a CSV file
         # Mode 'a' is for append, header=False to avoid writing headers multiple times
-        batch_df.to_csv('df_embedded_3103.csv', mode='a', header=not i, index=False)
+        batch_df.to_csv('df_embedded_0504_batch.csv', mode='a', header=not i, index=False)
         
         # Optional: Free up memory by deleting the batch DataFrame if no longer needed
         del batch_df
     
     # Load the CSV file with the embeddings
-    df_with_embeddings = pd.read_csv('df_embedded_3103.csv')
+    df_with_embeddings = pd.read_csv('df_embedded_0504_batch.csv')
     return df_with_embeddings
     
 def main():
@@ -123,7 +121,7 @@ def main():
     df_embedded = generate_openAI_embedded_csv(df, column_to_embed)
     
     # save the dataframe with embeddings to drive
-    upload_df_to_drive_as_csv(creds, df_embedded, "df_embedded_3103.csv", DATA_FOLDER)
+    upload_df_to_drive_as_csv(creds, df_embedded, "df_embedded_0504.csv", DATA_FOLDER)
 
 if __name__ == "__main__":
     main()
