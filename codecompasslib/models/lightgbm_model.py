@@ -108,8 +108,8 @@ def train_lightGBM_model(df_merged, label_col):
     valid_data = pd.concat([X_val, y_val], axis=1)
     test_data = pd.concat([X_test, y_test], axis=1)
     
-    nume_cols = ["embedding_" + str(i) for i in range(256)]
-    cate_cols = []	
+    nume_cols = ["embedding_" + str(i) for i in range(256)] + ["stars"]
+    cate_cols = ["language"]	
     
     ord_encoder = ce.ordinal.OrdinalEncoder(cols=cate_cols)
 
@@ -153,14 +153,14 @@ def generate_lightGBM_recommendations(target_user, df_non_embedded, df_embedded,
     starred_repo_ids = ids = [item['id'] for item in get_stared_repos(target_user)[0]]
     
     # Adding stars column to the embedded dataset (add any other column if you want to use it for a model)
-    df_merged = pd.merge(df_embedded, df_non_embedded[['id']], on='id', how='left')
+    df_merged = pd.merge(df_embedded, df_non_embedded[['id', 'stars', 'language']], on='id', how='left')
     # turn stars column into integer column
-    # df_merged['stars'] = df_merged['stars'].apply(lambda x: int(x))
+    df_merged['stars'] = df_merged['stars'].apply(lambda x: int(x))
     
     label_col = 'target'
     
     # add target column which will be 1 if the user has starred or owns the repo and 0 otherwise
-    df_merged[label_col] = df_merged['id'].apply(lambda x: 1 if x in starred_repo_ids+owned_by_target_repo_ids else 0)
+    df_merged[label_col] = df_merged['id'].apply(lambda x: 1 if x in (starred_repo_ids+owned_by_target_repo_ids) else 0)
     
     lgb_model, ord_encoder = train_lightGBM_model(df_merged, label_col)
     
@@ -200,10 +200,10 @@ def main():
         else:  
             recommendations = generate_lightGBM_recommendations(target_user, df_non_embedded, df_embedded, number_of_recommendations=10)
             print("----Recommendations----")
-            for repo in recommendations:
+            for index, repo in enumerate(recommendations):
                 # repo name
                 name = df_non_embedded[df_non_embedded['id'] == repo[0]]['name'].values[0]
-                print(f"Repo ID: {repo[0]}, Owner: {repo[1]}, link: https://github.com/{repo[1]}/{name}")
+                print(f"{index+1} - Repo ID: {repo[0]}, Owner: {repo[1]}, link: https://github.com/{repo[1]}/{name}", "\nDescription: ", df_non_embedded[df_non_embedded['id'] == repo[0]]['description'].values[0])
 
 if __name__ == "__main__":
     main()
