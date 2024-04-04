@@ -56,14 +56,9 @@ def train_lightGBM_model(df_merged: DataFrame, label_col: str) -> Tuple[lgb.Boos
         - 'target': The target variable to be predicted.
         - 'id': An identifier column.
         - 'owner_user': A column representing the owner user.
-
-    The function also assumes that the merged dataframe has numerical columns named "embedding_0" to "embedding_255"
-    and a categorical column named "language".
-
-    Example usage:
-    df = pd.read_csv('merged_data.csv')
-    model, ord_encoder = train_lightGBM_model(df, 'target')
-
+        - 'embedding_0' to 'embedding_255': Numerical columns representing the embeddings.
+        - 'language': A categorical column representing the language.
+        - 'stars': A numerical column representing the number of stars.
 
     :param df_merged: DataFrame containing the training data.
     :param label_col: The name of the target variable column.
@@ -95,7 +90,7 @@ def train_lightGBM_model(df_merged: DataFrame, label_col: str) -> Tuple[lgb.Boos
 
     print("Training LightGBM model")
 
-    X: DataFrame = df_merged.drop(columns=['target', 'id', 'owner_user']) # drop columns not used for training
+    X: DataFrame = df_merged.drop(columns=['target']) # drop columns not used for training
     y: DataFrame = df_merged[label_col]
 
     # Dataset is imbalaned -> make sure that the stratify parameter is set
@@ -108,8 +103,7 @@ def train_lightGBM_model(df_merged: DataFrame, label_col: str) -> Tuple[lgb.Boos
     valid_data = concat([X_val, y_val], axis=1)
     test_data = concat([X_test, y_test], axis=1)
     
-    nume_cols = ["embedding_" + str(i) for i in range(256)] + ["stars"]
-    cate_cols = ['language']	
+    cate_cols = ['language']
     
     ord_encoder = ordinal.OrdinalEncoder(cols=cate_cols)
 
@@ -139,22 +133,35 @@ def load_data(full_data_folder_id: str, full_data_embedded_folder_id: str) -> Tu
     DATA_FOLDER = "13JitBJQLNgMvFwx4QJcvrmDwKOYAShVx"
 
     creds = get_creds_drive()
-    df_non_embedded: DataFrame = download_csv_as_pd_dataframe(creds=creds, file_id=full_data_folder_id)
-    df_embedded: DataFrame = download_csv_as_pd_dataframe(creds=creds, file_id=full_data_embedded_folder_id)
+    # df_non_embedded: DataFrame = download_csv_as_pd_dataframe(creds=creds, file_id=full_data_folder_id)
+    # df_embedded: DataFrame = download_csv_as_pd_dataframe(creds=creds, file_id=full_data_embedded_folder_id)
+    
+    df_non_embedded = pd.read_csv('codecompasslib/models/data_full.csv')
+    df_embedded = pd.read_csv('codecompasslib/models/df_embedded_combined.csv')
 
     print("Data loaded")
     return df_non_embedded, df_embedded
 
 
 def preprocess_data(df_embedded: DataFrame, df_non_embedded: DataFrame,
-                    numerical_cols: List[str], categorical_cols: List[str],
                     label_col: str, target_user: str) -> DataFrame:
-    # Merge the non-embedded and embedded datasets
-    df_merged = pd.merge(df_embedded, df_non_embedded[['id', 'stars', 'language']],
-                         on='id', how='left')
+    """
+    Preprocesses the data by merging embedded and non-embedded datasets,
+    converting the 'stars' column to integer, adding a target column,
+    and dropping unnecessary columns.
 
-    # Drop columns not used for training
-    df_merged.drop(columns=['id', 'owner_user'], inplace=True)
+    Args:
+        df_embedded (DataFrame): The embedded dataset.
+        df_non_embedded (DataFrame): The non-embedded dataset.
+        label_col (str): The name of the target label column.
+        target_user (str): The username of the target user.
+
+    Returns:
+        DataFrame: The preprocessed dataset.
+        List: List of repo IDs that are either starred or owned by the target user.
+    """
+    # Merge the embedded and non-embedded datasets (match based on ID), grab the column you need for training 
+    df_merged: DataFrame = pd.merge(df_embedded, df_non_embedded[['id', 'stars', 'language']], on='id', how='left')
 
     # Turn stars column into integer column
     df_merged['stars'] = df_merged['stars'].astype(int)
@@ -163,36 +170,52 @@ def preprocess_data(df_embedded: DataFrame, df_non_embedded: DataFrame,
     owned_by_target_repo_ids = [item['id'] for item in get_user_repos(target_user)[0]]
     starred_repo_ids = [item['id'] for item in get_stared_repos(target_user)[0]]
     starred_or_owned_by_user = starred_repo_ids + owned_by_target_repo_ids
-    df_merged[label_col] = df_merged.index.isin(starred_or_owned_by_user).astype(int)
+    df_merged[label_col] = df_merged['id'].apply(lambda x: 1 if x in starred_or_owned_by_user else 0)
 
-    return df_merged
+    return df_merged, starred_or_owned_by_user
 
 
 def generate_lightGBM_recommendations(target_user: str, df_non_embedded: DataFrame,
-                                      df_embedded: DataFrame, 
-                                      numerical_cols: List[str], categorical_cols: List[str],
-                                      label_col: str, number_of_recommendations: int = 10) -> list:
-    # Preprocess data
-    df_merged = preprocess_data(df_embedded, df_non_embedded, numerical_cols, categorical_cols, label_col, target_user)
+                                      df_embedded: DataFrame, number_of_recommendations: int = 10) -> list:
+    """
+    Generates recommendations using the LightGBM model.
 
+    Args:
+        target_user (str): The target user for whom recommendations are generated.
+        df_non_embedded (DataFrame): The non-embedded data frame containing the features.
+        df_embedded (DataFrame): The embedded data frame containing the features.
+        label_col (str): The name of the label column.
+        number_of_recommendations (int, optional): The number of recommendations to generate. Defaults to 10.
+
+    Returns:
+        list: A list of recommendations, each containing the repository name, owner user, and prediction score.
+    """
+    # Preprocess data
+    label_col = 'target'
+    df_merged, starred_or_owned_by_user = preprocess_data(df_embedded, df_non_embedded, label_col, target_user)
+
+    df_training_ready = df_merged.drop(columns=['id', 'owner_user'])
     # Train LightGBM model
-    lgb_model, ord_encoder = train_lightGBM_model(df_merged, label_col)
+    lgb_model, ord_encoder = train_lightGBM_model(df_training_ready, label_col)
 
     # Make predictions for all repos
-    full_dataset_x, full_dataset_y = encode_csv(df_merged, ord_encoder, label_col, "transform")
+    full_dataset_x, full_dataset_y = encode_csv(df_training_ready, ord_encoder, label_col, "transform")
     all_preds = lgb_model.predict(full_dataset_x)
 
     # Get sorted predictions with the highest one first
     top_indices = argsort(all_preds)[::-1]
 
-    # Generate recommendations
-    recommendations = []
-    counter = 0
+    # Get the top recommendations
+    recommendations: list = []
+    counter: int = 0
     for index in top_indices:
         if counter == number_of_recommendations:
             break
-        if df_merged.index[index] not in starred_or_owned_by_user:
-            recommendations.append((df_merged.index[index], df_merged.iloc[index]['owner_user'], all_preds[index]))
+        # disregard if the repo is already starred by the user
+        if df_merged.iloc[index]['id'] in starred_or_owned_by_user:
+            continue
+        else:
             counter += 1
+            recommendations.append((df_merged.iloc[index]['id'], df_merged.iloc[index]['owner_user'], all_preds[index]))
     
     return recommendations
