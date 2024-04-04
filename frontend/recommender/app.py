@@ -19,7 +19,9 @@ def load_cached_data():
     if 'cached_data' not in st.session_state:
         with st.spinner('Fetching data from the server...'):
             # Load data
-            st.session_state.cached_data = load_data()
+            full_data_folder_id: str = '1Qiy9u03hUthqaoBDr4VQqhKwtLJ2O3Yd'
+            full_data_embedded_folder_id: str = '139wi78iRzhwGZwxmI5WALoYocR-Rk9By'
+            st.session_state.cached_data = load_data(full_data_folder_id, full_data_embedded_folder_id)
     return st.session_state.cached_data
 
 def main():
