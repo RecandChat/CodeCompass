@@ -17,7 +17,9 @@ from codecompasslib.models.lightgbm_model import generate_lightGBM_recommendatio
 def load_cached_data():
     # Check if data is already stored in session state
     if 'cached_data' not in st.session_state:
-        st.session_state.cached_data = load_data()
+        with st.spinner('Fetching data from the server...'):
+            # Load data
+            st.session_state.cached_data = load_data()
     return st.session_state.cached_data
 
 def main():
@@ -34,7 +36,9 @@ def main():
         if target_user not in df_embedded['owner_user'].values:
             st.error("User not found in the dataset. Please enter a valid username.")
         else:
-            recommendations = generate_lightGBM_recommendations(target_user, df_non_embedded, df_embedded, number_of_recommendations=10)
+            with st.spinner('Training model...'):
+                # Generate recommendations
+                recommendations = generate_lightGBM_recommendations(target_user, df_non_embedded, df_embedded, number_of_recommendations=10)
             st.subheader("Recommendations")
             for index, repo in enumerate(recommendations):
                 name = df_non_embedded[df_non_embedded['id'] == repo[0]]['name'].values[0]

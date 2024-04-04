@@ -152,7 +152,7 @@ def generate_lightGBM_recommendations(target_user: str, df_non_embedded: DataFra
     starred_repo_ids = [item['id'] for item in get_stared_repos(target_user)[0]]
 
     # Adding stars column to the embedded dataset (add any other column if you want to use it for a model)
-    df_merged: DataFrame = merge(df_embedded, df_non_embedded[['id']], on='id', how='left')
+    df_merged: DataFrame = merge(df_embedded, df_non_embedded[['id', 'stars', 'language']], on='id', how='left')
     # turn stars column into integer column
     df_merged['stars'] = df_merged['stars'].apply(lambda x: int(x))
     
