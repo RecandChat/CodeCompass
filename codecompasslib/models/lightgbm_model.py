@@ -192,7 +192,7 @@ def generate_lightGBM_recommendations(target_user: str, df_non_embedded: DataFra
     """
     # Preprocess data
     label_col: str = 'target'
-    df_merged: DataFrame, starred_or_owned_by_user: List = preprocess_data(df_embedded, df_non_embedded, label_col, target_user)
+    df_merged, starred_or_owned_by_user = preprocess_data(df_embedded, df_non_embedded, label_col, target_user)
 
     df_training_ready: DataFrame = df_merged.drop(columns=['id', 'owner_user'])
       
