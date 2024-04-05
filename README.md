@@ -13,11 +13,13 @@
 ### Personalized Recommendations
 Utilizing GitHub Data and Machine Learning algorithms, the system suggests GitHub projects that resonate with the user's historical interactions and preferences.
 
+![Recommender](https://github.com/RecandChat/CodeCompass/assets/99414447/c97ef5d9-2857-4326-bcbc-f51db1fc3b7b)
+
 ### Interactive Exploration and Learning
 The embedded chatbot enhances repository exploration, providing valuable insights and fostering a conducive exploration environment.
 
-### Demonstration
-*GIF videos demonstrating the chatbot and recommender will be added here.*
+![Chatbot](https://github.com/RecandChat/CodeCompass/assets/99414447/2eaa069c-fd50-4518-bde3-3661a8d61061)
+
 ## Usage
 
 Follow these steps to get CodeCompass up and running on your local machine:
