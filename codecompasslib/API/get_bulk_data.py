@@ -136,7 +136,7 @@ def get_stared_repos(username: str) -> (list, bool):
     """
     url: str = f'https://api.github.com/users/{username}/starred'
     query_parameters: dict = {
-        'per_page': 500,
+        'per_page': 100,
     }
     starred_repos: list = []
 
