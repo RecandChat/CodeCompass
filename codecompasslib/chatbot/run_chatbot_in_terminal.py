@@ -1,3 +1,8 @@
+"""
+The entry point of application that brings everything together and runs the chatbot IN THE TERMINAL.
+Reference frontend/chatbot/app.py to run STREAMLIT chatbot.
+"""
+
 import sys
 import os
 
@@ -10,10 +15,6 @@ project_root = os.path.dirname(os.path.dirname(current_dir))
 # Add the parent directory of codecompasslib to the Python path
 sys.path.insert(0, project_root)
 
-"""
-The entry point of application that brings everything together and runs the chatbot IN THE TERMINAL.
-Reference frontend/chatbot/app.py to run STREAMLIT chatbot.
-"""
 from codecompasslib.chatbot.secrets_manager import load_openai_key, load_github_token, load_assistant_instructions
 from codecompasslib.chatbot.chatbot_management import initialize_client, create_assistant, load_tools, retrieve_assistant, run_chatbot
 
