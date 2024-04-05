@@ -2,7 +2,7 @@ name: PR Gate
 
 # We are calling the api when running the tests
 # Therefore we need a PAT to authenticate
-# We also need to wait between testing the different python version to avoid rate limiting
+# We also need to wait between testing the different python version to avoid rate limiting the GitHib API
 # This is why we cannot use the matrix to run the tests in parallel
 
 on:
