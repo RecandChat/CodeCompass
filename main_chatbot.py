@@ -11,7 +11,8 @@ project_root = os.path.dirname(os.path.dirname(current_dir))
 sys.path.insert(0, project_root)
 
 """
-The entry point of application that brings everything together and runs the chatbot.
+The entry point of application that brings everything together and runs the chatbot IN THE TERMINAL.
+Reference frontend/chatbot/app.py to run STREAMLIT chatbot.
 """
 from codecompasslib.chatbot.secrets_manager import load_openai_key, load_github_token, load_assistant_instructions
 from codecompasslib.chatbot.chatbot_management import initialize_client, create_assistant, load_tools, retrieve_assistant, run_chatbot
@@ -33,8 +34,8 @@ new_assistant = create_assistant(
     model="gpt-4-0125-preview",
     tools=load_tools('codecompasslib/chatbot/tools.json'))
 """
-# Retrieve assistant using GPT-4 (This should be used for final demo)
-#assistant = retrieve_assistant(client, 'asst_lfVLtdNac9aVUvDIIlw5c1nY')
+# Retrieve assistant using GPT-4 
+#assistant = retrieve_assistant(client, 'asst_lfVLtdNac9aVUvDIIlw5c1nY') # ONLY FOR DEMO USE
 
 # Retrieve assistant using GPT-3.5
 assistant = retrieve_assistant(client, 'asst_cibfhJsvFEKbAo7EmaS34oQD')

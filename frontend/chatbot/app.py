@@ -91,8 +91,8 @@ def process_function_call(user_input):
 # Loading secrets and initialize the client
 openai.api_key = load_openai_key(file_path='./secrets/openAI_key')
 github_token = load_github_token(file_path='./secrets/github_token')
-# assistant_id = "asst_lfVLtdNac9aVUvDIIlw5c1nY" # GPT3.5 assistant
-assistant_id = "asst_cibfhJsvFEKbAo7EmaS34oQD" # GPT4 assistant
+# assistant_id = "asst_cibfhJsvFEKbAo7EmaS34oQD" # GPT3.5 assistant
+assistant_id = "asst_lfVLtdNac9aVUvDIIlw5c1nY" # GPT4 assistant
 client = initialize_client(openai.api_key)
 
 # Streamlit app setup
@@ -115,8 +115,8 @@ if st.button("Exit Chat"):
     st.session_state.thread_id = None
 
 if "openai_model" not in st.session_state:
-    # st.session_state.openai_model = "gpt-3.5-turbo" # GPT3.5 assistant
-    st.session_state.openai_model = "gpt-4-0125-preview" # GPT4 assistant
+    st.session_state.openai_model = "gpt-3.5-turbo" # GPT3.5 assistant
+    #st.session_state.openai_model = "gpt-4-0125-preview" # GPT4 assistant (ONLY FOR DEMO USE)
 if "messages" not in st.session_state:
     st.session_state.messages = []
 

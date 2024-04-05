@@ -1,12 +1,5 @@
 import os
 import sys
-import pandas as pd
-from typing import Tuple, List
-from pandas import DataFrame, read_csv, merge, concat
-from numpy import ndarray, argsort
-import lightgbm as lgb
-from sklearn.model_selection import train_test_split
-from category_encoders import ordinal
 
 # go up to root
 # Construct the path to the root directory (one level up from embeddings)
@@ -17,6 +10,13 @@ real_project_dir = os.path.dirname(project_dir)
 # Add the project directory to the Python path
 sys.path.insert(0, real_project_dir)
 
+import pandas as pd
+from typing import Tuple, List
+from pandas import DataFrame, read_csv, merge, concat
+from numpy import ndarray, argsort
+import lightgbm as lgb
+from sklearn.model_selection import train_test_split
+from category_encoders import ordinal
 
 from codecompasslib.API.drive_operations import download_csv_as_pd_dataframe, get_creds_drive
 from codecompasslib.API.get_bulk_data import get_stared_repos, get_user_repos
@@ -104,8 +104,7 @@ def train_lightGBM_model(df_merged: DataFrame, label_col: str) -> Tuple[lgb.Boos
     test_data = concat([X_test, y_test], axis=1)
     
     cate_cols = ['language']
-    
-    ord_encoder = ordinal.OrdinalEncoder(cols=cate_cols)
+    ord_encoder: ordinal.OrdinalEncoder = ordinal.OrdinalEncoder(cols=cate_cols)
 
     train_x, train_y = encode_csv(train_data, ord_encoder, label_col)
     valid_x, valid_y = encode_csv(valid_data, ord_encoder, label_col, "transform")
@@ -168,9 +167,9 @@ def preprocess_data(df_embedded: DataFrame, df_non_embedded: DataFrame,
     df_merged['stars'] = df_merged['stars'].astype(int)
 
     # Add target column: 1 if the repo is starred or owned by the user, else 0
-    owned_by_target_repo_ids = [item['id'] for item in get_user_repos(target_user)[0]]
-    starred_repo_ids = [item['id'] for item in get_stared_repos(target_user)[0]]
-    starred_or_owned_by_user = starred_repo_ids + owned_by_target_repo_ids
+    owned_by_target_repo_ids: List = [item['id'] for item in get_user_repos(target_user)[0]]
+    starred_repo_ids: List = [item['id'] for item in get_stared_repos(target_user)[0]]
+    starred_or_owned_by_user:List = starred_repo_ids + owned_by_target_repo_ids
     df_merged[label_col] = df_merged['id'].apply(lambda x: 1 if x in starred_or_owned_by_user else 0)
 
     return df_merged, starred_or_owned_by_user
@@ -192,10 +191,13 @@ def generate_lightGBM_recommendations(target_user: str, df_non_embedded: DataFra
         list: A list of recommendations, each containing the repository name, owner user, and prediction score.
     """
     # Preprocess data
-    label_col = 'target'
-    df_merged, starred_or_owned_by_user = preprocess_data(df_embedded, df_non_embedded, label_col, target_user)
+    label_col: str = 'target'
+    df_merged: DataFrame, starred_or_owned_by_user: List = preprocess_data(df_embedded, df_non_embedded, label_col, target_user)
 
-    df_training_ready = df_merged.drop(columns=['id', 'owner_user'])
+    df_training_ready: DataFrame = df_merged.drop(columns=['id', 'owner_user'])
+      
+    lgb_model: lgb.Booster
+    ord_encoder: ordinal.OrdinalEncoder
     # Train LightGBM model
     lgb_model, ord_encoder = train_lightGBM_model(df_training_ready, label_col)
 
@@ -218,5 +220,5 @@ def generate_lightGBM_recommendations(target_user: str, df_non_embedded: DataFra
         else:
             counter += 1
             recommendations.append((df_merged.iloc[index]['id'], df_merged.iloc[index]['owner_user'], all_preds[index]))
-    
+
     return recommendations
