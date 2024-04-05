@@ -21,4 +21,5 @@ COPY . /app
 # configure the container to run in an executed manner
 ENTRYPOINT [ "python" ]
 
-CMD ["app.py" ]
+# run the recommender
+CMD ["python", "frontend/recommender/app.py"]
