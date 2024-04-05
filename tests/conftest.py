@@ -1,3 +1,10 @@
+import os
+import sys
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, project_root)
+
 import pytest
 from google.oauth2.credentials import Credentials
 from codecompasslib.API.drive_operations import get_creds_drive
