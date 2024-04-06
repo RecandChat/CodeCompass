@@ -17,12 +17,16 @@ Utilizing GitHub Data and Machine Learning algorithms, the system suggests GitHu
   <img src="https://github.com/RecandChat/CodeCompass/assets/99414447/9b53abfd-d06f-43b4-a1c4-63fce2c5b7d8" />
 </p>
 
+For a full Recommender demonstration, watch our video on [YouTube](Keti_add_link_here).
+
 ### Interactive Exploration and Learning
 The embedded chatbot enhances repository exploration, providing valuable insights and fostering a conducive exploration environment.
 
 <p align="center">
   <img src="https://github.com/RecandChat/CodeCompass/assets/99414447/2eaa069c-fd50-4518-bde3-3661a8d61061" />
 </p>
+
+For a full Chabot demonstration, watch our video on [YouTube](https://youtu.be/iaSOjpxsE7s?si=-GKZ6iMEcsuDD4SD).
 
 ## Usage
 
