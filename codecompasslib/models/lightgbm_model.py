@@ -133,7 +133,7 @@ def load_data(full_data_folder_id: str, full_data_embedded_folder_id: str) -> Tu
     creds = get_creds_drive()
     df_non_embedded: DataFrame = download_csv_as_pd_dataframe(creds=creds, file_id=full_data_folder_id)
     df_embedded: DataFrame = download_csv_as_pd_dataframe(creds=creds, file_id=full_data_embedded_folder_id)
-    
+
     # Having data locally works much faster than retrieving from drive. Uncomment the following lines to use local data
     # df_non_embedded = pd.read_csv('codecompasslib/models/data_full.csv')
     # df_embedded = pd.read_csv('codecompasslib/models/df_embedded_combined.csv')
@@ -194,7 +194,7 @@ def generate_lightGBM_recommendations(target_user: str, df_non_embedded: DataFra
     df_merged, starred_or_owned_by_user = preprocess_data(df_embedded, df_non_embedded, label_col, target_user)
 
     df_training_ready: DataFrame = df_merged.drop(columns=['id', 'owner_user'])
-      
+
     lgb_model: lgb.Booster
     ord_encoder: ordinal.OrdinalEncoder
     # Train LightGBM model
