@@ -14,7 +14,7 @@
 Utilizing GitHub Data and Machine Learning algorithms, the system suggests GitHub projects that resonate with the user's historical interactions and preferences.
 
 <p align="center">
-  <img src="https://github.com/RecandChat/CodeCompass/assets/99414447/c97ef5d9-2857-4326-bcbc-f51db1fc3b7b" />
+  <img src="https://github.com/RecandChat/CodeCompass/assets/99414447/9b53abfd-d06f-43b4-a1c4-63fce2c5b7d8" />
 </p>
 
 ### Interactive Exploration and Learning
