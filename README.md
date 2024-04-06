@@ -46,12 +46,10 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 **5.** Create Secrets Diretory at the root (`secrets/`)
-```
 - `askthecode_api`: Your API URL wrapper for the chatbot to make requests.
 - `github_token`: Your GitHub API Token.
 - `instructions`: Your chatbot system prompt.
 - `openAI_key`: Your OpenAI API key.
-```
 **4.** Run:
   
 Chatbot
