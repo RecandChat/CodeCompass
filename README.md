@@ -52,7 +52,7 @@ pip install -r requirements.txt
 - `github_token`: Your GitHub API Token.
 - `instructions`: Your chatbot system prompt.
 - `openAI_key`: Your OpenAI API key.
-
+```
 **4.** Run:
   
 Chatbot
