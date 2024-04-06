@@ -18,48 +18,49 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 # Path setup
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-PROJECT_DIR = os.path.dirname(SCRIPT_DIR)
-sys.path.insert(0, PROJECT_DIR)
+# Construct the path to the root directory (one level up from embeddings)
+root_dir = os.path.dirname(os.path.abspath(__file__))
+project_dir = os.path.dirname(root_dir)
+real_project_dir = os.path.dirname(project_dir)
+# Add the project directory to the Python path
+sys.path.insert(0, real_project_dir)
 
 from codecompasslib.API.drive_operations import download_csv_as_pd_dataframe, get_creds_drive
 
-def load_and_clean_data(full_data_folder_id):
+def load_data(full_data_folder_id: str) -> DataFrame:
     """
-    Load and clean the dataset from a specified filepath.
+    Load the dataset from a specified filepath.
     
     Args:
         full_data_folder_id (str): data folder id of the dataframe on drive.
 
     Returns:
-        pandas.DataFrame: The cleaned DataFrame.
+        pandas.DataFrame: The loaded DataFrame.
     """
-    DRIVE_ID = "0AL1DtB4TdEWdUk9PVA"
-    DATA_FOLDER = "13JitBJQLNgMvFwx4QJcvrmDwKOYAShVx"
-
     creds = get_creds_drive()
     df: DataFrame = download_csv_as_pd_dataframe(creds=creds, file_id=full_data_folder_id)
+    return df
 
-    # Delete missing values
-    df.dropna(inplace=True)
+def clean_data(df: DataFrame) -> DataFrame:
+    """
+    Load and clean the dataset from a specified filepath.
+    
+    Args:
+        df: loaded dataframe
 
-    # Delete columns that are not needed
-    columns_to_drop = [
-        'is_archived', 'is_disabled', 'is_template', 'has_projects',  
-        'owner_type', 'has_pages', 'has_wiki', 
-        'has_issues', 'has_downloads', 'is_fork'
-    ]
-    df.drop(columns=columns_to_drop, inplace=True)
+    Returns:
+        pandas.DataFrame: The cleaned DataFrame.
+    """
+    # grab the necessary columns
+    df = df[['id', 'name', 'owner_user', 'description', 'url', 'language' ]]
 
     # Handling missing values in text columns
-    df['description'].fillna('', inplace=True)
-    df['name'].fillna('', inplace=True)
-    df['language'].fillna('', inplace=True)
-
-    # Drop duplicates with name
-    df.drop_duplicates(subset='name', keep='first', inplace=True)
+    df['description'] = df['description'].fillna('')
+    df['name'] = df['name'].fillna('')
+    df['language'] = df['language'].fillna('')
 
     return df
+
 
 
 def recommend_repos(user_preference, df, top_n=10):
@@ -75,13 +76,22 @@ def recommend_repos(user_preference, df, top_n=10):
         pandas.DataFrame: DataFrame containing top_n recommended repositories.
     """
     
+    # Concatenating the text columns for vectorization
+    text_data = df['name'] + " " + df['description'] + " " + df['language']
+
+    # fit the TF-IDF vectorizer
     tfidf_vectorizer = TfidfVectorizer()
+    tfidf_vectorizer.fit_transform(text_data)
+    
     # Vectorize the user preference
     user_pref_vector = tfidf_vectorizer.transform([user_preference])
 
     # Calculate cosine similarity with all repositories
-    cosine_scores = cosine_similarity(user_pref_vector, tfidf_vectorizer.transform(df['name'] + " " + df['description'] + " " + df['language'])).flatten()
+    cosine_scores = cosine_similarity(user_pref_vector, tfidf_vectorizer.transform(text_data)).flatten()
 
+    # Add the cosine similarity scores between repos and user preference text to the DataFrame
+    df['cosine_similarity_score'] = cosine_scores
+    
     # Get the indices of the repositories with the highest similarity scores
     top_indices = np.argsort(cosine_scores)[-top_n:][::-1]
 
@@ -90,14 +100,15 @@ def recommend_repos(user_preference, df, top_n=10):
 
     return recommended_repos[['name', 'description', 'language', 'cosine_similarity_score']]
 
-def main():
-    """
-    Main function to run the script.
-    """
-    df = load_and_clean_data('1Qiy9u03hUthqaoBDr4VQqhKwtLJ2O3Yd')
-    user_preference = "python"
-    recommended_repos = recommend_repos(user_preference, df, top_n=10)
-    print(recommended_repos)
+# def main():
+#     """
+#     Main function to run the script.
+#     """
+#     df = load_data('1Qiy9u03hUthqaoBDr4VQqhKwtLJ2O3Yd')
+#     df_clean = clean_data(df)
+#     user_preference = "python"
+#     recommended_repos = recommend_repos(user_preference, df_clean, top_n=10)
+#     print(recommended_repos)
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()

@@ -127,8 +127,6 @@ def load_data(full_data_folder_id: str, full_data_embedded_folder_id: str) -> Tu
     Load the data from the Google Drive
     :return: The non-embedded and embedded datasets
     """
-    DRIVE_ID = "0AL1DtB4TdEWdUk9PVA"
-    DATA_FOLDER = "13JitBJQLNgMvFwx4QJcvrmDwKOYAShVx"
 
     creds = get_creds_drive()
     df_non_embedded: DataFrame = download_csv_as_pd_dataframe(creds=creds, file_id=full_data_folder_id)
