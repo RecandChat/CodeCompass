@@ -6,7 +6,6 @@ import sys
 root_dir = os.path.dirname(os.path.abspath(__file__))
 project_dir = os.path.dirname(root_dir)
 real_project_dir = os.path.dirname(project_dir)
-
 # Add the project directory to the Python path
 sys.path.insert(0, real_project_dir)
 
