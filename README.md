@@ -36,6 +36,17 @@ git clone https://github.com/RecandChat/CodeCompass
 ```
 cd CodeCompass
 ```
+**3.** create and activate virtual environment:
+```
+python -m venv venv
+source venv/bin/activate
+```
+**4.** Install dependencies:
+```
+pip install -r requirements.txt
+```
+**5.** Create Secrets Diretory at the root (`secrets/`)
+```
 **3.** Create Secrets Diretory at the root (`secrets/`)
 - `askthecode_api`: Your API URL wrapper for the chatbot to make requests.
 - `github_token`: Your GitHub API Token.
