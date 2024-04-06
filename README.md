@@ -28,29 +28,29 @@ The embedded chatbot enhances repository exploration, providing valuable insight
 
 Follow these steps to get CodeCompass up and running on your local machine:
 
-**1.** Clone the repo:
+### **1.** Clone the repo:
 ```
 git clone https://github.com/RecandChat/CodeCompass
 ```
-**2.** Change to the project directory:
+### **2.** Change to the project directory:
 ```
 cd CodeCompass
 ```
-**3.** create and activate virtual environment:
+### **3.** create and activate virtual environment:
 ```
 python -m venv venv
 source venv/bin/activate
 ```
-**4.** Install dependencies:
+### **4.** Install dependencies:
 ```
 pip install -r requirements.txt
 ```
-**5.** Create Secrets Diretory at the root (`secrets/`)
+### **5.** Create Secrets Diretory at the root (`secrets/`)
 - `askthecode_api`: Your API URL wrapper for the chatbot to make requests.
 - `github_token`: Your GitHub API Token.
 - `instructions`: Your chatbot system prompt.
 - `openAI_key`: Your OpenAI API key.
-**4.** Run:
+### **4.** Run:
   
 Chatbot
 ```
