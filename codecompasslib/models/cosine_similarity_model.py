@@ -99,16 +99,3 @@ def recommend_repos(user_preference, df, top_n=10):
     recommended_repos = df.iloc[top_indices].reset_index(drop=True)
 
     return recommended_repos[['name', 'description', 'language', 'cosine_similarity_score']]
-
-# def main():
-#     """
-#     Main function to run the script.
-#     """
-#     df = load_data('1Qiy9u03hUthqaoBDr4VQqhKwtLJ2O3Yd')
-#     df_clean = clean_data(df)
-#     user_preference = "python"
-#     recommended_repos = recommend_repos(user_preference, df_clean, top_n=10)
-#     print(recommended_repos)
-
-# if __name__ == "__main__":
-#     main()
