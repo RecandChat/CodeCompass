@@ -12,6 +12,7 @@ import sys
 
 # Third-party imports
 import pandas as pd
+from pandas import DataFrame
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -21,21 +22,23 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.dirname(SCRIPT_DIR)
 sys.path.insert(0, PROJECT_DIR)
 
-# Constants
-FILE_PATH = 'allReposCleaned.csv'
+from codecompasslib.API.drive_operations import download_csv_as_pd_dataframe, get_creds_drive
 
-def load_and_clean_data(filepath):
+def load_and_clean_data(full_data_folder_id):
     """
     Load and clean the dataset from a specified filepath.
     
     Args:
-        filepath (str): The file path to the dataset.
+        full_data_folder_id (str): data folder id of the dataframe on drive.
 
     Returns:
         pandas.DataFrame: The cleaned DataFrame.
     """
-    # Load the data
-    df = pd.read_csv(filepath)
+    DRIVE_ID = "0AL1DtB4TdEWdUk9PVA"
+    DATA_FOLDER = "13JitBJQLNgMvFwx4QJcvrmDwKOYAShVx"
+
+    creds = get_creds_drive()
+    df: DataFrame = download_csv_as_pd_dataframe(creds=creds, file_id=full_data_folder_id)
 
     # Delete missing values
     df.dropna(inplace=True)
@@ -58,47 +61,21 @@ def load_and_clean_data(filepath):
 
     return df
 
-def calculate_cosine_similarity_scores(df):
-    """
-    Calculate cosine similarity scores for the dataset.
 
-    Args:
-        df (pandas.DataFrame): The DataFrame containing repository data.
-
-    Returns:
-        tuple: A tuple containing the DataFrame with added similarity scores and the TF-IDF vectorizer.
-    """
-    # Concatenating the text columns for vectorization
-    text_data = df['name'] + " " + df['description'] + " " + df['language']
-
-    # Vectorizing the text data using TF-IDF
-    tfidf_vectorizer = TfidfVectorizer()
-    tfidf_matrix = tfidf_vectorizer.fit_transform(text_data)
-
-    # Calculating cosine similarity
-    cosine_sim = cosine_similarity(tfidf_matrix)
-
-    # Average the cosine similarities for each repo
-    similarity_scores = np.mean(cosine_sim, axis=1)
-
-    # Adding the new column to the dataset
-    df['cosine_similarity_score'] = similarity_scores
-
-    return df, tfidf_vectorizer
-
-def recommend_repos(user_preference, df, tfidf_vectorizer, top_n=10):
+def recommend_repos(user_preference, df, top_n=10):
     """
     Recommend repositories based on user preferences.
 
     Args:
         user_preference (str): The user's preferred keywords or phrases.
         df (pandas.DataFrame): The DataFrame containing repository data.
-        tfidf_vectorizer (TfidfVectorizer): The TF-IDF vectorizer used for transforming text data.
         top_n (int, optional): Number of top recommendations to return. Defaults to 10.
 
     Returns:
         pandas.DataFrame: DataFrame containing top_n recommended repositories.
     """
+    
+    tfidf_vectorizer = TfidfVectorizer()
     # Vectorize the user preference
     user_pref_vector = tfidf_vectorizer.transform([user_preference])
 
@@ -117,10 +94,9 @@ def main():
     """
     Main function to run the script.
     """
-    df = load_and_clean_data(FILE_PATH)
-    df, tfidf_vectorizer = calculate_cosine_similarity_scores(df)
+    df = load_and_clean_data('1Qiy9u03hUthqaoBDr4VQqhKwtLJ2O3Yd')
     user_preference = "python"
-    recommended_repos = recommend_repos(user_preference, df, tfidf_vectorizer, top_n=10)
+    recommended_repos = recommend_repos(user_preference, df, top_n=10)
     print(recommended_repos)
 
 if __name__ == "__main__":
