@@ -11,7 +11,7 @@ sys.path.insert(0, real_project_dir)
 
 import pandas as pd
 from typing import Tuple, List
-from pandas import DataFrame, read_csv, merge, concat
+from pandas import DataFrame, concat
 from numpy import ndarray, argsort
 import lightgbm as lgb
 from sklearn.model_selection import train_test_split
@@ -127,8 +127,6 @@ def load_data(full_data_folder_id: str, full_data_embedded_folder_id: str) -> Tu
     Load the data from the Google Drive
     :return: The non-embedded and embedded datasets
     """
-    DRIVE_ID = "0AL1DtB4TdEWdUk9PVA"
-    DATA_FOLDER = "13JitBJQLNgMvFwx4QJcvrmDwKOYAShVx"
 
     creds = get_creds_drive()
     df_non_embedded: DataFrame = download_csv_as_pd_dataframe(creds=creds, file_id=full_data_folder_id)
