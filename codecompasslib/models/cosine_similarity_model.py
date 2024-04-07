@@ -35,7 +35,7 @@ def load_and_clean_data(filepath):
         pandas.DataFrame: The cleaned DataFrame.
     """
     # Load the data
-    df = pd.read_csv(filepath)
+    df = pd.read_csv(filepath) 
 
     # Delete missing values
     df.dropna(inplace=True)
