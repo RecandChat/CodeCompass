@@ -1,8 +1,10 @@
-![Python](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=whit)
-![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
-![chatGPT](https://img.shields.io/badge/ChatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white)
-![SciKitLearn](https://img.shields.io/badge/scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  <img src="https://img.shields.io/badge/ChatGPT-74aa9c?style=for-the-badge&logo=openai&logoColor=white" alt="ChatGPT" />
+  <img src="https://img.shields.io/badge/scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="SciKitLearn" />
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white" alt="streamlit" />
+</p>
 
 # CodeCompass
 
@@ -17,12 +19,16 @@ Utilizing GitHub Data and Machine Learning algorithms, the system suggests GitHu
   <img src="https://github.com/RecandChat/CodeCompass/assets/99414447/9b53abfd-d06f-43b4-a1c4-63fce2c5b7d8" />
 </p>
 
+For a full Recommender demonstration amd model explanation, watch our [video](https://www.youtube.com/watch?v=SPVVdKDqeag).
+
 ### Interactive Exploration and Learning
 The embedded chatbot enhances repository exploration, providing valuable insights and fostering a conducive exploration environment.
 
 <p align="center">
   <img src="https://github.com/RecandChat/CodeCompass/assets/99414447/2eaa069c-fd50-4518-bde3-3661a8d61061" />
 </p>
+
+For a full Chabot demonstration, watch our [video](https://youtu.be/iaSOjpxsE7s?si=-GKZ6iMEcsuDD4SD).
 
 ## Usage
 
@@ -36,11 +42,9 @@ git clone https://github.com/RecandChat/CodeCompass
 ```
 cd CodeCompass
 ```
-### **3.** create and activate virtual environment:
-```
-python -m venv venv
-source venv/bin/activate
-```
+### **3.** Create and activate a Virtual Environment
+
+
 ### **4.** Install dependencies:
 ```
 pip install -r requirements.txt
@@ -68,5 +72,5 @@ For more in-depth information, refer to the `documentation/Final_Report` directo
 - [Gabriel de Olaguibel](https://github.com/gabrieldeolaguibel)
 - [Keti Sulamanidze](https://github.com/KTsula)
 - [Felix Gomez-Guillamon](https://github.com/felixggj)
-- [Maud Hovland](https://github.com/maudhelen)
+- [Maud Helen Hovland](https://github.com/maudhelen)
 - [Miranda Drummond](https://github.com/mirandadrummond)
