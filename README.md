@@ -5,6 +5,7 @@
   <img src="https://img.shields.io/badge/scikit_learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="SciKitLearn" />
   <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white" alt="streamlit" />
 </p>
+
 # CodeCompass
 
 ## Overview
@@ -41,11 +42,9 @@ git clone https://github.com/RecandChat/CodeCompass
 ```
 cd CodeCompass
 ```
-### **3.** create and activate virtual environment:
-```
-python -m venv venv
-source venv/bin/activate
-```
+### **3.** Create and activate a Virtual Environment
+
+
 ### **4.** Install dependencies:
 ```
 pip install -r requirements.txt
@@ -73,5 +72,5 @@ For more in-depth information, refer to the `documentation/Final_Report` directo
 - [Gabriel de Olaguibel](https://github.com/gabrieldeolaguibel)
 - [Keti Sulamanidze](https://github.com/KTsula)
 - [Felix Gomez-Guillamon](https://github.com/felixggj)
-- [Maud Hovland](https://github.com/maudhelen)
+- [Maud Helen Hovland](https://github.com/maudhelen)
 - [Miranda Drummond](https://github.com/mirandadrummond)
