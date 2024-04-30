@@ -3,6 +3,7 @@ Functions focusing on handling the initialization and management of the chatbot 
 """
 import json
 import time
+import requests
 from openai import OpenAI
 from typing import Tuple, Any, Union, Dict, Callable
 from openai.types.beta.assistant import Assistant
@@ -31,7 +32,6 @@ def initialize_client(api_key: str) -> OpenAI:
     """
     client = OpenAI(api_key=api_key)
     return client
-
 
 def create_assistant(client: OpenAI, name: str, instructions: str, model: str, tools: list) -> Assistant:
     """
@@ -107,6 +107,24 @@ def get_function_details(run: Run) -> Tuple[str, Any, str]:
     print(f"Function Called: {function_name} with arguments: {arguments}")
 
     return function_name, arguments, function_id
+
+def get_llama_details(function_output : list) -> Tuple[str, Any, str]:
+    """
+    Extracts and prints details about the function to be called based on the run's required action.
+
+    :param run: The Run object containing details about the required action.
+    :return: A tuple containing the function name to be called, its arguments, and the function call's ID.
+    """
+    print("\nRun Action Required")  # Placeholder for actual run.required_action
+
+    function_name = function_output[0]
+    arguments = function_output[1]
+    function_id = function_output[2]
+
+    print(f"Function Called: {function_name} with arguments: {arguments}")
+
+    return function_name, arguments, function_id
+    
 
 # Utility function to submit the function response
 

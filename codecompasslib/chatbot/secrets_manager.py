@@ -1,6 +1,7 @@
 """
 Contains functions related to loading secrets like API keys and URLs. 
 """
+import json
 
 def load_openai_key(file_path='secrets/openAI_key') -> str:
     """
@@ -16,6 +17,23 @@ def load_openai_key(file_path='secrets/openAI_key') -> str:
             return openai_key
     except FileNotFoundError:
         print(f"OpenAI key file not found at {file_path}.")
+        return ""
+    
+def load_llama_key(file_path='secrets/llama_key') -> str:
+    """
+    Loads the Llama API key from a specified file.
+
+    :param file_path: The path to the file containing the Llama API key.
+    :return: The Llama API key, or an empty string if the file cannot be found.
+    """
+    try:
+        with open(file_path, 'r') as file:
+            print("Llama key loaded successfully.")
+            return json.load(file)
+            
+
+    except FileNotFoundError:
+        print(f"Llama key file not found at {file_path}.")
         return ""
 
 def load_github_token(file_path='secrets/github_token') -> str:
