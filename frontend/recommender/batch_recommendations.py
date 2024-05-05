@@ -34,6 +34,13 @@ def fetch_and_store_recommendations():
         recommendations = generate_lightGBM_recommendations(user, df_non_embedded, df_embedded, number_of_recommendations=10)
         recommendations_json = json.dumps(recommendations)
 
+        # File path to save the recommendations
+        file_path = 'recommendations.json'
+
+        # Write recommendations to a JSON file
+        with open(file_path, 'w') as file:
+            file.write(recommendations_json)
+
         try:
             redis_client.set(user, recommendations_json)
             logging.info(f"Stored recommendations for user {user}")
