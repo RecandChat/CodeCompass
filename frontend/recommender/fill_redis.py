@@ -1,6 +1,5 @@
 import os
 import sys
-import streamlit as st
 import redis
 import json
 import pandas as pd
@@ -24,9 +23,25 @@ def fill_redis_with_data():
         full_data_embedded_folder_id = '139wi78iRzhwGZwxmI5WALoYocR-Rk9By'
         df_non_embedded, df_embedded = load_data(full_data_folder_id, full_data_embedded_folder_id)
 
-        # Convert DataFrames to JSON format
-        df_non_embedded_json = df_non_embedded.to_json(orient='records')
-        df_embedded_json = df_embedded.to_json(orient='records')
+        print("Checkpoint 1")
+        # Convert DataFrames to CSV
+        df_non_embedded_csv = df_non_embedded.to_csv(index=False)
+        df_embedded_csv = df_embedded.to_csv(index=False)
+        
+        #print first 3 rows of the csv
+        print("\nFirst 3 rows of the csv")
+        print(df_non_embedded_csv[:3])
+        
+        # Convert CSV to JSON
+        print("Checkpoint 2") 
+        df_non_embedded_json = json.loads(df_non_embedded_csv)
+        df_embedded_json = json.loads(df_embedded_csv)
+        
+        #print first 3 rows of the json
+        print("\nFirst 3 rows of the json")
+        print(df_non_embedded_json[:3])
+        
+        print("Checkpoint 3")
 
         # Connect to Redis
         redis_client = redis.Redis(host='localhost', port=6379, db=0)
