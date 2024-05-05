@@ -3,6 +3,7 @@ import sys
 import streamlit as st
 import redis
 import json
+from codecompasslib.models.lightgbm_model import load_data
 
 # Navigate to root directory
 root_dir = os.path.dirname(os.path.abspath(__file__))
@@ -11,9 +12,6 @@ real_project_dir = os.path.dirname(project_dir)
 
 # Add project directory to Python path
 sys.path.insert(0, real_project_dir)
-
-# Import necessary functions from codecompasslib
-from codecompasslib.models.lightgbm_model import load_data
 
 # Function to load cached data
 def load_cached_data():
@@ -24,14 +22,14 @@ def load_cached_data():
             st.session_state.cached_data = load_data(full_data_folder_id, full_data_embedded_folder_id)
     return st.session_state.cached_data
 
-# Connect to Redis
-try:
-    redis_client = redis.Redis(host='localhost', port=6379, db=0)
-except Exception as e:
-    st.error(f"Could not connect to Redis: {e}")
-    sys.exit(1)
-
 def main():
+    # Connect to Redis
+    try:
+        redis_client = redis.Redis(host='localhost', port=6379, db=0)
+    except Exception as e:
+        st.error(f"Could not connect to Redis: {e}")
+        sys.exit(1)
+
     # Load the data
     df_non_embedded, df_embedded = load_cached_data()
 
